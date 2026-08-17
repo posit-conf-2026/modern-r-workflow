@@ -32,7 +32,15 @@ Prerequisites: Basic familiarity with R programming (e.g., using the tidyverse).
 
 ## Setup
 
-ADD INFORMATION YOU WANT LEARNERS TO HAVE / STEPS THEY WANT THEM TO COMPLETE PRIOR TO THE WORKSHOP. THIS COULD BE A LINK TO A THREAD ON POSIT COMMUNITY, PACKAGE INSTALL INSTRUCTIONS, HOW TO GET A POSIT CLOUD ACCOUNT, ETC.
+You'll need:
+
+* A recent version of Positron.
+
+* Signed up for posit.ai using the same email addres as your course registration. Open Posit Assitant in Positron and connect your posit.ai account. (It's fine to use other tools but there are couple of things we want to show you specifically in PA.)
+
+* Grab the development version of PA by pressing Cmd + Shift + P to open the command palette and paste `Posit Assistant: Check for newer dev build`. Follow the prompts to restart your current PA.
+
+* Install pak with `install.packages("pak")` and then ensure you have the latest devtools and associated packages with `pak::pak("devtools")`.
 
 ## Schedule
 
