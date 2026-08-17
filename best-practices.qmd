@@ -1,0 +1,12 @@
+# Introduction
+
+* LLMs amplify best practices, and make them more achievable
+* Virtuous cycle where as you improve tests and docs, it makes it easier for agents to work with your package. 
+
+# Unit testing
+
+# Documentation
+
+# Kaleidoscope
+
+

@@ -1,0 +1,5 @@
+# Whole game
+
+# R CMD check
+
+# Skills and AGENTS.md
