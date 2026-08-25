@@ -1,0 +1,171 @@
+[
+  {
+    "objectID": "writing-code.html",
+    "href": "writing-code.html",
+    "title": "Whole game",
+    "section": "",
+    "text": "Whole game\n\n\nR CMD check\n\n\nSkills and AGENTS.md"
+  },
+  {
+    "objectID": "positron-ai.html",
+    "href": "positron-ai.html",
+    "title": "Introductions",
+    "section": "",
+    "text": "Introductions\n\n\nTour of Positron\n\n\nIntroduction to Posit Assistant\n\n\nHow do agents work?"
+  },
+  {
+    "objectID": "modules/07-best-practices-feedback-loop.html",
+    "href": "modules/07-best-practices-feedback-loop.html",
+    "title": "Best practices feedback loop",
+    "section": "",
+    "text": "TODO",
+    "crumbs": [
+      "Modules",
+      "Best practices feedback loop"
+    ]
+  },
+  {
+    "objectID": "modules/05-r-cmd-check.html",
+    "href": "modules/05-r-cmd-check.html",
+    "title": "R CMD check",
+    "section": "",
+    "text": "TODO",
+    "crumbs": [
+      "Modules",
+      "R CMD check"
+    ]
+  },
+  {
+    "objectID": "modules/03-agent-explainer.html",
+    "href": "modules/03-agent-explainer.html",
+    "title": "How do agents work?",
+    "section": "",
+    "text": "TODO",
+    "crumbs": [
+      "Modules",
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/01-positron-tour.html",
+    "href": "modules/01-positron-tour.html",
+    "title": "Positron tour",
+    "section": "",
+    "text": "TODO",
+    "crumbs": [
+      "Modules",
+      "Positron tour"
+    ]
+  },
+  {
+    "objectID": "best-practices.html",
+    "href": "best-practices.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Introduction\n\nLLMs amplify best practices, and make them more achievable\nVirtuous cycle where as you improve tests and docs, it makes it easier for agents to work with your package.\n\n\n\nUnit testing\n\n\nDocumentation\n\n\nKaleidoscope"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Modern R Workflow (ft. Positron and AI)",
+    "section": "",
+    "text": "September 14, 2026 posit::conf(2026)",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#setup",
+    "href": "index.html#setup",
+    "title": "Modern R Workflow (ft. Positron and AI)",
+    "section": "Setup",
+    "text": "Setup\nPlease check the Setup Instructions for recommended steps to take before the workshop.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "Modern R Workflow (ft. Positron and AI)",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\nTime\nActivity\n\n\n\n\n09:00 - 10:30\nPositron tourIntro to Posit AssistantHow do agents work?\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nHow do agents work? (cont’d)The whole game\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nR CMD checkSkills and AGENTS.md\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nBest practices feedback loopHelping yourself",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#instructors",
+    "href": "index.html#instructors",
+    "title": "Modern R Workflow (ft. Positron and AI)",
+    "section": "Instructors",
+    "text": "Instructors\n\nHadley Wickham\nADD BIO\n\n\nJenny Bryan\nADD BIO",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#description",
+    "href": "index.html#description",
+    "title": "Modern R Workflow (ft. Positron and AI)",
+    "section": "Description",
+    "text": "Description\nThis workshop is designed for data scientists who are comfortable with using R for data analysis and ready to level up their software engineering skills. Led by Hadley Wickham and Jenny Bryan, you’ll learn how to write more robust, maintainable R code while taking advantage of modern tooling (cough AI cough) that can dramatically accelerate your productivity.\nWe’ll cover three interconnected themes. First, you’ll learn contemporary R development practices—writing functions, organizing code into packages, testing, and documentation strategies that scale from personal projects to team collaboration. Second, we’ll explore how AI assistants like Claude Code can help you write better R code faster. Third, we’ll share practical tips for getting the most out of Positron, including features specifically designed to make R development and data exploration more fluid.\nThroughout the workshop, we’ll emphasize the connections between these topics: how good development practices make AI assistance more effective, how modern tooling reduces friction so you can focus on the interesting problems, and how to build workflows that are both efficient and reproducible. You’ll leave with concrete skills you can apply immediately to your own projects.\nPrerequisites: Basic familiarity with R programming (e.g., using the tidyverse). You should have written a few functions before, but don’t need any experience with package development, AI coding tools, or Positron. If you have taken a package development workshop before, you’ll learn what’s changed in our workflows, especially how we’re using AI and Positron effectively.\n This work is licensed under a Creative Commons Attribution 4.0 International License.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "modules/02-posit-assistant-intro.html",
+    "href": "modules/02-posit-assistant-intro.html",
+    "title": "Intro to Posit Assistant",
+    "section": "",
+    "text": "TODO",
+    "crumbs": [
+      "Modules",
+      "Intro to Posit Assistant"
+    ]
+  },
+  {
+    "objectID": "modules/04-whole-game.html",
+    "href": "modules/04-whole-game.html",
+    "title": "The whole game",
+    "section": "",
+    "text": "TODO",
+    "crumbs": [
+      "Modules",
+      "The whole game"
+    ]
+  },
+  {
+    "objectID": "modules/06-agent-instructions.html",
+    "href": "modules/06-agent-instructions.html",
+    "title": "Skills and AGENTS.md",
+    "section": "",
+    "text": "TODO",
+    "crumbs": [
+      "Modules",
+      "Skills and AGENTS.md"
+    ]
+  },
+  {
+    "objectID": "modules/08-helping-yourself.html",
+    "href": "modules/08-helping-yourself.html",
+    "title": "Helping yourself",
+    "section": "",
+    "text": "TODO",
+    "crumbs": [
+      "Modules",
+      "Helping yourself"
+    ]
+  },
+  {
+    "objectID": "setup.html",
+    "href": "setup.html",
+    "title": "Setup",
+    "section": "",
+    "text": "Please complete the following steps before the workshop so we can dive straight into the material.\nYou’ll need:\n\nA recent version of Positron.\nSigned up for posit.ai using the same email address as your course registration. Open Posit Assistant in Positron and connect your posit.ai account. (It’s fine to use other tools but there are a couple of things we want to show you specifically in PA.)\nGrab the development version of PA by pressing Cmd + Shift + P to open the command palette and paste Posit Assistant: Check for newer dev build. Follow the prompts to restart your current PA.\nInstall pak with install.packages(\"pak\") and then ensure you have the latest devtools and associated packages with pak::pak(\"devtools\").",
+    "crumbs": [
+      "Setup"
+    ]
+  }
+]
