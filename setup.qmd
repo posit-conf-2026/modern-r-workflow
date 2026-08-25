@@ -1,0 +1,15 @@
+---
+title: Setup
+---
+
+Please complete the following steps before the workshop so we can dive straight into the material.
+
+You'll need:
+
+* A recent version of Positron.
+
+* Signed up for posit.ai using the same email address as your course registration. Open Posit Assistant in Positron and connect your posit.ai account. (It's fine to use other tools but there are a couple of things we want to show you specifically in PA.)
+
+* Grab the development version of PA by pressing Cmd + Shift + P to open the command palette and paste `Posit Assistant: Check for newer dev build`. Follow the prompts to restart your current PA.
+
+* Install pak with `install.packages("pak")` and then ensure you have the latest devtools and associated packages with `pak::pak("devtools")`.

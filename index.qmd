@@ -1,0 +1,38 @@
+---
+title: "Modern R Workflow (ft. Positron and AI)"
+---
+
+> September 14, 2026
+> `posit::conf(2026)`
+
+## Setup
+
+Please check the [Setup Instructions](setup.qmd) for recommended steps to take before the workshop.
+
+## Schedule
+
+| Time          | Activity                                                                                            |
+| :------------ | :--------------------------------------------------------------------------------------------------- |
+| 09:00 - 10:30 | [Positron tour](modules/01-positron-tour.qmd)<br>[Intro to Posit Assistant](modules/02-posit-assistant-intro.qmd)<br>[How do agents work?](modules/03-agent-explainer.qmd) |
+| 10:30 - 11:00 | *Coffee break*                                                                                       |
+| 11:00 - 12:30 | [How do agents work? (cont'd)](modules/03-agent-explainer.qmd)<br>[The whole game](modules/04-whole-game.qmd) |
+| 12:30 - 13:30 | *Lunch break*                                                                                        |
+| 13:30 - 15:00 | [R CMD check](modules/05-r-cmd-check.qmd)<br>[Skills and AGENTS.md](modules/06-agent-instructions.qmd) |
+| 15:00 - 15:30 | *Coffee break*                                                                                       |
+| 15:30 - 17:00 | [Best practices feedback loop](modules/07-best-practices-feedback-loop.qmd)<br>[Helping yourself](modules/08-helping-yourself.qmd) |
+
+## Instructors
+
+### Hadley Wickham
+
+ADD BIO
+
+### Jenny Bryan
+
+ADD BIO
+
+## Description
+
+{{< include _description.md >}}
+
+{{< include _license.md >}}
