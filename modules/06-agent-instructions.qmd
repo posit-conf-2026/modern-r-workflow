@@ -2,4 +2,44 @@
 title: "Skills and AGENTS.md"
 ---
 
-TODO
+# `AGENTS.md`
+
+* So far we've used (implicitly) `AGENTS.md`.
+* What about skills?
+
+# Skills
+
+## What is a skill?
+
+* On-demand context
+* Canonical form is ...
+
+## Other forms of skills
+
+* Directory of markdown files
+* Quarto website with `LLMs: true`
+* R functions
+* design.tidyverse.org
+* R documentation
+
+## General advice
+
+* Hold on to them loosely
+* Keep them personal, local, timely
+* Best for stuff a general LLM can't know
+* Relatively little benefit to using same model to both write and read
+* They don't have to be markdown files
+
+## Your turn
+
+* `use_tidy_agents()` bundles two skills
+* What are they? How do they work?
+* What's the advantage of bundling them this way?
+* What's the disadvantage?
+
+## Our skills
+
+* PR description writer 
+* Winston's PR reviewer
+
+## Bundling with a package

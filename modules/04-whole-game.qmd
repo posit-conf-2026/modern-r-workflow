@@ -7,3 +7,44 @@ title: "The whole game"
 * `usethis::create_package()`
 * `use_tidy_agents()`
 * What does `AGENTS.md` contain?
+
+## Basic workflows
+
+* Implement it.
+* Plan it, then implement it.
+* Plan it, review the plan, implement it, review the implementation.
+* Design it, then repeat cycles above.
+
+(An ounce of prevention is worth a pound of cure.)
+
+## Workflow lore
+
+* Claude (esp. Fable/Opus) best at planning
+* Codex best at reviewing
+* Cheap models fine for implementing
+
+## Example workflow for low-stakes task
+
+> Fix https://github.com/r-lib/testthat/issues/2344
+
+> Fix https://github.com/r-lib/testthat/issues/2317
+
+## Example workflow for higher-stakes task
+
+> Read https://github.com/r-lib/testthat/issues/2334. Construct a minimal reprex, and briefly outline a plan to fix the problem. 
+
+## Example workflow for high-stake task
+
+1. Plan it with Fable
+1. Read the plan and iterate
+2. Review the plan with codex. Copy and paste feedback to back to fable.
+4. Implement with sonnet
+5. Review the implementation with codex
+
+> https://github.com/r-lib/testthat/issues/2328
+
+## Basic advice
+
+* At least in the beginning, pay attention to what it's doing.
+* Can be useful to intervene when it's getting off track.
+* Can also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out.
