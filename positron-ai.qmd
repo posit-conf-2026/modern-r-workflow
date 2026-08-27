@@ -5,3 +5,137 @@
 # Introduction to Posit Assistant
 
 # How do agents work?
+
+Goal: 
+* some important vocab
+* basic understanding of agents
+* help understand the costs
+
+In principle, you could develop your own. There are a lot of details, but it's surprisingly straighforward to implement a prototype. 
+
+TODO: publish my ellmer agent code.
+
+## Important vocabulary
+
+* Tool call: 
+* Harness: provides tools; r/uns the loop
+* Agent: what you get from using the harness; semi-autonomous
+* Provider: who hosts the model. open models can be hosted anywhere.
+* Model:
+
+e.g.
+
+Kimi K3 (model) on posit.ai (provider) with Posit Assitant (harness).
+Opus 5 (model) from claude (provider) in Claude Code (harness)
+Opus 5 (model) from posit.ai (provider) in Claude code (harness)
+
+## What does a coding harness do?
+
+* Detailed system prompt
+* Finds skills
+* Useful tools 
+* Memory
+* Slash commands
+
+## Token costs
+
+### Life is good for individual developers
+
+* Individuals can use an all-you-can-eat plan
+  * Codex: $20 / month, $100 / month
+  * Claude Code: $20 / month, $100 / month
+* These are very generous; you get 20-80x what the API costs
+* BUT you can only use in provider harnesses 
+* (So you can't use claude code subscription with PA :sad-face:)
+
+### Enterprise plans are different
+
+* Enterprises have to pay by the million tokens
+  * Opus 5: $5 input, $25 output
+  * gpt-5.6-terra: $2 input, $12 output
+  * Kimi K3: $3 input, $15 output 
+  * (These are also what you pay in ellmer)
+
+* TODO: add some examples of costs to help calibrate
+
+### Why care?
+
+* At least in the short-term this is really important for organisations, and I think data scientists and engineers need to understand where they're spending money.
+
+* Two tools:
+  * Posit Assistant
+  * AgentsView
+
+* In both cases these are best-efforts to compute cost. Model providers don't make this easy!
+
+## The PA cost display
+
+* You'll need to use PA for this
+* Not aware of other tools 
+* Actively working on it, so let me know your feedback!
+
+### My views on cost-benefit have changed
+
+* I used to think that anthropic was worth the additional cost. 
+* But the relative cost has increased and output quality has decreased (code is still fine, but the sheer quantity of AI slop writing is painful)
+* Kimi K3 is excellent. Somewhere between Opus and Fable in quality. But much more concive. And only costs 75% of sonnet (thanks to tokenizer).
+
+### All this to say, understanding cost is important
+
+1. Conversations are additive
+2. Tool calls 
+3. Cache is king
+
+## Conversations are additive
+
+* LLMs are predictive models
+* They need the *complete history* of the conversation
+* Both your inputs and its outputs
+* TODO: add diagram show how this grows
+
+* Recommendation: use `/clear` to start from a fresh slate
+* Saves money and avoids stale state
+* AgentsView
+
+## Tokenizers
+
+* By and large, you don't need to care about the details of going from text to the numbers that LLMs us
+* BUT in [TODO: fill in model] Claude switched to a tokenizer that produces ~30% more tokens for the same input.
+* So in general, there are lots of other levers providers can pull.
+* And you might wonder if Claude's loquacious output is a way to raise prices.
+* Assessing total cost is hard :(
+
+## Cost is dominated by cache hits
+
+* No caching = ~10x cost
+
+* Of course it would be very slow if each time the conversation had to restart from scratch
+* So providers cache the results of the previous turn so that they can resume where they left off
+* Caching price still iterating, but seems to be stabilising
+  * You pay more to cache results: 1.25x
+  * Cache reads are much cheaper: 0.1x
+  * The conversation records explicit cache points
+
+* Details for cache length vary:
+  * Claude: 5 minutes / 1 hour (2x cost)
+  * OpenAI: 30 minutes
+  * KimiK3: no guarantees
+
+* Very difficult to figure out the exact consequences of costs.
+
+* But if you step away from a claude session for 5 minutes, the next request might be 10x the cost. We're working on better tools for this in PA.
+
+## Your turn
+
+## Compaction is no longer relevant
+
+* In past generations of models, with smaller context, harness would provide tools for compaction
+* Basically, you ask a model (maybe the same as existing maybe) to summarise
+* The problem is you lose the advantages of caching
+
+## Agents can run code on your computer
+
+* Send tool call request; harness runs and sends results
+* Often does many of these in parallel (in a single turn, not at the same time )
+* The LLM sends a bunch of requests, your harness does them sequentially, then sends a bunch of responses
+* TODO: add PA screenshot showing parallel calls
