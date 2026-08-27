@@ -2,4 +2,8 @@
 title: "The whole game"
 ---
 
-TODO
+## Your turn
+
+* `usethis::create_package()`
+* `use_tidy_agents()`
+* What does `AGENTS.md` contain?
