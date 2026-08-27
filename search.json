@@ -4,14 +4,84 @@
     "href": "writing-code.html",
     "title": "Whole game",
     "section": "",
-    "text": "Whole game\n\n\nR CMD check\n\n\nSkills and AGENTS.md"
+    "text": "usethis::create_package()\nuse_tidy_agents()\nWhat does AGENTS.md contain?"
   },
   {
-    "objectID": "positron-ai.html",
-    "href": "positron-ai.html",
-    "title": "Introductions",
+    "objectID": "writing-code.html#your-turn",
+    "href": "writing-code.html#your-turn",
+    "title": "Whole game",
     "section": "",
-    "text": "Introductions\n\n\nTour of Positron\n\n\nIntroduction to Posit Assistant\n\n\nHow do agents work?"
+    "text": "usethis::create_package()\nuse_tidy_agents()\nWhat does AGENTS.md contain?"
+  },
+  {
+    "objectID": "positron-ai.html#important-vocabulary",
+    "href": "positron-ai.html#important-vocabulary",
+    "title": "Introductions",
+    "section": "Important vocabulary",
+    "text": "Important vocabulary\n\nTool call:\nHarness: provides tools; r/uns the loop\nAgent: what you get from using the harness; semi-autonomous\nProvider: who hosts the model. open models can be hosted anywhere.\nModel:\n\ne.g.\nKimi K3 (model) on posit.ai (provider) with Posit Assitant (harness). Opus 5 (model) from claude (provider) in Claude Code (harness) Opus 5 (model) from posit.ai (provider) in Claude code (harness)"
+  },
+  {
+    "objectID": "positron-ai.html#what-does-a-coding-harness-do",
+    "href": "positron-ai.html#what-does-a-coding-harness-do",
+    "title": "Introductions",
+    "section": "What does a coding harness do?",
+    "text": "What does a coding harness do?\n\nDetailed system prompt\nFinds skills\nUseful tools\nMemory\nSlash commands"
+  },
+  {
+    "objectID": "positron-ai.html#token-costs",
+    "href": "positron-ai.html#token-costs",
+    "title": "Introductions",
+    "section": "Token costs",
+    "text": "Token costs\n\nLife is good for individual developers\n\nIndividuals can use an all-you-can-eat plan\n\nCodex: $20 / month, $100 / month\nClaude Code: $20 / month, $100 / month\n\nThese are very generous; you get 20-80x what the API costs\nBUT you can only use in provider harnesses\n(So you can’t use claude code subscription with PA :sad-face:)\n\n\n\nEnterprise plans are different\n\nEnterprises have to pay by the million tokens\n\nOpus 5: $5 input, $25 output\ngpt-5.6-terra: $2 input, $12 output\nKimi K3: $3 input, $15 output\n(These are also what you pay in ellmer)\n\nTODO: add some examples of costs to help calibrate\n\n\n\nWhy care?\n\nAt least in the short-term this is really important for organisations, and I think data scientists and engineers need to understand where they’re spending money.\nTwo tools:\n\nPosit Assistant\nAgentsView\n\nIn both cases these are best-efforts to compute cost. Model providers don’t make this easy!"
+  },
+  {
+    "objectID": "positron-ai.html#the-pa-cost-display",
+    "href": "positron-ai.html#the-pa-cost-display",
+    "title": "Introductions",
+    "section": "The PA cost display",
+    "text": "The PA cost display\n\nYou’ll need to use PA for this\nNot aware of other tools\nActively working on it, so let me know your feedback!\n\n\nMy views on cost-benefit have changed\n\nI used to think that anthropic was worth the additional cost.\nBut the relative cost has increased and output quality has decreased (code is still fine, but the sheer quantity of AI slop writing is painful)\nKimi K3 is excellent. Somewhere between Opus and Fable in quality. But much more concive. And only costs 75% of sonnet (thanks to tokenizer).\n\n\n\nAll this to say, understanding cost is important\n\nConversations are additive\nTool calls\nCache is king"
+  },
+  {
+    "objectID": "positron-ai.html#conversations-are-additive",
+    "href": "positron-ai.html#conversations-are-additive",
+    "title": "Introductions",
+    "section": "Conversations are additive",
+    "text": "Conversations are additive\n\nLLMs are predictive models\nThey need the complete history of the conversation\nBoth your inputs and its outputs\nTODO: add diagram show how this grows\nRecommendation: use /clear to start from a fresh slate\nSaves money and avoids stale state\nAgentsView"
+  },
+  {
+    "objectID": "positron-ai.html#tokenizers",
+    "href": "positron-ai.html#tokenizers",
+    "title": "Introductions",
+    "section": "Tokenizers",
+    "text": "Tokenizers\n\nBy and large, you don’t need to care about the details of going from text to the numbers that LLMs us\nBUT in [TODO: fill in model] Claude switched to a tokenizer that produces ~30% more tokens for the same input.\nSo in general, there are lots of other levers providers can pull.\nAnd you might wonder if Claude’s loquacious output is a way to raise prices.\nAssessing total cost is hard :("
+  },
+  {
+    "objectID": "positron-ai.html#cost-is-dominated-by-cache-hits",
+    "href": "positron-ai.html#cost-is-dominated-by-cache-hits",
+    "title": "Introductions",
+    "section": "Cost is dominated by cache hits",
+    "text": "Cost is dominated by cache hits\n\nNo caching = ~10x cost\nOf course it would be very slow if each time the conversation had to restart from scratch\nSo providers cache the results of the previous turn so that they can resume where they left off\nCaching price still iterating, but seems to be stabilising\n\nYou pay more to cache results: 1.25x\nCache reads are much cheaper: 0.1x\nThe conversation records explicit cache points\n\nDetails for cache length vary:\n\nClaude: 5 minutes / 1 hour (2x cost)\nOpenAI: 30 minutes\nKimiK3: no guarantees\n\nVery difficult to figure out the exact consequences of costs.\nBut if you step away from a claude session for 5 minutes, the next request might be 10x the cost. We’re working on better tools for this in PA."
+  },
+  {
+    "objectID": "positron-ai.html#your-turn",
+    "href": "positron-ai.html#your-turn",
+    "title": "Introductions",
+    "section": "Your turn",
+    "text": "Your turn"
+  },
+  {
+    "objectID": "positron-ai.html#compaction-is-no-longer-relevant",
+    "href": "positron-ai.html#compaction-is-no-longer-relevant",
+    "title": "Introductions",
+    "section": "Compaction is no longer relevant",
+    "text": "Compaction is no longer relevant\n\nIn past generations of models, with smaller context, harness would provide tools for compaction\nBasically, you ask a model (maybe the same as existing maybe) to summarise\nThe problem is you lose the advantages of caching"
+  },
+  {
+    "objectID": "positron-ai.html#agents-can-run-code-on-your-computer",
+    "href": "positron-ai.html#agents-can-run-code-on-your-computer",
+    "title": "Introductions",
+    "section": "Agents can run code on your computer",
+    "text": "Agents can run code on your computer\n\nSend tool call request; harness runs and sends results\nOften does many of these in parallel (in a single turn, not at the same time )\nThe LLM sends a bunch of requests, your harness does them sequentially, then sends a bunch of responses\nTODO: add PA screenshot showing parallel calls"
   },
   {
     "objectID": "modules/07-best-practices-feedback-loop.html",
