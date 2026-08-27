@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/01-positron-tour.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/03-agent-explainer.html">How do agents work?</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-intro.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/03-agent-explainer.html">How do agents work?</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -137,6 +137,12 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/00-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introducitons</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../modules/01-positron-tour.html" class="sidebar-item-text sidebar-link">
@@ -196,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/01-positron-tour.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/03-agent-explainer.html">How do agents work?</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-intro.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/03-agent-explainer.html">How do agents work?</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">How do agents work?</h1>
 </div>
@@ -215,9 +221,171 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>TODO</p>
+<p>Goal: * some important vocab * basic understanding of agents * help understand the costs</p>
+<p>In principle, you could develop your own. There are a lot of details, but it’s surprisingly straighforward to implement a prototype.</p>
+<p>TODO: publish my ellmer agent code.</p>
+<section id="important-vocab" class="level1">
+<h1>Important vocab</h1>
+<section id="what-are-you-using" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-you-using">What are you using?</h2>
+<ul>
+<li>Harness: provides tools; r/uns the loop</li>
+<li>Provider: who hosts the model. open models can be hosted anywhere.</li>
+<li>Model:</li>
+</ul>
+<p>e.g.</p>
+<p>Kimi K3 (model) on posit.ai (provider) with Posit Assitant (harness). Opus 5 (model) from claude (provider) in Claude Code (harness) Opus 5 (model) from posit.ai (provider) in Claude code (harness)</p>
+</section>
+<section id="whats-happening" class="level2">
+<h2 class="anchored" data-anchor-id="whats-happening">What’s happening?</h2>
+<ul>
+<li>Tool call:</li>
+<li>Agent: what you get from using the harness; semi-autonomous</li>
+</ul>
+</section>
+</section>
+<section id="what-does-a-coding-harness-do" class="level1">
+<h1>What does a coding harness do?</h1>
+<ul>
+<li>Detailed system prompt</li>
+<li>Finds skills</li>
+<li>Useful tools</li>
+<li>Memory</li>
+<li>Slash commands</li>
+</ul>
+</section>
+<section id="token-costs" class="level1">
+<h1>Token costs</h1>
+<section id="life-is-good-for-individual-developers" class="level2">
+<h2 class="anchored" data-anchor-id="life-is-good-for-individual-developers">Life is good for individual developers</h2>
+<ul>
+<li>Individuals can use an all-you-can-eat plan
+<ul>
+<li>Codex: $20 / month, $100 / month</li>
+<li>Claude Code: $20 / month, $100 / month</li>
+</ul></li>
+<li>These are very generous; you get 20-80x what the API costs</li>
+<li>BUT you can only use in provider harnesses</li>
+<li>(So you can’t use claude code subscription with PA :sad-face:)</li>
+</ul>
+</section>
+<section id="enterprise-plans-are-different" class="level2">
+<h2 class="anchored" data-anchor-id="enterprise-plans-are-different">Enterprise plans are different</h2>
+<ul>
+<li><p>Enterprises have to pay by the million tokens</p>
+<ul>
+<li>Opus 5: $5 input, $25 output</li>
+<li>gpt-5.6-terra: $2 input, $12 output</li>
+<li>Kimi K3: $3 input, $15 output</li>
+</ul></li>
+<li><p>(This is also what you pay in ellmer)</p></li>
+<li><p>TODO: add some examples of costs to help calibrate</p></li>
+</ul>
+</section>
+<section id="why-care" class="level2">
+<h2 class="anchored" data-anchor-id="why-care">Why care?</h2>
+<ul>
+<li><p>At least in the short-term this is really important for organisations, and I think data scientists and engineers need to understand where they’re spending money.</p></li>
+<li><p>Two tools:</p>
+<ul>
+<li>Posit Assistant</li>
+<li>AgentsView</li>
+</ul></li>
+<li><p>In both cases these are best-efforts to compute cost. Model providers don’t make this easy!</p></li>
+<li><p>Skills (which we’ll come back to later are a good way to increase token efficiency)</p></li>
+</ul>
+</section>
+</section>
+<section id="the-pa-cost-display" class="level1">
+<h1>The PA cost display</h1>
+<ul>
+<li>You’ll need to use PA for this</li>
+<li>Not aware of other tools</li>
+<li>Actively working on it, so let me know your feedback!</li>
+</ul>
+<section id="my-views-on-cost-benefit-have-changed" class="level2">
+<h2 class="anchored" data-anchor-id="my-views-on-cost-benefit-have-changed">My views on cost-benefit have changed</h2>
+<ul>
+<li>I used to think that Anthropic was worth the additional cost.</li>
+<li>But the relative cost has increased and output quality has decreased (code is still fine, but the sheer quantity of AI slop writing is painful)</li>
+<li>Kimi K3 is excellent. Somewhere between Opus and Fable in quality. But much more concive. And only costs 75% of sonnet (thanks to tokenizer).</li>
+</ul>
+</section>
+<section id="all-this-to-say-understanding-cost-is-important" class="level2">
+<h2 class="anchored" data-anchor-id="all-this-to-say-understanding-cost-is-important">All this to say, understanding cost is important</h2>
+<ol type="1">
+<li>Conversations are additive</li>
+<li>Tool calls</li>
+<li>Cache is king</li>
+</ol>
+</section>
+<section id="conversations-are-additive" class="level2">
+<h2 class="anchored" data-anchor-id="conversations-are-additive">Conversations are additive</h2>
+<ul>
+<li><p>LLMs are predictive models</p></li>
+<li><p>They need the <em>complete history</em> of the conversation</p></li>
+<li><p>Both your inputs and its outputs</p></li>
+<li><p>TODO: add diagram show how this grows</p></li>
+<li><p>Recommendation: use <code>/clear</code> to start from a fresh slate</p></li>
+<li><p>Saves money and avoids stale state</p></li>
+<li><p>AgentsView</p></li>
+</ul>
+</section>
+<section id="tokenizers" class="level2">
+<h2 class="anchored" data-anchor-id="tokenizers">Tokenizers</h2>
+<ul>
+<li>By and large, you don’t need to care about the details of going from text to the numbers that LLMs us</li>
+<li>BUT in [TODO: fill in model] Claude switched to a tokenizer that produces ~30% more tokens for the same input.</li>
+<li>So in general, there are lots of other levers providers can pull.</li>
+<li>And you might wonder if Claude’s loquacious output is a way to raise prices.</li>
+<li>Assessing total cost is hard :(</li>
+</ul>
+</section>
+<section id="cost-is-dominated-by-cache-hits" class="level2">
+<h2 class="anchored" data-anchor-id="cost-is-dominated-by-cache-hits">Cost is dominated by cache hits</h2>
+<ul>
+<li><p>No caching = ~10x cost</p></li>
+<li><p>Of course it would be very slow if each time the conversation had to restart from scratch</p></li>
+<li><p>So providers cache the results of the previous turn so that they can resume where they left off</p></li>
+<li><p>Caching price still iterating, but seems to be stabilising</p>
+<ul>
+<li>You pay more to cache results: 1.25x</li>
+<li>Cache reads are much cheaper: 0.1x</li>
+<li>The conversation records explicit cache points</li>
+</ul></li>
+<li><p>Details for cache length vary:</p>
+<ul>
+<li>Claude: 5 minutes / 1 hour (2x cost)</li>
+<li>OpenAI: 30 minutes</li>
+<li>KimiK3: no guarantees</li>
+</ul></li>
+<li><p>Very difficult to figure out the exact consequences of costs.</p></li>
+<li><p>But if you step away from a claude session for 5 minutes, the next request might be 10x the cost. We’re working on better tools for this in PA.</p></li>
+</ul>
+</section>
+<section id="your-turn" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn">Your turn</h2>
+</section>
+<section id="compaction-is-no-longer-relevant" class="level2">
+<h2 class="anchored" data-anchor-id="compaction-is-no-longer-relevant">Compaction is no longer relevant</h2>
+<ul>
+<li>In past generations of models, with smaller context, harness would provide tools for compaction</li>
+<li>Basically, you ask a model (maybe the same as existing maybe) to summarise</li>
+<li>The problem is you lose the advantages of caching</li>
+</ul>
+</section>
+<section id="agents-can-run-code-on-your-computer" class="level2">
+<h2 class="anchored" data-anchor-id="agents-can-run-code-on-your-computer">Agents can run code on your computer</h2>
+<ul>
+<li>Send tool call request; harness runs and sends results</li>
+<li>Often does many of these in parallel (in a single turn, not at the same time )</li>
+<li>The LLM sends a bunch of requests, your harness does them sequentially, then sends a bunch of responses</li>
+<li>TODO: add PA screenshot showing parallel calls</li>
+</ul>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/01-positron-tour.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/04-whole-game.html">The whole game</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-intro.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/04-whole-game.html">The whole game</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -137,6 +137,12 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/00-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introducitons</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../modules/01-positron-tour.html" class="sidebar-item-text sidebar-link">
@@ -196,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/01-positron-tour.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/04-whole-game.html">The whole game</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-intro.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/04-whole-game.html">The whole game</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">The whole game</h1>
 </div>
@@ -215,9 +221,70 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>TODO</p>
+<section id="your-turn" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn">Your turn</h2>
+<ul>
+<li><code>usethis::create_package()</code></li>
+<li><code>use_tidy_agents()</code></li>
+<li>What does <code>AGENTS.md</code> contain?</li>
+</ul>
+</section>
+<section id="basic-workflows" class="level2">
+<h2 class="anchored" data-anchor-id="basic-workflows">Basic workflows</h2>
+<ul>
+<li>Implement it.</li>
+<li>Plan it, then implement it.</li>
+<li>Plan it, review the plan, implement it, review the implementation.</li>
+<li>Design it, then repeat cycles above.</li>
+</ul>
+<p>(An ounce of prevention is worth a pound of cure.)</p>
+</section>
+<section id="workflow-lore" class="level2">
+<h2 class="anchored" data-anchor-id="workflow-lore">Workflow lore</h2>
+<ul>
+<li>Claude (esp.&nbsp;Fable/Opus) best at planning</li>
+<li>Codex best at reviewing</li>
+<li>Cheap models fine for implementing</li>
+</ul>
+</section>
+<section id="example-workflow-for-low-stakes-task" class="level2">
+<h2 class="anchored" data-anchor-id="example-workflow-for-low-stakes-task">Example workflow for low-stakes task</h2>
+<blockquote class="blockquote">
+<p>Fix https://github.com/r-lib/testthat/issues/2344</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Fix https://github.com/r-lib/testthat/issues/2317</p>
+</blockquote>
+</section>
+<section id="example-workflow-for-higher-stakes-task" class="level2">
+<h2 class="anchored" data-anchor-id="example-workflow-for-higher-stakes-task">Example workflow for higher-stakes task</h2>
+<blockquote class="blockquote">
+<p>Read https://github.com/r-lib/testthat/issues/2334. Construct a minimal reprex, and briefly outline a plan to fix the problem.</p>
+</blockquote>
+</section>
+<section id="example-workflow-for-high-stake-task" class="level2">
+<h2 class="anchored" data-anchor-id="example-workflow-for-high-stake-task">Example workflow for high-stake task</h2>
+<ol type="1">
+<li>Plan it with Fable</li>
+<li>Read the plan and iterate</li>
+<li>Review the plan with codex. Copy and paste feedback to back to fable.</li>
+<li>Implement with sonnet</li>
+<li>Review the implementation with codex</li>
+</ol>
+<blockquote class="blockquote">
+<p>https://github.com/r-lib/testthat/issues/2328</p>
+</blockquote>
+</section>
+<section id="basic-advice" class="level2">
+<h2 class="anchored" data-anchor-id="basic-advice">Basic advice</h2>
+<ul>
+<li>At least in the beginning, pay attention to what it’s doing.</li>
+<li>Can be useful to intervene when it’s getting off track.</li>
+<li>Can also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out.</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

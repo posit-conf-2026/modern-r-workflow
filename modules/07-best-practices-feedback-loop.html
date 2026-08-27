@@ -77,7 +77,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta property="og:title" content="Best practices feedback loop – Modern R Workflow (ft. Positron and AI)">
-<meta property="og:description" content="A one day workshop at posit::conf(2026) on modern R development practices, AI-assisted coding, and Positron.">
 <meta property="og:site_name" content="Modern R Workflow (ft. Positron and AI)">
 </head>
 
@@ -90,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/01-positron-tour.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/07-best-practices-feedback-loop.html">Best practices feedback loop</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-intro.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/07-best-practices-feedback-loop.html">Best practices feedback loop</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -137,6 +136,12 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/00-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introducitons</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../modules/01-positron-tour.html" class="sidebar-item-text sidebar-link">
@@ -196,7 +201,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/01-positron-tour.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/07-best-practices-feedback-loop.html">Best practices feedback loop</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-intro.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/07-best-practices-feedback-loop.html">Best practices feedback loop</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Best practices feedback loop</h1>
 </div>
@@ -215,9 +220,146 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>TODO</p>
+<ul>
+<li>LLMs amplify best practices, and make them more achievable</li>
+<li>Virtuous cycle: where as you improve tests and docs, it makes it easier for agents to work with your package.</li>
+<li>Really good news for non-professional developers</li>
+<li>You can do as you go, but also useful to batch up as part of regular upkeep</li>
+</ul>
+<section id="code-style" class="level1">
+<h1>Code style</h1>
+<section id="just-use-air" class="level2">
+<h2 class="anchored" data-anchor-id="just-use-air">Just use air</h2>
+<ul>
+<li>No longer worth manually enforcing a coding style</li>
+<li>Just use <code>air</code></li>
+<li>Get started with <code>usethis::use_air()</code> + <code>Air: format workspace file</code>.</li>
+<li>(If you’re using the Claude Code extension, it won’t know where to find the <code>air</code> binary. You can tell that it’s bundled in )</li>
+</ul>
+</section>
+<section id="beware-excessive-comments" class="level2">
+<h2 class="anchored" data-anchor-id="beware-excessive-comments">Beware excessive comments</h2>
+<ul>
+<li><p>Agents (esp.&nbsp;Claude) LOVE to write wordy comments</p></li>
+<li><p>Sometimes the comments are useful; often they are not</p></li>
+<li><p>Code-comment mismatch more dangerous with agents</p></li>
+<li><p>Comments should explain the why</p></li>
+<li><p>Comments shouldn’t need to explain the what</p></li>
+<li><p>Comments shouldn’t explain how we got here</p></li>
+<li><p>I’ve had relatively little success prompting this behaviour away</p></li>
+<li><p>Better luck with prompt to remove</p></li>
+</ul>
+</section>
+</section>
+<section id="unit-testing" class="level1">
+<h1>Unit testing</h1>
+<section id="agents-love-to-write-tests" class="level2">
+<h2 class="anchored" data-anchor-id="agents-love-to-write-tests">Agents love to write tests</h2>
+<ul>
+<li>Generally don’t need to explicitly ask for them</li>
+<li>(Assuming you have tests already set up e.g.&nbsp;with <code>use_testthat()</code>)</li>
+<li>Explicitly request code coverage</li>
+<li>May want to explicitly request TDD (i.e.&nbsp;write the test first)</li>
+</ul>
+</section>
+<section id="your-job-is-to" class="level2">
+<h2 class="anchored" data-anchor-id="your-job-is-to">Your job is to:</h2>
+<ul>
+<li>Keep them well organised
+<ul>
+<li>“Tests for R/{foo}.R should live in tests/testhat/test-{foo}.R”</li>
+</ul></li>
+<li>Keep them fast
+<ul>
+<li>“Parallelise these tests”</li>
+<li>“Use SlowReporter and speed up the slowest tests”</li>
+<li>“Compare coverage before and after”</li>
+</ul></li>
+<li>Keep them minimal
+<ul>
+<li>“Carefully consider the tests”</li>
+</ul></li>
+<li>All these tasks are faciliated by relatively fine grained R and test files</li>
+<li>You can ask the agent to refactor</li>
+</ul>
+</section>
+<section id="test-coverage" class="level2">
+<h2 class="anchored" data-anchor-id="test-coverage">Test coverage</h2>
+<ul>
+<li>Previously 100% test coverage was not worth it.</li>
+<li>Probably worth reconsidering now.</li>
+</ul>
+</section>
+<section id="test-maintenance" class="level2">
+<h2 class="anchored" data-anchor-id="test-maintenance">Test maintenance</h2>
+<ul>
+<li>Worth asking to minimise tests, to group related tests together</li>
+<li>Make sure</li>
+</ul>
+</section>
+</section>
+<section id="documentation" class="level1">
+<h1>Documentation</h1>
+<ul>
+<li>Reserve <code>AGENTS.md</code> for agents only</li>
+<li>Use <code>README.md</code> for humans + agents</li>
+<li>If you want people to take your package seriously, worth spending human time on your README and vignettes.</li>
+<li>IMO Kimi is a better writer than Claude, but still plenty of LLMism</li>
+</ul>
+</section>
+<section id="performance" class="level1">
+<h1>Performance</h1>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<ul>
+<li>LLMs are very good at improving the performance of code.</li>
+<li>They are better than me at reading the results of <code>RProf()</code>.</li>
+<li>They are better than me at writing C/C++ code.</li>
+<li>They are not very good at experimental design.</li>
+<li>They are not very good at managing complexity/performance tradeoffs.</li>
+</ul>
+</section>
+<section id="prompting" class="level2">
+<h2 class="anchored" data-anchor-id="prompting">Prompting</h2>
+<ul>
+<li>“Make XXX faster”</li>
+<li>Make sure it’s well tested first</li>
+<li>Ensure it records its work</li>
+<li>Request both microbenchmarks and meaningful user actions</li>
+<li>Pay attention to what it’s doing</li>
+</ul>
+</section>
+<section id="cc" class="level2">
+<h2 class="anchored" data-anchor-id="cc">C/C++</h2>
+<ul>
+<li>Previously C++ (via Rcpp/cpp11) had good balance of effort vs.&nbsp;results</li>
+<li>Now for small amounts of compiled code, pure C has no dependencies and LLMs are good at writing it.</li>
+<li>You will need to give it hints as to latest C API.</li>
+</ul>
+</section>
+</section>
+<section id="cicd" class="level1">
+<h1>CI/CD</h1>
+<ul>
+<li>Agents know more about writing GitHub actions than I do.</li>
+<li><code>use_github_action()</code> for common stuff</li>
+<li>Use agents for anything custom</li>
+<li>Agents are also great at fixing problems thus revealed</li>
+</ul>
+</section>
+<section id="contributing-upstream" class="level1">
+<h1>Contributing upstream</h1>
+<ul>
+<li>You can now use these skills to fix problems upstream that might have previously been out of reach.</li>
+<li>The primary drawback of this is maintainer overload</li>
+<li>Your job is to bring your human judgement and expertise into play.</li>
+<li>Be upfront about AI usage.</li>
+<li>Spend human time on communication.</li>
+<li>Don’t be a meat proxy.</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
