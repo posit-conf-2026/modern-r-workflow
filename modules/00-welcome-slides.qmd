@@ -86,6 +86,7 @@ If you haven't already, now's a good time to install Positron, or check that you
 Sign up for Posit AI so you're ready to use Posit Assistant during the workshop.
 
 -   Sign up: <https://posit.ai>
+-   Make sure to use the same email address as you used to register for conf
 
 ## Check your R setup
 
@@ -111,15 +112,20 @@ Let's make sure everyone's R installation is ready to go.
     devtools::dev_sitrep()
     ```
 
+<!-- HW: do we want to mention air, rig, and quarto here? -->
+
+## Overall
+
+* More changes in the last year than last 10 years combined, and doesn't look like the pace is going to slow down.
+* Changes the cost-benefit ratio for many activities
+* We are still figuring out what it all means
+* Keep exploring and reading; hold loosely to your hypthoeses.
+
 ## The good news
 
 On the whole you're well positioned to benefit from AI:
 
 * Plain text workflows are equally accessible to humans and agents.
 * Baseline scepticism will serve you well (but don't let it imprison you).
+* Human knowledge still super important!
 * Subject matter expertise now more important that programming skill.
-
-## Overall
-
-* Changes the cost-benefit ratio for many activities
-* We are still figuring out what this means
