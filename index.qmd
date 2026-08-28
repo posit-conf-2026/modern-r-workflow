@@ -13,6 +13,7 @@ Please check the [Setup Instructions](setup.qmd) for recommended steps to take b
 
 | Time          | Activity                                                                                            |
 | :------------ | :--------------------------------------------------------------------------------------------------- |
+| 09:00 | [Welcome](modules/00-welcome.qmd)                                                                    |
 | 09:00 - 10:30 | [Positron tour](modules/01-positron-tour.qmd)<br>[Intro to Posit Assistant](modules/02-posit-assistant-intro.qmd)<br>[How do agents work?](modules/03-agent-explainer.qmd) |
 | 10:30 - 11:00 | *Coffee break*                                                                                       |
 | 11:00 - 12:30 | [How do agents work? (cont'd)](modules/03-agent-explainer.qmd)<br>[The whole game](modules/04-whole-game.qmd) |
