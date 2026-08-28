@@ -1,19 +1,13 @@
 ---
-title: "The whole game"
+title: "Workflow"
 ---
 
-General principles:
+## General principles
 
-* Never make another human read slop text.
-* Choose what to invest in (e.g. code, tests, plan).
+* You are still important and still in control!
+* Choose what to invest in (e.g. code, tests, plan)
 * Start slow and grow your confidence
-
-
-## Your turn
-
-* `usethis::create_package()`
-* `use_tidy_agents()`
-* What does `AGENTS.md` contain?
+* Never make another human read AI slop
 
 ## Basic workflows
 
@@ -55,6 +49,7 @@ General principles:
 * At least in the beginning, pay attention to what it's doing.
 * Can be useful to intervene when it's getting off track.
 * Can also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out.
+* Planning tends to lead to better results, but don't get too hung up on it.
 
 ## Git flow
 
