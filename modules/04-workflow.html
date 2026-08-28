@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The whole game – Modern R Workflow (ft. Positron and AI)</title>
+<title>Workflow – Modern R Workflow (ft. Positron and AI)</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -76,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="The whole game – Modern R Workflow (ft. Positron and AI)">
+<meta property="og:title" content="Workflow – Modern R Workflow (ft. Positron and AI)">
 <meta property="og:description" content="A one day workshop at posit::conf(2026) on modern R development practices, AI-assisted coding, and Positron.">
 <meta property="og:site_name" content="Modern R Workflow (ft. Positron and AI)">
 </head>
@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-welcome.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/04-whole-game.html">The whole game</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-welcome.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/04-workflow.html">Workflow</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -163,8 +163,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/04-whole-game.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">The whole game</span></a>
+  <a href="../modules/04-workflow.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Workflow</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -202,9 +202,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-welcome.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/04-whole-game.html">The whole game</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-welcome.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/04-workflow.html">Workflow</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">The whole game</h1>
+<h1 class="title">Workflow</h1>
 </div>
 
 
@@ -221,12 +221,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="your-turn" class="level2">
-<h2 class="anchored" data-anchor-id="your-turn">Your turn</h2>
+<section id="general-principles" class="level2">
+<h2 class="anchored" data-anchor-id="general-principles">General principles</h2>
 <ul>
-<li><code>usethis::create_package()</code></li>
-<li><code>use_tidy_agents()</code></li>
-<li>What does <code>AGENTS.md</code> contain?</li>
+<li>You are still important and still in control!</li>
+<li>Choose what to invest in (e.g.&nbsp;code, tests, plan)</li>
+<li>Start slow and grow your confidence</li>
+<li>Never make another human read AI slop</li>
 </ul>
 </section>
 <section id="basic-workflows" class="level2">
@@ -281,6 +282,16 @@ ul.task-list li input[type="checkbox"] {
 <li>At least in the beginning, pay attention to what it’s doing.</li>
 <li>Can be useful to intervene when it’s getting off track.</li>
 <li>Can also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out.</li>
+<li>Planning tends to lead to better results, but don’t get too hung up on it.</li>
+</ul>
+</section>
+<section id="git-flow" class="level2">
+<h2 class="anchored" data-anchor-id="git-flow">Git flow</h2>
+<ul>
+<li>When you get started, I think it’s worth doing all the commits yourself</li>
+<li>Then, tell it when you’re ready to commit</li>
+<li>Then, tell it what strategy to use</li>
+<li>Then, let it make the whole PR (assuming you don’t automatically inflict slop text on humans)</li>
 </ul>
 
 

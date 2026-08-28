@@ -331,7 +331,7 @@
     "href": "index.html#schedule",
     "title": "Modern R Workflow (ft. Positron and AI)",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\nTime\nActivity\n\n\n\n\n09:00\nWelcome\n\n\n09:00 - 10:30\nPositron tourIntro to Posit AssistantHow do agents work?\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nHow do agents work? (cont’d)The whole game\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nR CMD checkSkills and AGENTS.md\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nBest practices feedback loopHelping yourself",
+    "text": "Schedule\n\n\n\nTime\nActivity\n\n\n\n\n09:00\nWelcome\n\n\n09:00 - 10:30\nPositron tourIntro to Posit AssistantHow do agents work?\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nHow do agents work? (cont’d)Workflow\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nR CMD checkSkills and AGENTS.md\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nBest practices feedback loopHelping yourself",
     "crumbs": [
       "Home"
     ]
@@ -379,91 +379,102 @@
     ]
   },
   {
-    "objectID": "modules/04-whole-game.html",
-    "href": "modules/04-whole-game.html",
-    "title": "The whole game",
+    "objectID": "modules/04-workflow.html",
+    "href": "modules/04-workflow.html",
+    "title": "Workflow",
     "section": "",
-    "text": "usethis::create_package()\nuse_tidy_agents()\nWhat does AGENTS.md contain?",
+    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, plan)\nStart slow and grow your confidence\nNever make another human read AI slop",
     "crumbs": [
       "Modules",
-      "The whole game"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/04-whole-game.html#your-turn",
-    "href": "modules/04-whole-game.html#your-turn",
-    "title": "The whole game",
+    "objectID": "modules/04-workflow.html#general-principles",
+    "href": "modules/04-workflow.html#general-principles",
+    "title": "Workflow",
     "section": "",
-    "text": "usethis::create_package()\nuse_tidy_agents()\nWhat does AGENTS.md contain?",
+    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, plan)\nStart slow and grow your confidence\nNever make another human read AI slop",
     "crumbs": [
       "Modules",
-      "The whole game"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/04-whole-game.html#basic-workflows",
-    "href": "modules/04-whole-game.html#basic-workflows",
-    "title": "The whole game",
+    "objectID": "modules/04-workflow.html#basic-workflows",
+    "href": "modules/04-workflow.html#basic-workflows",
+    "title": "Workflow",
     "section": "Basic workflows",
     "text": "Basic workflows\n\nImplement it.\nPlan it, then implement it.\nPlan it, review the plan, implement it, review the implementation.\nDesign it, then repeat cycles above.\n\n(An ounce of prevention is worth a pound of cure.)",
     "crumbs": [
       "Modules",
-      "The whole game"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/04-whole-game.html#workflow-lore",
-    "href": "modules/04-whole-game.html#workflow-lore",
-    "title": "The whole game",
+    "objectID": "modules/04-workflow.html#workflow-lore",
+    "href": "modules/04-workflow.html#workflow-lore",
+    "title": "Workflow",
     "section": "Workflow lore",
     "text": "Workflow lore\n\nClaude (esp. Fable/Opus) best at planning\nCodex best at reviewing\nCheap models fine for implementing",
     "crumbs": [
       "Modules",
-      "The whole game"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/04-whole-game.html#example-workflow-for-low-stakes-task",
-    "href": "modules/04-whole-game.html#example-workflow-for-low-stakes-task",
-    "title": "The whole game",
+    "objectID": "modules/04-workflow.html#example-workflow-for-low-stakes-task",
+    "href": "modules/04-workflow.html#example-workflow-for-low-stakes-task",
+    "title": "Workflow",
     "section": "Example workflow for low-stakes task",
     "text": "Example workflow for low-stakes task\n\nFix https://github.com/r-lib/testthat/issues/2344\n\n\nFix https://github.com/r-lib/testthat/issues/2317",
     "crumbs": [
       "Modules",
-      "The whole game"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/04-whole-game.html#example-workflow-for-higher-stakes-task",
-    "href": "modules/04-whole-game.html#example-workflow-for-higher-stakes-task",
-    "title": "The whole game",
+    "objectID": "modules/04-workflow.html#example-workflow-for-higher-stakes-task",
+    "href": "modules/04-workflow.html#example-workflow-for-higher-stakes-task",
+    "title": "Workflow",
     "section": "Example workflow for higher-stakes task",
     "text": "Example workflow for higher-stakes task\n\nRead https://github.com/r-lib/testthat/issues/2334. Construct a minimal reprex, and briefly outline a plan to fix the problem.",
     "crumbs": [
       "Modules",
-      "The whole game"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/04-whole-game.html#example-workflow-for-high-stake-task",
-    "href": "modules/04-whole-game.html#example-workflow-for-high-stake-task",
-    "title": "The whole game",
+    "objectID": "modules/04-workflow.html#example-workflow-for-high-stake-task",
+    "href": "modules/04-workflow.html#example-workflow-for-high-stake-task",
+    "title": "Workflow",
     "section": "Example workflow for high-stake task",
     "text": "Example workflow for high-stake task\n\nPlan it with Fable\nRead the plan and iterate\nReview the plan with codex. Copy and paste feedback to back to fable.\nImplement with sonnet\nReview the implementation with codex\n\n\nhttps://github.com/r-lib/testthat/issues/2328",
     "crumbs": [
       "Modules",
-      "The whole game"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/04-whole-game.html#basic-advice",
-    "href": "modules/04-whole-game.html#basic-advice",
-    "title": "The whole game",
+    "objectID": "modules/04-workflow.html#basic-advice",
+    "href": "modules/04-workflow.html#basic-advice",
+    "title": "Workflow",
     "section": "Basic advice",
-    "text": "Basic advice\n\nAt least in the beginning, pay attention to what it’s doing.\nCan be useful to intervene when it’s getting off track.\nCan also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out.",
+    "text": "Basic advice\n\nAt least in the beginning, pay attention to what it’s doing.\nCan be useful to intervene when it’s getting off track.\nCan also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out.\nPlanning tends to lead to better results, but don’t get too hung up on it.",
     "crumbs": [
       "Modules",
-      "The whole game"
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/04-workflow.html#git-flow",
+    "href": "modules/04-workflow.html#git-flow",
+    "title": "Workflow",
+    "section": "Git flow",
+    "text": "Git flow\n\nWhen you get started, I think it’s worth doing all the commits yourself\nThen, tell it when you’re ready to commit\nThen, tell it what strategy to use\nThen, let it make the whole PR (assuming you don’t automatically inflict slop text on humans)",
+    "crumbs": [
+      "Modules",
+      "Workflow"
     ]
   },
   {
