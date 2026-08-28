@@ -2,6 +2,13 @@
 title: "The whole game"
 ---
 
+General principles:
+
+* Never make another human read slop text.
+* Choose what to invest in (e.g. code, tests, plan).
+* Start slow and grow your confidence
+
+
 ## Your turn
 
 * `usethis::create_package()`
@@ -48,3 +55,10 @@ title: "The whole game"
 * At least in the beginning, pay attention to what it's doing.
 * Can be useful to intervene when it's getting off track.
 * Can also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out.
+
+## Git flow
+
+* When you get started, I think it's worth doing all the commits yourself
+* Then, tell it when you're ready to commit
+* Then, tell it what strategy to use
+* Then, let it make the whole PR (assuming you don't automatically inflict slop text on humans)
