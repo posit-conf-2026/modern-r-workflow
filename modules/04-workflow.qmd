@@ -1,6 +1,6 @@
 ---
 title: "Workflow"
-duration: 45
+duration: 90
 deliverer: Hadley
 ---
 
@@ -10,6 +10,13 @@ deliverer: Hadley
 * Choose what to invest in (e.g. code, tests, planning, design, docs)
 * Start slow and grow your confidence
 * Never make another human read AI slop
+
+### R workflow
+
+* Write code
+* Write tests
+* Iterate until they pass
+* R CMD check at the end
 
 ## Basic workflows
 
@@ -87,3 +94,12 @@ Fine to dump a stream of consciousness and let the agent figure it out. I think 
 1. Review the implementation with Codex
 
 > https://github.com/r-lib/testthat/issues/2328
+
+## Your turn (big)
+
+* stringb
+
+# `R CMD check`
+
+* Regular
+* First submission
