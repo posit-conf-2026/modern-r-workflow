@@ -70,8 +70,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../modules/04-workflow.html" rel="next">
-<link href="../modules/02-posit-assistant-intro.html" rel="prev">
+<link href="../modules/05-workflow.html" rel="next">
+<link href="../modules/03-posit-assistant-intro.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -128,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-welcome.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/03-agent-explainer.html">How do agents work?</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-welcome.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/04-agent-explainer.html">How do agents work?</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -183,25 +183,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/01-positron-tour.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/01-helping-yourself.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Helping yourself</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/02-positron-tour.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Positron tour</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/02-posit-assistant-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/03-posit-assistant-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Intro to Posit Assistant</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/03-agent-explainer.html" class="sidebar-item-text sidebar-link active">
+  <a href="../modules/04-agent-explainer.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">How do agents work?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/04-workflow.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/05-workflow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Workflow</span></a>
   </div>
 </li>
@@ -217,12 +223,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Best practices feedback loop</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../modules/08-helping-yourself.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Helping yourself</span></a>
-  </div>
-</li>
       </ul>
   </li>
     </ul>
@@ -234,7 +234,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-welcome.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/03-agent-explainer.html">How do agents work?</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-welcome.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/04-agent-explainer.html">How do agents work?</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">How do agents work?</h1>
 </div>
@@ -358,28 +358,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="auto-mode">Auto-mode</h2>
 </section>
 </section>
-<section id="important-vocab" class="level1">
-<h1>Important vocab</h1>
-<section id="whats-happening" class="level2">
-<h2 class="anchored" data-anchor-id="whats-happening">What’s happening?</h2>
-<ul>
-<li>Tool call:</li>
-<li>Agent: what you get from using the harness; semi-autonomous</li>
-</ul>
-</section>
-</section>
-<section id="what-does-a-coding-harness-do" class="level1">
-<h1>What does a coding harness do?</h1>
-<ul>
-<li>Detailed system prompt</li>
-<li>Finds skills</li>
-<li>Useful tools</li>
-<li>Memory</li>
-<li>Slash commands</li>
-</ul>
-</section>
-<section id="token-costs" class="level1">
-<h1>Token costs</h1>
+<section id="costs" class="level1">
+<h1>Costs</h1>
 <section id="life-is-good-for-individual-developers" class="level2">
 <h2 class="anchored" data-anchor-id="life-is-good-for-individual-developers">Life is good for individual developers</h2>
 <ul>
@@ -496,14 +476,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>In past generations of models, with smaller context, harness would provide tools for compaction</li>
 <li>Basically, you ask a model (maybe the same as existing maybe) to summarise</li>
 <li>The problem is you lose the advantages of caching</li>
-</ul>
-</section>
-<section id="agents-can-run-code-on-your-computer" class="level2">
-<h2 class="anchored" data-anchor-id="agents-can-run-code-on-your-computer">Agents can run code on your computer</h2>
-<ul>
-<li>Send tool call request; harness runs and sends results</li>
-<li>Often does many of these in parallel (in a single turn, not at the same time )</li>
-<li>The LLM sends a bunch of requests, your harness does them sequentially, then sends a bunch of responses</li>
 </ul>
 
 
@@ -913,12 +885,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../modules/02-posit-assistant-intro.html" class="pagination-link" aria-label="Intro to Posit Assistant">
+      <a href="../modules/03-posit-assistant-intro.html" class="pagination-link" aria-label="Intro to Posit Assistant">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Intro to Posit Assistant</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../modules/04-workflow.html" class="pagination-link" aria-label="Workflow">
+      <a href="../modules/05-workflow.html" class="pagination-link" aria-label="Workflow">
         <span class="nav-page-text">Workflow</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

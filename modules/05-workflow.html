@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Positron tour – Modern R Workflow (ft. Positron and AI)</title>
+<title>Workflow – Modern R Workflow (ft. Positron and AI)</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -35,8 +35,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../modules/02-posit-assistant-intro.html" rel="next">
-<link href="../modules/00-welcome-slides.html" rel="prev">
+<link href="../modules/06-agent-instructions.html" rel="next">
+<link href="../modules/04-agent-explainer.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -76,8 +76,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Positron tour – Modern R Workflow (ft. Positron and AI)">
-<meta property="og:description" content="A one day workshop at posit::conf(2026) on modern R development practices, AI-assisted coding, and Positron.">
+<meta property="og:title" content="Workflow – Modern R Workflow (ft. Positron and AI)">
 <meta property="og:site_name" content="Modern R Workflow (ft. Positron and AI)">
 </head>
 
@@ -90,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-welcome.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/01-positron-tour.html">Positron tour</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-welcome.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/05-workflow.html">Workflow</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -145,25 +144,31 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/01-positron-tour.html" class="sidebar-item-text sidebar-link active">
+  <a href="../modules/01-helping-yourself.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Helping yourself</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/02-positron-tour.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Positron tour</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/02-posit-assistant-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/03-posit-assistant-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Intro to Posit Assistant</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/03-agent-explainer.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/04-agent-explainer.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">How do agents work?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/04-workflow.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/05-workflow.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Workflow</span></a>
   </div>
 </li>
@@ -179,12 +184,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Best practices feedback loop</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../modules/08-helping-yourself.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Helping yourself</span></a>
-  </div>
-</li>
       </ul>
   </li>
     </ul>
@@ -196,9 +195,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-welcome.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/01-positron-tour.html">Positron tour</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-welcome.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/05-workflow.html">Workflow</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Positron tour</h1>
+<h1 class="title">Workflow</h1>
 </div>
 
 
@@ -215,9 +214,136 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>TODO</p>
+<section id="general-principles" class="level2">
+<h2 class="anchored" data-anchor-id="general-principles">General principles</h2>
+<ul>
+<li>You are still important and still in control!</li>
+<li>Choose what to invest in (e.g.&nbsp;code, tests, planning, design, docs)</li>
+<li>Start slow and grow your confidence</li>
+<li>Never make another human read AI slop</li>
+</ul>
+<section id="r-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="r-workflow">R workflow</h3>
+<ul>
+<li>Write code</li>
+<li>Write tests</li>
+<li>Iterate until they pass</li>
+<li>R CMD check at the end</li>
+</ul>
+</section>
+</section>
+<section id="basic-workflows" class="level2">
+<h2 class="anchored" data-anchor-id="basic-workflows">Basic workflows</h2>
+<!-- TODO: make a diagram for this -->
+<ul>
+<li>Implement it</li>
+<li>Plan it, then implement it</li>
+<li>Plan it, review the plan, implement it, review the implementation</li>
+<li>Design it, then repeat cycles above</li>
+</ul>
+</section>
+<section id="low-stakes-tasks" class="level1">
+<h1>Low-stakes tasks</h1>
+<section id="example-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="example-workflow">Example workflow</h2>
+<blockquote class="blockquote">
+<p>Fix https://github.com/r-lib/testthat/issues/2344</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Fix https://github.com/r-lib/testthat/issues/2317</p>
+</blockquote>
+</section>
+<section id="basic-advice" class="level2">
+<h2 class="anchored" data-anchor-id="basic-advice">Basic advice</h2>
+<ul>
+<li>When you get started, pay attention to what it’s doing</li>
+<li>Can be useful to intervene when it’s getting off track.</li>
+<li>Can also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out</li>
+</ul>
+</section>
+<section id="git-flow" class="level2">
+<h2 class="anchored" data-anchor-id="git-flow">Git flow</h2>
+<ul>
+<li>When you get started, I think it’s worth doing all the commits yourself</li>
+<li>Then, tell it when to commit</li>
+<li>Then, it let it commit by itself</li>
+<li>Then, let it make the whole PR</li>
+<li>(But NEVER EVER inflect Claude’s writing on another human.)</li>
+</ul>
+</section>
+</section>
+<section id="medium-stakes-tasks" class="level1">
+<h1>Medium-stakes tasks</h1>
+<blockquote class="blockquote">
+<p>An ounce of prevention is worth a pound of cure</p>
+</blockquote>
+<section id="now-its-time-to-make-a-plan" class="level2">
+<h2 class="anchored" data-anchor-id="now-its-time-to-make-a-plan">Now it’s time to make a plan</h2>
+<ul>
+<li>Planning tends to lead to better results, but don’t get hung up on it</li>
+<li>Always ask for a markdown file that you can read and edit</li>
+<li>Three options for where to put this:
+<ul>
+<li>Ephemeral</li>
+<li>Persistent, outside of git</li>
+<li>Checked in</li>
+</ul></li>
+</ul>
+</section>
+<section id="example-workflow-1" class="level2">
+<h2 class="anchored" data-anchor-id="example-workflow-1">Example workflow</h2>
+<blockquote class="blockquote">
+<p>Read https://github.com/r-lib/testthat/issues/2334. Construct a minimal reprex, then write a brief plan for fixing the problem. Save your plan in plan.md.</p>
+</blockquote>
+<p>… read and review the plan …</p>
+<blockquote class="blockquote">
+<p>Execute the plan</p>
+</blockquote>
+</section>
+<section id="example-workflow-voice" class="level2">
+<h2 class="anchored" data-anchor-id="example-workflow-voice">Example workflow (voice)</h2>
+<p>Fine to dump a stream of consciousness and let the agent figure it out. I think it’s good to ask for a plan just to check it’s clear what you actually want.</p>
+</section>
+</section>
+<section id="high-stakes-tasks" class="level1">
+<h1>High-stakes tasks</h1>
+<section id="workflow-lore" class="level2">
+<h2 class="anchored" data-anchor-id="workflow-lore">Workflow lore</h2>
+<ul>
+<li>Claude (esp.&nbsp;Fable/Opus) best at planning</li>
+<li>Codex best at reviewing</li>
+<li>Cheap models fine for implementing</li>
+</ul>
+</section>
+<section id="example-workflow-2" class="level2">
+<h2 class="anchored" data-anchor-id="example-workflow-2">Example workflow</h2>
+<ol type="1">
+<li>Plan it with Fable (or whatever the best model you have access to is)</li>
+<li>You read and review the plan</li>
+<li>Review the plan with Codex. Copy and paste the feedback.</li>
+<li>Implement with Sonnet (or a similar cheap model)</li>
+<li>Review the implementation with Codex</li>
+</ol>
+<blockquote class="blockquote">
+<p>https://github.com/r-lib/testthat/issues/2328</p>
+</blockquote>
+</section>
+<section id="your-turn-big" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn-big">Your turn (big)</h2>
+<ul>
+<li>stringb</li>
+</ul>
+</section>
+</section>
+<section id="r-cmd-check" class="level1">
+<h1><code>R CMD check</code></h1>
+<ul>
+<li>Regular</li>
+<li>First submission</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -622,13 +748,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../modules/00-welcome-slides.html" class="pagination-link" aria-label="Welcome">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome</span>
+      <a href="../modules/04-agent-explainer.html" class="pagination-link" aria-label="How do agents work?">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">How do agents work?</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../modules/02-posit-assistant-intro.html" class="pagination-link" aria-label="Intro to Posit Assistant">
-        <span class="nav-page-text">Intro to Posit Assistant</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../modules/06-agent-instructions.html" class="pagination-link" aria-label="Skills and AGENTS.md">
+        <span class="nav-page-text">Skills and AGENTS.md</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
