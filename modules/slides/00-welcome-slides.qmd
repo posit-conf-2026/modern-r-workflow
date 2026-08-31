@@ -79,6 +79,11 @@ Then head to the workshop channel: [#workshop-modern-r-workflow](https://discord
 
 ### Introduce yourself to your neighbors 👋
 
+-   Do you have a hidden talent?
+-   Do you have a pet or hobby?
+-   What's your biggest pet peeve with R?
+-   What's your favorite thing to do in R?
+
 ## Positron
 
 <!-- FILL IN: screenshot of Positron -->
