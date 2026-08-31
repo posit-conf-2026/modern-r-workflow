@@ -28,7 +28,7 @@ usethis::create_package("~/desktop/compliment")
 
 * Use the same prompt as me. It's underspecified ask so we're going to get lots of variation. That's part of the fun!
 * Manually approve a few writes
-* Then allow all 
+* Then allow all
 * Make sure your package has tests and Git
 * How does your package differ from mine? From your neighbours?
 
@@ -36,7 +36,7 @@ usethis::create_package("~/desktop/compliment")
 
 * Text
 * Thinking (click to expand)
-* Tool calls 
+* Tool calls
 
 ## Tool calls let the agent run code on your computer
 
@@ -51,7 +51,7 @@ usethis::create_package("~/desktop/compliment")
 ## A little vocab
 
 * Harness: provides tools; runs the loop
-* Provider: who runs the server that runs the model 
+* Provider: who runs the server that runs the model
   * Open models can be hosted anywhere
   * AWS + Azure host lots of foundation models
 * Model: the specific LLM model you're using
@@ -136,7 +136,7 @@ tar -xzf backup.tar.gz -C /tmp/restore --strip-components=1 -P
 
 * I remain optimistic that it's possible to overcome these problems, but current implementations are painful.
 
-## Auto-mode 
+## Auto-mode
 
 * What if we only ask permission for operations that seem legitimately dangerous?
 * That's the idea behind auto-mode: ask a (simpler) LLM to classify if a command is dangerous or safe, and then only ask permission for dangerous options
@@ -144,10 +144,9 @@ tar -xzf backup.tar.gz -C /tmp/restore --strip-components=1 -P
 
 ## Reasoning about LLM behaviour is weird
 
-```{r}
-#| include: false
-#| eval: false
-
+<!--
+Jenny had to do this to fix build and deploy. Otherwise we need to install R, even thought there's no actually executable R code. Quarto can't tell that.
+```r
 dir.create("~/desktop/family-data")
 writeLines(letters, "~/desktop/family-data/precious-memories.txt")
 writeLines(letters, "~/desktop/family-data/bank-records.txt")
@@ -155,6 +154,8 @@ dir.create("~/desktop/junk")
 writeLines(letters, "~/desktop/junk/tmp1.txt")
 writeLines(letters, "~/desktop/junk/tmp2.txt")
 ```
+-->
+
 
 > Delete ~/desktop/family-data
 
@@ -192,7 +193,7 @@ What other potentially dangerous operations can you get Posit Assistant to do? (
 * Enterprises have to pay by the million tokens
   * Opus 5: $5 input, $25 output
   * gpt-5.6-terra: $2 input, $12 output
-  * Kimi K3: $3 input, $15 output 
+  * Kimi K3: $3 input, $15 output
 * (This is also what you pay in ellmer)
 
 * Average engineers spend $150-$250 / month, i.e. $8-12 / day
@@ -236,7 +237,7 @@ What other potentially dangerous operations can you get Posit Assistant to do? (
 ## Your turn
 
 * Look at what you've spent in previous PA conversations.
-* 
+*
 * Optional: download and install AgentsView. Where is your LLM spend going?
 
 # Posit Assistant alternatives
