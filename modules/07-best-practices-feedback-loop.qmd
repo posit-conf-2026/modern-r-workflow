@@ -135,7 +135,7 @@ deliverer: Hadley
 
 * You made a backward incompatbile change or want to help people handle deprecations?
 * Ask your agent to do it! 
-* <https://blog.davisvaughan.com/posts/2026-01-09-claude-200-pull-requests/>
+* <https://blog.davisvaughan.com/posts/2026-01-09-claude-200-pull-requests/
 
 # Upstream changes
 
