@@ -1,5 +1,7 @@
 ---
 title: "Skills and AGENTS.md"
+duration: 30
+deliverer: Hadley
 ---
 
 # `AGENTS.md`
@@ -7,20 +9,33 @@ title: "Skills and AGENTS.md"
 * So far we've used (implicitly) `AGENTS.md`.
 * What about skills?
 
+## Your turn
+
+* `use_tidy_agents()` bundles two skills
+* What are they? How do they work?
+* What's the advantage of bundling them this way?
+* What's the disadvantage?
+
 # Skills
 
 ## What is a skill?
 
-* On-demand context
-* Canonical form is ...
+* Formal definition at <https://agentskills.io/>
+* But IMO this is very overwrought
+* Two parts to a skill:
+  * When: short description that states when to use it
+  * What: longer details of how to use it
+* System prompt includes all the "when"s
+* Agent loads the "what" on demand
 
 ## Other forms of skills
 
-* Directory of markdown files
-* Quarto website with `LLMs: true`
-* R functions
-* design.tidyverse.org
+* Directory of markdown files with index/README
+* [Quarto website](https://quarto.org/docs/websites/website-llms.html) 
+  * Use `llms-text: true` 
+  * Basic idea: <https://design.tidyverse.org>
 * R documentation
+* R functions
 
 ## General advice
 
@@ -30,16 +45,27 @@ title: "Skills and AGENTS.md"
 * Relatively little benefit to using same model to both write and read
 * They don't have to be markdown files
 
-## Your turn
-
-* `use_tidy_agents()` bundles two skills
-* What are they? How do they work?
-* What's the advantage of bundling them this way?
-* What's the disadvantage?
-
 ## Our skills
 
 * PR description writer 
 * Winston's PR reviewer
 
+## Winston's simplification prompt
+
+<!-- Extracted from https://github.com/posit-dev/assistant/blob/main/.agents/skills/assistant-review/SKILL.md -->
+
+Make a deliberate pass over each non-trivial change looking for opportunities for simplification:
+
+* Could this change be achieved by deleting or restructuring instead of adding — removing a branch, mode, layer, or special case rather than bolting one on? It's always better to remove than add.
+
+* Is each new or changed interface narrow relative to what it hides — or must callers know its internals, keep duplicated logic in sync, or work around documented gaps ("does NOT handle X")?
+
+* Does anything re-implement what the codebase already provides — a bespoke helper shadowing a canonical one, logic in the wrong layer, or wrapper/cast/any churn obscuring the real contract?
+
+When you find opportunities for simplification, be clear about the pros and cons. Produce either a list of potential simplifications or "No simplifications found".
+
 ## Bundling with a package
+
+* No automated tooling yet
+* `inst/skills` is a reasonable place to put them
+* You'll need to expose in some other way

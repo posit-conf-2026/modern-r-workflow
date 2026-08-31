@@ -1,8 +1,11 @@
 ---
 title: "How do agents work?"
+duration: 60
+deliverer: Hadley
 ---
 
 Goal: 
+
 * some important vocab
 * basic understanding of agents
 * help understand the costs
@@ -11,24 +14,90 @@ In principle, you could develop your own. There are a lot of details, but it's s
 
 TODO: publish my ellmer agent code.
 
+# What is an agent?
+
+## Let's make a package
+
+(Make sure you're in normal mode)
+
+```R
+usethis::create_package("~/desktop/compliment")
+```
+
+> Create a new R package called compliment in the current directory. It should generate randomized compliments.
+
+## Your turn
+
+* Use the same prompt as me. It's underspecified ask so we're going to get lots of variation. That's part of the fun!
+* Manually approve a few writes
+* Then allow all 
+* Make sure your package has tests and Git
+* How does your package differ from mine? From your neighbours?
+
+## There are three types of output
+
+* Text
+* Thinking (click to expand)
+* Tool calls 
+
+## Tool calls let the agent run code on your computer
+
+* Tools are provided by the **harness**, e.g. Posit Assistant
+* LLM asks harness to run code; harness returns result to the LLM
+* Often requests many tool calls at once
+* These are called "parallel" calls, but don't actually run in parallel.
+* Can recognise with the thick line line
+
+![Two read calls and three edit calls](../images/pa-parallel-calls.png)
+
+## A little vocab
+
+* Harness: provides tools; runs the loop
+* Provider: who runs the server that runs the model 
+  * Open models can be hosted anywhere
+  * AWS + Azure host lots of foundation models
+* Model: the specific LLM model you're using
+
+## Some examples
+
+* Kimi K3 (model) on posit.ai (provider) with Posit Assitant (harness)
+* Opus 5 (model) on posit.ai (provider) with Posit Assitant (harness)
+* Opus 5 (model) from claude (provider) in Claude Code (harness)
+* GPT-5.3 (model) from AWS Bedrock (provider) in Posit Assitant (harness)
+* GPT-5.3 (model) from OpenAI (provider) in codex (harness)
+
+## What are some common calls?
+
+* `write` creates a new file
+* `edit` modifies an existing file
+* `executeCode` runs R (or Python) code in the console
+* `bash` runs code you'd usually use the terminal for
+* `AskUser` asks you a question
+* `read` reads a file on disk
+* `webfetch` reads a web page
+* `search` searches directory for matching text
+
+## Your turn
+
+* Try and prompt your agent to make it use each of the tool calls above.
+* What other tools are available?
+
+# Safety and security
+
+More at <https://tidydesign.substack.com/p/help-my-coding-agent-can-run-code>
+
+## Sandbox
+
+## Auto-mode
+
+
 # Important vocab
-
-## What are you using?
-
-* Harness: provides tools; r/uns the loop
-* Provider: who hosts the model. open models can be hosted anywhere.
-* Model:
-
-e.g.
-
-Kimi K3 (model) on posit.ai (provider) with Posit Assitant (harness).
-Opus 5 (model) from claude (provider) in Claude Code (harness)
-Opus 5 (model) from posit.ai (provider) in Claude code (harness)
 
 ## What's happening?
 
 * Tool call: 
 * Agent: what you get from using the harness; semi-autonomous
+
 
 # What does a coding harness do?
 
@@ -141,4 +210,3 @@ Opus 5 (model) from posit.ai (provider) in Claude code (harness)
 * Send tool call request; harness runs and sends results
 * Often does many of these in parallel (in a single turn, not at the same time )
 * The LLM sends a bunch of requests, your harness does them sequentially, then sends a bunch of responses
-* TODO: add PA screenshot showing parallel calls

@@ -1,22 +1,76 @@
 ---
 title: "Workflow"
+duration: 45
+deliverer: Hadley
 ---
 
 ## General principles
 
 * You are still important and still in control!
-* Choose what to invest in (e.g. code, tests, plan)
+* Choose what to invest in (e.g. code, tests, planning, design, docs)
 * Start slow and grow your confidence
 * Never make another human read AI slop
 
 ## Basic workflows
 
-* Implement it.
-* Plan it, then implement it.
-* Plan it, review the plan, implement it, review the implementation.
-* Design it, then repeat cycles above.
+<!-- TODO: make a diagram for this -->
 
-(An ounce of prevention is worth a pound of cure.)
+* Implement it
+* Plan it, then implement it
+* Plan it, review the plan, implement it, review the implementation
+* Design it, then repeat cycles above
+
+# Low-stakes tasks
+
+## Example workflow
+
+> Fix https://github.com/r-lib/testthat/issues/2344
+
+> Fix https://github.com/r-lib/testthat/issues/2317
+
+## Basic advice
+
+* When you get started, pay attention to what it's doing
+* Can be useful to intervene when it's getting off track.
+* Can also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out
+
+## Git flow
+
+* When you get started, I think it's worth doing all the commits yourself
+* Then, tell it when to commit
+* Then, it let it commit by itself 
+* Then, let it make the whole PR
+* (But NEVER EVER inflect Claude's writing on another human.)
+
+# Medium-stakes tasks
+
+> An ounce of prevention is worth a pound of cure
+
+## Now it's time to make a plan
+
+* Planning tends to lead to better results, but don't get hung up on it
+* Always ask for a markdown file that you can read and edit
+* Three options for where to put this:
+  * Ephemeral
+  * Persistent, outside of git
+  * Checked in
+
+## Example workflow
+
+> Read https://github.com/r-lib/testthat/issues/2334. 
+> Construct a minimal reprex, then write a brief plan for fixing the problem.
+> Save your plan in plan.md.
+
+... read and review the plan ...
+
+> Execute the plan
+
+## Example workflow (voice)
+
+Fine to dump a stream of consciousness and let the agent figure it out. I think it's good to ask for a plan just to check it's clear what you actually want.
+
+
+# High-stakes tasks
 
 ## Workflow lore
 
@@ -24,36 +78,12 @@ title: "Workflow"
 * Codex best at reviewing
 * Cheap models fine for implementing
 
-## Example workflow for low-stakes task
+## Example workflow
 
-> Fix https://github.com/r-lib/testthat/issues/2344
-
-> Fix https://github.com/r-lib/testthat/issues/2317
-
-## Example workflow for higher-stakes task
-
-> Read https://github.com/r-lib/testthat/issues/2334. Construct a minimal reprex, and briefly outline a plan to fix the problem. 
-
-## Example workflow for high-stake task
-
-1. Plan it with Fable
-1. Read the plan and iterate
-2. Review the plan with codex. Copy and paste feedback to back to fable.
-4. Implement with sonnet
-5. Review the implementation with codex
+1. Plan it with Fable (or whatever the best model you have access to is)
+1. You read and review the plan
+1. Review the plan with Codex. Copy and paste the feedback.
+1. Implement with Sonnet (or a similar cheap model)
+1. Review the implementation with Codex
 
 > https://github.com/r-lib/testthat/issues/2328
-
-## Basic advice
-
-* At least in the beginning, pay attention to what it's doing.
-* Can be useful to intervene when it's getting off track.
-* Can also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out.
-* Planning tends to lead to better results, but don't get too hung up on it.
-
-## Git flow
-
-* When you get started, I think it's worth doing all the commits yourself
-* Then, tell it when you're ready to commit
-* Then, tell it what strategy to use
-* Then, let it make the whole PR (assuming you don't automatically inflict slop text on humans)

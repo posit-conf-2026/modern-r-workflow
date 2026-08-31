@@ -114,18 +114,28 @@ Let's make sure everyone's R installation is ready to go.
 
 <!-- HW: do we want to mention air, rig, and quarto here? -->
 
+## What's changed?
+
+Where are the significant changes since [R Packages](https://r-pkgs.org)?
+
+* 80% AI
+* 15% Positron
+* 5% standalone CLIs written in rust (e.g. air, rig, quarto)
+
 ## Overall
 
-* More changes in the last year than last 10 years combined, and doesn't look like the pace is going to slow down.
-* Changes the cost-benefit ratio for many activities
+* More changes in the last year than last 10 years combined, and doesn't look like the pace is going to slow down
+* Non-obvious consequences because the cost-benefit ratio for many tasks has radically changed
 * We are still figuring out what it all means
-* Keep exploring and reading; hold loosely to your hypthoeses.
+* Keep exploring and experimenting; hold loosely to your hypthoeses
+* We hope you'll learn something useful; and we also expect to learn from you!
 
 ## The good news
 
 On the whole you're well positioned to benefit from AI:
 
-* Plain text workflows are equally accessible to humans and agents.
-* Baseline scepticism will serve you well (but don't let it imprison you).
+* Plain text workflows are equally accessible to humans and agents
+* Baseline scepticism will serve you well (but don't let it imprison you)
 * Human knowledge still super important!
-* Subject matter expertise now more important that programming skill.
+* Subject matter expertise now more important that programming skill
+* Development best practices now much more accessible
