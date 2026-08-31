@@ -64,7 +64,10 @@ More detailed maps are on the way and will be added once available.
 
 ## Who are your TAs?
 
-<!-- FILL IN: intro your TAs here -->
+-   Julia Silge
+-   Katie Masiello
+-   Simon Couch
+-   Thomas Pedersen
 
 ## Join us on Discord
 
