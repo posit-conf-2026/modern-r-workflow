@@ -31,6 +31,7 @@ website:
       - href: setup.qmd
       - text: "---"
       - auto: modules/*.qmd
+      - href: modules/slides/deep-thoughts.qmd
 
 format:
   html:
