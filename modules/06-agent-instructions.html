@@ -226,24 +226,43 @@ ul.task-list li input[type="checkbox"] {
 <li>So far we’ve used (implicitly) <code>AGENTS.md</code>.</li>
 <li>What about skills?</li>
 </ul>
+<section id="your-turn" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn">Your turn</h2>
+<ul>
+<li><code>use_tidy_agents()</code> bundles two skills</li>
+<li>What are they? How do they work?</li>
+<li>What’s the advantage of bundling them this way?</li>
+<li>What’s the disadvantage?</li>
+</ul>
+</section>
 </section>
 <section id="skills" class="level1">
 <h1>Skills</h1>
 <section id="what-is-a-skill" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-a-skill">What is a skill?</h2>
 <ul>
-<li>On-demand context</li>
-<li>Canonical form is …</li>
+<li>Formal definition at <a href="https://agentskills.io/" class="uri">https://agentskills.io/</a></li>
+<li>But IMO this is very overwrought</li>
+<li>Two parts to a skill:
+<ul>
+<li>When: short description that states when to use it</li>
+<li>What: longer details of how to use it</li>
+</ul></li>
+<li>System prompt includes all the “when”s</li>
+<li>Agent loads the “what” on demand</li>
 </ul>
 </section>
 <section id="other-forms-of-skills" class="level2">
 <h2 class="anchored" data-anchor-id="other-forms-of-skills">Other forms of skills</h2>
 <ul>
-<li>Directory of markdown files</li>
-<li>Quarto website with <code>LLMs: true</code></li>
-<li>R functions</li>
-<li>design.tidyverse.org</li>
+<li>Directory of markdown files with index/README</li>
+<li><a href="https://quarto.org/docs/websites/website-llms.html">Quarto website</a>
+<ul>
+<li>Use <code>llms-text: true</code></li>
+<li>Basic idea: <a href="https://design.tidyverse.org" class="uri">https://design.tidyverse.org</a></li>
+</ul></li>
 <li>R documentation</li>
+<li>R functions</li>
 </ul>
 </section>
 <section id="general-advice" class="level2">
@@ -256,15 +275,6 @@ ul.task-list li input[type="checkbox"] {
 <li>They don’t have to be markdown files</li>
 </ul>
 </section>
-<section id="your-turn" class="level2">
-<h2 class="anchored" data-anchor-id="your-turn">Your turn</h2>
-<ul>
-<li><code>use_tidy_agents()</code> bundles two skills</li>
-<li>What are they? How do they work?</li>
-<li>What’s the advantage of bundling them this way?</li>
-<li>What’s the disadvantage?</li>
-</ul>
-</section>
 <section id="our-skills" class="level2">
 <h2 class="anchored" data-anchor-id="our-skills">Our skills</h2>
 <ul>
@@ -272,8 +282,24 @@ ul.task-list li input[type="checkbox"] {
 <li>Winston’s PR reviewer</li>
 </ul>
 </section>
+<section id="winstons-simplification-prompt" class="level2">
+<h2 class="anchored" data-anchor-id="winstons-simplification-prompt">Winston’s simplification prompt</h2>
+<!-- Extracted from https://github.com/posit-dev/assistant/blob/main/.agents/skills/assistant-review/SKILL.md -->
+<p>Make a deliberate pass over each non-trivial change looking for opportunities for simplification:</p>
+<ul>
+<li><p>Could this change be achieved by deleting or restructuring instead of adding — removing a branch, mode, layer, or special case rather than bolting one on? It’s always better to remove than add.</p></li>
+<li><p>Is each new or changed interface narrow relative to what it hides — or must callers know its internals, keep duplicated logic in sync, or work around documented gaps (“does NOT handle X”)?</p></li>
+<li><p>Does anything re-implement what the codebase already provides — a bespoke helper shadowing a canonical one, logic in the wrong layer, or wrapper/cast/any churn obscuring the real contract?</p></li>
+</ul>
+<p>When you find opportunities for simplification, be clear about the pros and cons. Produce either a list of potential simplifications or “No simplifications found”.</p>
+</section>
 <section id="bundling-with-a-package" class="level2">
 <h2 class="anchored" data-anchor-id="bundling-with-a-package">Bundling with a package</h2>
+<ul>
+<li>No automated tooling yet</li>
+<li><code>inst/skills</code> is a reasonable place to put them</li>
+<li>You’ll need to expose in some other way</li>
+</ul>
 
 
 </section>

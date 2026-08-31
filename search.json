@@ -14,7 +14,18 @@
     "href": "modules/07-best-practices-feedback-loop.html",
     "title": "Best practices feedback loop",
     "section": "",
-    "text": "LLMs amplify best practices, and make them more achievable\nVirtuous cycle: where as you improve tests and docs, it makes it easier for agents to work with your package.\nReally good news for non-professional developers\nYou can do as you go, but also useful to batch up as part of regular upkeep",
+    "text": "LLMs both amplify best practices, and make them more achievable\nAs you improve tests and docs, it makes it easier for agents to work with your package\nReally good news for non-professional developers\nDo it as you go, and also useful as part of regular upkeep\n\n\n\n\nGit\nCode style\nTesting\nDocumentation\nPerformance\nCI/CD\nDownstream\nUpstream",
+    "crumbs": [
+      "Modules",
+      "Best practices feedback loop"
+    ]
+  },
+  {
+    "objectID": "modules/07-best-practices-feedback-loop.html#development-best-practices",
+    "href": "modules/07-best-practices-feedback-loop.html#development-best-practices",
+    "title": "Best practices feedback loop",
+    "section": "",
+    "text": "Git\nCode style\nTesting\nDocumentation\nPerformance\nCI/CD\nDownstream\nUpstream",
     "crumbs": [
       "Modules",
       "Best practices feedback loop"
@@ -25,18 +36,40 @@
     "href": "modules/07-best-practices-feedback-loop.html#just-use-air",
     "title": "Best practices feedback loop",
     "section": "Just use air",
-    "text": "Just use air\n\nNo longer worth manually enforcing a coding style\nJust use air\nGet started with usethis::use_air() + Air: format workspace file.\n(If you’re using the Claude Code extension, it won’t know where to find the air binary. You can tell that it’s bundled in )",
+    "text": "Just use air\n\nNo longer worth manually enforcing a coding style\nJust use air\nGet started with usethis::use_air() + Air: format workspace file.\nOur AGENTS.md reminds the agent to use it.\n(If you’re using the Claude Code extension specifically, it won’t know where to find the air binary. You can tell it that it’s bundled with Positron)",
     "crumbs": [
       "Modules",
       "Best practices feedback loop"
     ]
   },
   {
-    "objectID": "modules/07-best-practices-feedback-loop.html#beware-excessive-comments",
-    "href": "modules/07-best-practices-feedback-loop.html#beware-excessive-comments",
+    "objectID": "modules/07-best-practices-feedback-loop.html#agents-love-comments",
+    "href": "modules/07-best-practices-feedback-loop.html#agents-love-comments",
     "title": "Best practices feedback loop",
-    "section": "Beware excessive comments",
-    "text": "Beware excessive comments\n\nAgents (esp. Claude) LOVE to write wordy comments\nSometimes the comments are useful; often they are not\nCode-comment mismatch more dangerous with agents\nComments should explain the why\nComments shouldn’t need to explain the what\nComments shouldn’t explain how we got here\nI’ve had relatively little success prompting this behaviour away\nBetter luck with prompt to remove",
+    "section": "Agents love comments",
+    "text": "Agents love comments\n\nAgents (esp. Claude) LOVE to write wordy comments\nSometimes the comments are useful; often they are not\nCode-comment mismatch more dangerous with agents since they’ll often just believe the comment.\nI’ve had relatively little success prompting this behaviour away\nBetter luck with prompt to remove (esp with non-Claude model)",
+    "crumbs": [
+      "Modules",
+      "Best practices feedback loop"
+    ]
+  },
+  {
+    "objectID": "modules/07-best-practices-feedback-loop.html#commenting-best-practices",
+    "href": "modules/07-best-practices-feedback-loop.html#commenting-best-practices",
+    "title": "Best practices feedback loop",
+    "section": "Commenting best practices",
+    "text": "Commenting best practices\n\nComments should explain the why\nComments shouldn’t need to explain the what. If you can’t understand the code, refactor it.\nComments dont’ need to give the entire history that lead to a decision.",
+    "crumbs": [
+      "Modules",
+      "Best practices feedback loop"
+    ]
+  },
+  {
+    "objectID": "modules/07-best-practices-feedback-loop.html#more-smaller-files",
+    "href": "modules/07-best-practices-feedback-loop.html#more-smaller-files",
+    "title": "Best practices feedback loop",
+    "section": "More smaller files",
+    "text": "More smaller files\n\nAgents can more easily load just the context they need with smaller, well-named files.\nIf you have very large files, ask to break them up.\n\nIf you can easily see a good category, ask for that.\nOtherwise brainstorm together to come up with a good solution.\nFor complicated moves, ask for a summary table and a todo list.",
     "crumbs": [
       "Modules",
       "Best practices feedback loop"
@@ -146,18 +179,117 @@
     "href": "modules/03-agent-explainer.html",
     "title": "How do agents work?",
     "section": "",
-    "text": "Goal: * some important vocab * basic understanding of agents * help understand the costs\nIn principle, you could develop your own. There are a lot of details, but it’s surprisingly straighforward to implement a prototype.\nTODO: publish my ellmer agent code.",
+    "text": "Goal:\nIn principle, you could develop your own. There are a lot of details, but it’s surprisingly straighforward to implement a prototype.\nTODO: publish my ellmer agent code.",
     "crumbs": [
       "Modules",
       "How do agents work?"
     ]
   },
   {
-    "objectID": "modules/03-agent-explainer.html#what-are-you-using",
-    "href": "modules/03-agent-explainer.html#what-are-you-using",
+    "objectID": "modules/03-agent-explainer.html#lets-make-a-package",
+    "href": "modules/03-agent-explainer.html#lets-make-a-package",
     "title": "How do agents work?",
-    "section": "What are you using?",
-    "text": "What are you using?\n\nHarness: provides tools; r/uns the loop\nProvider: who hosts the model. open models can be hosted anywhere.\nModel:\n\ne.g.\nKimi K3 (model) on posit.ai (provider) with Posit Assitant (harness). Opus 5 (model) from claude (provider) in Claude Code (harness) Opus 5 (model) from posit.ai (provider) in Claude code (harness)",
+    "section": "Let’s make a package",
+    "text": "Let’s make a package\n(Make sure you’re in normal mode)\nusethis::create_package(\"~/desktop/compliment\")\n\nCreate a new R package called compliment in the current directory. It should generate randomized compliments.",
+    "crumbs": [
+      "Modules",
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/03-agent-explainer.html#your-turn",
+    "href": "modules/03-agent-explainer.html#your-turn",
+    "title": "How do agents work?",
+    "section": "Your turn",
+    "text": "Your turn\n\nUse the same prompt as me. It’s underspecified ask so we’re going to get lots of variation. That’s part of the fun!\nManually approve a few writes\nThen allow all\nMake sure your package has tests and Git\nHow does your package differ from mine? From your neighbours?",
+    "crumbs": [
+      "Modules",
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/03-agent-explainer.html#there-are-three-types-of-output",
+    "href": "modules/03-agent-explainer.html#there-are-three-types-of-output",
+    "title": "How do agents work?",
+    "section": "There are three types of output",
+    "text": "There are three types of output\n\nText\nThinking (click to expand)\nTool calls",
+    "crumbs": [
+      "Modules",
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/03-agent-explainer.html#tool-calls-let-the-agent-run-code-on-your-computer",
+    "href": "modules/03-agent-explainer.html#tool-calls-let-the-agent-run-code-on-your-computer",
+    "title": "How do agents work?",
+    "section": "Tool calls let the agent run code on your computer",
+    "text": "Tool calls let the agent run code on your computer\n\nTools are provided by the harness, e.g. Posit Assistant\nLLM asks harness to run code; harness returns result to the LLM\nOften requests many tool calls at once\nThese are called “parallel” calls, but don’t actually run in parallel.\nCan recognise with the thick line line\n\n\n\n\nTwo read calls and three edit calls",
+    "crumbs": [
+      "Modules",
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/03-agent-explainer.html#a-little-vocab",
+    "href": "modules/03-agent-explainer.html#a-little-vocab",
+    "title": "How do agents work?",
+    "section": "A little vocab",
+    "text": "A little vocab\n\nHarness: provides tools; runs the loop\nProvider: who runs the server that runs the model\n\nOpen models can be hosted anywhere\nAWS + Azure host lots of foundation models\n\nModel: the specific LLM model you’re using",
+    "crumbs": [
+      "Modules",
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/03-agent-explainer.html#some-examples",
+    "href": "modules/03-agent-explainer.html#some-examples",
+    "title": "How do agents work?",
+    "section": "Some examples",
+    "text": "Some examples\n\nKimi K3 (model) on posit.ai (provider) with Posit Assitant (harness)\nOpus 5 (model) on posit.ai (provider) with Posit Assitant (harness)\nOpus 5 (model) from claude (provider) in Claude Code (harness)\nGPT-5.3 (model) from AWS Bedrock (provider) in Posit Assitant (harness)\nGPT-5.3 (model) from OpenAI (provider) in codex (harness)",
+    "crumbs": [
+      "Modules",
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/03-agent-explainer.html#what-are-some-common-calls",
+    "href": "modules/03-agent-explainer.html#what-are-some-common-calls",
+    "title": "How do agents work?",
+    "section": "What are some common calls?",
+    "text": "What are some common calls?\n\nwrite creates a new file\nedit modifies an existing file\nexecuteCode runs R (or Python) code in the console\nbash runs code you’d usually use the terminal for\nAskUser asks you a question\nread reads a file on disk\nwebfetch reads a web page\nsearch searches directory for matching text",
+    "crumbs": [
+      "Modules",
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/03-agent-explainer.html#your-turn-1",
+    "href": "modules/03-agent-explainer.html#your-turn-1",
+    "title": "How do agents work?",
+    "section": "Your turn",
+    "text": "Your turn\n\nTry and prompt your agent to make it use each of the tool calls above.\nWhat other tools are available?",
+    "crumbs": [
+      "Modules",
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/03-agent-explainer.html#sandbox",
+    "href": "modules/03-agent-explainer.html#sandbox",
+    "title": "How do agents work?",
+    "section": "Sandbox",
+    "text": "Sandbox",
+    "crumbs": [
+      "Modules",
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/03-agent-explainer.html#auto-mode",
+    "href": "modules/03-agent-explainer.html#auto-mode",
+    "title": "How do agents work?",
+    "section": "Auto-mode",
+    "text": "Auto-mode",
     "crumbs": [
       "Modules",
       "How do agents work?"
@@ -263,8 +395,8 @@
     ]
   },
   {
-    "objectID": "modules/03-agent-explainer.html#your-turn",
-    "href": "modules/03-agent-explainer.html#your-turn",
+    "objectID": "modules/03-agent-explainer.html#your-turn-2",
+    "href": "modules/03-agent-explainer.html#your-turn-2",
     "title": "How do agents work?",
     "section": "Your turn",
     "text": "Your turn",
@@ -289,7 +421,7 @@
     "href": "modules/03-agent-explainer.html#agents-can-run-code-on-your-computer",
     "title": "How do agents work?",
     "section": "Agents can run code on your computer",
-    "text": "Agents can run code on your computer\n\nSend tool call request; harness runs and sends results\nOften does many of these in parallel (in a single turn, not at the same time )\nThe LLM sends a bunch of requests, your harness does them sequentially, then sends a bunch of responses\nTODO: add PA screenshot showing parallel calls",
+    "text": "Agents can run code on your computer\n\nSend tool call request; harness runs and sends results\nOften does many of these in parallel (in a single turn, not at the same time )\nThe LLM sends a bunch of requests, your harness does them sequentially, then sends a bunch of responses",
     "crumbs": [
       "Modules",
       "How do agents work?"
@@ -383,7 +515,7 @@
     "href": "modules/04-workflow.html",
     "title": "Workflow",
     "section": "",
-    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, plan)\nStart slow and grow your confidence\nNever make another human read AI slop",
+    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, planning, design, docs)\nStart slow and grow your confidence\nNever make another human read AI slop",
     "crumbs": [
       "Modules",
       "Workflow"
@@ -394,7 +526,7 @@
     "href": "modules/04-workflow.html#general-principles",
     "title": "Workflow",
     "section": "",
-    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, plan)\nStart slow and grow your confidence\nNever make another human read AI slop",
+    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, planning, design, docs)\nStart slow and grow your confidence\nNever make another human read AI slop",
     "crumbs": [
       "Modules",
       "Workflow"
@@ -405,7 +537,73 @@
     "href": "modules/04-workflow.html#basic-workflows",
     "title": "Workflow",
     "section": "Basic workflows",
-    "text": "Basic workflows\n\nImplement it.\nPlan it, then implement it.\nPlan it, review the plan, implement it, review the implementation.\nDesign it, then repeat cycles above.\n\n(An ounce of prevention is worth a pound of cure.)",
+    "text": "Basic workflows\n\n\nImplement it\nPlan it, then implement it\nPlan it, review the plan, implement it, review the implementation\nDesign it, then repeat cycles above",
+    "crumbs": [
+      "Modules",
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/04-workflow.html#example-workflow",
+    "href": "modules/04-workflow.html#example-workflow",
+    "title": "Workflow",
+    "section": "Example workflow",
+    "text": "Example workflow\n\nFix https://github.com/r-lib/testthat/issues/2344\n\n\nFix https://github.com/r-lib/testthat/issues/2317",
+    "crumbs": [
+      "Modules",
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/04-workflow.html#basic-advice",
+    "href": "modules/04-workflow.html#basic-advice",
+    "title": "Workflow",
+    "section": "Basic advice",
+    "text": "Basic advice\n\nWhen you get started, pay attention to what it’s doing\nCan be useful to intervene when it’s getting off track.\nCan also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out",
+    "crumbs": [
+      "Modules",
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/04-workflow.html#git-flow",
+    "href": "modules/04-workflow.html#git-flow",
+    "title": "Workflow",
+    "section": "Git flow",
+    "text": "Git flow\n\nWhen you get started, I think it’s worth doing all the commits yourself\nThen, tell it when to commit\nThen, it let it commit by itself\nThen, let it make the whole PR\n(But NEVER EVER inflect Claude’s writing on another human.)",
+    "crumbs": [
+      "Modules",
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/04-workflow.html#now-its-time-to-make-a-plan",
+    "href": "modules/04-workflow.html#now-its-time-to-make-a-plan",
+    "title": "Workflow",
+    "section": "Now it’s time to make a plan",
+    "text": "Now it’s time to make a plan\n\nPlanning tends to lead to better results, but don’t get hung up on it\nAlways ask for a markdown file that you can read and edit\nThree options for where to put this:\n\nEphemeral\nPersistent, outside of git\nChecked in",
+    "crumbs": [
+      "Modules",
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/04-workflow.html#example-workflow-1",
+    "href": "modules/04-workflow.html#example-workflow-1",
+    "title": "Workflow",
+    "section": "Example workflow",
+    "text": "Example workflow\n\nRead https://github.com/r-lib/testthat/issues/2334. Construct a minimal reprex, then write a brief plan for fixing the problem. Save your plan in plan.md.\n\n… read and review the plan …\n\nExecute the plan",
+    "crumbs": [
+      "Modules",
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/04-workflow.html#example-workflow-voice",
+    "href": "modules/04-workflow.html#example-workflow-voice",
+    "title": "Workflow",
+    "section": "Example workflow (voice)",
+    "text": "Example workflow (voice)\nFine to dump a stream of consciousness and let the agent figure it out. I think it’s good to ask for a plan just to check it’s clear what you actually want.",
     "crumbs": [
       "Modules",
       "Workflow"
@@ -423,55 +621,11 @@
     ]
   },
   {
-    "objectID": "modules/04-workflow.html#example-workflow-for-low-stakes-task",
-    "href": "modules/04-workflow.html#example-workflow-for-low-stakes-task",
+    "objectID": "modules/04-workflow.html#example-workflow-2",
+    "href": "modules/04-workflow.html#example-workflow-2",
     "title": "Workflow",
-    "section": "Example workflow for low-stakes task",
-    "text": "Example workflow for low-stakes task\n\nFix https://github.com/r-lib/testthat/issues/2344\n\n\nFix https://github.com/r-lib/testthat/issues/2317",
-    "crumbs": [
-      "Modules",
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/04-workflow.html#example-workflow-for-higher-stakes-task",
-    "href": "modules/04-workflow.html#example-workflow-for-higher-stakes-task",
-    "title": "Workflow",
-    "section": "Example workflow for higher-stakes task",
-    "text": "Example workflow for higher-stakes task\n\nRead https://github.com/r-lib/testthat/issues/2334. Construct a minimal reprex, and briefly outline a plan to fix the problem.",
-    "crumbs": [
-      "Modules",
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/04-workflow.html#example-workflow-for-high-stake-task",
-    "href": "modules/04-workflow.html#example-workflow-for-high-stake-task",
-    "title": "Workflow",
-    "section": "Example workflow for high-stake task",
-    "text": "Example workflow for high-stake task\n\nPlan it with Fable\nRead the plan and iterate\nReview the plan with codex. Copy and paste feedback to back to fable.\nImplement with sonnet\nReview the implementation with codex\n\n\nhttps://github.com/r-lib/testthat/issues/2328",
-    "crumbs": [
-      "Modules",
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/04-workflow.html#basic-advice",
-    "href": "modules/04-workflow.html#basic-advice",
-    "title": "Workflow",
-    "section": "Basic advice",
-    "text": "Basic advice\n\nAt least in the beginning, pay attention to what it’s doing.\nCan be useful to intervene when it’s getting off track.\nCan also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out.\nPlanning tends to lead to better results, but don’t get too hung up on it.",
-    "crumbs": [
-      "Modules",
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/04-workflow.html#git-flow",
-    "href": "modules/04-workflow.html#git-flow",
-    "title": "Workflow",
-    "section": "Git flow",
-    "text": "Git flow\n\nWhen you get started, I think it’s worth doing all the commits yourself\nThen, tell it when you’re ready to commit\nThen, tell it what strategy to use\nThen, let it make the whole PR (assuming you don’t automatically inflict slop text on humans)",
+    "section": "Example workflow",
+    "text": "Example workflow\n\nPlan it with Fable (or whatever the best model you have access to is)\nYou read and review the plan\nReview the plan with Codex. Copy and paste the feedback.\nImplement with Sonnet (or a similar cheap model)\nReview the implementation with Codex\n\n\nhttps://github.com/r-lib/testthat/issues/2328",
     "crumbs": [
       "Modules",
       "Workflow"
@@ -482,7 +636,18 @@
     "href": "modules/06-agent-instructions.html",
     "title": "Skills and AGENTS.md",
     "section": "",
-    "text": "So far we’ve used (implicitly) AGENTS.md.\nWhat about skills?",
+    "text": "So far we’ve used (implicitly) AGENTS.md.\nWhat about skills?\n\n\n\n\nuse_tidy_agents() bundles two skills\nWhat are they? How do they work?\nWhat’s the advantage of bundling them this way?\nWhat’s the disadvantage?",
+    "crumbs": [
+      "Modules",
+      "Skills and AGENTS.md"
+    ]
+  },
+  {
+    "objectID": "modules/06-agent-instructions.html#your-turn",
+    "href": "modules/06-agent-instructions.html#your-turn",
+    "title": "Skills and AGENTS.md",
+    "section": "",
+    "text": "use_tidy_agents() bundles two skills\nWhat are they? How do they work?\nWhat’s the advantage of bundling them this way?\nWhat’s the disadvantage?",
     "crumbs": [
       "Modules",
       "Skills and AGENTS.md"
@@ -493,7 +658,7 @@
     "href": "modules/06-agent-instructions.html#what-is-a-skill",
     "title": "Skills and AGENTS.md",
     "section": "What is a skill?",
-    "text": "What is a skill?\n\nOn-demand context\nCanonical form is …",
+    "text": "What is a skill?\n\nFormal definition at https://agentskills.io/\nBut IMO this is very overwrought\nTwo parts to a skill:\n\nWhen: short description that states when to use it\nWhat: longer details of how to use it\n\nSystem prompt includes all the “when”s\nAgent loads the “what” on demand",
     "crumbs": [
       "Modules",
       "Skills and AGENTS.md"
@@ -504,7 +669,7 @@
     "href": "modules/06-agent-instructions.html#other-forms-of-skills",
     "title": "Skills and AGENTS.md",
     "section": "Other forms of skills",
-    "text": "Other forms of skills\n\nDirectory of markdown files\nQuarto website with LLMs: true\nR functions\ndesign.tidyverse.org\nR documentation",
+    "text": "Other forms of skills\n\nDirectory of markdown files with index/README\nQuarto website\n\nUse llms-text: true\nBasic idea: https://design.tidyverse.org\n\nR documentation\nR functions",
     "crumbs": [
       "Modules",
       "Skills and AGENTS.md"
@@ -522,17 +687,6 @@
     ]
   },
   {
-    "objectID": "modules/06-agent-instructions.html#your-turn",
-    "href": "modules/06-agent-instructions.html#your-turn",
-    "title": "Skills and AGENTS.md",
-    "section": "Your turn",
-    "text": "Your turn\n\nuse_tidy_agents() bundles two skills\nWhat are they? How do they work?\nWhat’s the advantage of bundling them this way?\nWhat’s the disadvantage?",
-    "crumbs": [
-      "Modules",
-      "Skills and AGENTS.md"
-    ]
-  },
-  {
     "objectID": "modules/06-agent-instructions.html#our-skills",
     "href": "modules/06-agent-instructions.html#our-skills",
     "title": "Skills and AGENTS.md",
@@ -544,11 +698,22 @@
     ]
   },
   {
+    "objectID": "modules/06-agent-instructions.html#winstons-simplification-prompt",
+    "href": "modules/06-agent-instructions.html#winstons-simplification-prompt",
+    "title": "Skills and AGENTS.md",
+    "section": "Winston’s simplification prompt",
+    "text": "Winston’s simplification prompt\n\nMake a deliberate pass over each non-trivial change looking for opportunities for simplification:\n\nCould this change be achieved by deleting or restructuring instead of adding — removing a branch, mode, layer, or special case rather than bolting one on? It’s always better to remove than add.\nIs each new or changed interface narrow relative to what it hides — or must callers know its internals, keep duplicated logic in sync, or work around documented gaps (“does NOT handle X”)?\nDoes anything re-implement what the codebase already provides — a bespoke helper shadowing a canonical one, logic in the wrong layer, or wrapper/cast/any churn obscuring the real contract?\n\nWhen you find opportunities for simplification, be clear about the pros and cons. Produce either a list of potential simplifications or “No simplifications found”.",
+    "crumbs": [
+      "Modules",
+      "Skills and AGENTS.md"
+    ]
+  },
+  {
     "objectID": "modules/06-agent-instructions.html#bundling-with-a-package",
     "href": "modules/06-agent-instructions.html#bundling-with-a-package",
     "title": "Skills and AGENTS.md",
     "section": "Bundling with a package",
-    "text": "Bundling with a package",
+    "text": "Bundling with a package\n\nNo automated tooling yet\ninst/skills is a reasonable place to put them\nYou’ll need to expose in some other way",
     "crumbs": [
       "Modules",
       "Skills and AGENTS.md"

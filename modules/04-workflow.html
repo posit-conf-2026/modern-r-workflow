@@ -77,7 +77,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta property="og:title" content="Workflow – Modern R Workflow (ft. Positron and AI)">
-<meta property="og:description" content="A one day workshop at posit::conf(2026) on modern R development practices, AI-assisted coding, and Positron.">
 <meta property="og:site_name" content="Modern R Workflow (ft. Positron and AI)">
 </head>
 
@@ -225,21 +224,86 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="general-principles">General principles</h2>
 <ul>
 <li>You are still important and still in control!</li>
-<li>Choose what to invest in (e.g.&nbsp;code, tests, plan)</li>
+<li>Choose what to invest in (e.g.&nbsp;code, tests, planning, design, docs)</li>
 <li>Start slow and grow your confidence</li>
 <li>Never make another human read AI slop</li>
 </ul>
 </section>
 <section id="basic-workflows" class="level2">
 <h2 class="anchored" data-anchor-id="basic-workflows">Basic workflows</h2>
+<!-- TODO: make a diagram for this -->
 <ul>
-<li>Implement it.</li>
-<li>Plan it, then implement it.</li>
-<li>Plan it, review the plan, implement it, review the implementation.</li>
-<li>Design it, then repeat cycles above.</li>
+<li>Implement it</li>
+<li>Plan it, then implement it</li>
+<li>Plan it, review the plan, implement it, review the implementation</li>
+<li>Design it, then repeat cycles above</li>
 </ul>
-<p>(An ounce of prevention is worth a pound of cure.)</p>
 </section>
+<section id="low-stakes-tasks" class="level1">
+<h1>Low-stakes tasks</h1>
+<section id="example-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="example-workflow">Example workflow</h2>
+<blockquote class="blockquote">
+<p>Fix https://github.com/r-lib/testthat/issues/2344</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Fix https://github.com/r-lib/testthat/issues/2317</p>
+</blockquote>
+</section>
+<section id="basic-advice" class="level2">
+<h2 class="anchored" data-anchor-id="basic-advice">Basic advice</h2>
+<ul>
+<li>When you get started, pay attention to what it’s doing</li>
+<li>Can be useful to intervene when it’s getting off track.</li>
+<li>Can also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out</li>
+</ul>
+</section>
+<section id="git-flow" class="level2">
+<h2 class="anchored" data-anchor-id="git-flow">Git flow</h2>
+<ul>
+<li>When you get started, I think it’s worth doing all the commits yourself</li>
+<li>Then, tell it when to commit</li>
+<li>Then, it let it commit by itself</li>
+<li>Then, let it make the whole PR</li>
+<li>(But NEVER EVER inflect Claude’s writing on another human.)</li>
+</ul>
+</section>
+</section>
+<section id="medium-stakes-tasks" class="level1">
+<h1>Medium-stakes tasks</h1>
+<blockquote class="blockquote">
+<p>An ounce of prevention is worth a pound of cure</p>
+</blockquote>
+<section id="now-its-time-to-make-a-plan" class="level2">
+<h2 class="anchored" data-anchor-id="now-its-time-to-make-a-plan">Now it’s time to make a plan</h2>
+<ul>
+<li>Planning tends to lead to better results, but don’t get hung up on it</li>
+<li>Always ask for a markdown file that you can read and edit</li>
+<li>Three options for where to put this:
+<ul>
+<li>Ephemeral</li>
+<li>Persistent, outside of git</li>
+<li>Checked in</li>
+</ul></li>
+</ul>
+</section>
+<section id="example-workflow-1" class="level2">
+<h2 class="anchored" data-anchor-id="example-workflow-1">Example workflow</h2>
+<blockquote class="blockquote">
+<p>Read https://github.com/r-lib/testthat/issues/2334. Construct a minimal reprex, then write a brief plan for fixing the problem. Save your plan in plan.md.</p>
+</blockquote>
+<p>… read and review the plan …</p>
+<blockquote class="blockquote">
+<p>Execute the plan</p>
+</blockquote>
+</section>
+<section id="example-workflow-voice" class="level2">
+<h2 class="anchored" data-anchor-id="example-workflow-voice">Example workflow (voice)</h2>
+<p>Fine to dump a stream of consciousness and let the agent figure it out. I think it’s good to ask for a plan just to check it’s clear what you actually want.</p>
+</section>
+</section>
+<section id="high-stakes-tasks" class="level1">
+<h1>High-stakes tasks</h1>
 <section id="workflow-lore" class="level2">
 <h2 class="anchored" data-anchor-id="workflow-lore">Workflow lore</h2>
 <ul>
@@ -248,53 +312,21 @@ ul.task-list li input[type="checkbox"] {
 <li>Cheap models fine for implementing</li>
 </ul>
 </section>
-<section id="example-workflow-for-low-stakes-task" class="level2">
-<h2 class="anchored" data-anchor-id="example-workflow-for-low-stakes-task">Example workflow for low-stakes task</h2>
-<blockquote class="blockquote">
-<p>Fix https://github.com/r-lib/testthat/issues/2344</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Fix https://github.com/r-lib/testthat/issues/2317</p>
-</blockquote>
-</section>
-<section id="example-workflow-for-higher-stakes-task" class="level2">
-<h2 class="anchored" data-anchor-id="example-workflow-for-higher-stakes-task">Example workflow for higher-stakes task</h2>
-<blockquote class="blockquote">
-<p>Read https://github.com/r-lib/testthat/issues/2334. Construct a minimal reprex, and briefly outline a plan to fix the problem.</p>
-</blockquote>
-</section>
-<section id="example-workflow-for-high-stake-task" class="level2">
-<h2 class="anchored" data-anchor-id="example-workflow-for-high-stake-task">Example workflow for high-stake task</h2>
+<section id="example-workflow-2" class="level2">
+<h2 class="anchored" data-anchor-id="example-workflow-2">Example workflow</h2>
 <ol type="1">
-<li>Plan it with Fable</li>
-<li>Read the plan and iterate</li>
-<li>Review the plan with codex. Copy and paste feedback to back to fable.</li>
-<li>Implement with sonnet</li>
-<li>Review the implementation with codex</li>
+<li>Plan it with Fable (or whatever the best model you have access to is)</li>
+<li>You read and review the plan</li>
+<li>Review the plan with Codex. Copy and paste the feedback.</li>
+<li>Implement with Sonnet (or a similar cheap model)</li>
+<li>Review the implementation with Codex</li>
 </ol>
 <blockquote class="blockquote">
 <p>https://github.com/r-lib/testthat/issues/2328</p>
 </blockquote>
-</section>
-<section id="basic-advice" class="level2">
-<h2 class="anchored" data-anchor-id="basic-advice">Basic advice</h2>
-<ul>
-<li>At least in the beginning, pay attention to what it’s doing.</li>
-<li>Can be useful to intervene when it’s getting off track.</li>
-<li>Can also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out.</li>
-<li>Planning tends to lead to better results, but don’t get too hung up on it.</li>
-</ul>
-</section>
-<section id="git-flow" class="level2">
-<h2 class="anchored" data-anchor-id="git-flow">Git flow</h2>
-<ul>
-<li>When you get started, I think it’s worth doing all the commits yourself</li>
-<li>Then, tell it when you’re ready to commit</li>
-<li>Then, tell it what strategy to use</li>
-<li>Then, let it make the whole PR (assuming you don’t automatically inflict slop text on humans)</li>
-</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

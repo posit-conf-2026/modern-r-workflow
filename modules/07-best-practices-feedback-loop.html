@@ -220,12 +220,36 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="the-best-practices-virtuouos-cycle" class="level1">
+<h1>The best practices virtuouos cycle</h1>
 <ul>
-<li>LLMs amplify best practices, and make them more achievable</li>
-<li>Virtuous cycle: where as you improve tests and docs, it makes it easier for agents to work with your package.</li>
+<li>LLMs both amplify best practices, and make them more achievable</li>
+<li>As you improve tests and docs, it makes it easier for agents to work with your package</li>
 <li>Really good news for non-professional developers</li>
-<li>You can do as you go, but also useful to batch up as part of regular upkeep</li>
+<li>Do it as you go, and also useful as part of regular upkeep</li>
 </ul>
+<section id="development-best-practices" class="level2">
+<h2 class="anchored" data-anchor-id="development-best-practices">Development best practices</h2>
+<ul>
+<li>Git</li>
+<li>Code style</li>
+<li>Testing</li>
+<li>Documentation</li>
+<li>Performance</li>
+<li>CI/CD</li>
+<li>Downstream</li>
+<li>Upstream</li>
+</ul>
+</section>
+</section>
+<section id="git" class="level1">
+<h1>Git</h1>
+<ul>
+<li>Merge conflicts? Ask your agent to fix</li>
+<li>Commit messages? Ask your agent to write</li>
+<li>PR descriptions? Ask your agent to <strong>draft</strong></li>
+</ul>
+</section>
 <section id="code-style" class="level1">
 <h1>Code style</h1>
 <section id="just-use-air" class="level2">
@@ -234,20 +258,38 @@ ul.task-list li input[type="checkbox"] {
 <li>No longer worth manually enforcing a coding style</li>
 <li>Just use <code>air</code></li>
 <li>Get started with <code>usethis::use_air()</code> + <code>Air: format workspace file</code>.</li>
-<li>(If you’re using the Claude Code extension, it won’t know where to find the <code>air</code> binary. You can tell that it’s bundled in )</li>
+<li>Our <code>AGENTS.md</code> reminds the agent to use it.</li>
+<li>(If you’re using the Claude Code extension <em>specifically</em>, it won’t know where to find the <code>air</code> binary. You can tell it that it’s bundled with Positron)</li>
 </ul>
 </section>
-<section id="beware-excessive-comments" class="level2">
-<h2 class="anchored" data-anchor-id="beware-excessive-comments">Beware excessive comments</h2>
+<section id="agents-love-comments" class="level2">
+<h2 class="anchored" data-anchor-id="agents-love-comments">Agents love comments</h2>
 <ul>
-<li><p>Agents (esp.&nbsp;Claude) LOVE to write wordy comments</p></li>
-<li><p>Sometimes the comments are useful; often they are not</p></li>
-<li><p>Code-comment mismatch more dangerous with agents</p></li>
-<li><p>Comments should explain the why</p></li>
-<li><p>Comments shouldn’t need to explain the what</p></li>
-<li><p>Comments shouldn’t explain how we got here</p></li>
-<li><p>I’ve had relatively little success prompting this behaviour away</p></li>
-<li><p>Better luck with prompt to remove</p></li>
+<li>Agents (esp.&nbsp;Claude) LOVE to write wordy comments</li>
+<li>Sometimes the comments are useful; often they are not</li>
+<li>Code-comment mismatch more dangerous with agents since they’ll often just believe the comment.</li>
+<li>I’ve had relatively little success prompting this behaviour away</li>
+<li>Better luck with prompt to remove (esp with non-Claude model)</li>
+</ul>
+</section>
+<section id="commenting-best-practices" class="level2">
+<h2 class="anchored" data-anchor-id="commenting-best-practices">Commenting best practices</h2>
+<ul>
+<li>Comments should explain the why</li>
+<li>Comments shouldn’t need to explain the what. If you can’t understand the code, refactor it.</li>
+<li>Comments dont’ need to give the entire history that lead to a decision.</li>
+</ul>
+</section>
+<section id="more-smaller-files" class="level2">
+<h2 class="anchored" data-anchor-id="more-smaller-files">More smaller files</h2>
+<ul>
+<li>Agents can more easily load just the context they need with smaller, well-named files.</li>
+<li>If you have very large files, ask to break them up.
+<ul>
+<li>If you can easily see a good category, ask for that.</li>
+<li>Otherwise brainstorm together to come up with a good solution.</li>
+<li>For complicated moves, ask for a summary table and a todo list.</li>
+</ul></li>
 </ul>
 </section>
 </section>
@@ -341,14 +383,22 @@ ul.task-list li input[type="checkbox"] {
 <section id="cicd" class="level1">
 <h1>CI/CD</h1>
 <ul>
-<li>Agents know more about writing GitHub actions than I do.</li>
+<li>Agents know more about writing GitHub actions than I do</li>
 <li><code>use_github_action()</code> for common stuff</li>
 <li>Use agents for anything custom</li>
 <li>Agents are also great at fixing problems thus revealed</li>
 </ul>
 </section>
-<section id="contributing-upstream" class="level1">
-<h1>Contributing upstream</h1>
+<section id="downstream-changes" class="level1">
+<h1>Downstream changes</h1>
+<ul>
+<li>You made a backward incompatbile change or want to help people handle deprecations?</li>
+<li>Ask your agent to do it!</li>
+<li><a href="https://blog.davisvaughan.com/posts/2026-01-09-claude-200-pull-requests/" class="uri">https://blog.davisvaughan.com/posts/2026-01-09-claude-200-pull-requests/</a></li>
+</ul>
+</section>
+<section id="upstream-changes" class="level1">
+<h1>Upstream changes</h1>
 <ul>
 <li>You can now use these skills to fix problems upstream that might have previously been out of reach.</li>
 <li>The primary drawback of this is maintainer overload</li>

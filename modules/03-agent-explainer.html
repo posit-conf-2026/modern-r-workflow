@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -78,7 +113,10 @@ ul.task-list li input[type="checkbox"] {
 
 <meta property="og:title" content="How do agents work? – Modern R Workflow (ft. Positron and AI)">
 <meta property="og:description" content="A one day workshop at posit::conf(2026) on modern R development practices, AI-assisted coding, and Positron.">
+<meta property="og:image" content="https://posit-conf-2026.github.io/modern-r-workflow/images/pa-parallel-calls.png">
 <meta property="og:site_name" content="Modern R Workflow (ft. Positron and AI)">
+<meta property="og:image:height" content="410">
+<meta property="og:image:width" content="1158">
 </head>
 
 <body class="nav-sidebar floating fullcontent quarto-light">
@@ -221,21 +259,113 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Goal: * some important vocab * basic understanding of agents * help understand the costs</p>
+<p>Goal:</p>
+<ul>
+<li>some important vocab</li>
+<li>basic understanding of agents</li>
+<li>help understand the costs</li>
+</ul>
 <p>In principle, you could develop your own. There are a lot of details, but it’s surprisingly straighforward to implement a prototype.</p>
 <p>TODO: publish my ellmer agent code.</p>
+<section id="what-is-an-agent" class="level1">
+<h1>What is an agent?</h1>
+<section id="lets-make-a-package" class="level2">
+<h2 class="anchored" data-anchor-id="lets-make-a-package">Let’s make a package</h2>
+<p>(Make sure you’re in normal mode)</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_package</span>(<span class="st">"~/desktop/compliment"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<blockquote class="blockquote">
+<p>Create a new R package called compliment in the current directory. It should generate randomized compliments.</p>
+</blockquote>
+</section>
+<section id="your-turn" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn">Your turn</h2>
+<ul>
+<li>Use the same prompt as me. It’s underspecified ask so we’re going to get lots of variation. That’s part of the fun!</li>
+<li>Manually approve a few writes</li>
+<li>Then allow all</li>
+<li>Make sure your package has tests and Git</li>
+<li>How does your package differ from mine? From your neighbours?</li>
+</ul>
+</section>
+<section id="there-are-three-types-of-output" class="level2">
+<h2 class="anchored" data-anchor-id="there-are-three-types-of-output">There are three types of output</h2>
+<ul>
+<li>Text</li>
+<li>Thinking (click to expand)</li>
+<li>Tool calls</li>
+</ul>
+</section>
+<section id="tool-calls-let-the-agent-run-code-on-your-computer" class="level2">
+<h2 class="anchored" data-anchor-id="tool-calls-let-the-agent-run-code-on-your-computer">Tool calls let the agent run code on your computer</h2>
+<ul>
+<li>Tools are provided by the <strong>harness</strong>, e.g.&nbsp;Posit Assistant</li>
+<li>LLM asks harness to run code; harness returns result to the LLM</li>
+<li>Often requests many tool calls at once</li>
+<li>These are called “parallel” calls, but don’t actually run in parallel.</li>
+<li>Can recognise with the thick line line</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/pa-parallel-calls.png" class="img-fluid figure-img"></p>
+<figcaption>Two read calls and three edit calls</figcaption>
+</figure>
+</div>
+</section>
+<section id="a-little-vocab" class="level2">
+<h2 class="anchored" data-anchor-id="a-little-vocab">A little vocab</h2>
+<ul>
+<li>Harness: provides tools; runs the loop</li>
+<li>Provider: who runs the server that runs the model
+<ul>
+<li>Open models can be hosted anywhere</li>
+<li>AWS + Azure host lots of foundation models</li>
+</ul></li>
+<li>Model: the specific LLM model you’re using</li>
+</ul>
+</section>
+<section id="some-examples" class="level2">
+<h2 class="anchored" data-anchor-id="some-examples">Some examples</h2>
+<ul>
+<li>Kimi K3 (model) on posit.ai (provider) with Posit Assitant (harness)</li>
+<li>Opus 5 (model) on posit.ai (provider) with Posit Assitant (harness)</li>
+<li>Opus 5 (model) from claude (provider) in Claude Code (harness)</li>
+<li>GPT-5.3 (model) from AWS Bedrock (provider) in Posit Assitant (harness)</li>
+<li>GPT-5.3 (model) from OpenAI (provider) in codex (harness)</li>
+</ul>
+</section>
+<section id="what-are-some-common-calls" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-some-common-calls">What are some common calls?</h2>
+<ul>
+<li><code>write</code> creates a new file</li>
+<li><code>edit</code> modifies an existing file</li>
+<li><code>executeCode</code> runs R (or Python) code in the console</li>
+<li><code>bash</code> runs code you’d usually use the terminal for</li>
+<li><code>AskUser</code> asks you a question</li>
+<li><code>read</code> reads a file on disk</li>
+<li><code>webfetch</code> reads a web page</li>
+<li><code>search</code> searches directory for matching text</li>
+</ul>
+</section>
+<section id="your-turn-1" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn-1">Your turn</h2>
+<ul>
+<li>Try and prompt your agent to make it use each of the tool calls above.</li>
+<li>What other tools are available?</li>
+</ul>
+</section>
+</section>
+<section id="safety-and-security" class="level1">
+<h1>Safety and security</h1>
+<p>More at <a href="https://tidydesign.substack.com/p/help-my-coding-agent-can-run-code" class="uri">https://tidydesign.substack.com/p/help-my-coding-agent-can-run-code</a></p>
+<section id="sandbox" class="level2">
+<h2 class="anchored" data-anchor-id="sandbox">Sandbox</h2>
+</section>
+<section id="auto-mode" class="level2">
+<h2 class="anchored" data-anchor-id="auto-mode">Auto-mode</h2>
+</section>
+</section>
 <section id="important-vocab" class="level1">
 <h1>Important vocab</h1>
-<section id="what-are-you-using" class="level2">
-<h2 class="anchored" data-anchor-id="what-are-you-using">What are you using?</h2>
-<ul>
-<li>Harness: provides tools; r/uns the loop</li>
-<li>Provider: who hosts the model. open models can be hosted anywhere.</li>
-<li>Model:</li>
-</ul>
-<p>e.g.</p>
-<p>Kimi K3 (model) on posit.ai (provider) with Posit Assitant (harness). Opus 5 (model) from claude (provider) in Claude Code (harness) Opus 5 (model) from posit.ai (provider) in Claude code (harness)</p>
-</section>
 <section id="whats-happening" class="level2">
 <h2 class="anchored" data-anchor-id="whats-happening">What’s happening?</h2>
 <ul>
@@ -363,8 +493,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p>But if you step away from a claude session for 5 minutes, the next request might be 10x the cost. We’re working on better tools for this in PA.</p></li>
 </ul>
 </section>
-<section id="your-turn" class="level2">
-<h2 class="anchored" data-anchor-id="your-turn">Your turn</h2>
+<section id="your-turn-2" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn-2">Your turn</h2>
 </section>
 <section id="compaction-is-no-longer-relevant" class="level2">
 <h2 class="anchored" data-anchor-id="compaction-is-no-longer-relevant">Compaction is no longer relevant</h2>
@@ -380,7 +510,6 @@ ul.task-list li input[type="checkbox"] {
 <li>Send tool call request; harness runs and sends results</li>
 <li>Often does many of these in parallel (in a single turn, not at the same time )</li>
 <li>The LLM sends a bunch of requests, your harness does them sequentially, then sends a bunch of responses</li>
-<li>TODO: add PA screenshot showing parallel calls</li>
 </ul>
 
 
