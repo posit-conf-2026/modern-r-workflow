@@ -1,6 +1,5 @@
 ---
 title: "Welcome"
-draft: true
 format:
   revealjs:
     slide-number: true
