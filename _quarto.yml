@@ -30,7 +30,7 @@ website:
         text: Home
       - href: setup.qmd
       - text: "---"
-      - auto: modules/
+      - auto: modules/*.qmd
 
 format:
   html:

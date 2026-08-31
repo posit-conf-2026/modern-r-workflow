@@ -2,8 +2,8 @@
 title: "Welcome"
 ---
 
-[Slides (full screen)](00-welcome-slides.qmd)
+[Slides (full screen)](slides/00-welcome-slides.qmd)
 
 ```{=html}
-<iframe src="00-welcome-slides.html" style="width: 100%; aspect-ratio: 16 / 9; border: 1px solid #dee2e6;"></iframe>
+<iframe src="slides/00-welcome-slides.html" style="width: 100%; aspect-ratio: 16 / 9; border: 1px solid #dee2e6;"></iframe>
 ```
