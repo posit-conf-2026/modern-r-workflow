@@ -153,25 +153,218 @@
     ]
   },
   {
-    "objectID": "modules/05-r-cmd-check.html",
-    "href": "modules/05-r-cmd-check.html",
-    "title": "R CMD check",
+    "objectID": "modules/04-workflow.html",
+    "href": "modules/04-workflow.html",
+    "title": "Workflow",
+    "section": "",
+    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, planning, design, docs)\nStart slow and grow your confidence\nNever make another human read AI slop\n\n\n\n\nWrite code\nWrite tests\nIterate until they pass\nR CMD check at the end",
+    "crumbs": [
+      "Modules",
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/04-workflow.html#general-principles",
+    "href": "modules/04-workflow.html#general-principles",
+    "title": "Workflow",
+    "section": "",
+    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, planning, design, docs)\nStart slow and grow your confidence\nNever make another human read AI slop\n\n\n\n\nWrite code\nWrite tests\nIterate until they pass\nR CMD check at the end",
+    "crumbs": [
+      "Modules",
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/04-workflow.html#basic-workflows",
+    "href": "modules/04-workflow.html#basic-workflows",
+    "title": "Workflow",
+    "section": "Basic workflows",
+    "text": "Basic workflows\n\n\nImplement it\nPlan it, then implement it\nPlan it, review the plan, implement it, review the implementation\nDesign it, then repeat cycles above",
+    "crumbs": [
+      "Modules",
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/04-workflow.html#example-workflow",
+    "href": "modules/04-workflow.html#example-workflow",
+    "title": "Workflow",
+    "section": "Example workflow",
+    "text": "Example workflow\n\nFix https://github.com/r-lib/testthat/issues/2344\n\n\nFix https://github.com/r-lib/testthat/issues/2317",
+    "crumbs": [
+      "Modules",
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/04-workflow.html#basic-advice",
+    "href": "modules/04-workflow.html#basic-advice",
+    "title": "Workflow",
+    "section": "Basic advice",
+    "text": "Basic advice\n\nWhen you get started, pay attention to what it’s doing\nCan be useful to intervene when it’s getting off track.\nCan also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out",
+    "crumbs": [
+      "Modules",
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/04-workflow.html#git-flow",
+    "href": "modules/04-workflow.html#git-flow",
+    "title": "Workflow",
+    "section": "Git flow",
+    "text": "Git flow\n\nWhen you get started, I think it’s worth doing all the commits yourself\nThen, tell it when to commit\nThen, it let it commit by itself\nThen, let it make the whole PR\n(But NEVER EVER inflect Claude’s writing on another human.)",
+    "crumbs": [
+      "Modules",
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/04-workflow.html#now-its-time-to-make-a-plan",
+    "href": "modules/04-workflow.html#now-its-time-to-make-a-plan",
+    "title": "Workflow",
+    "section": "Now it’s time to make a plan",
+    "text": "Now it’s time to make a plan\n\nPlanning tends to lead to better results, but don’t get hung up on it\nAlways ask for a markdown file that you can read and edit\nThree options for where to put this:\n\nEphemeral\nPersistent, outside of git\nChecked in",
+    "crumbs": [
+      "Modules",
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/04-workflow.html#example-workflow-1",
+    "href": "modules/04-workflow.html#example-workflow-1",
+    "title": "Workflow",
+    "section": "Example workflow",
+    "text": "Example workflow\n\nRead https://github.com/r-lib/testthat/issues/2334. Construct a minimal reprex, then write a brief plan for fixing the problem. Save your plan in plan.md.\n\n… read and review the plan …\n\nExecute the plan",
+    "crumbs": [
+      "Modules",
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/04-workflow.html#example-workflow-voice",
+    "href": "modules/04-workflow.html#example-workflow-voice",
+    "title": "Workflow",
+    "section": "Example workflow (voice)",
+    "text": "Example workflow (voice)\nFine to dump a stream of consciousness and let the agent figure it out. I think it’s good to ask for a plan just to check it’s clear what you actually want.",
+    "crumbs": [
+      "Modules",
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/04-workflow.html#workflow-lore",
+    "href": "modules/04-workflow.html#workflow-lore",
+    "title": "Workflow",
+    "section": "Workflow lore",
+    "text": "Workflow lore\n\nClaude (esp. Fable/Opus) best at planning\nCodex best at reviewing\nCheap models fine for implementing",
+    "crumbs": [
+      "Modules",
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/04-workflow.html#example-workflow-2",
+    "href": "modules/04-workflow.html#example-workflow-2",
+    "title": "Workflow",
+    "section": "Example workflow",
+    "text": "Example workflow\n\nPlan it with Fable (or whatever the best model you have access to is)\nYou read and review the plan\nReview the plan with Codex. Copy and paste the feedback.\nImplement with Sonnet (or a similar cheap model)\nReview the implementation with Codex\n\n\nhttps://github.com/r-lib/testthat/issues/2328",
+    "crumbs": [
+      "Modules",
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/04-workflow.html#your-turn-big",
+    "href": "modules/04-workflow.html#your-turn-big",
+    "title": "Workflow",
+    "section": "Your turn (big)",
+    "text": "Your turn (big)\n\nstringb",
+    "crumbs": [
+      "Modules",
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/02-posit-assistant-intro.html",
+    "href": "modules/02-posit-assistant-intro.html",
+    "title": "Intro to Posit Assistant",
     "section": "",
     "text": "TODO",
     "crumbs": [
       "Modules",
-      "R CMD check"
+      "Intro to Posit Assistant"
     ]
   },
   {
-    "objectID": "modules/05-r-cmd-check.html#your-first-cran-submission",
-    "href": "modules/05-r-cmd-check.html#your-first-cran-submission",
-    "title": "R CMD check",
-    "section": "Your first CRAN submission",
-    "text": "Your first CRAN submission",
+    "objectID": "modules/00-welcome.html",
+    "href": "modules/00-welcome.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "Slides (full screen)",
     "crumbs": [
       "Modules",
-      "R CMD check"
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Modern R Workflow (ft. Positron and AI)",
+    "section": "",
+    "text": "September 14, 2026 posit::conf(2026)",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#setup",
+    "href": "index.html#setup",
+    "title": "Modern R Workflow (ft. Positron and AI)",
+    "section": "Setup",
+    "text": "Setup\nPlease check the Setup Instructions for recommended steps to take before the workshop.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "Modern R Workflow (ft. Positron and AI)",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\nTime\nActivity\n\n\n\n\n09:00\nWelcome\n\n\n09:00 - 10:30\nPositron tourIntro to Posit AssistantHow do agents work?\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nHow do agents work? (cont’d)Workflow\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nR CMD checkSkills and AGENTS.md\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nBest practices feedback loopHelping yourself",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#instructors",
+    "href": "index.html#instructors",
+    "title": "Modern R Workflow (ft. Positron and AI)",
+    "section": "Instructors",
+    "text": "Instructors\n\nHadley Wickham\nHadley Wickham is Chief Scientist at Posit, where (among other things) he leads the tidyverse team. He builds tools (both computational and cognitive) that make data science easier, faster, and more fun. He’s the creator of packages like ggplot2, dplyr, and devtools and an author of several books on R, including R for Data Science and R Packages.\nGitHub · Bluesky · LinkedIn\n\n\nJenny Bryan\nJenny Bryan is a Senior Software Engineer at Posit, where she works on the tidyverse/r-lib and Positron teams. A recovering biostatistician, she takes special delight in eliminating the small agonies of data analysis. She’s the creator of packages like googlesheets4 and reprex and an author of the book R Packages and the Happy Git with R guide.\nGitHub · Bluesky",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#description",
+    "href": "index.html#description",
+    "title": "Modern R Workflow (ft. Positron and AI)",
+    "section": "Description",
+    "text": "Description\nThis workshop is designed for data scientists who are comfortable with using R for data analysis and ready to level up their software engineering skills. Led by Hadley Wickham and Jenny Bryan, you’ll learn how to write more robust, maintainable R code while taking advantage of modern tooling (cough AI cough) that can dramatically accelerate your productivity.\nWe’ll cover three interconnected themes. First, you’ll learn contemporary R development practices—writing functions, organizing code into packages, testing, and documentation strategies that scale from personal projects to team collaboration. Second, we’ll explore how AI assistants like Claude Code can help you write better R code faster. Third, we’ll share practical tips for getting the most out of Positron, including features specifically designed to make R development and data exploration more fluid.\nThroughout the workshop, we’ll emphasize the connections between these topics: how good development practices make AI assistance more effective, how modern tooling reduces friction so you can focus on the interesting problems, and how to build workflows that are both efficient and reproducible. You’ll leave with concrete skills you can apply immediately to your own projects.\nPrerequisites: Basic familiarity with R programming (e.g., using the tidyverse). You should have written a few functions before, but don’t need any experience with package development, AI coding tools, or Positron. If you have taken a package development workshop before, you’ll learn what’s changed in our workflows, especially how we’re using AI and Positron effectively.\n This work is licensed under a Creative Commons Attribution 4.0 International License.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "modules/01-positron-tour.html",
+    "href": "modules/01-positron-tour.html",
+    "title": "Positron tour",
+    "section": "",
+    "text": "TODO",
+    "crumbs": [
+      "Modules",
+      "Positron tour"
     ]
   },
   {
@@ -425,210 +618,6 @@
     "crumbs": [
       "Modules",
       "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/01-positron-tour.html",
-    "href": "modules/01-positron-tour.html",
-    "title": "Positron tour",
-    "section": "",
-    "text": "TODO",
-    "crumbs": [
-      "Modules",
-      "Positron tour"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Modern R Workflow (ft. Positron and AI)",
-    "section": "",
-    "text": "September 14, 2026 posit::conf(2026)",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#setup",
-    "href": "index.html#setup",
-    "title": "Modern R Workflow (ft. Positron and AI)",
-    "section": "Setup",
-    "text": "Setup\nPlease check the Setup Instructions for recommended steps to take before the workshop.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#schedule",
-    "href": "index.html#schedule",
-    "title": "Modern R Workflow (ft. Positron and AI)",
-    "section": "Schedule",
-    "text": "Schedule\n\n\n\nTime\nActivity\n\n\n\n\n09:00\nWelcome\n\n\n09:00 - 10:30\nPositron tourIntro to Posit AssistantHow do agents work?\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nHow do agents work? (cont’d)Workflow\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nR CMD checkSkills and AGENTS.md\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nBest practices feedback loopHelping yourself",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#instructors",
-    "href": "index.html#instructors",
-    "title": "Modern R Workflow (ft. Positron and AI)",
-    "section": "Instructors",
-    "text": "Instructors\n\nHadley Wickham\nHadley Wickham is Chief Scientist at Posit, where (among other things) he leads the tidyverse team. He builds tools (both computational and cognitive) that make data science easier, faster, and more fun. He’s the creator of packages like ggplot2, dplyr, and devtools and an author of several books on R, including R for Data Science and R Packages.\nGitHub · Bluesky · LinkedIn\n\n\nJenny Bryan\nJenny Bryan is a Senior Software Engineer at Posit, where she works on the tidyverse/r-lib and Positron teams. A recovering biostatistician, she takes special delight in eliminating the small agonies of data analysis. She’s the creator of packages like googlesheets4 and reprex and an author of the book R Packages and the Happy Git with R guide.\nGitHub · Bluesky",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#description",
-    "href": "index.html#description",
-    "title": "Modern R Workflow (ft. Positron and AI)",
-    "section": "Description",
-    "text": "Description\nThis workshop is designed for data scientists who are comfortable with using R for data analysis and ready to level up their software engineering skills. Led by Hadley Wickham and Jenny Bryan, you’ll learn how to write more robust, maintainable R code while taking advantage of modern tooling (cough AI cough) that can dramatically accelerate your productivity.\nWe’ll cover three interconnected themes. First, you’ll learn contemporary R development practices—writing functions, organizing code into packages, testing, and documentation strategies that scale from personal projects to team collaboration. Second, we’ll explore how AI assistants like Claude Code can help you write better R code faster. Third, we’ll share practical tips for getting the most out of Positron, including features specifically designed to make R development and data exploration more fluid.\nThroughout the workshop, we’ll emphasize the connections between these topics: how good development practices make AI assistance more effective, how modern tooling reduces friction so you can focus on the interesting problems, and how to build workflows that are both efficient and reproducible. You’ll leave with concrete skills you can apply immediately to your own projects.\nPrerequisites: Basic familiarity with R programming (e.g., using the tidyverse). You should have written a few functions before, but don’t need any experience with package development, AI coding tools, or Positron. If you have taken a package development workshop before, you’ll learn what’s changed in our workflows, especially how we’re using AI and Positron effectively.\n This work is licensed under a Creative Commons Attribution 4.0 International License.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "modules/00-welcome.html",
-    "href": "modules/00-welcome.html",
-    "title": "Welcome",
-    "section": "",
-    "text": "Slides (full screen)",
-    "crumbs": [
-      "Modules",
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "modules/02-posit-assistant-intro.html",
-    "href": "modules/02-posit-assistant-intro.html",
-    "title": "Intro to Posit Assistant",
-    "section": "",
-    "text": "TODO",
-    "crumbs": [
-      "Modules",
-      "Intro to Posit Assistant"
-    ]
-  },
-  {
-    "objectID": "modules/04-workflow.html",
-    "href": "modules/04-workflow.html",
-    "title": "Workflow",
-    "section": "",
-    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, planning, design, docs)\nStart slow and grow your confidence\nNever make another human read AI slop",
-    "crumbs": [
-      "Modules",
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/04-workflow.html#general-principles",
-    "href": "modules/04-workflow.html#general-principles",
-    "title": "Workflow",
-    "section": "",
-    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, planning, design, docs)\nStart slow and grow your confidence\nNever make another human read AI slop",
-    "crumbs": [
-      "Modules",
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/04-workflow.html#basic-workflows",
-    "href": "modules/04-workflow.html#basic-workflows",
-    "title": "Workflow",
-    "section": "Basic workflows",
-    "text": "Basic workflows\n\n\nImplement it\nPlan it, then implement it\nPlan it, review the plan, implement it, review the implementation\nDesign it, then repeat cycles above",
-    "crumbs": [
-      "Modules",
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/04-workflow.html#example-workflow",
-    "href": "modules/04-workflow.html#example-workflow",
-    "title": "Workflow",
-    "section": "Example workflow",
-    "text": "Example workflow\n\nFix https://github.com/r-lib/testthat/issues/2344\n\n\nFix https://github.com/r-lib/testthat/issues/2317",
-    "crumbs": [
-      "Modules",
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/04-workflow.html#basic-advice",
-    "href": "modules/04-workflow.html#basic-advice",
-    "title": "Workflow",
-    "section": "Basic advice",
-    "text": "Basic advice\n\nWhen you get started, pay attention to what it’s doing\nCan be useful to intervene when it’s getting off track.\nCan also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out",
-    "crumbs": [
-      "Modules",
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/04-workflow.html#git-flow",
-    "href": "modules/04-workflow.html#git-flow",
-    "title": "Workflow",
-    "section": "Git flow",
-    "text": "Git flow\n\nWhen you get started, I think it’s worth doing all the commits yourself\nThen, tell it when to commit\nThen, it let it commit by itself\nThen, let it make the whole PR\n(But NEVER EVER inflect Claude’s writing on another human.)",
-    "crumbs": [
-      "Modules",
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/04-workflow.html#now-its-time-to-make-a-plan",
-    "href": "modules/04-workflow.html#now-its-time-to-make-a-plan",
-    "title": "Workflow",
-    "section": "Now it’s time to make a plan",
-    "text": "Now it’s time to make a plan\n\nPlanning tends to lead to better results, but don’t get hung up on it\nAlways ask for a markdown file that you can read and edit\nThree options for where to put this:\n\nEphemeral\nPersistent, outside of git\nChecked in",
-    "crumbs": [
-      "Modules",
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/04-workflow.html#example-workflow-1",
-    "href": "modules/04-workflow.html#example-workflow-1",
-    "title": "Workflow",
-    "section": "Example workflow",
-    "text": "Example workflow\n\nRead https://github.com/r-lib/testthat/issues/2334. Construct a minimal reprex, then write a brief plan for fixing the problem. Save your plan in plan.md.\n\n… read and review the plan …\n\nExecute the plan",
-    "crumbs": [
-      "Modules",
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/04-workflow.html#example-workflow-voice",
-    "href": "modules/04-workflow.html#example-workflow-voice",
-    "title": "Workflow",
-    "section": "Example workflow (voice)",
-    "text": "Example workflow (voice)\nFine to dump a stream of consciousness and let the agent figure it out. I think it’s good to ask for a plan just to check it’s clear what you actually want.",
-    "crumbs": [
-      "Modules",
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/04-workflow.html#workflow-lore",
-    "href": "modules/04-workflow.html#workflow-lore",
-    "title": "Workflow",
-    "section": "Workflow lore",
-    "text": "Workflow lore\n\nClaude (esp. Fable/Opus) best at planning\nCodex best at reviewing\nCheap models fine for implementing",
-    "crumbs": [
-      "Modules",
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/04-workflow.html#example-workflow-2",
-    "href": "modules/04-workflow.html#example-workflow-2",
-    "title": "Workflow",
-    "section": "Example workflow",
-    "text": "Example workflow\n\nPlan it with Fable (or whatever the best model you have access to is)\nYou read and review the plan\nReview the plan with Codex. Copy and paste the feedback.\nImplement with Sonnet (or a similar cheap model)\nReview the implementation with Codex\n\n\nhttps://github.com/r-lib/testthat/issues/2328",
-    "crumbs": [
-      "Modules",
-      "Workflow"
     ]
   },
   {
