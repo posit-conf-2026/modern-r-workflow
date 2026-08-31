@@ -10,6 +10,690 @@
     ]
   },
   {
+    "objectID": "modules/slides/00-welcome-slides.html#wi-fi",
+    "href": "modules/slides/00-welcome-slides.html#wi-fi",
+    "title": "Welcome",
+    "section": "Wi-Fi",
+    "text": "Wi-Fi\n\n\n\n\nWi-Fi network name\nPosit Conf 2026\n\n\n\n\nWi-Fi password\nconf2026"
+  },
+  {
+    "objectID": "modules/slides/00-welcome-slides.html#venue-information",
+    "href": "modules/slides/00-welcome-slides.html#venue-information",
+    "title": "Welcome",
+    "section": "Venue information",
+    "text": "Venue information\n\nMeditation/Prayer Room: Room 332\nMother’s Room: Room 333\nSpeakers Lounge: Room 334\nRestroom locations: TBD\n\nMore detailed maps are on the way and will be added once available."
+  },
+  {
+    "objectID": "modules/slides/00-welcome-slides.html#workshop-policies",
+    "href": "modules/slides/00-welcome-slides.html#workshop-policies",
+    "title": "Welcome",
+    "section": "Workshop policies",
+    "text": "Workshop policies\n\nPlease review the posit::conf code of conduct, which applies to all workshops: https://posit.co/code-of-conduct\nThe Code of Conduct site has info on how to report a problem (in person, email, phone)\nPlease do not photograph people wearing red lanyards"
+  },
+  {
+    "objectID": "modules/slides/00-welcome-slides.html#who-are-your-tas",
+    "href": "modules/slides/00-welcome-slides.html#who-are-your-tas",
+    "title": "Welcome",
+    "section": "Who are your TAs?",
+    "text": "Who are your TAs?\n\nJulia Silge\nKatie Masiello\nSimon Couch\nThomas Pedersen"
+  },
+  {
+    "objectID": "modules/slides/00-welcome-slides.html#join-us-on-discord",
+    "href": "modules/slides/00-welcome-slides.html#join-us-on-discord",
+    "title": "Welcome",
+    "section": "Join us on Discord",
+    "text": "Join us on Discord\nJoin the posit::conf Discord server: pos.it/joinconf26\nThen head to the workshop channel: #workshop-modern-r-workflow"
+  },
+  {
+    "objectID": "modules/slides/00-welcome-slides.html#section-2",
+    "href": "modules/slides/00-welcome-slides.html#section-2",
+    "title": "Welcome",
+    "section": "",
+    "text": "Introduce yourself to your neighbors 👋\n\nDo you have a hidden talent?\nDo you have a pet or hobby?\nWhat’s your biggest pet peeve with R?\nWhat’s your favorite thing to do in R?"
+  },
+  {
+    "objectID": "modules/slides/00-welcome-slides.html#positron",
+    "href": "modules/slides/00-welcome-slides.html#positron",
+    "title": "Welcome",
+    "section": "Positron",
+    "text": "Positron\n\nIf you haven’t already, now’s a good time to install Positron, or check that you’re on the latest version.\n\nDownload: https://positron.posit.co/download.html"
+  },
+  {
+    "objectID": "modules/slides/00-welcome-slides.html#posit-ai",
+    "href": "modules/slides/00-welcome-slides.html#posit-ai",
+    "title": "Welcome",
+    "section": "Posit AI",
+    "text": "Posit AI\n\nSign up for Posit AI so you’re ready to use Posit Assistant during the workshop.\n\nSign up: https://posit.ai\nMake sure to use the same email address as you used to register for conf"
+  },
+  {
+    "objectID": "modules/slides/00-welcome-slides.html#check-your-r-setup",
+    "href": "modules/slides/00-welcome-slides.html#check-your-r-setup",
+    "title": "Welcome",
+    "section": "Check your R setup",
+    "text": "Check your R setup\nLet’s make sure everyone’s R installation is ready to go.\n\nConfirm you’re on a recent version of R\nInstall pak, if you haven’t already:\ninstall.packages(\"pak\")\nInstall/update devtools and friends:\npak::pak(\"devtools\")\nRun a situation report and check that everything looks good:\ndevtools::dev_sitrep()"
+  },
+  {
+    "objectID": "modules/slides/00-welcome-slides.html#whats-changed",
+    "href": "modules/slides/00-welcome-slides.html#whats-changed",
+    "title": "Welcome",
+    "section": "What’s changed?",
+    "text": "What’s changed?\nWhere are the significant changes since R Packages?\n\n80% AI\n15% Positron\n5% standalone CLIs written in rust (e.g. air, rig, quarto)"
+  },
+  {
+    "objectID": "modules/slides/00-welcome-slides.html#overall",
+    "href": "modules/slides/00-welcome-slides.html#overall",
+    "title": "Welcome",
+    "section": "Overall",
+    "text": "Overall\n\nMore changes in the last year than last 10 years combined, and doesn’t look like the pace is going to slow down\nNon-obvious consequences because the cost-benefit ratio for many tasks has radically changed\nWe are still figuring out what it all means\nKeep exploring and experimenting; hold loosely to your hypthoeses\nWe hope you’ll learn something useful; and we also expect to learn from you!"
+  },
+  {
+    "objectID": "modules/slides/00-welcome-slides.html#the-good-news",
+    "href": "modules/slides/00-welcome-slides.html#the-good-news",
+    "title": "Welcome",
+    "section": "The good news",
+    "text": "The good news\nOn the whole you’re well positioned to benefit from AI:\n\nPlain text workflows are equally accessible to humans and agents\nBaseline scepticism will serve you well (but don’t let it imprison you)\nHuman knowledge still super important!\nSubject matter expertise now more important that programming skill\nDevelopment best practices now much more accessible"
+  },
+  {
+    "objectID": "modules/06-agent-instructions.html",
+    "href": "modules/06-agent-instructions.html",
+    "title": "Skills and AGENTS.md",
+    "section": "",
+    "text": "So far we’ve used (implicitly) AGENTS.md.\nWhat about skills?\n\n\n\n\nuse_tidy_agents() bundles two skills\nWhat are they? How do they work?\nWhat’s the advantage of bundling them this way?\nWhat’s the disadvantage?",
+    "crumbs": [
+      "Skills and AGENTS.md"
+    ]
+  },
+  {
+    "objectID": "modules/06-agent-instructions.html#your-turn",
+    "href": "modules/06-agent-instructions.html#your-turn",
+    "title": "Skills and AGENTS.md",
+    "section": "",
+    "text": "use_tidy_agents() bundles two skills\nWhat are they? How do they work?\nWhat’s the advantage of bundling them this way?\nWhat’s the disadvantage?",
+    "crumbs": [
+      "Skills and AGENTS.md"
+    ]
+  },
+  {
+    "objectID": "modules/06-agent-instructions.html#what-is-a-skill",
+    "href": "modules/06-agent-instructions.html#what-is-a-skill",
+    "title": "Skills and AGENTS.md",
+    "section": "What is a skill?",
+    "text": "What is a skill?\n\nFormal definition at https://agentskills.io/\nBut IMO this is very overwrought\nTwo parts to a skill:\n\nWhen: short description that states when to use it\nWhat: longer details of how to use it\n\nSystem prompt includes all the “when”s\nAgent loads the “what” on demand",
+    "crumbs": [
+      "Skills and AGENTS.md"
+    ]
+  },
+  {
+    "objectID": "modules/06-agent-instructions.html#other-forms-of-skills",
+    "href": "modules/06-agent-instructions.html#other-forms-of-skills",
+    "title": "Skills and AGENTS.md",
+    "section": "Other forms of skills",
+    "text": "Other forms of skills\n\nDirectory of markdown files with index/README\nQuarto website\n\nUse llms-text: true\nBasic idea: https://design.tidyverse.org\n\nR documentation\nR functions",
+    "crumbs": [
+      "Skills and AGENTS.md"
+    ]
+  },
+  {
+    "objectID": "modules/06-agent-instructions.html#general-advice",
+    "href": "modules/06-agent-instructions.html#general-advice",
+    "title": "Skills and AGENTS.md",
+    "section": "General advice",
+    "text": "General advice\n\nHold on to them loosely\nKeep them personal, local, timely\nBest for stuff a general LLM can’t know\nRelatively little benefit to using same model to both write and read\nThey don’t have to be markdown files",
+    "crumbs": [
+      "Skills and AGENTS.md"
+    ]
+  },
+  {
+    "objectID": "modules/06-agent-instructions.html#our-skills",
+    "href": "modules/06-agent-instructions.html#our-skills",
+    "title": "Skills and AGENTS.md",
+    "section": "Our skills",
+    "text": "Our skills\n\nPR description writer\nWinston’s PR reviewer",
+    "crumbs": [
+      "Skills and AGENTS.md"
+    ]
+  },
+  {
+    "objectID": "modules/06-agent-instructions.html#winstons-simplification-prompt",
+    "href": "modules/06-agent-instructions.html#winstons-simplification-prompt",
+    "title": "Skills and AGENTS.md",
+    "section": "Winston’s simplification prompt",
+    "text": "Winston’s simplification prompt\n\nMake a deliberate pass over each non-trivial change looking for opportunities for simplification:\n\nCould this change be achieved by deleting or restructuring instead of adding — removing a branch, mode, layer, or special case rather than bolting one on? It’s always better to remove than add.\nIs each new or changed interface narrow relative to what it hides — or must callers know its internals, keep duplicated logic in sync, or work around documented gaps (“does NOT handle X”)?\nDoes anything re-implement what the codebase already provides — a bespoke helper shadowing a canonical one, logic in the wrong layer, or wrapper/cast/any churn obscuring the real contract?\n\nWhen you find opportunities for simplification, be clear about the pros and cons. Produce either a list of potential simplifications or “No simplifications found”.",
+    "crumbs": [
+      "Skills and AGENTS.md"
+    ]
+  },
+  {
+    "objectID": "modules/06-agent-instructions.html#bundling-with-a-package",
+    "href": "modules/06-agent-instructions.html#bundling-with-a-package",
+    "title": "Skills and AGENTS.md",
+    "section": "Bundling with a package",
+    "text": "Bundling with a package\n\nNo automated tooling yet\ninst/skills is a reasonable place to put them\nYou’ll need to expose in some other way",
+    "crumbs": [
+      "Skills and AGENTS.md"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html",
+    "href": "modules/04-agent-explainer.html",
+    "title": "How do agents work?",
+    "section": "",
+    "text": "Introduce you to package development in Posit Assitant\nUse that as a framework to explain how agents work\nHelp you understand the risks associated with using agents\nGive you a basic mental model of LLM costs\nDiscuss Posit Assistant alternatives",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#lets-make-a-package",
+    "href": "modules/04-agent-explainer.html#lets-make-a-package",
+    "title": "How do agents work?",
+    "section": "Let’s make a package",
+    "text": "Let’s make a package\n(Make sure you’re in normal mode)\nusethis::create_package(\"~/desktop/compliment\")\n\nCreate a new R package called compliment in the current directory. It should generate randomized compliments.",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#your-turn",
+    "href": "modules/04-agent-explainer.html#your-turn",
+    "title": "How do agents work?",
+    "section": "Your turn",
+    "text": "Your turn\n\nUse the same prompt as me. It’s underspecified ask so we’re going to get lots of variation. That’s part of the fun!\nManually approve a few writes\nThen allow all\nMake sure your package has tests and Git\nHow does your package differ from mine? From your neighbours?",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#there-are-three-types-of-output",
+    "href": "modules/04-agent-explainer.html#there-are-three-types-of-output",
+    "title": "How do agents work?",
+    "section": "There are three types of output",
+    "text": "There are three types of output\n\nText\nThinking (click to expand)\nTool calls",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#tool-calls-let-the-agent-run-code-on-your-computer",
+    "href": "modules/04-agent-explainer.html#tool-calls-let-the-agent-run-code-on-your-computer",
+    "title": "How do agents work?",
+    "section": "Tool calls let the agent run code on your computer",
+    "text": "Tool calls let the agent run code on your computer\n\nTools are provided by the harness, e.g. Posit Assistant\nLLM asks harness to run code; harness returns result to the LLM\nOften requests many tool calls at once\nThese are called “parallel” calls, but don’t actually run in parallel.\nCan recognise with the thick line line\n\n\n\n\nTwo read calls and three edit calls",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#a-little-vocab",
+    "href": "modules/04-agent-explainer.html#a-little-vocab",
+    "title": "How do agents work?",
+    "section": "A little vocab",
+    "text": "A little vocab\n\nHarness: provides tools; runs the loop\nProvider: who runs the server that runs the model\n\nOpen models can be hosted anywhere\nAWS + Azure host lots of foundation models\n\nModel: the specific LLM model you’re using",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#some-examples",
+    "href": "modules/04-agent-explainer.html#some-examples",
+    "title": "How do agents work?",
+    "section": "Some examples",
+    "text": "Some examples\n\nKimi K3 (model) on posit.ai (provider) with Posit Assitant (harness)\nOpus 5 (model) on posit.ai (provider) with Posit Assitant (harness)\nOpus 5 (model) from claude (provider) in Claude Code (harness)\nGPT-5.3 (model) from AWS Bedrock (provider) in Posit Assitant (harness)\nGPT-5.3 (model) from OpenAI (provider) in codex (harness)",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#what-are-some-common-calls",
+    "href": "modules/04-agent-explainer.html#what-are-some-common-calls",
+    "title": "How do agents work?",
+    "section": "What are some common calls?",
+    "text": "What are some common calls?\n\nwrite creates a new file\nedit modifies an existing file\nexecuteCode runs R (or Python) code in the console\nbash runs code you’d usually use the terminal for\nAskUser asks you a question\nread reads a file on disk\nwebfetch reads a web page\nsearch searches directory for matching text",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#your-turn-1",
+    "href": "modules/04-agent-explainer.html#your-turn-1",
+    "title": "How do agents work?",
+    "section": "Your turn",
+    "text": "Your turn\n\nTry and prompt your agent to make it use each of the tool calls above.\nWhat other tools are available?",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#so-what-is-an-agent",
+    "href": "modules/04-agent-explainer.html#so-what-is-an-agent",
+    "title": "How do agents work?",
+    "section": "So what is an agent?",
+    "text": "So what is an agent?",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#what-are-the-risks",
+    "href": "modules/04-agent-explainer.html#what-are-the-risks",
+    "title": "How do agents work?",
+    "section": "What are the risks?",
+    "text": "What are the risks?\nI think the cleanest definition is that the dangers are irreversible action, i.e.:\n\nEditing file (without git)\nDeleting a file or database table (without a backup)\nSending an email\nRevealing a secret (API key, password, …)",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#your-turn-2",
+    "href": "modules/04-agent-explainer.html#your-turn-2",
+    "title": "How do agents work?",
+    "section": "Your turn",
+    "text": "Your turn\nWhat other irreversible actions are you worried about? What ways do you know to protect yourself?",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#how-do-you-protect-yourself",
+    "href": "modules/04-agent-explainer.html#how-do-you-protect-yourself",
+    "title": "How do agents work?",
+    "section": "How do you protect yourself?",
+    "text": "How do you protect yourself?\n\nAsk for permission\nMake operations reversible\n\nAlways use git\nBack up!\n\nPrevent dangerous actions (i.e. use a sandbox)",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#ask-for-permission",
+    "href": "modules/04-agent-explainer.html#ask-for-permission",
+    "title": "How do agents work?",
+    "section": "Ask for permission",
+    "text": "Ask for permission\n\nIMO constantly asking for permission is just security theatre\n99% of LLM actions are fine, so you quickly get trained to always click ok\nSo then you just click “Approve always”\nMatching command prefixes doesn’t work",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#prefixes-dont-work",
+    "href": "modules/04-agent-explainer.html#prefixes-dont-work",
+    "title": "How do agents work?",
+    "section": "Prefixes don’t work",
+    "text": "Prefixes don’t work\ngit push --force\ngh issue delete 123\nfind . -type f -name '*.log' -mtime +30 -size +10M -path './var/*' -delete\ncurl -fsSL https://example.com/install.sh -o /dev/stdout | sh\ntar -xzf backup.tar.gz -C /tmp/restore --strip-components=1 -P",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#what-about-sandboxes",
+    "href": "modules/04-agent-explainer.html#what-about-sandboxes",
+    "title": "How do agents work?",
+    "section": "What about sandboxes?",
+    "text": "What about sandboxes?\n\nUse OS level sandboxing to only allow reads and writes to the current directory, and no network access.\nUnfortunately that’s not very useful\n\nNo package install\nNo temporary directory\nNo GitHub\nNo web search\n\nI remain optimistic that it’s possible to overcome these problems, but current implementations are painful.",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#auto-mode",
+    "href": "modules/04-agent-explainer.html#auto-mode",
+    "title": "How do agents work?",
+    "section": "Auto-mode",
+    "text": "Auto-mode\n\nWhat if we only ask permission for operations that seem legitimately dangerous?\nThat’s the idea behind auto-mode: ask a (simpler) LLM to classify if a command is dangerous or safe, and then only ask permission for dangerous options\nIt leaves a lot to be desired, but I think this is a sweet spot on the security-utility spectrum right now",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#reasoning-about-llm-behaviour-is-weird",
+    "href": "modules/04-agent-explainer.html#reasoning-about-llm-behaviour-is-weird",
+    "title": "How do agents work?",
+    "section": "Reasoning about LLM behaviour is weird",
+    "text": "Reasoning about LLM behaviour is weird\n\n\nDelete ~/desktop/family-data\n\n\nDelete ~/desktop/junk",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#your-turn-3",
+    "href": "modules/04-agent-explainer.html#your-turn-3",
+    "title": "How do agents work?",
+    "section": "Your turn",
+    "text": "Your turn\nWhat other potentially dangerous operations can you get Posit Assistant to do? (Don’t do anything legit dangerous but see if you can trick PA into doing something that’s clearly dangerous in general.)",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#more-work-to-be-done",
+    "href": "modules/04-agent-explainer.html#more-work-to-be-done",
+    "title": "How do agents work?",
+    "section": "More work to be done",
+    "text": "More work to be done\n\nSome of my (incorrect) thinking at https://tidydesign.substack.com/p/help-my-coding-agent-can-run-code\nI plan to work on this after conf",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#why-care",
+    "href": "modules/04-agent-explainer.html#why-care",
+    "title": "How do agents work?",
+    "section": "Why care?",
+    "text": "Why care?\n\nYou probably don’t need to if you’re an individual developer\nBut:\n\nIt matters inside enterprises\nIt’s a proxy for energy usage\nWho knows how long all-you-can-eat plans will continue",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#life-is-good-for-individual-developers",
+    "href": "modules/04-agent-explainer.html#life-is-good-for-individual-developers",
+    "title": "How do agents work?",
+    "section": "Life is good for individual developers",
+    "text": "Life is good for individual developers\n\nIndividuals can use an all-you-can-eat plan\n\nCodex: $20 / month, $100 / month\nClaude Code: $20 / month, $100 / month\n\nThese are very generous; you get 20-80x the value of API pricing\nBUT you can only use in provider harnesses (i.e. not Posit Assitant)",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#enterprise-plans-are-different",
+    "href": "modules/04-agent-explainer.html#enterprise-plans-are-different",
+    "title": "How do agents work?",
+    "section": "Enterprise plans are different",
+    "text": "Enterprise plans are different\n\nEnterprises have to pay by the million tokens\n\nOpus 5: $5 input, $25 output\ngpt-5.6-terra: $2 input, $12 output\nKimi K3: $3 input, $15 output\n\n(This is also what you pay in ellmer)\nAverage engineers spend $150-$250 / month, i.e. $8-12 / day\nHigh users spend $3,000 / month, i.e. $150 / day.",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#my-views-on-cost-benefit-have-changed",
+    "href": "modules/04-agent-explainer.html#my-views-on-cost-benefit-have-changed",
+    "title": "How do agents work?",
+    "section": "My views on cost-benefit have changed",
+    "text": "My views on cost-benefit have changed\n\nI used to think that Anthropic models was worth the premium\nBut the relative cost has increased and output quality has decreased (code is still fine, but its writing is painful)\nKimi K3 is excellent. Somewhere between Opus and Fable in code quality, but a much better writer, and only costs 75% of Sonnet (thanks to tokenizer).\nAll models since April 16, 2026 (Claude Opus 4.7) use a new tokenizer that uses ~20% more tokens, so even though the per-token prices didn’t change, the overall cost did.\nAnd Anthropic models seem to be producing more loquacious output, which also costs more money 🤔",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#so-how-can-you-tell-what-youre-spending",
+    "href": "modules/04-agent-explainer.html#so-how-can-you-tell-what-youre-spending",
+    "title": "How do agents work?",
+    "section": "So how can you tell what you’re spending?",
+    "text": "So how can you tell what you’re spending?\n\nHarnesses by model providers don’t tend to make the cost obvious (I think you can imagine why)\nPosit Assistant displays a lot of information (and we’re working hard to make it better)\nAgentsView is a good retrospective tool that works with many harnesses.\nTwo important facts to know:\n\nConversations are additive\nCache is king",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#conversations-are-additive",
+    "href": "modules/04-agent-explainer.html#conversations-are-additive",
+    "title": "How do agents work?",
+    "section": "Conversations are additive",
+    "text": "Conversations are additive\n\nLLMs are predictive models\nThey need the complete history of the conversation\nBoth your inputs and its outputs\nRecommendation: use /clear to start from a fresh slate\nSaves money and avoids stale state",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#cost-is-dominated-by-cache-hits",
+    "href": "modules/04-agent-explainer.html#cost-is-dominated-by-cache-hits",
+    "title": "How do agents work?",
+    "section": "Cost is dominated by cache hits",
+    "text": "Cost is dominated by cache hits\n\nNo caching = ~10x cost\nVery hard to reason about, not least because the providers differ so much:\n\nClaude: 5 minutes / 1 hour (2x cost)\nOpenAI: 30 minutes\nKimiK3: no guarantees\n\nBut if you resume a session the next day, be 10x the cost of the last request",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#your-turn-4",
+    "href": "modules/04-agent-explainer.html#your-turn-4",
+    "title": "How do agents work?",
+    "section": "Your turn",
+    "text": "Your turn\n\nLook at what you’ve spent in previous PA conversations.\n\nOptional: download and install AgentsView. Where is your LLM spend going?",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#posit-assistant-currently-most-compelling-inside-the-enterprise",
+    "href": "modules/04-agent-explainer.html#posit-assistant-currently-most-compelling-inside-the-enterprise",
+    "title": "How do agents work?",
+    "section": "Posit Assistant currently most compelling inside the enterprise",
+    "text": "Posit Assistant currently most compelling inside the enterprise\n\nOptimistically, it’s 2x better than Claude code/codex\nBut you have to pay 20-80x as much to use it with an API key (or via posit.ai)\nSo ask for it if you use RStudio/Positron for work, but otherwise we accept it’s probably not worth it for you to use it\nWe are closely tracking Anthropic/OpenAI opening up their plans to other harnesses",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#so-why-use-it-in-this-workshop",
+    "href": "modules/04-agent-explainer.html#so-why-use-it-in-this-workshop",
+    "title": "How do agents work?",
+    "section": "So why use it in this workshop?",
+    "text": "So why use it in this workshop?\n\nWe believe it’s a really good product and want you to at least experience it\nWe also want to see what problems you discover with it\nIt’s what I use day-to-day\nIt gives the best feedback on cost",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#what-if-you-cant-use-it",
+    "href": "modules/04-agent-explainer.html#what-if-you-cant-use-it",
+    "title": "How do agents work?",
+    "section": "What if you can’t use it ?",
+    "text": "What if you can’t use it ?\n\nThe Claude Code and Codex harnesses are also very good\nI have used both VS Code/Positron extensions and just their CLI’s in the terminal\nDownside of both extensions is that they can’t find quarto and air which are bundled with Positron. You’ll need to explicitly tell them to that they’re bundled with Positron.\nWe recommend pairing with https://github.com/posit-dev/mcp-repl or similar to get access to a persistent R/python environment",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/02-positron-tour.html",
+    "href": "modules/02-positron-tour.html",
+    "title": "Positron tour",
+    "section": "",
+    "text": "TODO",
+    "crumbs": [
+      "Positron tour"
+    ]
+  },
+  {
+    "objectID": "modules/00-welcome.html",
+    "href": "modules/00-welcome.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "Slides (full screen)",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Modern R Workflow (ft. Positron and AI)",
+    "section": "",
+    "text": "September 14, 2026 posit::conf(2026)\nHow to get to this page: pos.it/modern-r-workflow",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#setup",
+    "href": "index.html#setup",
+    "title": "Modern R Workflow (ft. Positron and AI)",
+    "section": "Setup",
+    "text": "Setup\nPlease check the Setup Instructions for recommended steps to take before the workshop.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "Modern R Workflow (ft. Positron and AI)",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\nTime\nActivity\n\n\n\n\n09:00\nWelcome\n\n\n09:00 - 10:30\nPositron tourIntro to Posit AssistantHow do agents work?\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nHow do agents work? (cont’d)Workflow\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nSkills and AGENTS.md\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nBest practices feedback loopHelping yourself",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#instructors",
+    "href": "index.html#instructors",
+    "title": "Modern R Workflow (ft. Positron and AI)",
+    "section": "Instructors",
+    "text": "Instructors\n\nHadley Wickham\nHadley Wickham is Chief Scientist at Posit, where (among other things) he leads the tidyverse team. He builds tools (both computational and cognitive) that make data science easier, faster, and more fun. He’s the creator of packages like ggplot2, dplyr, and devtools and an author of several books on R, including R for Data Science and R Packages.\nGitHub · Bluesky · LinkedIn\n\n\nJenny Bryan\nJenny Bryan is a Senior Software Engineer at Posit, where she works on the tidyverse/r-lib and Positron teams. A recovering biostatistician, she takes special delight in eliminating the small agonies of data analysis. She’s the creator of packages like googlesheets4 and reprex and an author of the book R Packages and the Happy Git with R guide.\nGitHub · Bluesky",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#description",
+    "href": "index.html#description",
+    "title": "Modern R Workflow (ft. Positron and AI)",
+    "section": "Description",
+    "text": "Description\nThis workshop is designed for data scientists who are comfortable with using R for data analysis and ready to level up their software engineering skills. Led by Hadley Wickham and Jenny Bryan, you’ll learn how to write more robust, maintainable R code while taking advantage of modern tooling (cough AI cough) that can dramatically accelerate your productivity.\nWe’ll cover three interconnected themes. First, you’ll learn contemporary R development practices—writing functions, organizing code into packages, testing, and documentation strategies that scale from personal projects to team collaboration. Second, we’ll explore how AI assistants like Claude Code can help you write better R code faster. Third, we’ll share practical tips for getting the most out of Positron, including features specifically designed to make R development and data exploration more fluid.\nThroughout the workshop, we’ll emphasize the connections between these topics: how good development practices make AI assistance more effective, how modern tooling reduces friction so you can focus on the interesting problems, and how to build workflows that are both efficient and reproducible. You’ll leave with concrete skills you can apply immediately to your own projects.\nPrerequisites: Basic familiarity with R programming (e.g., using the tidyverse). You should have written a few functions before, but don’t need any experience with package development, AI coding tools, or Positron. If you have taken a package development workshop before, you’ll learn what’s changed in our workflows, especially how we’re using AI and Positron effectively.\n This work is licensed under a Creative Commons Attribution 4.0 International License.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "modules/01-helping-yourself.html",
+    "href": "modules/01-helping-yourself.html",
+    "title": "Helping yourself",
+    "section": "",
+    "text": "TODO",
+    "crumbs": [
+      "Helping yourself"
+    ]
+  },
+  {
+    "objectID": "modules/03-posit-assistant-intro.html",
+    "href": "modules/03-posit-assistant-intro.html",
+    "title": "Intro to Posit Assistant",
+    "section": "",
+    "text": "TODO",
+    "crumbs": [
+      "Intro to Posit Assistant"
+    ]
+  },
+  {
+    "objectID": "modules/05-workflow.html",
+    "href": "modules/05-workflow.html",
+    "title": "Workflow",
+    "section": "",
+    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, planning, design, docs)\nStart slow and grow your confidence\nNever make another human read AI slop\n\n\n\n\nWrite code\nWrite tests\nIterate until they pass\nR CMD check at the end",
+    "crumbs": [
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/05-workflow.html#general-principles",
+    "href": "modules/05-workflow.html#general-principles",
+    "title": "Workflow",
+    "section": "",
+    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, planning, design, docs)\nStart slow and grow your confidence\nNever make another human read AI slop\n\n\n\n\nWrite code\nWrite tests\nIterate until they pass\nR CMD check at the end",
+    "crumbs": [
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/05-workflow.html#basic-workflows",
+    "href": "modules/05-workflow.html#basic-workflows",
+    "title": "Workflow",
+    "section": "Basic workflows",
+    "text": "Basic workflows\n\n\nImplement it\nPlan it, then implement it\nPlan it, review the plan, implement it, review the implementation\nDesign it, then repeat cycles above",
+    "crumbs": [
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/05-workflow.html#example-workflow",
+    "href": "modules/05-workflow.html#example-workflow",
+    "title": "Workflow",
+    "section": "Example workflow",
+    "text": "Example workflow\n\nFix https://github.com/r-lib/testthat/issues/2344\n\n\nFix https://github.com/r-lib/testthat/issues/2317",
+    "crumbs": [
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/05-workflow.html#basic-advice",
+    "href": "modules/05-workflow.html#basic-advice",
+    "title": "Workflow",
+    "section": "Basic advice",
+    "text": "Basic advice\n\nWhen you get started, pay attention to what it’s doing\nCan be useful to intervene when it’s getting off track.\nCan also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out",
+    "crumbs": [
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/05-workflow.html#git-flow",
+    "href": "modules/05-workflow.html#git-flow",
+    "title": "Workflow",
+    "section": "Git flow",
+    "text": "Git flow\n\nWhen you get started, I think it’s worth doing all the commits yourself\nThen, tell it when to commit\nThen, it let it commit by itself\nThen, let it make the whole PR\n(But NEVER EVER inflect Claude’s writing on another human.)",
+    "crumbs": [
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/05-workflow.html#now-its-time-to-make-a-plan",
+    "href": "modules/05-workflow.html#now-its-time-to-make-a-plan",
+    "title": "Workflow",
+    "section": "Now it’s time to make a plan",
+    "text": "Now it’s time to make a plan\n\nPlanning tends to lead to better results, but don’t get hung up on it\nAlways ask for a markdown file that you can read and edit\nThree options for where to put this:\n\nEphemeral\nPersistent, outside of git\nChecked in",
+    "crumbs": [
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/05-workflow.html#example-workflow-1",
+    "href": "modules/05-workflow.html#example-workflow-1",
+    "title": "Workflow",
+    "section": "Example workflow",
+    "text": "Example workflow\n\nRead https://github.com/r-lib/testthat/issues/2334. Construct a minimal reprex, then write a brief plan for fixing the problem. Save your plan in plan.md.\n\n… read and review the plan …\n\nExecute the plan",
+    "crumbs": [
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/05-workflow.html#example-workflow-voice",
+    "href": "modules/05-workflow.html#example-workflow-voice",
+    "title": "Workflow",
+    "section": "Example workflow (voice)",
+    "text": "Example workflow (voice)\nFine to dump a stream of consciousness and let the agent figure it out. I think it’s good to ask for a plan just to check it’s clear what you actually want.",
+    "crumbs": [
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/05-workflow.html#workflow-lore",
+    "href": "modules/05-workflow.html#workflow-lore",
+    "title": "Workflow",
+    "section": "Workflow lore",
+    "text": "Workflow lore\n\nClaude (esp. Fable/Opus) best at planning\nCodex best at reviewing\nCheap models fine for implementing",
+    "crumbs": [
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/05-workflow.html#example-workflow-2",
+    "href": "modules/05-workflow.html#example-workflow-2",
+    "title": "Workflow",
+    "section": "Example workflow",
+    "text": "Example workflow\n\nPlan it with Fable (or whatever the best model you have access to is)\nYou read and review the plan\nReview the plan with Codex. Copy and paste the feedback.\nImplement with Sonnet (or a similar cheap model)\nReview the implementation with Codex\n\n\nhttps://github.com/r-lib/testthat/issues/2328",
+    "crumbs": [
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/05-workflow.html#your-turn-big",
+    "href": "modules/05-workflow.html#your-turn-big",
+    "title": "Workflow",
+    "section": "Your turn (big)",
+    "text": "Your turn (big)\n\nstringb",
+    "crumbs": [
+      "Workflow"
+    ]
+  },
+  {
     "objectID": "modules/07-best-practices-feedback-loop.html",
     "href": "modules/07-best-practices-feedback-loop.html",
     "title": "Best practices feedback loop",
@@ -140,503 +824,45 @@
     ]
   },
   {
-    "objectID": "modules/05-workflow.html",
-    "href": "modules/05-workflow.html",
-    "title": "Workflow",
+    "objectID": "modules/slides/deep-thoughts.html#section",
+    "href": "modules/slides/deep-thoughts.html#section",
+    "title": "Deep Thoughts",
     "section": "",
-    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, planning, design, docs)\nStart slow and grow your confidence\nNever make another human read AI slop\n\n\n\n\nWrite code\nWrite tests\nIterate until they pass\nR CMD check at the end",
-    "crumbs": [
-      "Workflow"
-    ]
+    "text": "🌌 Deep Thoughts\n(with apologies to Jack Handey)"
   },
   {
-    "objectID": "modules/05-workflow.html#general-principles",
-    "href": "modules/05-workflow.html#general-principles",
-    "title": "Workflow",
-    "section": "",
-    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, planning, design, docs)\nStart slow and grow your confidence\nNever make another human read AI slop\n\n\n\n\nWrite code\nWrite tests\nIterate until they pass\nR CMD check at the end",
-    "crumbs": [
-      "Workflow"
-    ]
+    "objectID": "modules/slides/deep-thoughts.html#deep-thought",
+    "href": "modules/slides/deep-thoughts.html#deep-thought",
+    "title": "Deep Thoughts",
+    "section": "Deep Thought",
+    "text": "Deep Thought\n\nThe agent builds you something amazing in five minutes, then the 10% that’s wrong takes longer to fix than the 90% that was right took to build. But it never feels that way. It always feels like you’re right on the precipice of completion.\n\nhelp! my husband is addicted to Claude Code. — Hilary Gridley (writerbuilder)\nWhy it’s here: the “almost done” feeling is a gamification trick, not a status report. Worth noticing when you feel it mid-workshop.\n🗳️ Engage: [TODO: reaction mechanism – e.g. vote yes/no on “I’ve felt this”]"
   },
   {
-    "objectID": "modules/05-workflow.html#basic-workflows",
-    "href": "modules/05-workflow.html#basic-workflows",
-    "title": "Workflow",
-    "section": "Basic workflows",
-    "text": "Basic workflows\n\n\nImplement it\nPlan it, then implement it\nPlan it, review the plan, implement it, review the implementation\nDesign it, then repeat cycles above",
-    "crumbs": [
-      "Workflow"
-    ]
+    "objectID": "modules/slides/deep-thoughts.html#deep-thought-1",
+    "href": "modules/slides/deep-thoughts.html#deep-thought-1",
+    "title": "Deep Thoughts",
+    "section": "Deep Thought",
+    "text": "Deep Thought\n\nFolks often assume what they lack are skills, when they often lack skills AND well-refined ideas.\n\nThe prototyping bottleneck — frank.computer\nIncludes a “prototype slop zone” diagram worth looking at directly.\nWhy it’s here: AI removes the skills bottleneck faster than it removes the “do I actually have a good idea” bottleneck.\n🗳️ Engage: [TODO: reaction mechanism – e.g. poll “which bottleneck do you hit more often: skills or ideas?”]"
   },
   {
-    "objectID": "modules/05-workflow.html#example-workflow",
-    "href": "modules/05-workflow.html#example-workflow",
-    "title": "Workflow",
-    "section": "Example workflow",
-    "text": "Example workflow\n\nFix https://github.com/r-lib/testthat/issues/2344\n\n\nFix https://github.com/r-lib/testthat/issues/2317",
-    "crumbs": [
-      "Workflow"
-    ]
+    "objectID": "modules/slides/deep-thoughts.html#deep-thought-2",
+    "href": "modules/slides/deep-thoughts.html#deep-thought-2",
+    "title": "Deep Thoughts",
+    "section": "Deep Thought",
+    "text": "Deep Thought\n\nControl quality and relevance with your own behavior more than with “heaps of extraneous detail.”\n\nCode is the byproduct — yagmin.com\nWhy it’s here: a counterpoint to the instinct to write ever-longer prompts/AGENTS.md files instead of steering as you go.\n🗳️ Engage: [TODO: reaction mechanism – e.g. comment thread “one habit I use to steer AI output”]"
   },
   {
-    "objectID": "modules/05-workflow.html#basic-advice",
-    "href": "modules/05-workflow.html#basic-advice",
-    "title": "Workflow",
-    "section": "Basic advice",
-    "text": "Basic advice\n\nWhen you get started, pay attention to what it’s doing\nCan be useful to intervene when it’s getting off track.\nCan also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out",
-    "crumbs": [
-      "Workflow"
-    ]
+    "objectID": "modules/slides/deep-thoughts.html#deep-thought-3",
+    "href": "modules/slides/deep-thoughts.html#deep-thought-3",
+    "title": "Deep Thoughts",
+    "section": "Deep Thought",
+    "text": "Deep Thought\n\nSometimes I want “do this for me,” sometimes “do this with me” or “show me how.”\n\nThe task isn’t the job — Sunil Pai\nWhy it’s here: naming which of these three modes you actually want, before you prompt, avoids a lot of friction.\n🗳️ Engage: [TODO: reaction mechanism – e.g. vote on which mode you reach for most]"
   },
   {
-    "objectID": "modules/05-workflow.html#git-flow",
-    "href": "modules/05-workflow.html#git-flow",
-    "title": "Workflow",
-    "section": "Git flow",
-    "text": "Git flow\n\nWhen you get started, I think it’s worth doing all the commits yourself\nThen, tell it when to commit\nThen, it let it commit by itself\nThen, let it make the whole PR\n(But NEVER EVER inflect Claude’s writing on another human.)",
-    "crumbs": [
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/05-workflow.html#now-its-time-to-make-a-plan",
-    "href": "modules/05-workflow.html#now-its-time-to-make-a-plan",
-    "title": "Workflow",
-    "section": "Now it’s time to make a plan",
-    "text": "Now it’s time to make a plan\n\nPlanning tends to lead to better results, but don’t get hung up on it\nAlways ask for a markdown file that you can read and edit\nThree options for where to put this:\n\nEphemeral\nPersistent, outside of git\nChecked in",
-    "crumbs": [
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/05-workflow.html#example-workflow-1",
-    "href": "modules/05-workflow.html#example-workflow-1",
-    "title": "Workflow",
-    "section": "Example workflow",
-    "text": "Example workflow\n\nRead https://github.com/r-lib/testthat/issues/2334. Construct a minimal reprex, then write a brief plan for fixing the problem. Save your plan in plan.md.\n\n… read and review the plan …\n\nExecute the plan",
-    "crumbs": [
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/05-workflow.html#example-workflow-voice",
-    "href": "modules/05-workflow.html#example-workflow-voice",
-    "title": "Workflow",
-    "section": "Example workflow (voice)",
-    "text": "Example workflow (voice)\nFine to dump a stream of consciousness and let the agent figure it out. I think it’s good to ask for a plan just to check it’s clear what you actually want.",
-    "crumbs": [
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/05-workflow.html#workflow-lore",
-    "href": "modules/05-workflow.html#workflow-lore",
-    "title": "Workflow",
-    "section": "Workflow lore",
-    "text": "Workflow lore\n\nClaude (esp. Fable/Opus) best at planning\nCodex best at reviewing\nCheap models fine for implementing",
-    "crumbs": [
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/05-workflow.html#example-workflow-2",
-    "href": "modules/05-workflow.html#example-workflow-2",
-    "title": "Workflow",
-    "section": "Example workflow",
-    "text": "Example workflow\n\nPlan it with Fable (or whatever the best model you have access to is)\nYou read and review the plan\nReview the plan with Codex. Copy and paste the feedback.\nImplement with Sonnet (or a similar cheap model)\nReview the implementation with Codex\n\n\nhttps://github.com/r-lib/testthat/issues/2328",
-    "crumbs": [
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/05-workflow.html#your-turn-big",
-    "href": "modules/05-workflow.html#your-turn-big",
-    "title": "Workflow",
-    "section": "Your turn (big)",
-    "text": "Your turn (big)\n\nstringb",
-    "crumbs": [
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/03-posit-assistant-intro.html",
-    "href": "modules/03-posit-assistant-intro.html",
-    "title": "Intro to Posit Assistant",
-    "section": "",
-    "text": "TODO",
-    "crumbs": [
-      "Intro to Posit Assistant"
-    ]
-  },
-  {
-    "objectID": "modules/01-helping-yourself.html",
-    "href": "modules/01-helping-yourself.html",
-    "title": "Helping yourself",
-    "section": "",
-    "text": "TODO",
-    "crumbs": [
-      "Helping yourself"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Modern R Workflow (ft. Positron and AI)",
-    "section": "",
-    "text": "September 14, 2026 posit::conf(2026)\nHow to get to this page: pos.it/modern-r-workflow",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#setup",
-    "href": "index.html#setup",
-    "title": "Modern R Workflow (ft. Positron and AI)",
-    "section": "Setup",
-    "text": "Setup\nPlease check the Setup Instructions for recommended steps to take before the workshop.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#schedule",
-    "href": "index.html#schedule",
-    "title": "Modern R Workflow (ft. Positron and AI)",
-    "section": "Schedule",
-    "text": "Schedule\n\n\n\nTime\nActivity\n\n\n\n\n09:00\nWelcome\n\n\n09:00 - 10:30\nPositron tourIntro to Posit AssistantHow do agents work?\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nHow do agents work? (cont’d)Workflow\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nR CMD checkSkills and AGENTS.md\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nBest practices feedback loopHelping yourself",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#instructors",
-    "href": "index.html#instructors",
-    "title": "Modern R Workflow (ft. Positron and AI)",
-    "section": "Instructors",
-    "text": "Instructors\n\nHadley Wickham\nHadley Wickham is Chief Scientist at Posit, where (among other things) he leads the tidyverse team. He builds tools (both computational and cognitive) that make data science easier, faster, and more fun. He’s the creator of packages like ggplot2, dplyr, and devtools and an author of several books on R, including R for Data Science and R Packages.\nGitHub · Bluesky · LinkedIn\n\n\nJenny Bryan\nJenny Bryan is a Senior Software Engineer at Posit, where she works on the tidyverse/r-lib and Positron teams. A recovering biostatistician, she takes special delight in eliminating the small agonies of data analysis. She’s the creator of packages like googlesheets4 and reprex and an author of the book R Packages and the Happy Git with R guide.\nGitHub · Bluesky",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#description",
-    "href": "index.html#description",
-    "title": "Modern R Workflow (ft. Positron and AI)",
-    "section": "Description",
-    "text": "Description\nThis workshop is designed for data scientists who are comfortable with using R for data analysis and ready to level up their software engineering skills. Led by Hadley Wickham and Jenny Bryan, you’ll learn how to write more robust, maintainable R code while taking advantage of modern tooling (cough AI cough) that can dramatically accelerate your productivity.\nWe’ll cover three interconnected themes. First, you’ll learn contemporary R development practices—writing functions, organizing code into packages, testing, and documentation strategies that scale from personal projects to team collaboration. Second, we’ll explore how AI assistants like Claude Code can help you write better R code faster. Third, we’ll share practical tips for getting the most out of Positron, including features specifically designed to make R development and data exploration more fluid.\nThroughout the workshop, we’ll emphasize the connections between these topics: how good development practices make AI assistance more effective, how modern tooling reduces friction so you can focus on the interesting problems, and how to build workflows that are both efficient and reproducible. You’ll leave with concrete skills you can apply immediately to your own projects.\nPrerequisites: Basic familiarity with R programming (e.g., using the tidyverse). You should have written a few functions before, but don’t need any experience with package development, AI coding tools, or Positron. If you have taken a package development workshop before, you’ll learn what’s changed in our workflows, especially how we’re using AI and Positron effectively.\n This work is licensed under a Creative Commons Attribution 4.0 International License.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "modules/00-welcome.html",
-    "href": "modules/00-welcome.html",
-    "title": "Welcome",
-    "section": "",
-    "text": "Slides (full screen)",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "modules/02-positron-tour.html",
-    "href": "modules/02-positron-tour.html",
-    "title": "Positron tour",
-    "section": "",
-    "text": "TODO",
-    "crumbs": [
-      "Positron tour"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html",
-    "href": "modules/04-agent-explainer.html",
-    "title": "How do agents work?",
-    "section": "",
-    "text": "Goal:\nIn principle, you could develop your own. There are a lot of details, but it’s surprisingly straighforward to implement a prototype.\nTODO: publish my ellmer agent code.",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#lets-make-a-package",
-    "href": "modules/04-agent-explainer.html#lets-make-a-package",
-    "title": "How do agents work?",
-    "section": "Let’s make a package",
-    "text": "Let’s make a package\n(Make sure you’re in normal mode)\nusethis::create_package(\"~/desktop/compliment\")\n\nCreate a new R package called compliment in the current directory. It should generate randomized compliments.",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#your-turn",
-    "href": "modules/04-agent-explainer.html#your-turn",
-    "title": "How do agents work?",
-    "section": "Your turn",
-    "text": "Your turn\n\nUse the same prompt as me. It’s underspecified ask so we’re going to get lots of variation. That’s part of the fun!\nManually approve a few writes\nThen allow all\nMake sure your package has tests and Git\nHow does your package differ from mine? From your neighbours?",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#there-are-three-types-of-output",
-    "href": "modules/04-agent-explainer.html#there-are-three-types-of-output",
-    "title": "How do agents work?",
-    "section": "There are three types of output",
-    "text": "There are three types of output\n\nText\nThinking (click to expand)\nTool calls",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#tool-calls-let-the-agent-run-code-on-your-computer",
-    "href": "modules/04-agent-explainer.html#tool-calls-let-the-agent-run-code-on-your-computer",
-    "title": "How do agents work?",
-    "section": "Tool calls let the agent run code on your computer",
-    "text": "Tool calls let the agent run code on your computer\n\nTools are provided by the harness, e.g. Posit Assistant\nLLM asks harness to run code; harness returns result to the LLM\nOften requests many tool calls at once\nThese are called “parallel” calls, but don’t actually run in parallel.\nCan recognise with the thick line line\n\n\n\n\nTwo read calls and three edit calls",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#a-little-vocab",
-    "href": "modules/04-agent-explainer.html#a-little-vocab",
-    "title": "How do agents work?",
-    "section": "A little vocab",
-    "text": "A little vocab\n\nHarness: provides tools; runs the loop\nProvider: who runs the server that runs the model\n\nOpen models can be hosted anywhere\nAWS + Azure host lots of foundation models\n\nModel: the specific LLM model you’re using",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#some-examples",
-    "href": "modules/04-agent-explainer.html#some-examples",
-    "title": "How do agents work?",
-    "section": "Some examples",
-    "text": "Some examples\n\nKimi K3 (model) on posit.ai (provider) with Posit Assitant (harness)\nOpus 5 (model) on posit.ai (provider) with Posit Assitant (harness)\nOpus 5 (model) from claude (provider) in Claude Code (harness)\nGPT-5.3 (model) from AWS Bedrock (provider) in Posit Assitant (harness)\nGPT-5.3 (model) from OpenAI (provider) in codex (harness)",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#what-are-some-common-calls",
-    "href": "modules/04-agent-explainer.html#what-are-some-common-calls",
-    "title": "How do agents work?",
-    "section": "What are some common calls?",
-    "text": "What are some common calls?\n\nwrite creates a new file\nedit modifies an existing file\nexecuteCode runs R (or Python) code in the console\nbash runs code you’d usually use the terminal for\nAskUser asks you a question\nread reads a file on disk\nwebfetch reads a web page\nsearch searches directory for matching text",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#your-turn-1",
-    "href": "modules/04-agent-explainer.html#your-turn-1",
-    "title": "How do agents work?",
-    "section": "Your turn",
-    "text": "Your turn\n\nTry and prompt your agent to make it use each of the tool calls above.\nWhat other tools are available?",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#sandbox",
-    "href": "modules/04-agent-explainer.html#sandbox",
-    "title": "How do agents work?",
-    "section": "Sandbox",
-    "text": "Sandbox",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#auto-mode",
-    "href": "modules/04-agent-explainer.html#auto-mode",
-    "title": "How do agents work?",
-    "section": "Auto-mode",
-    "text": "Auto-mode",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#life-is-good-for-individual-developers",
-    "href": "modules/04-agent-explainer.html#life-is-good-for-individual-developers",
-    "title": "How do agents work?",
-    "section": "Life is good for individual developers",
-    "text": "Life is good for individual developers\n\nIndividuals can use an all-you-can-eat plan\n\nCodex: $20 / month, $100 / month\nClaude Code: $20 / month, $100 / month\n\nThese are very generous; you get 20-80x what the API costs\nBUT you can only use in provider harnesses\n(So you can’t use claude code subscription with PA :sad-face:)",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#enterprise-plans-are-different",
-    "href": "modules/04-agent-explainer.html#enterprise-plans-are-different",
-    "title": "How do agents work?",
-    "section": "Enterprise plans are different",
-    "text": "Enterprise plans are different\n\nEnterprises have to pay by the million tokens\n\nOpus 5: $5 input, $25 output\ngpt-5.6-terra: $2 input, $12 output\nKimi K3: $3 input, $15 output\n\n(This is also what you pay in ellmer)\nTODO: add some examples of costs to help calibrate",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#why-care",
-    "href": "modules/04-agent-explainer.html#why-care",
-    "title": "How do agents work?",
-    "section": "Why care?",
-    "text": "Why care?\n\nAt least in the short-term this is really important for organisations, and I think data scientists and engineers need to understand where they’re spending money.\nTwo tools:\n\nPosit Assistant\nAgentsView\n\nIn both cases these are best-efforts to compute cost. Model providers don’t make this easy!\nSkills (which we’ll come back to later are a good way to increase token efficiency)",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#my-views-on-cost-benefit-have-changed",
-    "href": "modules/04-agent-explainer.html#my-views-on-cost-benefit-have-changed",
-    "title": "How do agents work?",
-    "section": "My views on cost-benefit have changed",
-    "text": "My views on cost-benefit have changed\n\nI used to think that Anthropic was worth the additional cost.\nBut the relative cost has increased and output quality has decreased (code is still fine, but the sheer quantity of AI slop writing is painful)\nKimi K3 is excellent. Somewhere between Opus and Fable in quality. But much more concive. And only costs 75% of sonnet (thanks to tokenizer).",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#all-this-to-say-understanding-cost-is-important",
-    "href": "modules/04-agent-explainer.html#all-this-to-say-understanding-cost-is-important",
-    "title": "How do agents work?",
-    "section": "All this to say, understanding cost is important",
-    "text": "All this to say, understanding cost is important\n\nConversations are additive\nTool calls\nCache is king",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#conversations-are-additive",
-    "href": "modules/04-agent-explainer.html#conversations-are-additive",
-    "title": "How do agents work?",
-    "section": "Conversations are additive",
-    "text": "Conversations are additive\n\nLLMs are predictive models\nThey need the complete history of the conversation\nBoth your inputs and its outputs\nTODO: add diagram show how this grows\nRecommendation: use /clear to start from a fresh slate\nSaves money and avoids stale state\nAgentsView",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#tokenizers",
-    "href": "modules/04-agent-explainer.html#tokenizers",
-    "title": "How do agents work?",
-    "section": "Tokenizers",
-    "text": "Tokenizers\n\nBy and large, you don’t need to care about the details of going from text to the numbers that LLMs us\nBUT in [TODO: fill in model] Claude switched to a tokenizer that produces ~30% more tokens for the same input.\nSo in general, there are lots of other levers providers can pull.\nAnd you might wonder if Claude’s loquacious output is a way to raise prices.\nAssessing total cost is hard :(",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#cost-is-dominated-by-cache-hits",
-    "href": "modules/04-agent-explainer.html#cost-is-dominated-by-cache-hits",
-    "title": "How do agents work?",
-    "section": "Cost is dominated by cache hits",
-    "text": "Cost is dominated by cache hits\n\nNo caching = ~10x cost\nOf course it would be very slow if each time the conversation had to restart from scratch\nSo providers cache the results of the previous turn so that they can resume where they left off\nCaching price still iterating, but seems to be stabilising\n\nYou pay more to cache results: 1.25x\nCache reads are much cheaper: 0.1x\nThe conversation records explicit cache points\n\nDetails for cache length vary:\n\nClaude: 5 minutes / 1 hour (2x cost)\nOpenAI: 30 minutes\nKimiK3: no guarantees\n\nVery difficult to figure out the exact consequences of costs.\nBut if you step away from a claude session for 5 minutes, the next request might be 10x the cost. We’re working on better tools for this in PA.",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#your-turn-2",
-    "href": "modules/04-agent-explainer.html#your-turn-2",
-    "title": "How do agents work?",
-    "section": "Your turn",
-    "text": "Your turn",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#compaction-is-no-longer-relevant",
-    "href": "modules/04-agent-explainer.html#compaction-is-no-longer-relevant",
-    "title": "How do agents work?",
-    "section": "Compaction is no longer relevant",
-    "text": "Compaction is no longer relevant\n\nIn past generations of models, with smaller context, harness would provide tools for compaction\nBasically, you ask a model (maybe the same as existing maybe) to summarise\nThe problem is you lose the advantages of caching",
-    "crumbs": [
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/06-agent-instructions.html",
-    "href": "modules/06-agent-instructions.html",
-    "title": "Skills and AGENTS.md",
-    "section": "",
-    "text": "So far we’ve used (implicitly) AGENTS.md.\nWhat about skills?\n\n\n\n\nuse_tidy_agents() bundles two skills\nWhat are they? How do they work?\nWhat’s the advantage of bundling them this way?\nWhat’s the disadvantage?",
-    "crumbs": [
-      "Skills and AGENTS.md"
-    ]
-  },
-  {
-    "objectID": "modules/06-agent-instructions.html#your-turn",
-    "href": "modules/06-agent-instructions.html#your-turn",
-    "title": "Skills and AGENTS.md",
-    "section": "",
-    "text": "use_tidy_agents() bundles two skills\nWhat are they? How do they work?\nWhat’s the advantage of bundling them this way?\nWhat’s the disadvantage?",
-    "crumbs": [
-      "Skills and AGENTS.md"
-    ]
-  },
-  {
-    "objectID": "modules/06-agent-instructions.html#what-is-a-skill",
-    "href": "modules/06-agent-instructions.html#what-is-a-skill",
-    "title": "Skills and AGENTS.md",
-    "section": "What is a skill?",
-    "text": "What is a skill?\n\nFormal definition at https://agentskills.io/\nBut IMO this is very overwrought\nTwo parts to a skill:\n\nWhen: short description that states when to use it\nWhat: longer details of how to use it\n\nSystem prompt includes all the “when”s\nAgent loads the “what” on demand",
-    "crumbs": [
-      "Skills and AGENTS.md"
-    ]
-  },
-  {
-    "objectID": "modules/06-agent-instructions.html#other-forms-of-skills",
-    "href": "modules/06-agent-instructions.html#other-forms-of-skills",
-    "title": "Skills and AGENTS.md",
-    "section": "Other forms of skills",
-    "text": "Other forms of skills\n\nDirectory of markdown files with index/README\nQuarto website\n\nUse llms-text: true\nBasic idea: https://design.tidyverse.org\n\nR documentation\nR functions",
-    "crumbs": [
-      "Skills and AGENTS.md"
-    ]
-  },
-  {
-    "objectID": "modules/06-agent-instructions.html#general-advice",
-    "href": "modules/06-agent-instructions.html#general-advice",
-    "title": "Skills and AGENTS.md",
-    "section": "General advice",
-    "text": "General advice\n\nHold on to them loosely\nKeep them personal, local, timely\nBest for stuff a general LLM can’t know\nRelatively little benefit to using same model to both write and read\nThey don’t have to be markdown files",
-    "crumbs": [
-      "Skills and AGENTS.md"
-    ]
-  },
-  {
-    "objectID": "modules/06-agent-instructions.html#our-skills",
-    "href": "modules/06-agent-instructions.html#our-skills",
-    "title": "Skills and AGENTS.md",
-    "section": "Our skills",
-    "text": "Our skills\n\nPR description writer\nWinston’s PR reviewer",
-    "crumbs": [
-      "Skills and AGENTS.md"
-    ]
-  },
-  {
-    "objectID": "modules/06-agent-instructions.html#winstons-simplification-prompt",
-    "href": "modules/06-agent-instructions.html#winstons-simplification-prompt",
-    "title": "Skills and AGENTS.md",
-    "section": "Winston’s simplification prompt",
-    "text": "Winston’s simplification prompt\n\nMake a deliberate pass over each non-trivial change looking for opportunities for simplification:\n\nCould this change be achieved by deleting or restructuring instead of adding — removing a branch, mode, layer, or special case rather than bolting one on? It’s always better to remove than add.\nIs each new or changed interface narrow relative to what it hides — or must callers know its internals, keep duplicated logic in sync, or work around documented gaps (“does NOT handle X”)?\nDoes anything re-implement what the codebase already provides — a bespoke helper shadowing a canonical one, logic in the wrong layer, or wrapper/cast/any churn obscuring the real contract?\n\nWhen you find opportunities for simplification, be clear about the pros and cons. Produce either a list of potential simplifications or “No simplifications found”.",
-    "crumbs": [
-      "Skills and AGENTS.md"
-    ]
-  },
-  {
-    "objectID": "modules/06-agent-instructions.html#bundling-with-a-package",
-    "href": "modules/06-agent-instructions.html#bundling-with-a-package",
-    "title": "Skills and AGENTS.md",
-    "section": "Bundling with a package",
-    "text": "Bundling with a package\n\nNo automated tooling yet\ninst/skills is a reasonable place to put them\nYou’ll need to expose in some other way",
-    "crumbs": [
-      "Skills and AGENTS.md"
-    ]
+    "objectID": "modules/slides/deep-thoughts.html#deep-thought-4",
+    "href": "modules/slides/deep-thoughts.html#deep-thought-4",
+    "title": "Deep Thoughts",
+    "section": "Deep Thought",
+    "text": "Deep Thought\n\nIf it hurts, do it more often.\n\nFrequencyReducesDifficulty — Martin Fowler\nWhy it’s here: applies as much to running tests/reviews with an agent in the loop as it did to deployments and integration.\n🗳️ Engage: [TODO: reaction mechanism – e.g. “what’s one painful thing you could do more often?”]"
   }
 ]

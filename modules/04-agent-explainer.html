@@ -113,7 +113,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <meta property="og:title" content="How do agents work? – Modern R Workflow (ft. Positron and AI)">
-<meta property="og:description" content="A one day workshop at posit::conf(2026) on modern R development practices, AI-assisted coding, and Positron.">
 <meta property="og:image" content="https://posit-conf-2026.github.io/modern-r-workflow/images/pa-parallel-calls.png">
 <meta property="og:site_name" content="Modern R Workflow (ft. Positron and AI)">
 <meta property="og:image:height" content="410">
@@ -243,14 +242,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Goal:</p>
+<section id="goals" class="level1">
+<h1>Goals</h1>
 <ul>
-<li>some important vocab</li>
-<li>basic understanding of agents</li>
-<li>help understand the costs</li>
+<li>Introduce you to package development in Posit Assitant</li>
+<li>Use that as a framework to explain how agents work</li>
+<li>Help you understand the risks associated with using agents</li>
+<li>Give you a basic mental model of LLM costs</li>
+<li>Discuss Posit Assistant alternatives</li>
 </ul>
-<p>In principle, you could develop your own. There are a lot of details, but it’s surprisingly straighforward to implement a prototype.</p>
-<p>TODO: publish my ellmer agent code.</p>
+</section>
 <section id="what-is-an-agent" class="level1">
 <h1>What is an agent?</h1>
 <section id="lets-make-a-package" class="level2">
@@ -337,19 +338,123 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>What other tools are available?</li>
 </ul>
 </section>
+<section id="so-what-is-an-agent" class="level2">
+<h2 class="anchored" data-anchor-id="so-what-is-an-agent">So what is an agent?</h2>
+</section>
 </section>
 <section id="safety-and-security" class="level1">
 <h1>Safety and security</h1>
-<p>More at <a href="https://tidydesign.substack.com/p/help-my-coding-agent-can-run-code" class="uri">https://tidydesign.substack.com/p/help-my-coding-agent-can-run-code</a></p>
-<section id="sandbox" class="level2">
-<h2 class="anchored" data-anchor-id="sandbox">Sandbox</h2>
+<section id="what-are-the-risks" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-the-risks">What are the risks?</h2>
+<p>I think the cleanest definition is that the dangers are irreversible action, i.e.:</p>
+<ul>
+<li>Editing file (without git)</li>
+<li>Deleting a file or database table (without a backup)</li>
+<li>Sending an email</li>
+<li>Revealing a secret (API key, password, …)</li>
+</ul>
+</section>
+<section id="your-turn-2" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn-2">Your turn</h2>
+<p>What other irreversible actions are you worried about? What ways do you know to protect yourself?</p>
+</section>
+<section id="how-do-you-protect-yourself" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-you-protect-yourself">How do you protect yourself?</h2>
+<ul>
+<li>Ask for permission</li>
+<li>Make operations reversible
+<ul>
+<li>Always use git</li>
+<li>Back up!</li>
+</ul></li>
+<li>Prevent dangerous actions (i.e.&nbsp;use a sandbox)</li>
+</ul>
+</section>
+<section id="ask-for-permission" class="level2">
+<h2 class="anchored" data-anchor-id="ask-for-permission">Ask for permission</h2>
+<ul>
+<li>IMO constantly asking for permission is just security theatre</li>
+<li>99% of LLM actions are fine, so you quickly get trained to always click ok</li>
+<li>So then you just click “Approve always”</li>
+<li>Matching command prefixes doesn’t work</li>
+</ul>
+</section>
+<section id="prefixes-dont-work" class="level2">
+<h2 class="anchored" data-anchor-id="prefixes-dont-work">Prefixes don’t work</h2>
+<pre><code>git push --force
+gh issue delete 123
+find . -type f -name '*.log' -mtime +30 -size +10M -path './var/*' -delete
+curl -fsSL https://example.com/install.sh -o /dev/stdout | sh
+tar -xzf backup.tar.gz -C /tmp/restore --strip-components=1 -P</code></pre>
+</section>
+<section id="what-about-sandboxes" class="level2">
+<h2 class="anchored" data-anchor-id="what-about-sandboxes">What about sandboxes?</h2>
+<ul>
+<li><p>Use OS level sandboxing to only allow reads and writes to the current directory, and no network access.</p></li>
+<li><p>Unfortunately that’s not very useful</p>
+<ul>
+<li>No package install</li>
+<li>No temporary directory</li>
+<li>No GitHub</li>
+<li>No web search</li>
+</ul></li>
+<li><p>I remain optimistic that it’s possible to overcome these problems, but current implementations are painful.</p></li>
+</ul>
 </section>
 <section id="auto-mode" class="level2">
 <h2 class="anchored" data-anchor-id="auto-mode">Auto-mode</h2>
+<ul>
+<li>What if we only ask permission for operations that seem legitimately dangerous?</li>
+<li>That’s the idea behind auto-mode: ask a (simpler) LLM to classify if a command is dangerous or safe, and then only ask permission for dangerous options</li>
+<li>It leaves a lot to be desired, but I think this is a sweet spot on the security-utility spectrum right now</li>
+</ul>
+</section>
+<section id="reasoning-about-llm-behaviour-is-weird" class="level2">
+<h2 class="anchored" data-anchor-id="reasoning-about-llm-behaviour-is-weird">Reasoning about LLM behaviour is weird</h2>
+<!--
+Jenny had to do this to fix build and deploy. Otherwise we need to install R, even thought there's no actually executable R code. Quarto can't tell that.
+```r
+dir.create("~/desktop/family-data")
+writeLines(letters, "~/desktop/family-data/precious-memories.txt")
+writeLines(letters, "~/desktop/family-data/bank-records.txt")
+dir.create("~/desktop/junk")
+writeLines(letters, "~/desktop/junk/tmp1.txt")
+writeLines(letters, "~/desktop/junk/tmp2.txt")
+```
+-->
+<blockquote class="blockquote">
+<p>Delete ~/desktop/family-data</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Delete ~/desktop/junk</p>
+</blockquote>
+</section>
+<section id="your-turn-3" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn-3">Your turn</h2>
+<p>What other potentially dangerous operations can you get Posit Assistant to do? (Don’t do anything legit dangerous but see if you can trick PA into doing something that’s clearly dangerous in general.)</p>
+</section>
+<section id="more-work-to-be-done" class="level2">
+<h2 class="anchored" data-anchor-id="more-work-to-be-done">More work to be done</h2>
+<ul>
+<li>Some of my (incorrect) thinking at <a href="https://tidydesign.substack.com/p/help-my-coding-agent-can-run-code" class="uri">https://tidydesign.substack.com/p/help-my-coding-agent-can-run-code</a></li>
+<li>I plan to work on this after conf</li>
+</ul>
 </section>
 </section>
 <section id="costs" class="level1">
 <h1>Costs</h1>
+<section id="why-care" class="level2">
+<h2 class="anchored" data-anchor-id="why-care">Why care?</h2>
+<ul>
+<li>You probably don’t need to if you’re an individual developer</li>
+<li>But:
+<ul>
+<li>It matters inside enterprises</li>
+<li>It’s a proxy for energy usage</li>
+<li>Who knows how long all-you-can-eat plans will continue</li>
+</ul></li>
+</ul>
+</section>
 <section id="life-is-good-for-individual-developers" class="level2">
 <h2 class="anchored" data-anchor-id="life-is-good-for-individual-developers">Life is good for individual developers</h2>
 <ul>
@@ -358,9 +463,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Codex: $20 / month, $100 / month</li>
 <li>Claude Code: $20 / month, $100 / month</li>
 </ul></li>
-<li>These are very generous; you get 20-80x what the API costs</li>
-<li>BUT you can only use in provider harnesses</li>
-<li>(So you can’t use claude code subscription with PA :sad-face:)</li>
+<li>These are very generous; you get 20-80x the value of API pricing</li>
+<li>BUT you can only use in provider harnesses (i.e.&nbsp;not Posit Assitant)</li>
 </ul>
 </section>
 <section id="enterprise-plans-are-different" class="level2">
@@ -373,45 +477,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Kimi K3: $3 input, $15 output</li>
 </ul></li>
 <li><p>(This is also what you pay in ellmer)</p></li>
-<li><p>TODO: add some examples of costs to help calibrate</p></li>
+<li><p>Average engineers spend $150-$250 / month, i.e.&nbsp;$8-12 / day</p></li>
+<li><p>High users spend $3,000 / month, i.e.&nbsp;$150 / day.</p></li>
 </ul>
 </section>
-<section id="why-care" class="level2">
-<h2 class="anchored" data-anchor-id="why-care">Why care?</h2>
-<ul>
-<li><p>At least in the short-term this is really important for organisations, and I think data scientists and engineers need to understand where they’re spending money.</p></li>
-<li><p>Two tools:</p>
-<ul>
-<li>Posit Assistant</li>
-<li>AgentsView</li>
-</ul></li>
-<li><p>In both cases these are best-efforts to compute cost. Model providers don’t make this easy!</p></li>
-<li><p>Skills (which we’ll come back to later are a good way to increase token efficiency)</p></li>
-</ul>
-</section>
-</section>
-<section id="the-pa-cost-display" class="level1">
-<h1>The PA cost display</h1>
-<ul>
-<li>You’ll need to use PA for this</li>
-<li>Not aware of other tools</li>
-<li>Actively working on it, so let me know your feedback!</li>
-</ul>
 <section id="my-views-on-cost-benefit-have-changed" class="level2">
 <h2 class="anchored" data-anchor-id="my-views-on-cost-benefit-have-changed">My views on cost-benefit have changed</h2>
 <ul>
-<li>I used to think that Anthropic was worth the additional cost.</li>
-<li>But the relative cost has increased and output quality has decreased (code is still fine, but the sheer quantity of AI slop writing is painful)</li>
-<li>Kimi K3 is excellent. Somewhere between Opus and Fable in quality. But much more concive. And only costs 75% of sonnet (thanks to tokenizer).</li>
+<li>I used to think that Anthropic models was worth the premium</li>
+<li>But the relative cost has increased and output quality has decreased (code is still fine, but its writing is painful)</li>
+<li>Kimi K3 is excellent. Somewhere between Opus and Fable in code quality, but a much better writer, and only costs 75% of Sonnet (thanks to tokenizer).</li>
+<li>All models since April 16, 2026 (Claude Opus 4.7) use a new tokenizer that uses ~20% more tokens, so even though the per-token prices didn’t change, the overall cost did.</li>
+<li>And Anthropic models seem to be producing more loquacious output, which also costs more money 🤔</li>
 </ul>
 </section>
-<section id="all-this-to-say-understanding-cost-is-important" class="level2">
-<h2 class="anchored" data-anchor-id="all-this-to-say-understanding-cost-is-important">All this to say, understanding cost is important</h2>
-<ol type="1">
+<section id="so-how-can-you-tell-what-youre-spending" class="level2">
+<h2 class="anchored" data-anchor-id="so-how-can-you-tell-what-youre-spending">So how can you tell what you’re spending?</h2>
+<ul>
+<li>Harnesses by model providers don’t tend to make the cost obvious (I think you can imagine why)</li>
+<li>Posit Assistant displays a lot of information (and we’re working hard to make it better)</li>
+<li><a href="https://www.agentsview.io">AgentsView</a> is a good retrospective tool that works with many harnesses.</li>
+<li>Two important facts to know:
+<ul>
 <li>Conversations are additive</li>
-<li>Tool calls</li>
 <li>Cache is king</li>
-</ol>
+</ul></li>
+</ul>
 </section>
 <section id="conversations-are-additive" class="level2">
 <h2 class="anchored" data-anchor-id="conversations-are-additive">Conversations are additive</h2>
@@ -419,53 +510,59 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>LLMs are predictive models</p></li>
 <li><p>They need the <em>complete history</em> of the conversation</p></li>
 <li><p>Both your inputs and its outputs</p></li>
-<li><p>TODO: add diagram show how this grows</p></li>
 <li><p>Recommendation: use <code>/clear</code> to start from a fresh slate</p></li>
 <li><p>Saves money and avoids stale state</p></li>
-<li><p>AgentsView</p></li>
-</ul>
-</section>
-<section id="tokenizers" class="level2">
-<h2 class="anchored" data-anchor-id="tokenizers">Tokenizers</h2>
-<ul>
-<li>By and large, you don’t need to care about the details of going from text to the numbers that LLMs us</li>
-<li>BUT in [TODO: fill in model] Claude switched to a tokenizer that produces ~30% more tokens for the same input.</li>
-<li>So in general, there are lots of other levers providers can pull.</li>
-<li>And you might wonder if Claude’s loquacious output is a way to raise prices.</li>
-<li>Assessing total cost is hard :(</li>
 </ul>
 </section>
 <section id="cost-is-dominated-by-cache-hits" class="level2">
 <h2 class="anchored" data-anchor-id="cost-is-dominated-by-cache-hits">Cost is dominated by cache hits</h2>
 <ul>
-<li><p>No caching = ~10x cost</p></li>
-<li><p>Of course it would be very slow if each time the conversation had to restart from scratch</p></li>
-<li><p>So providers cache the results of the previous turn so that they can resume where they left off</p></li>
-<li><p>Caching price still iterating, but seems to be stabilising</p>
-<ul>
-<li>You pay more to cache results: 1.25x</li>
-<li>Cache reads are much cheaper: 0.1x</li>
-<li>The conversation records explicit cache points</li>
-</ul></li>
-<li><p>Details for cache length vary:</p>
+<li>No caching = ~10x cost</li>
+<li>Very hard to reason about, not least because the providers differ so much:
 <ul>
 <li>Claude: 5 minutes / 1 hour (2x cost)</li>
 <li>OpenAI: 30 minutes</li>
 <li>KimiK3: no guarantees</li>
 </ul></li>
-<li><p>Very difficult to figure out the exact consequences of costs.</p></li>
-<li><p>But if you step away from a claude session for 5 minutes, the next request might be 10x the cost. We’re working on better tools for this in PA.</p></li>
+<li>But if you resume a session the next day, be 10x the cost of the last request</li>
 </ul>
 </section>
-<section id="your-turn-2" class="level2">
-<h2 class="anchored" data-anchor-id="your-turn-2">Your turn</h2>
-</section>
-<section id="compaction-is-no-longer-relevant" class="level2">
-<h2 class="anchored" data-anchor-id="compaction-is-no-longer-relevant">Compaction is no longer relevant</h2>
+<section id="your-turn-4" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn-4">Your turn</h2>
 <ul>
-<li>In past generations of models, with smaller context, harness would provide tools for compaction</li>
-<li>Basically, you ask a model (maybe the same as existing maybe) to summarise</li>
-<li>The problem is you lose the advantages of caching</li>
+<li>Look at what you’ve spent in previous PA conversations.</li>
+<li></li>
+<li>Optional: download and install AgentsView. Where is your LLM spend going?</li>
+</ul>
+</section>
+</section>
+<section id="posit-assistant-alternatives" class="level1">
+<h1>Posit Assistant alternatives</h1>
+<section id="posit-assistant-currently-most-compelling-inside-the-enterprise" class="level2">
+<h2 class="anchored" data-anchor-id="posit-assistant-currently-most-compelling-inside-the-enterprise">Posit Assistant currently most compelling inside the enterprise</h2>
+<ul>
+<li>Optimistically, it’s 2x better than Claude code/codex</li>
+<li>But you have to pay 20-80x as much to use it with an API key (or via posit.ai)</li>
+<li>So ask for it if you use RStudio/Positron for work, but otherwise we accept it’s probably not worth it for you to use it</li>
+<li>We are closely tracking Anthropic/OpenAI opening up their plans to other harnesses</li>
+</ul>
+</section>
+<section id="so-why-use-it-in-this-workshop" class="level2">
+<h2 class="anchored" data-anchor-id="so-why-use-it-in-this-workshop">So why use it in this workshop?</h2>
+<ul>
+<li>We believe it’s a really good product and want you to at least experience it</li>
+<li>We also want to see what problems you discover with it</li>
+<li>It’s what I use day-to-day</li>
+<li>It gives the best feedback on cost</li>
+</ul>
+</section>
+<section id="what-if-you-cant-use-it" class="level2">
+<h2 class="anchored" data-anchor-id="what-if-you-cant-use-it">What if you can’t use it ?</h2>
+<ul>
+<li>The Claude Code and Codex harnesses are also very good</li>
+<li>I have used both VS Code/Positron extensions and just their CLI’s in the terminal</li>
+<li>Downside of both extensions is that they can’t find <code>quarto</code> and <code>air</code> which are bundled with Positron. You’ll need to explicitly tell them to that they’re bundled with Positron.</li>
+<li>We recommend pairing with https://github.com/posit-dev/mcp-repl or similar to get access to a persistent R/python environment</li>
 </ul>
 
 
