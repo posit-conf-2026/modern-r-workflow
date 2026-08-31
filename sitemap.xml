@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://posit-conf-2026.github.io/modern-r-workflow/setup.html</loc>
-    <lastmod>2026-08-31T21:04:38.448Z</lastmod>
-  </url>
-  <url>
-    <loc>https://posit-conf-2026.github.io/modern-r-workflow/modules/06-agent-instructions.html</loc>
-    <lastmod>2026-08-31T21:04:38.448Z</lastmod>
-  </url>
-  <url>
-    <loc>https://posit-conf-2026.github.io/modern-r-workflow/modules/04-agent-explainer.html</loc>
-    <lastmod>2026-08-31T21:04:38.448Z</lastmod>
-  </url>
-  <url>
-    <loc>https://posit-conf-2026.github.io/modern-r-workflow/modules/02-positron-tour.html</loc>
-    <lastmod>2026-08-31T21:04:38.448Z</lastmod>
-  </url>
-  <url>
-    <loc>https://posit-conf-2026.github.io/modern-r-workflow/modules/00-welcome.html</loc>
-    <lastmod>2026-08-31T21:04:38.448Z</lastmod>
-  </url>
-  <url>
-    <loc>https://posit-conf-2026.github.io/modern-r-workflow/index.html</loc>
-    <lastmod>2026-08-31T21:04:38.446Z</lastmod>
-  </url>
-  <url>
-    <loc>https://posit-conf-2026.github.io/modern-r-workflow/modules/01-helping-yourself.html</loc>
-    <lastmod>2026-08-31T21:04:38.448Z</lastmod>
-  </url>
-  <url>
-    <loc>https://posit-conf-2026.github.io/modern-r-workflow/modules/03-posit-assistant-intro.html</loc>
-    <lastmod>2026-08-31T21:04:38.448Z</lastmod>
-  </url>
-  <url>
-    <loc>https://posit-conf-2026.github.io/modern-r-workflow/modules/05-workflow.html</loc>
-    <lastmod>2026-08-31T21:04:38.448Z</lastmod>
+    <lastmod>2026-08-31T21:24:05.594Z</lastmod>
   </url>
   <url>
     <loc>https://posit-conf-2026.github.io/modern-r-workflow/modules/07-best-practices-feedback-loop.html</loc>
-    <lastmod>2026-08-31T21:04:38.448Z</lastmod>
+    <lastmod>2026-08-31T21:24:05.594Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2026.github.io/modern-r-workflow/modules/05-workflow.html</loc>
+    <lastmod>2026-08-31T21:24:05.594Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2026.github.io/modern-r-workflow/modules/03-posit-assistant-intro.html</loc>
+    <lastmod>2026-08-31T21:24:05.594Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2026.github.io/modern-r-workflow/modules/01-helping-yourself.html</loc>
+    <lastmod>2026-08-31T21:24:05.594Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2026.github.io/modern-r-workflow/index.html</loc>
+    <lastmod>2026-08-31T21:24:05.592Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2026.github.io/modern-r-workflow/modules/00-welcome.html</loc>
+    <lastmod>2026-08-31T21:24:05.592Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2026.github.io/modern-r-workflow/modules/02-positron-tour.html</loc>
+    <lastmod>2026-08-31T21:24:05.594Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2026.github.io/modern-r-workflow/modules/04-agent-explainer.html</loc>
+    <lastmod>2026-08-31T21:24:05.594Z</lastmod>
+  </url>
+  <url>
+    <loc>https://posit-conf-2026.github.io/modern-r-workflow/modules/06-agent-instructions.html</loc>
+    <lastmod>2026-08-31T21:24:05.594Z</lastmod>
   </url>
 </urlset>

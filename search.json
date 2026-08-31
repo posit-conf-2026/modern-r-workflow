@@ -10,344 +10,273 @@
     ]
   },
   {
-    "objectID": "modules/06-agent-instructions.html",
-    "href": "modules/06-agent-instructions.html",
-    "title": "Skills and AGENTS.md",
+    "objectID": "modules/07-best-practices-feedback-loop.html",
+    "href": "modules/07-best-practices-feedback-loop.html",
+    "title": "Best practices feedback loop",
     "section": "",
-    "text": "So far we’ve used (implicitly) AGENTS.md.\nWhat about skills?\n\n\n\n\nuse_tidy_agents() bundles two skills\nWhat are they? How do they work?\nWhat’s the advantage of bundling them this way?\nWhat’s the disadvantage?",
+    "text": "LLMs both amplify best practices, and make them more achievable\nAs you improve tests and docs, it makes it easier for agents to work with your package\nReally good news for non-professional developers\nDo it as you go, and also useful as part of regular upkeep\n\n\n\n\nGit\nCode style\nTesting\nDocumentation\nPerformance\nCI/CD\nDownstream\nUpstream",
     "crumbs": [
-      "Modules",
-      "Skills and AGENTS.md"
+      "Best practices feedback loop"
     ]
   },
   {
-    "objectID": "modules/06-agent-instructions.html#your-turn",
-    "href": "modules/06-agent-instructions.html#your-turn",
-    "title": "Skills and AGENTS.md",
+    "objectID": "modules/07-best-practices-feedback-loop.html#development-best-practices",
+    "href": "modules/07-best-practices-feedback-loop.html#development-best-practices",
+    "title": "Best practices feedback loop",
     "section": "",
-    "text": "use_tidy_agents() bundles two skills\nWhat are they? How do they work?\nWhat’s the advantage of bundling them this way?\nWhat’s the disadvantage?",
+    "text": "Git\nCode style\nTesting\nDocumentation\nPerformance\nCI/CD\nDownstream\nUpstream",
     "crumbs": [
-      "Modules",
-      "Skills and AGENTS.md"
+      "Best practices feedback loop"
     ]
   },
   {
-    "objectID": "modules/06-agent-instructions.html#what-is-a-skill",
-    "href": "modules/06-agent-instructions.html#what-is-a-skill",
-    "title": "Skills and AGENTS.md",
-    "section": "What is a skill?",
-    "text": "What is a skill?\n\nFormal definition at https://agentskills.io/\nBut IMO this is very overwrought\nTwo parts to a skill:\n\nWhen: short description that states when to use it\nWhat: longer details of how to use it\n\nSystem prompt includes all the “when”s\nAgent loads the “what” on demand",
+    "objectID": "modules/07-best-practices-feedback-loop.html#just-use-air",
+    "href": "modules/07-best-practices-feedback-loop.html#just-use-air",
+    "title": "Best practices feedback loop",
+    "section": "Just use air",
+    "text": "Just use air\n\nNo longer worth manually enforcing a coding style\nJust use air\nGet started with usethis::use_air() + Air: format workspace file.\nOur AGENTS.md reminds the agent to use it.\n(If you’re using the Claude Code extension specifically, it won’t know where to find the air binary. You can tell it that it’s bundled with Positron)",
     "crumbs": [
-      "Modules",
-      "Skills and AGENTS.md"
+      "Best practices feedback loop"
     ]
   },
   {
-    "objectID": "modules/06-agent-instructions.html#other-forms-of-skills",
-    "href": "modules/06-agent-instructions.html#other-forms-of-skills",
-    "title": "Skills and AGENTS.md",
-    "section": "Other forms of skills",
-    "text": "Other forms of skills\n\nDirectory of markdown files with index/README\nQuarto website\n\nUse llms-text: true\nBasic idea: https://design.tidyverse.org\n\nR documentation\nR functions",
+    "objectID": "modules/07-best-practices-feedback-loop.html#agents-love-comments",
+    "href": "modules/07-best-practices-feedback-loop.html#agents-love-comments",
+    "title": "Best practices feedback loop",
+    "section": "Agents love comments",
+    "text": "Agents love comments\n\nAgents (esp. Claude) LOVE to write wordy comments\nSometimes the comments are useful; often they are not\nCode-comment mismatch more dangerous with agents since they’ll often just believe the comment.\nI’ve had relatively little success prompting this behaviour away\nBetter luck with prompt to remove (esp with non-Claude model)",
     "crumbs": [
-      "Modules",
-      "Skills and AGENTS.md"
+      "Best practices feedback loop"
     ]
   },
   {
-    "objectID": "modules/06-agent-instructions.html#general-advice",
-    "href": "modules/06-agent-instructions.html#general-advice",
-    "title": "Skills and AGENTS.md",
-    "section": "General advice",
-    "text": "General advice\n\nHold on to them loosely\nKeep them personal, local, timely\nBest for stuff a general LLM can’t know\nRelatively little benefit to using same model to both write and read\nThey don’t have to be markdown files",
+    "objectID": "modules/07-best-practices-feedback-loop.html#commenting-best-practices",
+    "href": "modules/07-best-practices-feedback-loop.html#commenting-best-practices",
+    "title": "Best practices feedback loop",
+    "section": "Commenting best practices",
+    "text": "Commenting best practices\n\nComments should explain the why\nComments shouldn’t need to explain the what. If you can’t understand the code, refactor it.\nComments dont’ need to give the entire history that lead to a decision.",
     "crumbs": [
-      "Modules",
-      "Skills and AGENTS.md"
+      "Best practices feedback loop"
     ]
   },
   {
-    "objectID": "modules/06-agent-instructions.html#our-skills",
-    "href": "modules/06-agent-instructions.html#our-skills",
-    "title": "Skills and AGENTS.md",
-    "section": "Our skills",
-    "text": "Our skills\n\nPR description writer\nWinston’s PR reviewer",
+    "objectID": "modules/07-best-practices-feedback-loop.html#more-smaller-files",
+    "href": "modules/07-best-practices-feedback-loop.html#more-smaller-files",
+    "title": "Best practices feedback loop",
+    "section": "More smaller files",
+    "text": "More smaller files\n\nAgents can more easily load just the context they need with smaller, well-named files.\nIf you have very large files, ask to break them up.\n\nIf you can easily see a good category, ask for that.\nOtherwise brainstorm together to come up with a good solution.\nFor complicated moves, ask for a summary table and a todo list.",
     "crumbs": [
-      "Modules",
-      "Skills and AGENTS.md"
+      "Best practices feedback loop"
     ]
   },
   {
-    "objectID": "modules/06-agent-instructions.html#winstons-simplification-prompt",
-    "href": "modules/06-agent-instructions.html#winstons-simplification-prompt",
-    "title": "Skills and AGENTS.md",
-    "section": "Winston’s simplification prompt",
-    "text": "Winston’s simplification prompt\n\nMake a deliberate pass over each non-trivial change looking for opportunities for simplification:\n\nCould this change be achieved by deleting or restructuring instead of adding — removing a branch, mode, layer, or special case rather than bolting one on? It’s always better to remove than add.\nIs each new or changed interface narrow relative to what it hides — or must callers know its internals, keep duplicated logic in sync, or work around documented gaps (“does NOT handle X”)?\nDoes anything re-implement what the codebase already provides — a bespoke helper shadowing a canonical one, logic in the wrong layer, or wrapper/cast/any churn obscuring the real contract?\n\nWhen you find opportunities for simplification, be clear about the pros and cons. Produce either a list of potential simplifications or “No simplifications found”.",
+    "objectID": "modules/07-best-practices-feedback-loop.html#agents-love-to-write-tests",
+    "href": "modules/07-best-practices-feedback-loop.html#agents-love-to-write-tests",
+    "title": "Best practices feedback loop",
+    "section": "Agents love to write tests",
+    "text": "Agents love to write tests\n\nGenerally don’t need to explicitly ask for them\n(Assuming you have tests already set up e.g. with use_testthat())\nExplicitly request code coverage\nMay want to explicitly request TDD (i.e. write the test first)",
     "crumbs": [
-      "Modules",
-      "Skills and AGENTS.md"
+      "Best practices feedback loop"
     ]
   },
   {
-    "objectID": "modules/06-agent-instructions.html#bundling-with-a-package",
-    "href": "modules/06-agent-instructions.html#bundling-with-a-package",
-    "title": "Skills and AGENTS.md",
-    "section": "Bundling with a package",
-    "text": "Bundling with a package\n\nNo automated tooling yet\ninst/skills is a reasonable place to put them\nYou’ll need to expose in some other way",
+    "objectID": "modules/07-best-practices-feedback-loop.html#your-job-is-to",
+    "href": "modules/07-best-practices-feedback-loop.html#your-job-is-to",
+    "title": "Best practices feedback loop",
+    "section": "Your job is to:",
+    "text": "Your job is to:\n\nKeep them well organised\n\n“Tests for R/{foo}.R should live in tests/testhat/test-{foo}.R”\n\nKeep them fast\n\n“Parallelise these tests”\n“Use SlowReporter and speed up the slowest tests”\n“Compare coverage before and after”\n\nKeep them minimal\n\n“Carefully consider the tests”\n\nAll these tasks are faciliated by relatively fine grained R and test files\nYou can ask the agent to refactor",
     "crumbs": [
-      "Modules",
-      "Skills and AGENTS.md"
+      "Best practices feedback loop"
     ]
   },
   {
-    "objectID": "modules/04-agent-explainer.html",
-    "href": "modules/04-agent-explainer.html",
-    "title": "How do agents work?",
+    "objectID": "modules/07-best-practices-feedback-loop.html#test-coverage",
+    "href": "modules/07-best-practices-feedback-loop.html#test-coverage",
+    "title": "Best practices feedback loop",
+    "section": "Test coverage",
+    "text": "Test coverage\n\nPreviously 100% test coverage was not worth it.\nProbably worth reconsidering now.",
+    "crumbs": [
+      "Best practices feedback loop"
+    ]
+  },
+  {
+    "objectID": "modules/07-best-practices-feedback-loop.html#test-maintenance",
+    "href": "modules/07-best-practices-feedback-loop.html#test-maintenance",
+    "title": "Best practices feedback loop",
+    "section": "Test maintenance",
+    "text": "Test maintenance\n\nWorth asking to minimise tests, to group related tests together\nMake sure",
+    "crumbs": [
+      "Best practices feedback loop"
+    ]
+  },
+  {
+    "objectID": "modules/07-best-practices-feedback-loop.html#overview",
+    "href": "modules/07-best-practices-feedback-loop.html#overview",
+    "title": "Best practices feedback loop",
+    "section": "Overview",
+    "text": "Overview\n\nLLMs are very good at improving the performance of code.\nThey are better than me at reading the results of RProf().\nThey are better than me at writing C/C++ code.\nThey are not very good at experimental design.\nThey are not very good at managing complexity/performance tradeoffs.",
+    "crumbs": [
+      "Best practices feedback loop"
+    ]
+  },
+  {
+    "objectID": "modules/07-best-practices-feedback-loop.html#prompting",
+    "href": "modules/07-best-practices-feedback-loop.html#prompting",
+    "title": "Best practices feedback loop",
+    "section": "Prompting",
+    "text": "Prompting\n\n“Make XXX faster”\nMake sure it’s well tested first\nEnsure it records its work\nRequest both microbenchmarks and meaningful user actions\nPay attention to what it’s doing",
+    "crumbs": [
+      "Best practices feedback loop"
+    ]
+  },
+  {
+    "objectID": "modules/07-best-practices-feedback-loop.html#cc",
+    "href": "modules/07-best-practices-feedback-loop.html#cc",
+    "title": "Best practices feedback loop",
+    "section": "C/C++",
+    "text": "C/C++\n\nPreviously C++ (via Rcpp/cpp11) had good balance of effort vs. results\nNow for small amounts of compiled code, pure C has no dependencies and LLMs are good at writing it.\nYou will need to give it hints as to latest C API.",
+    "crumbs": [
+      "Best practices feedback loop"
+    ]
+  },
+  {
+    "objectID": "modules/05-workflow.html",
+    "href": "modules/05-workflow.html",
+    "title": "Workflow",
     "section": "",
-    "text": "Goal:\nIn principle, you could develop your own. There are a lot of details, but it’s surprisingly straighforward to implement a prototype.\nTODO: publish my ellmer agent code.",
+    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, planning, design, docs)\nStart slow and grow your confidence\nNever make another human read AI slop\n\n\n\n\nWrite code\nWrite tests\nIterate until they pass\nR CMD check at the end",
     "crumbs": [
-      "Modules",
-      "How do agents work?"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/04-agent-explainer.html#lets-make-a-package",
-    "href": "modules/04-agent-explainer.html#lets-make-a-package",
-    "title": "How do agents work?",
-    "section": "Let’s make a package",
-    "text": "Let’s make a package\n(Make sure you’re in normal mode)\nusethis::create_package(\"~/desktop/compliment\")\n\nCreate a new R package called compliment in the current directory. It should generate randomized compliments.",
+    "objectID": "modules/05-workflow.html#general-principles",
+    "href": "modules/05-workflow.html#general-principles",
+    "title": "Workflow",
+    "section": "",
+    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, planning, design, docs)\nStart slow and grow your confidence\nNever make another human read AI slop\n\n\n\n\nWrite code\nWrite tests\nIterate until they pass\nR CMD check at the end",
     "crumbs": [
-      "Modules",
-      "How do agents work?"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/04-agent-explainer.html#your-turn",
-    "href": "modules/04-agent-explainer.html#your-turn",
-    "title": "How do agents work?",
-    "section": "Your turn",
-    "text": "Your turn\n\nUse the same prompt as me. It’s underspecified ask so we’re going to get lots of variation. That’s part of the fun!\nManually approve a few writes\nThen allow all\nMake sure your package has tests and Git\nHow does your package differ from mine? From your neighbours?",
+    "objectID": "modules/05-workflow.html#basic-workflows",
+    "href": "modules/05-workflow.html#basic-workflows",
+    "title": "Workflow",
+    "section": "Basic workflows",
+    "text": "Basic workflows\n\n\nImplement it\nPlan it, then implement it\nPlan it, review the plan, implement it, review the implementation\nDesign it, then repeat cycles above",
     "crumbs": [
-      "Modules",
-      "How do agents work?"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/04-agent-explainer.html#there-are-three-types-of-output",
-    "href": "modules/04-agent-explainer.html#there-are-three-types-of-output",
-    "title": "How do agents work?",
-    "section": "There are three types of output",
-    "text": "There are three types of output\n\nText\nThinking (click to expand)\nTool calls",
+    "objectID": "modules/05-workflow.html#example-workflow",
+    "href": "modules/05-workflow.html#example-workflow",
+    "title": "Workflow",
+    "section": "Example workflow",
+    "text": "Example workflow\n\nFix https://github.com/r-lib/testthat/issues/2344\n\n\nFix https://github.com/r-lib/testthat/issues/2317",
     "crumbs": [
-      "Modules",
-      "How do agents work?"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/04-agent-explainer.html#tool-calls-let-the-agent-run-code-on-your-computer",
-    "href": "modules/04-agent-explainer.html#tool-calls-let-the-agent-run-code-on-your-computer",
-    "title": "How do agents work?",
-    "section": "Tool calls let the agent run code on your computer",
-    "text": "Tool calls let the agent run code on your computer\n\nTools are provided by the harness, e.g. Posit Assistant\nLLM asks harness to run code; harness returns result to the LLM\nOften requests many tool calls at once\nThese are called “parallel” calls, but don’t actually run in parallel.\nCan recognise with the thick line line\n\n\n\n\nTwo read calls and three edit calls",
+    "objectID": "modules/05-workflow.html#basic-advice",
+    "href": "modules/05-workflow.html#basic-advice",
+    "title": "Workflow",
+    "section": "Basic advice",
+    "text": "Basic advice\n\nWhen you get started, pay attention to what it’s doing\nCan be useful to intervene when it’s getting off track.\nCan also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out",
     "crumbs": [
-      "Modules",
-      "How do agents work?"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/04-agent-explainer.html#a-little-vocab",
-    "href": "modules/04-agent-explainer.html#a-little-vocab",
-    "title": "How do agents work?",
-    "section": "A little vocab",
-    "text": "A little vocab\n\nHarness: provides tools; runs the loop\nProvider: who runs the server that runs the model\n\nOpen models can be hosted anywhere\nAWS + Azure host lots of foundation models\n\nModel: the specific LLM model you’re using",
+    "objectID": "modules/05-workflow.html#git-flow",
+    "href": "modules/05-workflow.html#git-flow",
+    "title": "Workflow",
+    "section": "Git flow",
+    "text": "Git flow\n\nWhen you get started, I think it’s worth doing all the commits yourself\nThen, tell it when to commit\nThen, it let it commit by itself\nThen, let it make the whole PR\n(But NEVER EVER inflect Claude’s writing on another human.)",
     "crumbs": [
-      "Modules",
-      "How do agents work?"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/04-agent-explainer.html#some-examples",
-    "href": "modules/04-agent-explainer.html#some-examples",
-    "title": "How do agents work?",
-    "section": "Some examples",
-    "text": "Some examples\n\nKimi K3 (model) on posit.ai (provider) with Posit Assitant (harness)\nOpus 5 (model) on posit.ai (provider) with Posit Assitant (harness)\nOpus 5 (model) from claude (provider) in Claude Code (harness)\nGPT-5.3 (model) from AWS Bedrock (provider) in Posit Assitant (harness)\nGPT-5.3 (model) from OpenAI (provider) in codex (harness)",
+    "objectID": "modules/05-workflow.html#now-its-time-to-make-a-plan",
+    "href": "modules/05-workflow.html#now-its-time-to-make-a-plan",
+    "title": "Workflow",
+    "section": "Now it’s time to make a plan",
+    "text": "Now it’s time to make a plan\n\nPlanning tends to lead to better results, but don’t get hung up on it\nAlways ask for a markdown file that you can read and edit\nThree options for where to put this:\n\nEphemeral\nPersistent, outside of git\nChecked in",
     "crumbs": [
-      "Modules",
-      "How do agents work?"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/04-agent-explainer.html#what-are-some-common-calls",
-    "href": "modules/04-agent-explainer.html#what-are-some-common-calls",
-    "title": "How do agents work?",
-    "section": "What are some common calls?",
-    "text": "What are some common calls?\n\nwrite creates a new file\nedit modifies an existing file\nexecuteCode runs R (or Python) code in the console\nbash runs code you’d usually use the terminal for\nAskUser asks you a question\nread reads a file on disk\nwebfetch reads a web page\nsearch searches directory for matching text",
+    "objectID": "modules/05-workflow.html#example-workflow-1",
+    "href": "modules/05-workflow.html#example-workflow-1",
+    "title": "Workflow",
+    "section": "Example workflow",
+    "text": "Example workflow\n\nRead https://github.com/r-lib/testthat/issues/2334. Construct a minimal reprex, then write a brief plan for fixing the problem. Save your plan in plan.md.\n\n… read and review the plan …\n\nExecute the plan",
     "crumbs": [
-      "Modules",
-      "How do agents work?"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/04-agent-explainer.html#your-turn-1",
-    "href": "modules/04-agent-explainer.html#your-turn-1",
-    "title": "How do agents work?",
-    "section": "Your turn",
-    "text": "Your turn\n\nTry and prompt your agent to make it use each of the tool calls above.\nWhat other tools are available?",
+    "objectID": "modules/05-workflow.html#example-workflow-voice",
+    "href": "modules/05-workflow.html#example-workflow-voice",
+    "title": "Workflow",
+    "section": "Example workflow (voice)",
+    "text": "Example workflow (voice)\nFine to dump a stream of consciousness and let the agent figure it out. I think it’s good to ask for a plan just to check it’s clear what you actually want.",
     "crumbs": [
-      "Modules",
-      "How do agents work?"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/04-agent-explainer.html#sandbox",
-    "href": "modules/04-agent-explainer.html#sandbox",
-    "title": "How do agents work?",
-    "section": "Sandbox",
-    "text": "Sandbox",
+    "objectID": "modules/05-workflow.html#workflow-lore",
+    "href": "modules/05-workflow.html#workflow-lore",
+    "title": "Workflow",
+    "section": "Workflow lore",
+    "text": "Workflow lore\n\nClaude (esp. Fable/Opus) best at planning\nCodex best at reviewing\nCheap models fine for implementing",
     "crumbs": [
-      "Modules",
-      "How do agents work?"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/04-agent-explainer.html#auto-mode",
-    "href": "modules/04-agent-explainer.html#auto-mode",
-    "title": "How do agents work?",
-    "section": "Auto-mode",
-    "text": "Auto-mode",
+    "objectID": "modules/05-workflow.html#example-workflow-2",
+    "href": "modules/05-workflow.html#example-workflow-2",
+    "title": "Workflow",
+    "section": "Example workflow",
+    "text": "Example workflow\n\nPlan it with Fable (or whatever the best model you have access to is)\nYou read and review the plan\nReview the plan with Codex. Copy and paste the feedback.\nImplement with Sonnet (or a similar cheap model)\nReview the implementation with Codex\n\n\nhttps://github.com/r-lib/testthat/issues/2328",
     "crumbs": [
-      "Modules",
-      "How do agents work?"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/04-agent-explainer.html#life-is-good-for-individual-developers",
-    "href": "modules/04-agent-explainer.html#life-is-good-for-individual-developers",
-    "title": "How do agents work?",
-    "section": "Life is good for individual developers",
-    "text": "Life is good for individual developers\n\nIndividuals can use an all-you-can-eat plan\n\nCodex: $20 / month, $100 / month\nClaude Code: $20 / month, $100 / month\n\nThese are very generous; you get 20-80x what the API costs\nBUT you can only use in provider harnesses\n(So you can’t use claude code subscription with PA :sad-face:)",
+    "objectID": "modules/05-workflow.html#your-turn-big",
+    "href": "modules/05-workflow.html#your-turn-big",
+    "title": "Workflow",
+    "section": "Your turn (big)",
+    "text": "Your turn (big)\n\nstringb",
     "crumbs": [
-      "Modules",
-      "How do agents work?"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/04-agent-explainer.html#enterprise-plans-are-different",
-    "href": "modules/04-agent-explainer.html#enterprise-plans-are-different",
-    "title": "How do agents work?",
-    "section": "Enterprise plans are different",
-    "text": "Enterprise plans are different\n\nEnterprises have to pay by the million tokens\n\nOpus 5: $5 input, $25 output\ngpt-5.6-terra: $2 input, $12 output\nKimi K3: $3 input, $15 output\n\n(This is also what you pay in ellmer)\nTODO: add some examples of costs to help calibrate",
-    "crumbs": [
-      "Modules",
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#why-care",
-    "href": "modules/04-agent-explainer.html#why-care",
-    "title": "How do agents work?",
-    "section": "Why care?",
-    "text": "Why care?\n\nAt least in the short-term this is really important for organisations, and I think data scientists and engineers need to understand where they’re spending money.\nTwo tools:\n\nPosit Assistant\nAgentsView\n\nIn both cases these are best-efforts to compute cost. Model providers don’t make this easy!\nSkills (which we’ll come back to later are a good way to increase token efficiency)",
-    "crumbs": [
-      "Modules",
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#my-views-on-cost-benefit-have-changed",
-    "href": "modules/04-agent-explainer.html#my-views-on-cost-benefit-have-changed",
-    "title": "How do agents work?",
-    "section": "My views on cost-benefit have changed",
-    "text": "My views on cost-benefit have changed\n\nI used to think that Anthropic was worth the additional cost.\nBut the relative cost has increased and output quality has decreased (code is still fine, but the sheer quantity of AI slop writing is painful)\nKimi K3 is excellent. Somewhere between Opus and Fable in quality. But much more concive. And only costs 75% of sonnet (thanks to tokenizer).",
-    "crumbs": [
-      "Modules",
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#all-this-to-say-understanding-cost-is-important",
-    "href": "modules/04-agent-explainer.html#all-this-to-say-understanding-cost-is-important",
-    "title": "How do agents work?",
-    "section": "All this to say, understanding cost is important",
-    "text": "All this to say, understanding cost is important\n\nConversations are additive\nTool calls\nCache is king",
-    "crumbs": [
-      "Modules",
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#conversations-are-additive",
-    "href": "modules/04-agent-explainer.html#conversations-are-additive",
-    "title": "How do agents work?",
-    "section": "Conversations are additive",
-    "text": "Conversations are additive\n\nLLMs are predictive models\nThey need the complete history of the conversation\nBoth your inputs and its outputs\nTODO: add diagram show how this grows\nRecommendation: use /clear to start from a fresh slate\nSaves money and avoids stale state\nAgentsView",
-    "crumbs": [
-      "Modules",
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#tokenizers",
-    "href": "modules/04-agent-explainer.html#tokenizers",
-    "title": "How do agents work?",
-    "section": "Tokenizers",
-    "text": "Tokenizers\n\nBy and large, you don’t need to care about the details of going from text to the numbers that LLMs us\nBUT in [TODO: fill in model] Claude switched to a tokenizer that produces ~30% more tokens for the same input.\nSo in general, there are lots of other levers providers can pull.\nAnd you might wonder if Claude’s loquacious output is a way to raise prices.\nAssessing total cost is hard :(",
-    "crumbs": [
-      "Modules",
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#cost-is-dominated-by-cache-hits",
-    "href": "modules/04-agent-explainer.html#cost-is-dominated-by-cache-hits",
-    "title": "How do agents work?",
-    "section": "Cost is dominated by cache hits",
-    "text": "Cost is dominated by cache hits\n\nNo caching = ~10x cost\nOf course it would be very slow if each time the conversation had to restart from scratch\nSo providers cache the results of the previous turn so that they can resume where they left off\nCaching price still iterating, but seems to be stabilising\n\nYou pay more to cache results: 1.25x\nCache reads are much cheaper: 0.1x\nThe conversation records explicit cache points\n\nDetails for cache length vary:\n\nClaude: 5 minutes / 1 hour (2x cost)\nOpenAI: 30 minutes\nKimiK3: no guarantees\n\nVery difficult to figure out the exact consequences of costs.\nBut if you step away from a claude session for 5 minutes, the next request might be 10x the cost. We’re working on better tools for this in PA.",
-    "crumbs": [
-      "Modules",
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#your-turn-2",
-    "href": "modules/04-agent-explainer.html#your-turn-2",
-    "title": "How do agents work?",
-    "section": "Your turn",
-    "text": "Your turn",
-    "crumbs": [
-      "Modules",
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/04-agent-explainer.html#compaction-is-no-longer-relevant",
-    "href": "modules/04-agent-explainer.html#compaction-is-no-longer-relevant",
-    "title": "How do agents work?",
-    "section": "Compaction is no longer relevant",
-    "text": "Compaction is no longer relevant\n\nIn past generations of models, with smaller context, harness would provide tools for compaction\nBasically, you ask a model (maybe the same as existing maybe) to summarise\nThe problem is you lose the advantages of caching",
-    "crumbs": [
-      "Modules",
-      "How do agents work?"
-    ]
-  },
-  {
-    "objectID": "modules/02-positron-tour.html",
-    "href": "modules/02-positron-tour.html",
-    "title": "Positron tour",
+    "objectID": "modules/03-posit-assistant-intro.html",
+    "href": "modules/03-posit-assistant-intro.html",
+    "title": "Intro to Posit Assistant",
     "section": "",
     "text": "TODO",
     "crumbs": [
-      "Modules",
-      "Positron tour"
+      "Intro to Posit Assistant"
     ]
   },
   {
-    "objectID": "modules/00-welcome.html",
-    "href": "modules/00-welcome.html",
-    "title": "Welcome",
+    "objectID": "modules/01-helping-yourself.html",
+    "href": "modules/01-helping-yourself.html",
+    "title": "Helping yourself",
     "section": "",
-    "text": "Slides (full screen)",
+    "text": "TODO",
     "crumbs": [
-      "Modules",
-      "Welcome"
+      "Helping yourself"
     ]
   },
   {
@@ -401,300 +330,313 @@
     ]
   },
   {
-    "objectID": "modules/01-helping-yourself.html",
-    "href": "modules/01-helping-yourself.html",
-    "title": "Helping yourself",
+    "objectID": "modules/00-welcome.html",
+    "href": "modules/00-welcome.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "Slides (full screen)",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "modules/02-positron-tour.html",
+    "href": "modules/02-positron-tour.html",
+    "title": "Positron tour",
     "section": "",
     "text": "TODO",
     "crumbs": [
-      "Modules",
-      "Helping yourself"
+      "Positron tour"
     ]
   },
   {
-    "objectID": "modules/03-posit-assistant-intro.html",
-    "href": "modules/03-posit-assistant-intro.html",
-    "title": "Intro to Posit Assistant",
+    "objectID": "modules/04-agent-explainer.html",
+    "href": "modules/04-agent-explainer.html",
+    "title": "How do agents work?",
     "section": "",
-    "text": "TODO",
+    "text": "Goal:\nIn principle, you could develop your own. There are a lot of details, but it’s surprisingly straighforward to implement a prototype.\nTODO: publish my ellmer agent code.",
     "crumbs": [
-      "Modules",
-      "Intro to Posit Assistant"
+      "How do agents work?"
     ]
   },
   {
-    "objectID": "modules/05-workflow.html",
-    "href": "modules/05-workflow.html",
-    "title": "Workflow",
+    "objectID": "modules/04-agent-explainer.html#lets-make-a-package",
+    "href": "modules/04-agent-explainer.html#lets-make-a-package",
+    "title": "How do agents work?",
+    "section": "Let’s make a package",
+    "text": "Let’s make a package\n(Make sure you’re in normal mode)\nusethis::create_package(\"~/desktop/compliment\")\n\nCreate a new R package called compliment in the current directory. It should generate randomized compliments.",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#your-turn",
+    "href": "modules/04-agent-explainer.html#your-turn",
+    "title": "How do agents work?",
+    "section": "Your turn",
+    "text": "Your turn\n\nUse the same prompt as me. It’s underspecified ask so we’re going to get lots of variation. That’s part of the fun!\nManually approve a few writes\nThen allow all\nMake sure your package has tests and Git\nHow does your package differ from mine? From your neighbours?",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#there-are-three-types-of-output",
+    "href": "modules/04-agent-explainer.html#there-are-three-types-of-output",
+    "title": "How do agents work?",
+    "section": "There are three types of output",
+    "text": "There are three types of output\n\nText\nThinking (click to expand)\nTool calls",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#tool-calls-let-the-agent-run-code-on-your-computer",
+    "href": "modules/04-agent-explainer.html#tool-calls-let-the-agent-run-code-on-your-computer",
+    "title": "How do agents work?",
+    "section": "Tool calls let the agent run code on your computer",
+    "text": "Tool calls let the agent run code on your computer\n\nTools are provided by the harness, e.g. Posit Assistant\nLLM asks harness to run code; harness returns result to the LLM\nOften requests many tool calls at once\nThese are called “parallel” calls, but don’t actually run in parallel.\nCan recognise with the thick line line\n\n\n\n\nTwo read calls and three edit calls",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#a-little-vocab",
+    "href": "modules/04-agent-explainer.html#a-little-vocab",
+    "title": "How do agents work?",
+    "section": "A little vocab",
+    "text": "A little vocab\n\nHarness: provides tools; runs the loop\nProvider: who runs the server that runs the model\n\nOpen models can be hosted anywhere\nAWS + Azure host lots of foundation models\n\nModel: the specific LLM model you’re using",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#some-examples",
+    "href": "modules/04-agent-explainer.html#some-examples",
+    "title": "How do agents work?",
+    "section": "Some examples",
+    "text": "Some examples\n\nKimi K3 (model) on posit.ai (provider) with Posit Assitant (harness)\nOpus 5 (model) on posit.ai (provider) with Posit Assitant (harness)\nOpus 5 (model) from claude (provider) in Claude Code (harness)\nGPT-5.3 (model) from AWS Bedrock (provider) in Posit Assitant (harness)\nGPT-5.3 (model) from OpenAI (provider) in codex (harness)",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#what-are-some-common-calls",
+    "href": "modules/04-agent-explainer.html#what-are-some-common-calls",
+    "title": "How do agents work?",
+    "section": "What are some common calls?",
+    "text": "What are some common calls?\n\nwrite creates a new file\nedit modifies an existing file\nexecuteCode runs R (or Python) code in the console\nbash runs code you’d usually use the terminal for\nAskUser asks you a question\nread reads a file on disk\nwebfetch reads a web page\nsearch searches directory for matching text",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#your-turn-1",
+    "href": "modules/04-agent-explainer.html#your-turn-1",
+    "title": "How do agents work?",
+    "section": "Your turn",
+    "text": "Your turn\n\nTry and prompt your agent to make it use each of the tool calls above.\nWhat other tools are available?",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#sandbox",
+    "href": "modules/04-agent-explainer.html#sandbox",
+    "title": "How do agents work?",
+    "section": "Sandbox",
+    "text": "Sandbox",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#auto-mode",
+    "href": "modules/04-agent-explainer.html#auto-mode",
+    "title": "How do agents work?",
+    "section": "Auto-mode",
+    "text": "Auto-mode",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#life-is-good-for-individual-developers",
+    "href": "modules/04-agent-explainer.html#life-is-good-for-individual-developers",
+    "title": "How do agents work?",
+    "section": "Life is good for individual developers",
+    "text": "Life is good for individual developers\n\nIndividuals can use an all-you-can-eat plan\n\nCodex: $20 / month, $100 / month\nClaude Code: $20 / month, $100 / month\n\nThese are very generous; you get 20-80x what the API costs\nBUT you can only use in provider harnesses\n(So you can’t use claude code subscription with PA :sad-face:)",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#enterprise-plans-are-different",
+    "href": "modules/04-agent-explainer.html#enterprise-plans-are-different",
+    "title": "How do agents work?",
+    "section": "Enterprise plans are different",
+    "text": "Enterprise plans are different\n\nEnterprises have to pay by the million tokens\n\nOpus 5: $5 input, $25 output\ngpt-5.6-terra: $2 input, $12 output\nKimi K3: $3 input, $15 output\n\n(This is also what you pay in ellmer)\nTODO: add some examples of costs to help calibrate",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#why-care",
+    "href": "modules/04-agent-explainer.html#why-care",
+    "title": "How do agents work?",
+    "section": "Why care?",
+    "text": "Why care?\n\nAt least in the short-term this is really important for organisations, and I think data scientists and engineers need to understand where they’re spending money.\nTwo tools:\n\nPosit Assistant\nAgentsView\n\nIn both cases these are best-efforts to compute cost. Model providers don’t make this easy!\nSkills (which we’ll come back to later are a good way to increase token efficiency)",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#my-views-on-cost-benefit-have-changed",
+    "href": "modules/04-agent-explainer.html#my-views-on-cost-benefit-have-changed",
+    "title": "How do agents work?",
+    "section": "My views on cost-benefit have changed",
+    "text": "My views on cost-benefit have changed\n\nI used to think that Anthropic was worth the additional cost.\nBut the relative cost has increased and output quality has decreased (code is still fine, but the sheer quantity of AI slop writing is painful)\nKimi K3 is excellent. Somewhere between Opus and Fable in quality. But much more concive. And only costs 75% of sonnet (thanks to tokenizer).",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#all-this-to-say-understanding-cost-is-important",
+    "href": "modules/04-agent-explainer.html#all-this-to-say-understanding-cost-is-important",
+    "title": "How do agents work?",
+    "section": "All this to say, understanding cost is important",
+    "text": "All this to say, understanding cost is important\n\nConversations are additive\nTool calls\nCache is king",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#conversations-are-additive",
+    "href": "modules/04-agent-explainer.html#conversations-are-additive",
+    "title": "How do agents work?",
+    "section": "Conversations are additive",
+    "text": "Conversations are additive\n\nLLMs are predictive models\nThey need the complete history of the conversation\nBoth your inputs and its outputs\nTODO: add diagram show how this grows\nRecommendation: use /clear to start from a fresh slate\nSaves money and avoids stale state\nAgentsView",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#tokenizers",
+    "href": "modules/04-agent-explainer.html#tokenizers",
+    "title": "How do agents work?",
+    "section": "Tokenizers",
+    "text": "Tokenizers\n\nBy and large, you don’t need to care about the details of going from text to the numbers that LLMs us\nBUT in [TODO: fill in model] Claude switched to a tokenizer that produces ~30% more tokens for the same input.\nSo in general, there are lots of other levers providers can pull.\nAnd you might wonder if Claude’s loquacious output is a way to raise prices.\nAssessing total cost is hard :(",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#cost-is-dominated-by-cache-hits",
+    "href": "modules/04-agent-explainer.html#cost-is-dominated-by-cache-hits",
+    "title": "How do agents work?",
+    "section": "Cost is dominated by cache hits",
+    "text": "Cost is dominated by cache hits\n\nNo caching = ~10x cost\nOf course it would be very slow if each time the conversation had to restart from scratch\nSo providers cache the results of the previous turn so that they can resume where they left off\nCaching price still iterating, but seems to be stabilising\n\nYou pay more to cache results: 1.25x\nCache reads are much cheaper: 0.1x\nThe conversation records explicit cache points\n\nDetails for cache length vary:\n\nClaude: 5 minutes / 1 hour (2x cost)\nOpenAI: 30 minutes\nKimiK3: no guarantees\n\nVery difficult to figure out the exact consequences of costs.\nBut if you step away from a claude session for 5 minutes, the next request might be 10x the cost. We’re working on better tools for this in PA.",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#your-turn-2",
+    "href": "modules/04-agent-explainer.html#your-turn-2",
+    "title": "How do agents work?",
+    "section": "Your turn",
+    "text": "Your turn",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#compaction-is-no-longer-relevant",
+    "href": "modules/04-agent-explainer.html#compaction-is-no-longer-relevant",
+    "title": "How do agents work?",
+    "section": "Compaction is no longer relevant",
+    "text": "Compaction is no longer relevant\n\nIn past generations of models, with smaller context, harness would provide tools for compaction\nBasically, you ask a model (maybe the same as existing maybe) to summarise\nThe problem is you lose the advantages of caching",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/06-agent-instructions.html",
+    "href": "modules/06-agent-instructions.html",
+    "title": "Skills and AGENTS.md",
     "section": "",
-    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, planning, design, docs)\nStart slow and grow your confidence\nNever make another human read AI slop\n\n\n\n\nWrite code\nWrite tests\nIterate until they pass\nR CMD check at the end",
+    "text": "So far we’ve used (implicitly) AGENTS.md.\nWhat about skills?\n\n\n\n\nuse_tidy_agents() bundles two skills\nWhat are they? How do they work?\nWhat’s the advantage of bundling them this way?\nWhat’s the disadvantage?",
     "crumbs": [
-      "Modules",
-      "Workflow"
+      "Skills and AGENTS.md"
     ]
   },
   {
-    "objectID": "modules/05-workflow.html#general-principles",
-    "href": "modules/05-workflow.html#general-principles",
-    "title": "Workflow",
+    "objectID": "modules/06-agent-instructions.html#your-turn",
+    "href": "modules/06-agent-instructions.html#your-turn",
+    "title": "Skills and AGENTS.md",
     "section": "",
-    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, planning, design, docs)\nStart slow and grow your confidence\nNever make another human read AI slop\n\n\n\n\nWrite code\nWrite tests\nIterate until they pass\nR CMD check at the end",
+    "text": "use_tidy_agents() bundles two skills\nWhat are they? How do they work?\nWhat’s the advantage of bundling them this way?\nWhat’s the disadvantage?",
     "crumbs": [
-      "Modules",
-      "Workflow"
+      "Skills and AGENTS.md"
     ]
   },
   {
-    "objectID": "modules/05-workflow.html#basic-workflows",
-    "href": "modules/05-workflow.html#basic-workflows",
-    "title": "Workflow",
-    "section": "Basic workflows",
-    "text": "Basic workflows\n\n\nImplement it\nPlan it, then implement it\nPlan it, review the plan, implement it, review the implementation\nDesign it, then repeat cycles above",
+    "objectID": "modules/06-agent-instructions.html#what-is-a-skill",
+    "href": "modules/06-agent-instructions.html#what-is-a-skill",
+    "title": "Skills and AGENTS.md",
+    "section": "What is a skill?",
+    "text": "What is a skill?\n\nFormal definition at https://agentskills.io/\nBut IMO this is very overwrought\nTwo parts to a skill:\n\nWhen: short description that states when to use it\nWhat: longer details of how to use it\n\nSystem prompt includes all the “when”s\nAgent loads the “what” on demand",
     "crumbs": [
-      "Modules",
-      "Workflow"
+      "Skills and AGENTS.md"
     ]
   },
   {
-    "objectID": "modules/05-workflow.html#example-workflow",
-    "href": "modules/05-workflow.html#example-workflow",
-    "title": "Workflow",
-    "section": "Example workflow",
-    "text": "Example workflow\n\nFix https://github.com/r-lib/testthat/issues/2344\n\n\nFix https://github.com/r-lib/testthat/issues/2317",
+    "objectID": "modules/06-agent-instructions.html#other-forms-of-skills",
+    "href": "modules/06-agent-instructions.html#other-forms-of-skills",
+    "title": "Skills and AGENTS.md",
+    "section": "Other forms of skills",
+    "text": "Other forms of skills\n\nDirectory of markdown files with index/README\nQuarto website\n\nUse llms-text: true\nBasic idea: https://design.tidyverse.org\n\nR documentation\nR functions",
     "crumbs": [
-      "Modules",
-      "Workflow"
+      "Skills and AGENTS.md"
     ]
   },
   {
-    "objectID": "modules/05-workflow.html#basic-advice",
-    "href": "modules/05-workflow.html#basic-advice",
-    "title": "Workflow",
-    "section": "Basic advice",
-    "text": "Basic advice\n\nWhen you get started, pay attention to what it’s doing\nCan be useful to intervene when it’s getting off track.\nCan also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out",
+    "objectID": "modules/06-agent-instructions.html#general-advice",
+    "href": "modules/06-agent-instructions.html#general-advice",
+    "title": "Skills and AGENTS.md",
+    "section": "General advice",
+    "text": "General advice\n\nHold on to them loosely\nKeep them personal, local, timely\nBest for stuff a general LLM can’t know\nRelatively little benefit to using same model to both write and read\nThey don’t have to be markdown files",
     "crumbs": [
-      "Modules",
-      "Workflow"
+      "Skills and AGENTS.md"
     ]
   },
   {
-    "objectID": "modules/05-workflow.html#git-flow",
-    "href": "modules/05-workflow.html#git-flow",
-    "title": "Workflow",
-    "section": "Git flow",
-    "text": "Git flow\n\nWhen you get started, I think it’s worth doing all the commits yourself\nThen, tell it when to commit\nThen, it let it commit by itself\nThen, let it make the whole PR\n(But NEVER EVER inflect Claude’s writing on another human.)",
+    "objectID": "modules/06-agent-instructions.html#our-skills",
+    "href": "modules/06-agent-instructions.html#our-skills",
+    "title": "Skills and AGENTS.md",
+    "section": "Our skills",
+    "text": "Our skills\n\nPR description writer\nWinston’s PR reviewer",
     "crumbs": [
-      "Modules",
-      "Workflow"
+      "Skills and AGENTS.md"
     ]
   },
   {
-    "objectID": "modules/05-workflow.html#now-its-time-to-make-a-plan",
-    "href": "modules/05-workflow.html#now-its-time-to-make-a-plan",
-    "title": "Workflow",
-    "section": "Now it’s time to make a plan",
-    "text": "Now it’s time to make a plan\n\nPlanning tends to lead to better results, but don’t get hung up on it\nAlways ask for a markdown file that you can read and edit\nThree options for where to put this:\n\nEphemeral\nPersistent, outside of git\nChecked in",
+    "objectID": "modules/06-agent-instructions.html#winstons-simplification-prompt",
+    "href": "modules/06-agent-instructions.html#winstons-simplification-prompt",
+    "title": "Skills and AGENTS.md",
+    "section": "Winston’s simplification prompt",
+    "text": "Winston’s simplification prompt\n\nMake a deliberate pass over each non-trivial change looking for opportunities for simplification:\n\nCould this change be achieved by deleting or restructuring instead of adding — removing a branch, mode, layer, or special case rather than bolting one on? It’s always better to remove than add.\nIs each new or changed interface narrow relative to what it hides — or must callers know its internals, keep duplicated logic in sync, or work around documented gaps (“does NOT handle X”)?\nDoes anything re-implement what the codebase already provides — a bespoke helper shadowing a canonical one, logic in the wrong layer, or wrapper/cast/any churn obscuring the real contract?\n\nWhen you find opportunities for simplification, be clear about the pros and cons. Produce either a list of potential simplifications or “No simplifications found”.",
     "crumbs": [
-      "Modules",
-      "Workflow"
+      "Skills and AGENTS.md"
     ]
   },
   {
-    "objectID": "modules/05-workflow.html#example-workflow-1",
-    "href": "modules/05-workflow.html#example-workflow-1",
-    "title": "Workflow",
-    "section": "Example workflow",
-    "text": "Example workflow\n\nRead https://github.com/r-lib/testthat/issues/2334. Construct a minimal reprex, then write a brief plan for fixing the problem. Save your plan in plan.md.\n\n… read and review the plan …\n\nExecute the plan",
+    "objectID": "modules/06-agent-instructions.html#bundling-with-a-package",
+    "href": "modules/06-agent-instructions.html#bundling-with-a-package",
+    "title": "Skills and AGENTS.md",
+    "section": "Bundling with a package",
+    "text": "Bundling with a package\n\nNo automated tooling yet\ninst/skills is a reasonable place to put them\nYou’ll need to expose in some other way",
     "crumbs": [
-      "Modules",
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/05-workflow.html#example-workflow-voice",
-    "href": "modules/05-workflow.html#example-workflow-voice",
-    "title": "Workflow",
-    "section": "Example workflow (voice)",
-    "text": "Example workflow (voice)\nFine to dump a stream of consciousness and let the agent figure it out. I think it’s good to ask for a plan just to check it’s clear what you actually want.",
-    "crumbs": [
-      "Modules",
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/05-workflow.html#workflow-lore",
-    "href": "modules/05-workflow.html#workflow-lore",
-    "title": "Workflow",
-    "section": "Workflow lore",
-    "text": "Workflow lore\n\nClaude (esp. Fable/Opus) best at planning\nCodex best at reviewing\nCheap models fine for implementing",
-    "crumbs": [
-      "Modules",
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/05-workflow.html#example-workflow-2",
-    "href": "modules/05-workflow.html#example-workflow-2",
-    "title": "Workflow",
-    "section": "Example workflow",
-    "text": "Example workflow\n\nPlan it with Fable (or whatever the best model you have access to is)\nYou read and review the plan\nReview the plan with Codex. Copy and paste the feedback.\nImplement with Sonnet (or a similar cheap model)\nReview the implementation with Codex\n\n\nhttps://github.com/r-lib/testthat/issues/2328",
-    "crumbs": [
-      "Modules",
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/05-workflow.html#your-turn-big",
-    "href": "modules/05-workflow.html#your-turn-big",
-    "title": "Workflow",
-    "section": "Your turn (big)",
-    "text": "Your turn (big)\n\nstringb",
-    "crumbs": [
-      "Modules",
-      "Workflow"
-    ]
-  },
-  {
-    "objectID": "modules/07-best-practices-feedback-loop.html",
-    "href": "modules/07-best-practices-feedback-loop.html",
-    "title": "Best practices feedback loop",
-    "section": "",
-    "text": "LLMs both amplify best practices, and make them more achievable\nAs you improve tests and docs, it makes it easier for agents to work with your package\nReally good news for non-professional developers\nDo it as you go, and also useful as part of regular upkeep\n\n\n\n\nGit\nCode style\nTesting\nDocumentation\nPerformance\nCI/CD\nDownstream\nUpstream",
-    "crumbs": [
-      "Modules",
-      "Best practices feedback loop"
-    ]
-  },
-  {
-    "objectID": "modules/07-best-practices-feedback-loop.html#development-best-practices",
-    "href": "modules/07-best-practices-feedback-loop.html#development-best-practices",
-    "title": "Best practices feedback loop",
-    "section": "",
-    "text": "Git\nCode style\nTesting\nDocumentation\nPerformance\nCI/CD\nDownstream\nUpstream",
-    "crumbs": [
-      "Modules",
-      "Best practices feedback loop"
-    ]
-  },
-  {
-    "objectID": "modules/07-best-practices-feedback-loop.html#just-use-air",
-    "href": "modules/07-best-practices-feedback-loop.html#just-use-air",
-    "title": "Best practices feedback loop",
-    "section": "Just use air",
-    "text": "Just use air\n\nNo longer worth manually enforcing a coding style\nJust use air\nGet started with usethis::use_air() + Air: format workspace file.\nOur AGENTS.md reminds the agent to use it.\n(If you’re using the Claude Code extension specifically, it won’t know where to find the air binary. You can tell it that it’s bundled with Positron)",
-    "crumbs": [
-      "Modules",
-      "Best practices feedback loop"
-    ]
-  },
-  {
-    "objectID": "modules/07-best-practices-feedback-loop.html#agents-love-comments",
-    "href": "modules/07-best-practices-feedback-loop.html#agents-love-comments",
-    "title": "Best practices feedback loop",
-    "section": "Agents love comments",
-    "text": "Agents love comments\n\nAgents (esp. Claude) LOVE to write wordy comments\nSometimes the comments are useful; often they are not\nCode-comment mismatch more dangerous with agents since they’ll often just believe the comment.\nI’ve had relatively little success prompting this behaviour away\nBetter luck with prompt to remove (esp with non-Claude model)",
-    "crumbs": [
-      "Modules",
-      "Best practices feedback loop"
-    ]
-  },
-  {
-    "objectID": "modules/07-best-practices-feedback-loop.html#commenting-best-practices",
-    "href": "modules/07-best-practices-feedback-loop.html#commenting-best-practices",
-    "title": "Best practices feedback loop",
-    "section": "Commenting best practices",
-    "text": "Commenting best practices\n\nComments should explain the why\nComments shouldn’t need to explain the what. If you can’t understand the code, refactor it.\nComments dont’ need to give the entire history that lead to a decision.",
-    "crumbs": [
-      "Modules",
-      "Best practices feedback loop"
-    ]
-  },
-  {
-    "objectID": "modules/07-best-practices-feedback-loop.html#more-smaller-files",
-    "href": "modules/07-best-practices-feedback-loop.html#more-smaller-files",
-    "title": "Best practices feedback loop",
-    "section": "More smaller files",
-    "text": "More smaller files\n\nAgents can more easily load just the context they need with smaller, well-named files.\nIf you have very large files, ask to break them up.\n\nIf you can easily see a good category, ask for that.\nOtherwise brainstorm together to come up with a good solution.\nFor complicated moves, ask for a summary table and a todo list.",
-    "crumbs": [
-      "Modules",
-      "Best practices feedback loop"
-    ]
-  },
-  {
-    "objectID": "modules/07-best-practices-feedback-loop.html#agents-love-to-write-tests",
-    "href": "modules/07-best-practices-feedback-loop.html#agents-love-to-write-tests",
-    "title": "Best practices feedback loop",
-    "section": "Agents love to write tests",
-    "text": "Agents love to write tests\n\nGenerally don’t need to explicitly ask for them\n(Assuming you have tests already set up e.g. with use_testthat())\nExplicitly request code coverage\nMay want to explicitly request TDD (i.e. write the test first)",
-    "crumbs": [
-      "Modules",
-      "Best practices feedback loop"
-    ]
-  },
-  {
-    "objectID": "modules/07-best-practices-feedback-loop.html#your-job-is-to",
-    "href": "modules/07-best-practices-feedback-loop.html#your-job-is-to",
-    "title": "Best practices feedback loop",
-    "section": "Your job is to:",
-    "text": "Your job is to:\n\nKeep them well organised\n\n“Tests for R/{foo}.R should live in tests/testhat/test-{foo}.R”\n\nKeep them fast\n\n“Parallelise these tests”\n“Use SlowReporter and speed up the slowest tests”\n“Compare coverage before and after”\n\nKeep them minimal\n\n“Carefully consider the tests”\n\nAll these tasks are faciliated by relatively fine grained R and test files\nYou can ask the agent to refactor",
-    "crumbs": [
-      "Modules",
-      "Best practices feedback loop"
-    ]
-  },
-  {
-    "objectID": "modules/07-best-practices-feedback-loop.html#test-coverage",
-    "href": "modules/07-best-practices-feedback-loop.html#test-coverage",
-    "title": "Best practices feedback loop",
-    "section": "Test coverage",
-    "text": "Test coverage\n\nPreviously 100% test coverage was not worth it.\nProbably worth reconsidering now.",
-    "crumbs": [
-      "Modules",
-      "Best practices feedback loop"
-    ]
-  },
-  {
-    "objectID": "modules/07-best-practices-feedback-loop.html#test-maintenance",
-    "href": "modules/07-best-practices-feedback-loop.html#test-maintenance",
-    "title": "Best practices feedback loop",
-    "section": "Test maintenance",
-    "text": "Test maintenance\n\nWorth asking to minimise tests, to group related tests together\nMake sure",
-    "crumbs": [
-      "Modules",
-      "Best practices feedback loop"
-    ]
-  },
-  {
-    "objectID": "modules/07-best-practices-feedback-loop.html#overview",
-    "href": "modules/07-best-practices-feedback-loop.html#overview",
-    "title": "Best practices feedback loop",
-    "section": "Overview",
-    "text": "Overview\n\nLLMs are very good at improving the performance of code.\nThey are better than me at reading the results of RProf().\nThey are better than me at writing C/C++ code.\nThey are not very good at experimental design.\nThey are not very good at managing complexity/performance tradeoffs.",
-    "crumbs": [
-      "Modules",
-      "Best practices feedback loop"
-    ]
-  },
-  {
-    "objectID": "modules/07-best-practices-feedback-loop.html#prompting",
-    "href": "modules/07-best-practices-feedback-loop.html#prompting",
-    "title": "Best practices feedback loop",
-    "section": "Prompting",
-    "text": "Prompting\n\n“Make XXX faster”\nMake sure it’s well tested first\nEnsure it records its work\nRequest both microbenchmarks and meaningful user actions\nPay attention to what it’s doing",
-    "crumbs": [
-      "Modules",
-      "Best practices feedback loop"
-    ]
-  },
-  {
-    "objectID": "modules/07-best-practices-feedback-loop.html#cc",
-    "href": "modules/07-best-practices-feedback-loop.html#cc",
-    "title": "Best practices feedback loop",
-    "section": "C/C++",
-    "text": "C/C++\n\nPreviously C++ (via Rcpp/cpp11) had good balance of effort vs. results\nNow for small amounts of compiled code, pure C has no dependencies and LLMs are good at writing it.\nYou will need to give it hints as to latest C API.",
-    "crumbs": [
-      "Modules",
-      "Best practices feedback loop"
+      "Skills and AGENTS.md"
     ]
   }
 ]
