@@ -67,6 +67,12 @@ More detailed maps are on the way and will be added once available.
 
 <!-- FILL IN: intro your TAs here -->
 
+## Join us on Discord
+
+Join the posit::conf Discord server: [pos.it/joinconf26](https://pos.it/joinconf26)
+
+Then head to the workshop channel: [#workshop-modern-r-workflow](https://discord.com/channels/1381993558437007490/1532807523524939927)
+
 ##  {.center}
 
 ### Introduce yourself to your neighbors 👋
