@@ -90,24 +90,7 @@ More at <https://tidydesign.substack.com/p/help-my-coding-agent-can-run-code>
 
 ## Auto-mode
 
-
-# Important vocab
-
-## What's happening?
-
-* Tool call: 
-* Agent: what you get from using the harness; semi-autonomous
-
-
-# What does a coding harness do?
-
-* Detailed system prompt
-* Finds skills
-* Useful tools 
-* Memory
-* Slash commands
-
-# Token costs
+# Costs
 
 ## Life is good for individual developers
 
@@ -204,9 +187,3 @@ More at <https://tidydesign.substack.com/p/help-my-coding-agent-can-run-code>
 * In past generations of models, with smaller context, harness would provide tools for compaction
 * Basically, you ask a model (maybe the same as existing maybe) to summarise
 * The problem is you lose the advantages of caching
-
-## Agents can run code on your computer
-
-* Send tool call request; harness runs and sends results
-* Often does many of these in parallel (in a single turn, not at the same time )
-* The LLM sends a bunch of requests, your harness does them sequentially, then sends a bunch of responses
