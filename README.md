@@ -2,7 +2,7 @@
 
 Workshop materials for *Modern R Workflow (ft. Positron and AI)*, a one-day workshop at posit::conf(2026) by Hadley Wickham and Jenny Bryan.
 
-📖 **[Workshop website](https://posit-conf-2026.github.io/modern-r-workflow/)** — description, setup instructions, schedule, and materials.
+🔗 **[Workshop website](https://posit-conf-2026.github.io/modern-r-workflow/)** — description, setup instructions, schedule, and materials. Also reachable via [pos.it/modern-r-workflow](https://pos.it/modern-r-workflow).
 
 -----
 

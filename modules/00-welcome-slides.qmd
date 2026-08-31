@@ -4,7 +4,7 @@ draft: true
 format:
   revealjs:
     slide-number: true
-    footer: <https://posit-conf-2026.github.io/modern-r-workflow>
+    footer: "[pos.it/modern-r-workflow](https://pos.it/modern-r-workflow)"
 ---
 
 ::: r-fit-text

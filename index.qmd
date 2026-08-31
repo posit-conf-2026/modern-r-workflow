@@ -5,6 +5,8 @@ title: "Modern R Workflow (ft. Positron and AI)"
 > September 14, 2026
 > `posit::conf(2026)`
 
+How to get to this page: **[pos.it/modern-r-workflow](https://pos.it/modern-r-workflow)**
+
 ## Setup
 
 Please check the [Setup Instructions](setup.qmd) for recommended steps to take before the workshop.
