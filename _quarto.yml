@@ -6,6 +6,7 @@ project:
 
 website:
   page-navigation: true
+  favicon: favicon.ico
   site-url: https://posit-conf-2026.github.io/modern-r-workflow
   title: "Modern R Workflow (ft. Positron and AI)"
   description: "A one day workshop at posit::conf(2026) on modern R development practices, AI-assisted coding, and Positron."
