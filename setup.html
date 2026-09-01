@@ -211,12 +211,31 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Please complete the following steps before the workshop so we can dive straight into the material.</p>
-<p>You’ll need:</p>
+<p>You need:</p>
 <ul>
-<li><p>A recent version of Positron.</p></li>
-<li><p>Signed up for posit.ai using the same email address as your course registration. Open Posit Assistant in Positron and connect your posit.ai account. (It’s fine to use other tools but there are a couple of things we want to show you specifically in PA.)</p></li>
-<li><p>Grab the development version of PA by pressing Cmd + Shift + P to open the command palette and paste <code>Posit Assistant: Check for newer dev build</code>. Follow the prompts to restart your current PA.</p></li>
-<li><p>Install pak with <code>install.packages("pak")</code> and then ensure you have the latest devtools and associated packages with <code>pak::pak("devtools")</code>.</p></li>
+<li><p>A recent version of Positron, preferably the latest release. Go here:</p>
+<ul>
+<li><a href="https://positron.posit.co/download.html" class="uri">https://positron.posit.co/download.html</a></li>
+<li>If you already have Positron, check for an update!</li>
+</ul></li>
+<li><p>A recent version of R (&gt;= 4.2), but preferably the current version, which is R 4.6.1.</p>
+<ul>
+<li><a href="https://cloud.r-project.org/" class="uri">https://cloud.r-project.org/</a></li>
+<li>If you’re updating R, consider using rig to do so: <a href="https://rig.r-lib.org" class="uri">https://rig.r-lib.org</a>. Then, in a terminal, do <code>rig add release</code>.</li>
+</ul></li>
+<li><p>Get your R installation ready for package development work. In R:</p>
+<ul>
+<li><code>install.packages("pak")</code>: <a href="https://pak.r-lib.org/">pak</a> is our preferred way to install packages</li>
+<li><code>pak::pak("devtools")</code>: installs <a href="https://devtools.r-lib.org/">devtools</a></li>
+<li><code>devtools::dev_sitrep()</code>: gives a package development “situation report”</li>
+</ul></li>
+<li><p>Sign up for Posit AI Pass <strong>using the same email address as your conf/workshop registration</strong>. You can start a free trial and, <strong>if your email matches what we have</strong>, we can give you credits to use on the day of the workshop.</p>
+<ul>
+<li><a href="https://posit.ai/" class="uri">https://posit.ai/</a></li>
+<li>Open <a href="https://assistant.posit.co/">Posit Assistant</a> in Positron and sign in with your Posit AI Pass.</li>
+<li>Say “hi” to Posit Assistant to check that all is well. Expect a response along the lines “Hello, how can I help?”.</li>
+</ul></li>
+<li><p>Optional: Get the development version of <a href="https://assistant.posit.co/">Posit Assistant</a> by pressing Cmd/Ctrl + Shift + P to open the command palette and run <code>Posit Assistant: Check for newer dev build</code>. Follow the prompts to restart Posit Assistant.</p></li>
 </ul>
 
 
