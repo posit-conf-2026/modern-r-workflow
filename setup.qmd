@@ -4,12 +4,28 @@ title: Setup
 
 Please complete the following steps before the workshop so we can dive straight into the material.
 
-You'll need:
+You need:
 
-* A recent version of Positron.
+* A recent version of Positron, preferably the latest release. Go here:
 
-* Signed up for posit.ai using the same email address as your course registration. Open Posit Assistant in Positron and connect your posit.ai account. (It's fine to use other tools but there are a couple of things we want to show you specifically in PA.)
+  - <https://positron.posit.co/download.html>
+  - If you already have Positron, check for an update!
 
-* Grab the development version of PA by pressing Cmd + Shift + P to open the command palette and paste `Posit Assistant: Check for newer dev build`. Follow the prompts to restart your current PA.
+* A recent version of R (>= 4.2), but preferably the current version, which is R 4.6.1.
 
-* Install pak with `install.packages("pak")` and then ensure you have the latest devtools and associated packages with `pak::pak("devtools")`.
+    - <https://cloud.r-project.org/>
+    - If you're updating R, consider using rig to do so: <https://rig.r-lib.org>. Then, in a terminal, do `rig add release`.
+
+* Get your R installation ready for package development work. In R:
+
+    - `install.packages("pak")`: [pak](https://pak.r-lib.org/) is our preferred way to install packages
+    - `pak::pak("devtools")`: installs [devtools](https://devtools.r-lib.org/)
+    - `devtools::dev_sitrep()`: gives a package development "situation report"
+
+* Sign up for Posit AI Pass **using the same email address as your conf/workshop registration**. You can start a free trial and, **if your email matches what we have**, we can give you credits to use on the day of the workshop.
+
+    - <https://posit.ai/>
+    - Open [Posit Assistant](https://assistant.posit.co/) in Positron and sign in with your Posit AI Pass.
+    - Say "hi" to Posit Assistant to check that all is well. Expect a response along the lines "Hello, how can I help?".
+
+* Optional: Get the development version of [Posit Assistant](https://assistant.posit.co/) by pressing Cmd/Ctrl + Shift + P to open the command palette and run `Posit Assistant: Check for newer dev build`. Follow the prompts to restart Posit Assistant.

@@ -92,15 +92,6 @@ If you haven't already, now's a good time to install Positron, or check that you
 
 -   Download: <https://positron.posit.co/download.html>
 
-## Posit AI
-
-<!-- FILL IN: more details on signing up for Posit AI -->
-
-Sign up for Posit AI so you're ready to use Posit Assistant during the workshop.
-
--   Sign up: <https://posit.ai>
--   Make sure to use the same email address as you used to register for conf
-
 ## Check your R setup
 
 Let's make sure everyone's R installation is ready to go.
@@ -126,6 +117,24 @@ Let's make sure everyone's R installation is ready to go.
     ```
 
 <!-- HW: do we want to mention air, rig, and quarto here? -->
+<!-- JB: air and quarto ship with Positron, so I think no. And no one should be installing R at this point in the workshop, so I think no for rig. They'll come up later, but don't need installation at this point. -->
+
+## Posit AI
+
+<!-- FILL IN: more details on signing up for Posit AI -->
+
+Sign up for Posit AI Pass, so you're ready to use Posit Assistant during the workshop.
+
+-   Sign up: <https://posit.ai>
+-   Make sure to use the same email address as you used to register for conf!
+
+## Check that Posit Assistant is ALIVE
+
+In Posit Assistant, sign in with your Posit AI Pass.
+
+In Posit Assistant's chat, enter "hi".
+
+If all is well, you should see a response along the lines of "Hi, what would you like to work on?"
 
 ## What's changed?
 
