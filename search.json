@@ -828,41 +828,89 @@
     "href": "modules/slides/deep-thoughts.html#section",
     "title": "Deep Thoughts",
     "section": "",
-    "text": "🌌 Deep Thoughts\n(with apologies to Jack Handey)"
+    "text": "🌌 Deep Thoughts\n(with apologies to Jack Handey)",
+    "crumbs": [
+      "Deep Thoughts"
+    ]
   },
   {
-    "objectID": "modules/slides/deep-thoughts.html#deep-thought",
-    "href": "modules/slides/deep-thoughts.html#deep-thought",
+    "objectID": "modules/slides/deep-thoughts.html#section-1",
+    "href": "modules/slides/deep-thoughts.html#section-1",
     "title": "Deep Thoughts",
-    "section": "Deep Thought",
-    "text": "Deep Thought\n\nThe agent builds you something amazing in five minutes, then the 10% that’s wrong takes longer to fix than the 90% that was right took to build. But it never feels that way. It always feels like you’re right on the precipice of completion.\n\nhelp! my husband is addicted to Claude Code. — Hilary Gridley (writerbuilder)\nWhy it’s here: the “almost done” feeling is a gamification trick, not a status report. Worth noticing when you feel it mid-workshop.\n🗳️ Engage: [TODO: reaction mechanism – e.g. vote yes/no on “I’ve felt this”]"
+    "section": "",
+    "text": "Anyone who has attempted to gamify some experience knows that if you want to keep people hooked, make them feel like they’re always almost at the next level.\nVibe coding does this naturally.\nThe agent builds you something amazing in five minutes, then the 10% that’s wrong takes longer to fix than the 90% that was right took to build. But it never feels that way.\nIt always feels like you’re right on the precipice of completion.\n\nhelp! my husband is addicted to Claude Code. — Hilary Gridley",
+    "crumbs": [
+      "Deep Thoughts"
+    ]
   },
   {
-    "objectID": "modules/slides/deep-thoughts.html#deep-thought-1",
-    "href": "modules/slides/deep-thoughts.html#deep-thought-1",
+    "objectID": "modules/slides/deep-thoughts.html#section-2",
+    "href": "modules/slides/deep-thoughts.html#section-2",
     "title": "Deep Thoughts",
-    "section": "Deep Thought",
-    "text": "Deep Thought\n\nFolks often assume what they lack are skills, when they often lack skills AND well-refined ideas.\n\nThe prototyping bottleneck — frank.computer\nIncludes a “prototype slop zone” diagram worth looking at directly.\nWhy it’s here: AI removes the skills bottleneck faster than it removes the “do I actually have a good idea” bottleneck.\n🗳️ Engage: [TODO: reaction mechanism – e.g. poll “which bottleneck do you hit more often: skills or ideas?”]"
+    "section": "",
+    "text": "Vibe coding extremely scratches the male itch to monitor the situation. You stand there with your arms crossed, watching your little agents work, feeling like Jeff Bezos in a headset overseeing a rocket launch. Very powerful. Very in control. The situation is being monitored.\n\n\nhelp! my husband is addicted to Claude Code. — Hilary Gridley",
+    "crumbs": [
+      "Deep Thoughts"
+    ]
   },
   {
-    "objectID": "modules/slides/deep-thoughts.html#deep-thought-2",
-    "href": "modules/slides/deep-thoughts.html#deep-thought-2",
+    "objectID": "modules/slides/deep-thoughts.html#section-3",
+    "href": "modules/slides/deep-thoughts.html#section-3",
     "title": "Deep Thoughts",
-    "section": "Deep Thought",
-    "text": "Deep Thought\n\nControl quality and relevance with your own behavior more than with “heaps of extraneous detail.”\n\nCode is the byproduct — yagmin.com\nWhy it’s here: a counterpoint to the instinct to write ever-longer prompts/AGENTS.md files instead of steering as you go.\n🗳️ Engage: [TODO: reaction mechanism – e.g. comment thread “one habit I use to steer AI output”]"
+    "section": "",
+    "text": "Folks often assume what they lack are skills, when they often lack skills AND well-refined ideas.\n\nThe prototyping bottleneck — frank.computer",
+    "crumbs": [
+      "Deep Thoughts"
+    ]
   },
   {
-    "objectID": "modules/slides/deep-thoughts.html#deep-thought-3",
-    "href": "modules/slides/deep-thoughts.html#deep-thought-3",
+    "objectID": "modules/slides/deep-thoughts.html#section-4",
+    "href": "modules/slides/deep-thoughts.html#section-4",
     "title": "Deep Thoughts",
-    "section": "Deep Thought",
-    "text": "Deep Thought\n\nSometimes I want “do this for me,” sometimes “do this with me” or “show me how.”\n\nThe task isn’t the job — Sunil Pai\nWhy it’s here: naming which of these three modes you actually want, before you prompt, avoids a lot of friction.\n🗳️ Engage: [TODO: reaction mechanism – e.g. vote on which mode you reach for most]"
+    "section": "",
+    "text": "Terence Tao discussing a surprising math result with ChatGPT\n\n\nIt is remarkable that the jacobian is constant, that is an exceptional amount of cancellation. Does this polynomial map have any symmetry or other structure that makes this cancelation less miraculous?\n\nWhat stands out is the shape of the interaction. Tao starts his inquiry by noting a single, precise detail that intrigues him.\n\nCode is the byproduct — yagmin.com",
+    "crumbs": [
+      "Deep Thoughts"
+    ]
   },
   {
-    "objectID": "modules/slides/deep-thoughts.html#deep-thought-4",
-    "href": "modules/slides/deep-thoughts.html#deep-thought-4",
+    "objectID": "modules/slides/deep-thoughts.html#section-5",
+    "href": "modules/slides/deep-thoughts.html#section-5",
     "title": "Deep Thoughts",
-    "section": "Deep Thought",
-    "text": "Deep Thought\n\nIf it hurts, do it more often.\n\nFrequencyReducesDifficulty — Martin Fowler\nWhy it’s here: applies as much to running tests/reviews with an agent in the loop as it did to deployments and integration.\n🗳️ Engage: [TODO: reaction mechanism – e.g. “what’s one painful thing you could do more often?”]"
+    "section": "",
+    "text": "Note what Tao is not doing.\nHe is not building a rich contextual background for the LLM to unpack. He does not list his credentials or say, “you are a mathematical genius, make no mistakes.”\nInstead, he is terse and precise. He asks narrow questions and gets narrow responses.\nKeep your requests narrow and specific. Let the output compound through repeated inquiries. Engage with the goal of improving your personal understanding.\n\nCode is the byproduct — yagmin.com",
+    "crumbs": [
+      "Deep Thoughts"
+    ]
+  },
+  {
+    "objectID": "modules/slides/deep-thoughts.html#section-6",
+    "href": "modules/slides/deep-thoughts.html#section-6",
+    "title": "Deep Thoughts",
+    "section": "",
+    "text": "How do you construct shared understanding? By narrowing the LLM’s focus through domain-specific wording and keeping requests specific and cumulative.\nTao pins ChatGPT to a “deep mathematics” headspace through terminology and the specificity of his question.\nIf you don’t understand something, set the stage for the LLM and it will capably fill in the missing 20%.\n\nCode is the byproduct — yagmin.com",
+    "crumbs": [
+      "Deep Thoughts"
+    ]
+  },
+  {
+    "objectID": "modules/slides/deep-thoughts.html#section-7",
+    "href": "modules/slides/deep-thoughts.html#section-7",
+    "title": "Deep Thoughts",
+    "section": "",
+    "text": "the relationship with the machine changes depending on the Job To Be Done\n\n\nplease argue with the insurance company for me, chase the refund, reschedule the meeting across six calendars, fill out the form, and do not invite me into a Delightful Collaborative Experience with the God Computer.\n\n\nbut if I sit down because I want to make music, handing me the finished song is a fairly spectacular misunderstanding…the process wasn’t “friction” on the way to the result.\n\n\nsometimes I want “do this for me,” sometimes “do this with me” or “show me how.” sometimes I just need enough of a boost to do something I couldn’t do before.\n\nThe task isn’t the job — Sunil Pai",
+    "crumbs": [
+      "Deep Thoughts"
+    ]
+  },
+  {
+    "objectID": "modules/slides/deep-thoughts.html#if-it-hurts-do-it-more-often",
+    "href": "modules/slides/deep-thoughts.html#if-it-hurts-do-it-more-often",
+    "title": "Deep Thoughts",
+    "section": "If It Hurts, Do It More Often",
+    "text": "If It Hurts, Do It More Often\n\nWhy?\n\nMany tasks easier when tackled in small chunks\nFeedback loops allow small course corrections\nPractice makes you better at it\n\nFrequencyReducesDifficulty — Martin Fowler",
+    "crumbs": [
+      "Deep Thoughts"
+    ]
   }
 ]
