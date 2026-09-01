@@ -3,6 +3,8 @@ project:
   render:
     - "*.qmd"
     - "!LICENSE.md"
+  resources:
+    - "!_keynote/"
 
 website:
   page-navigation: true

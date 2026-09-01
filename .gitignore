@@ -3,3 +3,4 @@ jenny-scratch.md
 /.quarto/
 **/*.quarto_ipynb
 /_site/
+/_keynote/
