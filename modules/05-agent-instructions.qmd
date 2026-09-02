@@ -4,19 +4,59 @@ duration: 30
 deliverer: Hadley
 ---
 
+# Additional context
+
+* Write markdown files to provide additional context for agents
+* Primary motivation:
+  * Avoid repeating yourself across multiple conversations
+  * Save tokens by avoiding common mistakes
+* We'll focus on `AGENTS.md` (always loaded) and skills (loaded on demand)
+* Lets dive in with an example
+
 # `AGENTS.md`
 
-* So far we've used (implicitly) `AGENTS.md`.
-* What about skills?
+## Let's make a package, take two
+
+(Make sure you're in normal mode)
+
+```R
+usethis::create_package("~/desktop/compliment2")
+usethis::use_tidy_agents()
+```
+
+> Create a new R package called compliment in the current directory. It should generate randomized compliments.
 
 ## Your turn
 
-* `use_tidy_agents()` bundles two skills
-* What are they? How do they work?
-* What's the advantage of bundling them this way?
-* What's the disadvantage?
+* Try it yourself. What differences do you notice in the workflow?
+* Read `AGENTS.md`. What advice does it contain?
+
+## Where does it live?
+
+* Project level: `AGENTS.md` in the project root
+  * Checked into git; shared with your whole team
+  * Applies to everything below it in the directory tree
+* User level: `~/.posit/assistant/AGENTS.md`
+  * Personal preferences that apply across all your projects
+* Project (generally) beats user when they conflict
+* If you're using Claude you also need `CLAUDE.md` that contains `@AGENTS.md`
+
+## What belongs there?
+
+* Have you told an agent to do it three times? Put it in `AGENTS.md`
+* Is it a lot of text that is only sometimes important? Use a skill.
+
+## Your turn
+
+* Update `AGENTS.md` to records some compliment specific conventions.
+* e.g.: Use British English; give over the top compliments.
 
 # Skills
+
+## Your turn
+
+* `use_tidy_agents()` includes three skills. What are they? How do they work?
+* What do you think the advantages and disadvantages of distributing of skills this way?
 
 ## What is a skill?
 
@@ -27,6 +67,8 @@ deliverer: Hadley
   * What: longer details of how to use it
 * System prompt includes all the "when"s
 * Agent loads the "what" on demand
+
+## Skill demo
 
 ## Other forms of skills
 
@@ -45,10 +87,15 @@ deliverer: Hadley
 * Relatively little benefit to using same model to both write and read
 * They don't have to be markdown files
 
-## Our skills
+## Creating a skill
 
-* PR description writer 
-* Winston's PR reviewer
+* Where do they live? I don't know
+* Just ask an agent to create the file for you :) 
+
+## Some example skills
+
+* `usethis::learn_tidy_skill()`
+* Simplification prompt
 
 ## Winston's simplification prompt
 

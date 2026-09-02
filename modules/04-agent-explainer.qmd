@@ -24,6 +24,15 @@ usethis::create_package("~/desktop/compliment")
 
 > Create a new R package called compliment in the current directory. It should generate randomized compliments.
 
+## You've never made a package before?
+
+* It's that easy!
+* How to find the bathroom:
+  * Code lives in `R/`
+  * Documentation lives in `#'` comments
+  * Tests live in `tests/testhat/`
+* We'll talk more about the pieces and the workflow later
+
 ## Your turn
 
 * Use the same prompt as me. It's underspecified ask so we're going to get lots of variation. That's part of the fun!

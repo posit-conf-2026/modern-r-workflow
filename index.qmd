@@ -18,9 +18,9 @@ Please check the [Setup Instructions](setup.qmd) for recommended steps to take b
 | 09:00 | [Welcome](modules/00-welcome.qmd)                                                                    |
 | 09:00 - 10:30 | [Positron tour](modules/02-positron-tour.qmd)<br>[Intro to Posit Assistant](modules/03-posit-assistant-intro.qmd)<br>[How do agents work?](modules/04-agent-explainer.qmd) |
 | 10:30 - 11:00 | *Coffee break*                                                                                       |
-| 11:00 - 12:30 | [How do agents work? (cont'd)](modules/04-agent-explainer.qmd)<br>[Workflow](modules/05-workflow.qmd) |
+| 11:00 - 12:30 | [How do agents work? (cont'd)](modules/04-agent-explainer.qmd)<br>[Skills and AGENTS.md](modules/05-agent-instructions.qmd) |
 | 12:30 - 13:30 | *Lunch break*                                                                                        |
-| 13:30 - 15:00 | [Skills and AGENTS.md](modules/06-agent-instructions.qmd) |
+| 13:30 - 15:00 | [Workflow](modules/06-workflow.qmd) |
 | 15:00 - 15:30 | *Coffee break*                                                                                       |
 | 15:30 - 17:00 | [Best practices feedback loop](modules/07-best-practices-feedback-loop.qmd)<br>[Helping yourself](modules/01-helping-yourself.qmd) |
 
