@@ -4,7 +4,7 @@
     "href": "setup.html",
     "title": "Setup",
     "section": "",
-    "text": "Please complete the following steps before the workshop so we can dive straight into the material.\nYou need:\n\nA recent version of Positron, preferably the latest release. Go here:\n\nhttps://positron.posit.co/download.html\nIf you already have Positron, check for an update!\n\nA recent version of R (&gt;= 4.2), but preferably the current version, which is R 4.6.1.\n\nhttps://cloud.r-project.org/\nIf you’re updating R, consider using rig to do so: https://rig.r-lib.org. Then, in a terminal, do rig add release.\n\nGet your R installation ready for package development work. In R:\n\ninstall.packages(\"pak\"): pak is our preferred way to install packages\npak::pak(\"devtools\"): installs devtools\ndevtools::dev_sitrep(): gives a package development “situation report”\n\nSign up for Posit AI Pass using the same email address as your conf/workshop registration. You can start a free trial and, if your email matches what we have, we can give you credits to use on the day of the workshop.\n\nhttps://posit.ai/\nOpen Posit Assistant in Positron and sign in with your Posit AI Pass.\nSay “hi” to Posit Assistant to check that all is well. Expect a response along the lines “Hello, how can I help?”.\n\nOptional: Get the development version of Posit Assistant by pressing Cmd/Ctrl + Shift + P to open the command palette and run Posit Assistant: Check for newer dev build. Follow the prompts to restart Posit Assistant.",
+    "text": "Please complete the following steps before the workshop so we can dive straight into the material.\nYou need:\n\nA recent version of Positron, preferably the latest release. Go here:\n\nhttps://positron.posit.co/download.html\nIf you already have Positron, check for an update! A red badge on the gear icon (lower-left or upper-right, depending on your layout) means an update is available:\n\n\n\n\n\n\n\n\n\n\nYou can also check the application menu (e.g. on macOS, the Positron menu): if there’s an option like “Restart to Update”, choose it.\n\n\nA recent version of R (&gt;= 4.2), but preferably the current version, which is R 4.6.1.\n\nhttps://cloud.r-project.org/\nIf you’re updating R, consider using rig to do so: https://rig.r-lib.org. Then, in a terminal, do rig add release.\n\nGet your R installation ready for package development work. In R:\n\ninstall.packages(\"pak\"): pak is our preferred way to install packages\npak::pak(\"devtools\"): installs devtools\ndevtools::dev_sitrep(): gives a package development “situation report”\n\nSign up for Posit AI Pass using the same email address as your conf/workshop registration. You can start a free trial and, if your email matches what we have, we can give you credits to use on the day of the workshop.\n\nhttps://posit.ai/\nOpen Posit Assistant in Positron and sign in with your Posit AI Pass.\nSay “hi” to Posit Assistant to check that all is well. Expect a response along the lines “Hello, how can I help?”.\n\nOptional: Get the development version of Posit Assistant by pressing Cmd/Ctrl + Shift + P to open the command palette and run Posit Assistant: Check for newer dev build. Follow the prompts to restart Posit Assistant.",
     "crumbs": [
       "Setup"
     ]
@@ -42,7 +42,7 @@
     "href": "modules/slides/00-welcome-slides.html#join-us-on-discord",
     "title": "Welcome",
     "section": "Join us on Discord",
-    "text": "Join us on Discord\nJoin the posit::conf Discord server: pos.it/joinconf26\nThen head to the workshop channel: #workshop-modern-r-workflow"
+    "text": "Join us on Discord\nJoin the posit::conf Discord server:\npos.it/joinconf26\nThen head to the workshop channel:\n#workshop-modern-r-workflow"
   },
   {
     "objectID": "modules/slides/00-welcome-slides.html#section-2",
@@ -56,28 +56,35 @@
     "href": "modules/slides/00-welcome-slides.html#positron",
     "title": "Welcome",
     "section": "Positron",
-    "text": "Positron\n\nIf you haven’t already, now’s a good time to install Positron, or check that you’re on the latest version.\n\nDownload: https://positron.posit.co/download.html"
+    "text": "Positron\n\nIf you haven’t already, now’s a good time to install Positron.\n\nDownload here: https://positron.posit.co/download.html"
+  },
+  {
+    "objectID": "modules/slides/00-welcome-slides.html#already-have-positron",
+    "href": "modules/slides/00-welcome-slides.html#already-have-positron",
+    "title": "Welcome",
+    "section": "Already have Positron?",
+    "text": "Already have Positron?\nIs Positron telling you it’s time to update? Do it!"
   },
   {
     "objectID": "modules/slides/00-welcome-slides.html#check-your-r-setup",
     "href": "modules/slides/00-welcome-slides.html#check-your-r-setup",
     "title": "Welcome",
     "section": "Check your R setup",
-    "text": "Check your R setup\nLet’s make sure everyone’s R installation is ready to go.\n\nConfirm you’re on a recent version of R\nInstall pak, if you haven’t already:\ninstall.packages(\"pak\")\nInstall/update devtools and friends:\npak::pak(\"devtools\")\nRun a situation report and check that everything looks good:\ndevtools::dev_sitrep()"
+    "text": "Check your R setup\nLet’s make sure everyone’s R installation is ready to go.\n\nConfirm you’re on a recent version of R. Ideally R 4.6.\nInstall pak, if you haven’t already:\ninstall.packages(\"pak\")\nInstall/update devtools and friends:\npak::pak(\"devtools\")\nRun a situation report and check that everything looks good:\ndevtools::dev_sitrep()"
   },
   {
-    "objectID": "modules/slides/00-welcome-slides.html#posit-ai",
-    "href": "modules/slides/00-welcome-slides.html#posit-ai",
+    "objectID": "modules/slides/00-welcome-slides.html#posit-ai-pass",
+    "href": "modules/slides/00-welcome-slides.html#posit-ai-pass",
     "title": "Welcome",
-    "section": "Posit AI",
-    "text": "Posit AI\n\nSign up for Posit AI Pass, so you’re ready to use Posit Assistant during the workshop.\n\nSign up: https://posit.ai\nMake sure to use the same email address as you used to register for conf!"
+    "section": "Posit AI Pass",
+    "text": "Posit AI Pass\nSign up for Posit AI Pass, so you’re ready to use Posit Assistant during the workshop.\n\nSign up: https://posit.ai\nMake sure to use the same email address as you used to register for conf! This is what lets us give you free credits to use today."
   },
   {
     "objectID": "modules/slides/00-welcome-slides.html#check-that-posit-assistant-is-alive",
     "href": "modules/slides/00-welcome-slides.html#check-that-posit-assistant-is-alive",
     "title": "Welcome",
     "section": "Check that Posit Assistant is ALIVE",
-    "text": "Check that Posit Assistant is ALIVE\nIn Posit Assistant, sign in with your Posit AI Pass.\nIn Posit Assistant’s chat, enter “hi”.\nIf all is well, you should see a response along the lines of “Hi, what would you like to work on?”"
+    "text": "Check that Posit Assistant is ALIVE\nIn Posit Assistant, sign in with your Posit AI Pass."
   },
   {
     "objectID": "modules/slides/00-welcome-slides.html#whats-changed",
