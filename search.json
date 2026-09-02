@@ -108,83 +108,123 @@
     "text": "The good news\nOn the whole you’re well positioned to benefit from AI:\n\nPlain text workflows are equally accessible to humans and agents\nBaseline scepticism will serve you well (but don’t let it imprison you)\nHuman knowledge still super important!\nSubject matter expertise now more important that programming skill\nDevelopment best practices now much more accessible"
   },
   {
-    "objectID": "modules/06-agent-instructions.html",
-    "href": "modules/06-agent-instructions.html",
-    "title": "Skills and AGENTS.md",
+    "objectID": "modules/06-workflow.html",
+    "href": "modules/06-workflow.html",
+    "title": "Workflow",
     "section": "",
-    "text": "So far we’ve used (implicitly) AGENTS.md.\nWhat about skills?\n\n\n\n\nuse_tidy_agents() bundles two skills\nWhat are they? How do they work?\nWhat’s the advantage of bundling them this way?\nWhat’s the disadvantage?",
+    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, planning, design, docs)\nStart slow and grow your confidence\nNever make another human read AI slop\n\n\n\n\nWrite code\nWrite tests\nIterate until they pass\nR CMD check at the end",
     "crumbs": [
-      "Skills and AGENTS.md"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/06-agent-instructions.html#your-turn",
-    "href": "modules/06-agent-instructions.html#your-turn",
-    "title": "Skills and AGENTS.md",
+    "objectID": "modules/06-workflow.html#general-principles",
+    "href": "modules/06-workflow.html#general-principles",
+    "title": "Workflow",
     "section": "",
-    "text": "use_tidy_agents() bundles two skills\nWhat are they? How do they work?\nWhat’s the advantage of bundling them this way?\nWhat’s the disadvantage?",
+    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, planning, design, docs)\nStart slow and grow your confidence\nNever make another human read AI slop\n\n\n\n\nWrite code\nWrite tests\nIterate until they pass\nR CMD check at the end",
     "crumbs": [
-      "Skills and AGENTS.md"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/06-agent-instructions.html#what-is-a-skill",
-    "href": "modules/06-agent-instructions.html#what-is-a-skill",
-    "title": "Skills and AGENTS.md",
-    "section": "What is a skill?",
-    "text": "What is a skill?\n\nFormal definition at https://agentskills.io/\nBut IMO this is very overwrought\nTwo parts to a skill:\n\nWhen: short description that states when to use it\nWhat: longer details of how to use it\n\nSystem prompt includes all the “when”s\nAgent loads the “what” on demand",
+    "objectID": "modules/06-workflow.html#basic-workflows",
+    "href": "modules/06-workflow.html#basic-workflows",
+    "title": "Workflow",
+    "section": "Basic workflows",
+    "text": "Basic workflows\n\n\nImplement it\nPlan it, then implement it\nPlan it, review the plan, implement it, review the implementation\nDesign it, then repeat cycles above",
     "crumbs": [
-      "Skills and AGENTS.md"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/06-agent-instructions.html#other-forms-of-skills",
-    "href": "modules/06-agent-instructions.html#other-forms-of-skills",
-    "title": "Skills and AGENTS.md",
-    "section": "Other forms of skills",
-    "text": "Other forms of skills\n\nDirectory of markdown files with index/README\nQuarto website\n\nUse llms-text: true\nBasic idea: https://design.tidyverse.org\n\nR documentation\nR functions",
+    "objectID": "modules/06-workflow.html#example-workflow",
+    "href": "modules/06-workflow.html#example-workflow",
+    "title": "Workflow",
+    "section": "Example workflow",
+    "text": "Example workflow\n\nFix https://github.com/r-lib/testthat/issues/2344\n\n\nFix https://github.com/r-lib/testthat/issues/2317",
     "crumbs": [
-      "Skills and AGENTS.md"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/06-agent-instructions.html#general-advice",
-    "href": "modules/06-agent-instructions.html#general-advice",
-    "title": "Skills and AGENTS.md",
-    "section": "General advice",
-    "text": "General advice\n\nHold on to them loosely\nKeep them personal, local, timely\nBest for stuff a general LLM can’t know\nRelatively little benefit to using same model to both write and read\nThey don’t have to be markdown files",
+    "objectID": "modules/06-workflow.html#basic-advice",
+    "href": "modules/06-workflow.html#basic-advice",
+    "title": "Workflow",
+    "section": "Basic advice",
+    "text": "Basic advice\n\nWhen you get started, pay attention to what it’s doing\nCan be useful to intervene when it’s getting off track.\nCan also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out",
     "crumbs": [
-      "Skills and AGENTS.md"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/06-agent-instructions.html#our-skills",
-    "href": "modules/06-agent-instructions.html#our-skills",
-    "title": "Skills and AGENTS.md",
-    "section": "Our skills",
-    "text": "Our skills\n\nPR description writer\nWinston’s PR reviewer",
+    "objectID": "modules/06-workflow.html#git-flow",
+    "href": "modules/06-workflow.html#git-flow",
+    "title": "Workflow",
+    "section": "Git flow",
+    "text": "Git flow\n\nWhen you get started, I think it’s worth doing all the commits yourself\nThen, tell it when to commit\nThen, it let it commit by itself\nThen, let it make the whole PR\n(But NEVER EVER inflect Claude’s writing on another human.)",
     "crumbs": [
-      "Skills and AGENTS.md"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/06-agent-instructions.html#winstons-simplification-prompt",
-    "href": "modules/06-agent-instructions.html#winstons-simplification-prompt",
-    "title": "Skills and AGENTS.md",
-    "section": "Winston’s simplification prompt",
-    "text": "Winston’s simplification prompt\n\nMake a deliberate pass over each non-trivial change looking for opportunities for simplification:\n\nCould this change be achieved by deleting or restructuring instead of adding — removing a branch, mode, layer, or special case rather than bolting one on? It’s always better to remove than add.\nIs each new or changed interface narrow relative to what it hides — or must callers know its internals, keep duplicated logic in sync, or work around documented gaps (“does NOT handle X”)?\nDoes anything re-implement what the codebase already provides — a bespoke helper shadowing a canonical one, logic in the wrong layer, or wrapper/cast/any churn obscuring the real contract?\n\nWhen you find opportunities for simplification, be clear about the pros and cons. Produce either a list of potential simplifications or “No simplifications found”.",
+    "objectID": "modules/06-workflow.html#now-its-time-to-make-a-plan",
+    "href": "modules/06-workflow.html#now-its-time-to-make-a-plan",
+    "title": "Workflow",
+    "section": "Now it’s time to make a plan",
+    "text": "Now it’s time to make a plan\n\nPlanning tends to lead to better results, but don’t get hung up on it\nAlways ask for a markdown file that you can read and edit\nThree options for where to put this:\n\nEphemeral\nPersistent, outside of git\nChecked in",
     "crumbs": [
-      "Skills and AGENTS.md"
+      "Workflow"
     ]
   },
   {
-    "objectID": "modules/06-agent-instructions.html#bundling-with-a-package",
-    "href": "modules/06-agent-instructions.html#bundling-with-a-package",
-    "title": "Skills and AGENTS.md",
-    "section": "Bundling with a package",
-    "text": "Bundling with a package\n\nNo automated tooling yet\ninst/skills is a reasonable place to put them\nYou’ll need to expose in some other way",
+    "objectID": "modules/06-workflow.html#example-workflow-1",
+    "href": "modules/06-workflow.html#example-workflow-1",
+    "title": "Workflow",
+    "section": "Example workflow",
+    "text": "Example workflow\n\nRead https://github.com/r-lib/testthat/issues/2334. Construct a minimal reprex, then write a brief plan for fixing the problem. Save your plan in plan.md.\n\n… read and review the plan …\n\nExecute the plan",
     "crumbs": [
-      "Skills and AGENTS.md"
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/06-workflow.html#example-workflow-voice",
+    "href": "modules/06-workflow.html#example-workflow-voice",
+    "title": "Workflow",
+    "section": "Example workflow (voice)",
+    "text": "Example workflow (voice)\nFine to dump a stream of consciousness and let the agent figure it out. I think it’s good to ask for a plan just to check it’s clear what you actually want.",
+    "crumbs": [
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/06-workflow.html#workflow-lore",
+    "href": "modules/06-workflow.html#workflow-lore",
+    "title": "Workflow",
+    "section": "Workflow lore",
+    "text": "Workflow lore\n\nClaude (esp. Fable/Opus) best at planning\nCodex best at reviewing\nCheap models fine for implementing",
+    "crumbs": [
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/06-workflow.html#example-workflow-2",
+    "href": "modules/06-workflow.html#example-workflow-2",
+    "title": "Workflow",
+    "section": "Example workflow",
+    "text": "Example workflow\n\nPlan it with Fable (or whatever the best model you have access to is)\nYou read and review the plan\nReview the plan with Codex. Copy and paste the feedback.\nImplement with Sonnet (or a similar cheap model)\nReview the implementation with Codex\n\n\nhttps://github.com/r-lib/testthat/issues/2328",
+    "crumbs": [
+      "Workflow"
+    ]
+  },
+  {
+    "objectID": "modules/06-workflow.html#your-turn-big",
+    "href": "modules/06-workflow.html#your-turn-big",
+    "title": "Workflow",
+    "section": "Your turn (big)",
+    "text": "Your turn (big)\n\nstringb",
+    "crumbs": [
+      "Workflow"
     ]
   },
   {
@@ -203,6 +243,16 @@
     "title": "How do agents work?",
     "section": "Let’s make a package",
     "text": "Let’s make a package\n(Make sure you’re in normal mode)\nusethis::create_package(\"~/desktop/compliment\")\n\nCreate a new R package called compliment in the current directory. It should generate randomized compliments.",
+    "crumbs": [
+      "How do agents work?"
+    ]
+  },
+  {
+    "objectID": "modules/04-agent-explainer.html#youve-never-made-a-package-before",
+    "href": "modules/04-agent-explainer.html#youve-never-made-a-package-before",
+    "title": "How do agents work?",
+    "section": "You’ve never made a package before?",
+    "text": "You’ve never made a package before?\n\nIt’s that easy!\nHow to find the bathroom:\n\nCode lives in R/\nDocumentation lives in #' comments\nTests live in tests/testhat/\n\nWe’ll talk more about the pieces and the workflow later",
     "crumbs": [
       "How do agents work?"
     ]
@@ -542,7 +592,7 @@
     "href": "index.html#schedule",
     "title": "Modern R Workflow (ft. Positron and AI)",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\nTime\nActivity\n\n\n\n\n09:00\nWelcome\n\n\n09:00 - 10:30\nPositron tourIntro to Posit AssistantHow do agents work?\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nHow do agents work? (cont’d)Workflow\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nSkills and AGENTS.md\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nBest practices feedback loopHelping yourself",
+    "text": "Schedule\n\n\n\nTime\nActivity\n\n\n\n\n09:00\nWelcome\n\n\n09:00 - 10:30\nPositron tourIntro to Posit AssistantHow do agents work?\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nHow do agents work? (cont’d)Skills and AGENTS.md\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nWorkflow\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nBest practices feedback loopHelping yourself",
     "crumbs": [
       "Home"
     ]
@@ -588,123 +638,153 @@
     ]
   },
   {
-    "objectID": "modules/05-workflow.html",
-    "href": "modules/05-workflow.html",
-    "title": "Workflow",
+    "objectID": "modules/05-agent-instructions.html",
+    "href": "modules/05-agent-instructions.html",
+    "title": "Skills and AGENTS.md",
     "section": "",
-    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, planning, design, docs)\nStart slow and grow your confidence\nNever make another human read AI slop\n\n\n\n\nWrite code\nWrite tests\nIterate until they pass\nR CMD check at the end",
+    "text": "Write markdown files to provide additional context for agents\nPrimary motivation:\n\nAvoid repeating yourself across multiple conversations\nSave tokens by avoiding common mistakes\n\nWe’ll focus on AGENTS.md (always loaded) and skills (loaded on demand)\nLets dive in with an example",
     "crumbs": [
-      "Workflow"
+      "Skills and AGENTS.md"
     ]
   },
   {
-    "objectID": "modules/05-workflow.html#general-principles",
-    "href": "modules/05-workflow.html#general-principles",
-    "title": "Workflow",
-    "section": "",
-    "text": "You are still important and still in control!\nChoose what to invest in (e.g. code, tests, planning, design, docs)\nStart slow and grow your confidence\nNever make another human read AI slop\n\n\n\n\nWrite code\nWrite tests\nIterate until they pass\nR CMD check at the end",
+    "objectID": "modules/05-agent-instructions.html#lets-make-a-package-take-two",
+    "href": "modules/05-agent-instructions.html#lets-make-a-package-take-two",
+    "title": "Skills and AGENTS.md",
+    "section": "Let’s make a package, take two",
+    "text": "Let’s make a package, take two\n(Make sure you’re in normal mode)\nusethis::create_package(\"~/desktop/compliment2\")\nusethis::use_tidy_agents()\n\nCreate a new R package called compliment in the current directory. It should generate randomized compliments.",
     "crumbs": [
-      "Workflow"
+      "Skills and AGENTS.md"
     ]
   },
   {
-    "objectID": "modules/05-workflow.html#basic-workflows",
-    "href": "modules/05-workflow.html#basic-workflows",
-    "title": "Workflow",
-    "section": "Basic workflows",
-    "text": "Basic workflows\n\n\nImplement it\nPlan it, then implement it\nPlan it, review the plan, implement it, review the implementation\nDesign it, then repeat cycles above",
+    "objectID": "modules/05-agent-instructions.html#your-turn",
+    "href": "modules/05-agent-instructions.html#your-turn",
+    "title": "Skills and AGENTS.md",
+    "section": "Your turn",
+    "text": "Your turn\n\nTry it yourself. What differences do you notice in the workflow?\nRead AGENTS.md. What advice does it contain?",
     "crumbs": [
-      "Workflow"
+      "Skills and AGENTS.md"
     ]
   },
   {
-    "objectID": "modules/05-workflow.html#example-workflow",
-    "href": "modules/05-workflow.html#example-workflow",
-    "title": "Workflow",
-    "section": "Example workflow",
-    "text": "Example workflow\n\nFix https://github.com/r-lib/testthat/issues/2344\n\n\nFix https://github.com/r-lib/testthat/issues/2317",
+    "objectID": "modules/05-agent-instructions.html#where-does-it-live",
+    "href": "modules/05-agent-instructions.html#where-does-it-live",
+    "title": "Skills and AGENTS.md",
+    "section": "Where does it live?",
+    "text": "Where does it live?\n\nProject level: AGENTS.md in the project root\n\nChecked into git; shared with your whole team\nApplies to everything below it in the directory tree\n\nUser level: ~/.posit/assistant/AGENTS.md\n\nPersonal preferences that apply across all your projects\n\nProject (generally) beats user when they conflict\nIf you’re using Claude you also need CLAUDE.md that contains @AGENTS.md",
     "crumbs": [
-      "Workflow"
+      "Skills and AGENTS.md"
     ]
   },
   {
-    "objectID": "modules/05-workflow.html#basic-advice",
-    "href": "modules/05-workflow.html#basic-advice",
-    "title": "Workflow",
-    "section": "Basic advice",
-    "text": "Basic advice\n\nWhen you get started, pay attention to what it’s doing\nCan be useful to intervene when it’s getting off track.\nCan also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out",
+    "objectID": "modules/05-agent-instructions.html#what-belongs-there",
+    "href": "modules/05-agent-instructions.html#what-belongs-there",
+    "title": "Skills and AGENTS.md",
+    "section": "What belongs there?",
+    "text": "What belongs there?\n\nHave you told an agent to do it three times? Put it in AGENTS.md\nIs it a lot of text that is only sometimes important? Use a skill.",
     "crumbs": [
-      "Workflow"
+      "Skills and AGENTS.md"
     ]
   },
   {
-    "objectID": "modules/05-workflow.html#git-flow",
-    "href": "modules/05-workflow.html#git-flow",
-    "title": "Workflow",
-    "section": "Git flow",
-    "text": "Git flow\n\nWhen you get started, I think it’s worth doing all the commits yourself\nThen, tell it when to commit\nThen, it let it commit by itself\nThen, let it make the whole PR\n(But NEVER EVER inflect Claude’s writing on another human.)",
+    "objectID": "modules/05-agent-instructions.html#your-turn-1",
+    "href": "modules/05-agent-instructions.html#your-turn-1",
+    "title": "Skills and AGENTS.md",
+    "section": "Your turn",
+    "text": "Your turn\n\nUpdate AGENTS.md to records some compliment specific conventions.\ne.g.: Use British English; give over the top compliments.",
     "crumbs": [
-      "Workflow"
+      "Skills and AGENTS.md"
     ]
   },
   {
-    "objectID": "modules/05-workflow.html#now-its-time-to-make-a-plan",
-    "href": "modules/05-workflow.html#now-its-time-to-make-a-plan",
-    "title": "Workflow",
-    "section": "Now it’s time to make a plan",
-    "text": "Now it’s time to make a plan\n\nPlanning tends to lead to better results, but don’t get hung up on it\nAlways ask for a markdown file that you can read and edit\nThree options for where to put this:\n\nEphemeral\nPersistent, outside of git\nChecked in",
+    "objectID": "modules/05-agent-instructions.html#your-turn-2",
+    "href": "modules/05-agent-instructions.html#your-turn-2",
+    "title": "Skills and AGENTS.md",
+    "section": "Your turn",
+    "text": "Your turn\n\nuse_tidy_agents() includes three skills. What are they? How do they work?\nWhat do you think the advantages and disadvantages of distributing of skills this way?",
     "crumbs": [
-      "Workflow"
+      "Skills and AGENTS.md"
     ]
   },
   {
-    "objectID": "modules/05-workflow.html#example-workflow-1",
-    "href": "modules/05-workflow.html#example-workflow-1",
-    "title": "Workflow",
-    "section": "Example workflow",
-    "text": "Example workflow\n\nRead https://github.com/r-lib/testthat/issues/2334. Construct a minimal reprex, then write a brief plan for fixing the problem. Save your plan in plan.md.\n\n… read and review the plan …\n\nExecute the plan",
+    "objectID": "modules/05-agent-instructions.html#what-is-a-skill",
+    "href": "modules/05-agent-instructions.html#what-is-a-skill",
+    "title": "Skills and AGENTS.md",
+    "section": "What is a skill?",
+    "text": "What is a skill?\n\nFormal definition at https://agentskills.io/\nBut IMO this is very overwrought\nTwo parts to a skill:\n\nWhen: short description that states when to use it\nWhat: longer details of how to use it\n\nSystem prompt includes all the “when”s\nAgent loads the “what” on demand",
     "crumbs": [
-      "Workflow"
+      "Skills and AGENTS.md"
     ]
   },
   {
-    "objectID": "modules/05-workflow.html#example-workflow-voice",
-    "href": "modules/05-workflow.html#example-workflow-voice",
-    "title": "Workflow",
-    "section": "Example workflow (voice)",
-    "text": "Example workflow (voice)\nFine to dump a stream of consciousness and let the agent figure it out. I think it’s good to ask for a plan just to check it’s clear what you actually want.",
+    "objectID": "modules/05-agent-instructions.html#skill-demo",
+    "href": "modules/05-agent-instructions.html#skill-demo",
+    "title": "Skills and AGENTS.md",
+    "section": "Skill demo",
+    "text": "Skill demo",
     "crumbs": [
-      "Workflow"
+      "Skills and AGENTS.md"
     ]
   },
   {
-    "objectID": "modules/05-workflow.html#workflow-lore",
-    "href": "modules/05-workflow.html#workflow-lore",
-    "title": "Workflow",
-    "section": "Workflow lore",
-    "text": "Workflow lore\n\nClaude (esp. Fable/Opus) best at planning\nCodex best at reviewing\nCheap models fine for implementing",
+    "objectID": "modules/05-agent-instructions.html#other-forms-of-skills",
+    "href": "modules/05-agent-instructions.html#other-forms-of-skills",
+    "title": "Skills and AGENTS.md",
+    "section": "Other forms of skills",
+    "text": "Other forms of skills\n\nDirectory of markdown files with index/README\nQuarto website\n\nUse llms-text: true\nBasic idea: https://design.tidyverse.org\n\nR documentation\nR functions",
     "crumbs": [
-      "Workflow"
+      "Skills and AGENTS.md"
     ]
   },
   {
-    "objectID": "modules/05-workflow.html#example-workflow-2",
-    "href": "modules/05-workflow.html#example-workflow-2",
-    "title": "Workflow",
-    "section": "Example workflow",
-    "text": "Example workflow\n\nPlan it with Fable (or whatever the best model you have access to is)\nYou read and review the plan\nReview the plan with Codex. Copy and paste the feedback.\nImplement with Sonnet (or a similar cheap model)\nReview the implementation with Codex\n\n\nhttps://github.com/r-lib/testthat/issues/2328",
+    "objectID": "modules/05-agent-instructions.html#general-advice",
+    "href": "modules/05-agent-instructions.html#general-advice",
+    "title": "Skills and AGENTS.md",
+    "section": "General advice",
+    "text": "General advice\n\nHold on to them loosely\nKeep them personal, local, timely\nBest for stuff a general LLM can’t know\nRelatively little benefit to using same model to both write and read\nThey don’t have to be markdown files",
     "crumbs": [
-      "Workflow"
+      "Skills and AGENTS.md"
     ]
   },
   {
-    "objectID": "modules/05-workflow.html#your-turn-big",
-    "href": "modules/05-workflow.html#your-turn-big",
-    "title": "Workflow",
-    "section": "Your turn (big)",
-    "text": "Your turn (big)\n\nstringb",
+    "objectID": "modules/05-agent-instructions.html#creating-a-skill",
+    "href": "modules/05-agent-instructions.html#creating-a-skill",
+    "title": "Skills and AGENTS.md",
+    "section": "Creating a skill",
+    "text": "Creating a skill\n\nWhere do they live? I don’t know\nJust ask an agent to create the file for you :)",
     "crumbs": [
-      "Workflow"
+      "Skills and AGENTS.md"
+    ]
+  },
+  {
+    "objectID": "modules/05-agent-instructions.html#some-example-skills",
+    "href": "modules/05-agent-instructions.html#some-example-skills",
+    "title": "Skills and AGENTS.md",
+    "section": "Some example skills",
+    "text": "Some example skills\n\nusethis::learn_tidy_skill()\nSimplification prompt",
+    "crumbs": [
+      "Skills and AGENTS.md"
+    ]
+  },
+  {
+    "objectID": "modules/05-agent-instructions.html#winstons-simplification-prompt",
+    "href": "modules/05-agent-instructions.html#winstons-simplification-prompt",
+    "title": "Skills and AGENTS.md",
+    "section": "Winston’s simplification prompt",
+    "text": "Winston’s simplification prompt\n\nMake a deliberate pass over each non-trivial change looking for opportunities for simplification:\n\nCould this change be achieved by deleting or restructuring instead of adding — removing a branch, mode, layer, or special case rather than bolting one on? It’s always better to remove than add.\nIs each new or changed interface narrow relative to what it hides — or must callers know its internals, keep duplicated logic in sync, or work around documented gaps (“does NOT handle X”)?\nDoes anything re-implement what the codebase already provides — a bespoke helper shadowing a canonical one, logic in the wrong layer, or wrapper/cast/any churn obscuring the real contract?\n\nWhen you find opportunities for simplification, be clear about the pros and cons. Produce either a list of potential simplifications or “No simplifications found”.",
+    "crumbs": [
+      "Skills and AGENTS.md"
+    ]
+  },
+  {
+    "objectID": "modules/05-agent-instructions.html#bundling-with-a-package",
+    "href": "modules/05-agent-instructions.html#bundling-with-a-package",
+    "title": "Skills and AGENTS.md",
+    "section": "Bundling with a package",
+    "text": "Bundling with a package\n\nNo automated tooling yet\ninst/skills is a reasonable place to put them\nYou’ll need to expose in some other way",
+    "crumbs": [
+      "Skills and AGENTS.md"
     ]
   },
   {

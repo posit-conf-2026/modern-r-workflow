@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Workflow – Modern R Workflow (ft. Positron and AI)</title>
+<title>Skills and AGENTS.md – Modern R Workflow (ft. Positron and AI)</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -35,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../modules/06-agent-instructions.html" rel="next">
+<link href="../modules/06-workflow.html" rel="next">
 <link href="../modules/04-agent-explainer.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -77,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Workflow – Modern R Workflow (ft. Positron and AI)">
+<meta property="og:title" content="Skills and AGENTS.md – Modern R Workflow (ft. Positron and AI)">
 <meta property="og:site_name" content="Modern R Workflow (ft. Positron and AI)">
 </head>
 
@@ -90,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/05-workflow.html">Workflow</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/05-agent-instructions.html">Skills and AGENTS.md</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -160,14 +195,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/05-workflow.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Workflow</span></a>
+  <a href="../modules/05-agent-instructions.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Skills and AGENTS.md</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/06-agent-instructions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Skills and AGENTS.md</span></a>
+  <a href="../modules/06-workflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workflow</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -193,7 +228,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Workflow</h1>
+<h1 class="title">Skills and AGENTS.md</h1>
 </div>
 
 
@@ -210,135 +245,152 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="general-principles" class="level2">
-<h2 class="anchored" data-anchor-id="general-principles">General principles</h2>
+<section id="additional-context" class="level1">
+<h1>Additional context</h1>
 <ul>
-<li>You are still important and still in control!</li>
-<li>Choose what to invest in (e.g.&nbsp;code, tests, planning, design, docs)</li>
-<li>Start slow and grow your confidence</li>
-<li>Never make another human read AI slop</li>
-</ul>
-<section id="r-workflow" class="level3">
-<h3 class="anchored" data-anchor-id="r-workflow">R workflow</h3>
+<li>Write markdown files to provide additional context for agents</li>
+<li>Primary motivation:
 <ul>
-<li>Write code</li>
-<li>Write tests</li>
-<li>Iterate until they pass</li>
-<li>R CMD check at the end</li>
-</ul>
-</section>
-</section>
-<section id="basic-workflows" class="level2">
-<h2 class="anchored" data-anchor-id="basic-workflows">Basic workflows</h2>
-<!-- TODO: make a diagram for this -->
-<ul>
-<li>Implement it</li>
-<li>Plan it, then implement it</li>
-<li>Plan it, review the plan, implement it, review the implementation</li>
-<li>Design it, then repeat cycles above</li>
-</ul>
-</section>
-<section id="low-stakes-tasks" class="level1">
-<h1>Low-stakes tasks</h1>
-<section id="example-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="example-workflow">Example workflow</h2>
-<blockquote class="blockquote">
-<p>Fix https://github.com/r-lib/testthat/issues/2344</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Fix https://github.com/r-lib/testthat/issues/2317</p>
-</blockquote>
-</section>
-<section id="basic-advice" class="level2">
-<h2 class="anchored" data-anchor-id="basic-advice">Basic advice</h2>
-<ul>
-<li>When you get started, pay attention to what it’s doing</li>
-<li>Can be useful to intervene when it’s getting off track.</li>
-<li>Can also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out</li>
-</ul>
-</section>
-<section id="git-flow" class="level2">
-<h2 class="anchored" data-anchor-id="git-flow">Git flow</h2>
-<ul>
-<li>When you get started, I think it’s worth doing all the commits yourself</li>
-<li>Then, tell it when to commit</li>
-<li>Then, it let it commit by itself</li>
-<li>Then, let it make the whole PR</li>
-<li>(But NEVER EVER inflect Claude’s writing on another human.)</li>
-</ul>
-</section>
-</section>
-<section id="medium-stakes-tasks" class="level1">
-<h1>Medium-stakes tasks</h1>
-<blockquote class="blockquote">
-<p>An ounce of prevention is worth a pound of cure</p>
-</blockquote>
-<section id="now-its-time-to-make-a-plan" class="level2">
-<h2 class="anchored" data-anchor-id="now-its-time-to-make-a-plan">Now it’s time to make a plan</h2>
-<ul>
-<li>Planning tends to lead to better results, but don’t get hung up on it</li>
-<li>Always ask for a markdown file that you can read and edit</li>
-<li>Three options for where to put this:
-<ul>
-<li>Ephemeral</li>
-<li>Persistent, outside of git</li>
-<li>Checked in</li>
+<li>Avoid repeating yourself across multiple conversations</li>
+<li>Save tokens by avoiding common mistakes</li>
 </ul></li>
+<li>We’ll focus on <code>AGENTS.md</code> (always loaded) and skills (loaded on demand)</li>
+<li>Lets dive in with an example</li>
 </ul>
 </section>
-<section id="example-workflow-1" class="level2">
-<h2 class="anchored" data-anchor-id="example-workflow-1">Example workflow</h2>
+<section id="agents.md" class="level1">
+<h1><code>AGENTS.md</code></h1>
+<section id="lets-make-a-package-take-two" class="level2">
+<h2 class="anchored" data-anchor-id="lets-make-a-package-take-two">Let’s make a package, take two</h2>
+<p>(Make sure you’re in normal mode)</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_package</span>(<span class="st">"~/desktop/compliment2"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_tidy_agents</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <blockquote class="blockquote">
-<p>Read https://github.com/r-lib/testthat/issues/2334. Construct a minimal reprex, then write a brief plan for fixing the problem. Save your plan in plan.md.</p>
-</blockquote>
-<p>… read and review the plan …</p>
-<blockquote class="blockquote">
-<p>Execute the plan</p>
+<p>Create a new R package called compliment in the current directory. It should generate randomized compliments.</p>
 </blockquote>
 </section>
-<section id="example-workflow-voice" class="level2">
-<h2 class="anchored" data-anchor-id="example-workflow-voice">Example workflow (voice)</h2>
-<p>Fine to dump a stream of consciousness and let the agent figure it out. I think it’s good to ask for a plan just to check it’s clear what you actually want.</p>
-</section>
-</section>
-<section id="high-stakes-tasks" class="level1">
-<h1>High-stakes tasks</h1>
-<section id="workflow-lore" class="level2">
-<h2 class="anchored" data-anchor-id="workflow-lore">Workflow lore</h2>
+<section id="your-turn" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn">Your turn</h2>
 <ul>
-<li>Claude (esp.&nbsp;Fable/Opus) best at planning</li>
-<li>Codex best at reviewing</li>
-<li>Cheap models fine for implementing</li>
+<li>Try it yourself. What differences do you notice in the workflow?</li>
+<li>Read <code>AGENTS.md</code>. What advice does it contain?</li>
 </ul>
 </section>
-<section id="example-workflow-2" class="level2">
-<h2 class="anchored" data-anchor-id="example-workflow-2">Example workflow</h2>
-<ol type="1">
-<li>Plan it with Fable (or whatever the best model you have access to is)</li>
-<li>You read and review the plan</li>
-<li>Review the plan with Codex. Copy and paste the feedback.</li>
-<li>Implement with Sonnet (or a similar cheap model)</li>
-<li>Review the implementation with Codex</li>
-</ol>
-<blockquote class="blockquote">
-<p>https://github.com/r-lib/testthat/issues/2328</p>
-</blockquote>
-</section>
-<section id="your-turn-big" class="level2">
-<h2 class="anchored" data-anchor-id="your-turn-big">Your turn (big)</h2>
+<section id="where-does-it-live" class="level2">
+<h2 class="anchored" data-anchor-id="where-does-it-live">Where does it live?</h2>
 <ul>
-<li>stringb</li>
+<li>Project level: <code>AGENTS.md</code> in the project root
+<ul>
+<li>Checked into git; shared with your whole team</li>
+<li>Applies to everything below it in the directory tree</li>
+</ul></li>
+<li>User level: <code>~/.posit/assistant/AGENTS.md</code>
+<ul>
+<li>Personal preferences that apply across all your projects</li>
+</ul></li>
+<li>Project (generally) beats user when they conflict</li>
+<li>If you’re using Claude you also need <code>CLAUDE.md</code> that contains <code>@AGENTS.md</code></li>
+</ul>
+</section>
+<section id="what-belongs-there" class="level2">
+<h2 class="anchored" data-anchor-id="what-belongs-there">What belongs there?</h2>
+<ul>
+<li>Have you told an agent to do it three times? Put it in <code>AGENTS.md</code></li>
+<li>Is it a lot of text that is only sometimes important? Use a skill.</li>
+</ul>
+</section>
+<section id="your-turn-1" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn-1">Your turn</h2>
+<ul>
+<li>Update <code>AGENTS.md</code> to records some compliment specific conventions.</li>
+<li>e.g.: Use British English; give over the top compliments.</li>
 </ul>
 </section>
 </section>
-<section id="r-cmd-check" class="level1">
-<h1><code>R CMD check</code></h1>
+<section id="skills" class="level1">
+<h1>Skills</h1>
+<section id="your-turn-2" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn-2">Your turn</h2>
 <ul>
-<li>Regular</li>
-<li>First submission</li>
+<li><code>use_tidy_agents()</code> includes three skills. What are they? How do they work?</li>
+<li>What do you think the advantages and disadvantages of distributing of skills this way?</li>
+</ul>
+</section>
+<section id="what-is-a-skill" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-skill">What is a skill?</h2>
+<ul>
+<li>Formal definition at <a href="https://agentskills.io/" class="uri">https://agentskills.io/</a></li>
+<li>But IMO this is very overwrought</li>
+<li>Two parts to a skill:
+<ul>
+<li>When: short description that states when to use it</li>
+<li>What: longer details of how to use it</li>
+</ul></li>
+<li>System prompt includes all the “when”s</li>
+<li>Agent loads the “what” on demand</li>
+</ul>
+</section>
+<section id="skill-demo" class="level2">
+<h2 class="anchored" data-anchor-id="skill-demo">Skill demo</h2>
+</section>
+<section id="other-forms-of-skills" class="level2">
+<h2 class="anchored" data-anchor-id="other-forms-of-skills">Other forms of skills</h2>
+<ul>
+<li>Directory of markdown files with index/README</li>
+<li><a href="https://quarto.org/docs/websites/website-llms.html">Quarto website</a>
+<ul>
+<li>Use <code>llms-text: true</code></li>
+<li>Basic idea: <a href="https://design.tidyverse.org" class="uri">https://design.tidyverse.org</a></li>
+</ul></li>
+<li>R documentation</li>
+<li>R functions</li>
+</ul>
+</section>
+<section id="general-advice" class="level2">
+<h2 class="anchored" data-anchor-id="general-advice">General advice</h2>
+<ul>
+<li>Hold on to them loosely</li>
+<li>Keep them personal, local, timely</li>
+<li>Best for stuff a general LLM can’t know</li>
+<li>Relatively little benefit to using same model to both write and read</li>
+<li>They don’t have to be markdown files</li>
+</ul>
+</section>
+<section id="creating-a-skill" class="level2">
+<h2 class="anchored" data-anchor-id="creating-a-skill">Creating a skill</h2>
+<ul>
+<li>Where do they live? I don’t know</li>
+<li>Just ask an agent to create the file for you :)</li>
+</ul>
+</section>
+<section id="some-example-skills" class="level2">
+<h2 class="anchored" data-anchor-id="some-example-skills">Some example skills</h2>
+<ul>
+<li><code>usethis::learn_tidy_skill()</code></li>
+<li>Simplification prompt</li>
+</ul>
+</section>
+<section id="winstons-simplification-prompt" class="level2">
+<h2 class="anchored" data-anchor-id="winstons-simplification-prompt">Winston’s simplification prompt</h2>
+<!-- Extracted from https://github.com/posit-dev/assistant/blob/main/.agents/skills/assistant-review/SKILL.md -->
+<p>Make a deliberate pass over each non-trivial change looking for opportunities for simplification:</p>
+<ul>
+<li><p>Could this change be achieved by deleting or restructuring instead of adding — removing a branch, mode, layer, or special case rather than bolting one on? It’s always better to remove than add.</p></li>
+<li><p>Is each new or changed interface narrow relative to what it hides — or must callers know its internals, keep duplicated logic in sync, or work around documented gaps (“does NOT handle X”)?</p></li>
+<li><p>Does anything re-implement what the codebase already provides — a bespoke helper shadowing a canonical one, logic in the wrong layer, or wrapper/cast/any churn obscuring the real contract?</p></li>
+</ul>
+<p>When you find opportunities for simplification, be clear about the pros and cons. Produce either a list of potential simplifications or “No simplifications found”.</p>
+</section>
+<section id="bundling-with-a-package" class="level2">
+<h2 class="anchored" data-anchor-id="bundling-with-a-package">Bundling with a package</h2>
+<ul>
+<li>No automated tooling yet</li>
+<li><code>inst/skills</code> is a reasonable place to put them</li>
+<li>You’ll need to expose in some other way</li>
 </ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -749,8 +801,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../modules/06-agent-instructions.html" class="pagination-link" aria-label="Skills and AGENTS.md">
-        <span class="nav-page-text">Skills and AGENTS.md</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../modules/06-workflow.html" class="pagination-link" aria-label="Workflow">
+        <span class="nav-page-text">Workflow</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
