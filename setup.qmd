@@ -9,7 +9,17 @@ You need:
 * A recent version of Positron, preferably the latest release. Go here:
 
   - <https://positron.posit.co/download.html>
-  - If you already have Positron, check for an update!
+  - If you already have Positron, check for an update! A red badge on the gear icon (lower-left or upper-right, depending on your layout) means an update is available:
+
+    ::: {layout-ncol="2"}
+    ![](images/signs-you-need-to-update-positron-lower-left.png)
+
+    ![](images/signs-you-need-to-update-positron-upper-right.png)
+    :::
+
+  - You can also check the application menu (e.g. on macOS, the **Positron** menu): if there's an option like "Restart to Update", choose it.
+
+    ![](images/signs-you-need-to-update-positron-menu.png){width="60%"}
 
 * A recent version of R (>= 4.2), but preferably the current version, which is R 4.6.1.
 
