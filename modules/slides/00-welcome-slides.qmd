@@ -6,10 +6,6 @@ format:
     footer: "[pos.it/modern-r-workflow](https://pos.it/modern-r-workflow)"
 ---
 
-::: r-fit-text
-Welcome!
-:::
-
 ## Wi-Fi
 
 ::: columns
@@ -71,9 +67,11 @@ More detailed maps are on the way and will be added once available.
 
 ## Join us on Discord
 
-Join the posit::conf Discord server: [pos.it/joinconf26](https://pos.it/joinconf26)
+Join the posit::conf Discord server:\
+[pos.it/joinconf26](https://pos.it/joinconf26)
 
-Then head to the workshop channel: [#workshop-modern-r-workflow](https://discord.com/channels/1381993558437007490/1532807523524939927)
+Then head to the workshop channel:\
+[#workshop-modern-r-workflow](https://discord.com/channels/1381993558437007490/1532807523524939927)
 
 ##  {.center}
 
@@ -86,17 +84,35 @@ Then head to the workshop channel: [#workshop-modern-r-workflow](https://discord
 
 ## Positron
 
-<!-- FILL IN: screenshot of Positron -->
+![](/images/positron-welcome.png)
 
-If you haven't already, now's a good time to install Positron, or check that you're on the latest version.
+If you haven't already, now's a good time to install Positron.
 
--   Download: <https://positron.posit.co/download.html>
+-   Download here: <https://positron.posit.co/download.html>
+
+## Already have Positron?
+
+Is Positron telling you it's time to update? Do it!
+
+::: columns
+::: {.column width="33%"}
+![](/images/signs-you-need-to-update-positron-lower-left.png)
+:::
+
+::: {.column width="33%"}
+![](/images/signs-you-need-to-update-positron-upper-right.png)
+:::
+
+::: {.column width="33%"}
+![](/images/signs-you-need-to-update-positron-menu.png)
+:::
+:::
 
 ## Check your R setup
 
 Let's make sure everyone's R installation is ready to go.
 
-1.  Confirm you're on a recent version of R
+1.  Confirm you're on a recent version of R. Ideally R 4.6.
 
 2.  Install pak, if you haven't already:
 
@@ -119,22 +135,18 @@ Let's make sure everyone's R installation is ready to go.
 <!-- HW: do we want to mention air, rig, and quarto here? -->
 <!-- JB: air and quarto ship with Positron, so I think no. And no one should be installing R at this point in the workshop, so I think no for rig. They'll come up later, but don't need installation at this point. -->
 
-## Posit AI
-
-<!-- FILL IN: more details on signing up for Posit AI -->
+## Posit AI Pass
 
 Sign up for Posit AI Pass, so you're ready to use Posit Assistant during the workshop.
 
 -   Sign up: <https://posit.ai>
--   Make sure to use the same email address as you used to register for conf!
+-   **Make sure to use the same email address as you used to register for conf!** This is what lets us give you free credits to use today.
 
 ## Check that Posit Assistant is ALIVE
 
 In Posit Assistant, sign in with your Posit AI Pass.
 
-In Posit Assistant's chat, enter "hi".
-
-If all is well, you should see a response along the lines of "Hi, what would you like to work on?"
+![](/images/posit-assistant-hi.png)
 
 ## What's changed?
 
