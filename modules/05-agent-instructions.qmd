@@ -6,69 +6,71 @@ deliverer: Hadley
 
 # Additional context
 
-* Write markdown files to provide additional context for agents
+* Provide additinal context/advice (not rules!) via markdown files
 * Primary motivation:
   * Avoid repeating yourself across multiple conversations
-  * Save tokens by avoiding common mistakes
+  * Save tokens by avoiding common wheel-spinning
 * We'll focus on `AGENTS.md` (always loaded) and skills (loaded on demand)
-* Lets dive in with an example
+* Lets start with an example
 
 # `AGENTS.md`
 
-## Let's make a package, take two
-
-(Make sure you're in normal mode)
+## Let's make a package (take two)
 
 ```R
 usethis::create_package("~/desktop/compliment2")
 usethis::use_tidy_agents()
 ```
 
-> Create a new R package called compliment in the current directory. It should generate randomized compliments.
+> Create a new R package called compliment in the current directory. 
+> It should generate randomized compliments.
 
 ## Your turn
 
 * Try it yourself. What differences do you notice in the workflow?
 * Read `AGENTS.md`. What advice does it contain?
 
-## Where does it live?
+## Where can `AGENTS.md` live?
 
 * Project level: `AGENTS.md` in the project root
   * Checked into git; shared with your whole team
   * Applies to everything below it in the directory tree
 * User level: `~/.posit/assistant/AGENTS.md`
   * Personal preferences that apply across all your projects
+  * Good place for pet peeves
 * Project (generally) beats user when they conflict
 * If you're using Claude you also need `CLAUDE.md` that contains `@AGENTS.md`
 
 ## What belongs there?
 
-* Have you told an agent to do it three times? Put it in `AGENTS.md`
+* Have you told an agent to do it three times? Put it in `AGENTS.md`.
+* Seriously, I think that's my advice
 * Is it a lot of text that is only sometimes important? Use a skill.
 
 ## Your turn
 
-* Update `AGENTS.md` to records some compliment specific conventions.
+* Update `AGENTS.md` to records some specific conventions for this package
 * e.g.: Use British English; give over the top compliments.
+* Then ask it to update your code, or add a new function.
 
 # Skills
 
 ## Your turn
 
-* `use_tidy_agents()` includes three skills. What are they? How do they work?
-* What do you think the advantages and disadvantages of distributing of skills this way?
+`use_tidy_agents()` includes three skills. 
+
+* What are they? 
+* How do you think they work?
+* How can you tell when a skill is used? (Look back at your history above, or try asking your agent to deprecate a file.)
 
 ## What is a skill?
 
-* Formal definition at <https://agentskills.io/>
-* But IMO this is very overwrought
+* Formal definition at <https://agentskills.io/>, but IMO this is overwrought
 * Two parts to a skill:
-  * When: short description that states when to use it
-  * What: longer details of how to use it
+  * **When** should you use it?
+  * **What** do you need to do?
 * System prompt includes all the "when"s
 * Agent loads the "what" on demand
-
-## Skill demo
 
 ## Other forms of skills
 
@@ -83,14 +85,14 @@ usethis::use_tidy_agents()
 
 * Hold on to them loosely
 * Keep them personal, local, timely
-* Best for stuff a general LLM can't know
+* Don't write prospectively
 * Relatively little benefit to using same model to both write and read
-* They don't have to be markdown files
 
 ## Creating a skill
 
 * Where do they live? I don't know
 * Just ask an agent to create the file for you :) 
+* But not to write the skill (unless you're using a smarter than usual model)
 
 ## Some example skills
 
