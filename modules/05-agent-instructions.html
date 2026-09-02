@@ -214,7 +214,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../modules/slides/deep-thoughts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Deep Thoughts</span></a>
+ <span class="menu-text">Deep thoughts</span></a>
   </div>
 </li>
     </ul>
@@ -248,21 +248,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="additional-context" class="level1">
 <h1>Additional context</h1>
 <ul>
-<li>Write markdown files to provide additional context for agents</li>
+<li>Provide additinal context/advice (not rules!) via markdown files</li>
 <li>Primary motivation:
 <ul>
 <li>Avoid repeating yourself across multiple conversations</li>
-<li>Save tokens by avoiding common mistakes</li>
+<li>Save tokens by avoiding common wheel-spinning</li>
 </ul></li>
 <li>We’ll focus on <code>AGENTS.md</code> (always loaded) and skills (loaded on demand)</li>
-<li>Lets dive in with an example</li>
+<li>Lets start with an example</li>
 </ul>
 </section>
 <section id="agents.md" class="level1">
 <h1><code>AGENTS.md</code></h1>
 <section id="lets-make-a-package-take-two" class="level2">
-<h2 class="anchored" data-anchor-id="lets-make-a-package-take-two">Let’s make a package, take two</h2>
-<p>(Make sure you’re in normal mode)</p>
+<h2 class="anchored" data-anchor-id="lets-make-a-package-take-two">Let’s make a package (take two)</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_package</span>(<span class="st">"~/desktop/compliment2"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_tidy_agents</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <blockquote class="blockquote">
@@ -276,8 +275,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Read <code>AGENTS.md</code>. What advice does it contain?</li>
 </ul>
 </section>
-<section id="where-does-it-live" class="level2">
-<h2 class="anchored" data-anchor-id="where-does-it-live">Where does it live?</h2>
+<section id="where-can-agents.md-live" class="level2">
+<h2 class="anchored" data-anchor-id="where-can-agents.md-live">Where can <code>AGENTS.md</code> live?</h2>
 <ul>
 <li>Project level: <code>AGENTS.md</code> in the project root
 <ul>
@@ -287,6 +286,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>User level: <code>~/.posit/assistant/AGENTS.md</code>
 <ul>
 <li>Personal preferences that apply across all your projects</li>
+<li>Good place for pet peeves</li>
 </ul></li>
 <li>Project (generally) beats user when they conflict</li>
 <li>If you’re using Claude you also need <code>CLAUDE.md</code> that contains <code>@AGENTS.md</code></li>
@@ -295,15 +295,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="what-belongs-there" class="level2">
 <h2 class="anchored" data-anchor-id="what-belongs-there">What belongs there?</h2>
 <ul>
-<li>Have you told an agent to do it three times? Put it in <code>AGENTS.md</code></li>
+<li>Have you told an agent to do it three times? Put it in <code>AGENTS.md</code>.</li>
+<li>Seriously, I think that’s my advice</li>
 <li>Is it a lot of text that is only sometimes important? Use a skill.</li>
 </ul>
 </section>
 <section id="your-turn-1" class="level2">
 <h2 class="anchored" data-anchor-id="your-turn-1">Your turn</h2>
 <ul>
-<li>Update <code>AGENTS.md</code> to records some compliment specific conventions.</li>
-<li>e.g.: Use British English; give over the top compliments.</li>
+<li>Update <code>AGENTS.md</code> to records some specific conventions for this package</li>
+<li>e.g.: Use British English; give over the top compliments</li>
+<li>Then ask it to update your code, or add a new function</li>
 </ul>
 </section>
 </section>
@@ -311,27 +313,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Skills</h1>
 <section id="your-turn-2" class="level2">
 <h2 class="anchored" data-anchor-id="your-turn-2">Your turn</h2>
+<p><code>use_tidy_agents()</code> includes three skills.</p>
 <ul>
-<li><code>use_tidy_agents()</code> includes three skills. What are they? How do they work?</li>
-<li>What do you think the advantages and disadvantages of distributing of skills this way?</li>
+<li>What are they?</li>
+<li>How do you think they work?</li>
+<li>How can you tell when a skill is used? (Look back at your history above, or try asking your agent to deprecate a file.)</li>
 </ul>
 </section>
 <section id="what-is-a-skill" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-a-skill">What is a skill?</h2>
 <ul>
-<li>Formal definition at <a href="https://agentskills.io/" class="uri">https://agentskills.io/</a></li>
-<li>But IMO this is very overwrought</li>
+<li>Formal definition at <a href="https://agentskills.io/" class="uri">https://agentskills.io/</a>, but IMO this is overwrought</li>
 <li>Two parts to a skill:
 <ul>
-<li>When: short description that states when to use it</li>
-<li>What: longer details of how to use it</li>
+<li><strong>When</strong> should you use it?</li>
+<li><strong>What</strong> do you need to do?</li>
 </ul></li>
 <li>System prompt includes all the “when”s</li>
 <li>Agent loads the “what” on demand</li>
 </ul>
-</section>
-<section id="skill-demo" class="level2">
-<h2 class="anchored" data-anchor-id="skill-demo">Skill demo</h2>
 </section>
 <section id="other-forms-of-skills" class="level2">
 <h2 class="anchored" data-anchor-id="other-forms-of-skills">Other forms of skills</h2>
@@ -351,9 +351,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Hold on to them loosely</li>
 <li>Keep them personal, local, timely</li>
-<li>Best for stuff a general LLM can’t know</li>
+<li>Don’t write prospectively</li>
 <li>Relatively little benefit to using same model to both write and read</li>
-<li>They don’t have to be markdown files</li>
 </ul>
 </section>
 <section id="creating-a-skill" class="level2">
@@ -361,6 +360,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Where do they live? I don’t know</li>
 <li>Just ask an agent to create the file for you :)</li>
+<li>But not to write the skill (unless you’re using a smarter than usual model)</li>
 </ul>
 </section>
 <section id="some-example-skills" class="level2">

@@ -4,7 +4,7 @@
     "href": "setup.html",
     "title": "Setup",
     "section": "",
-    "text": "Please complete the following steps before the workshop so we can dive straight into the material.\nYou need:\n\nA recent version of Positron, preferably the latest release. Go here:\n\nhttps://positron.posit.co/download.html\nIf you already have Positron, check for an update! A red badge on the gear icon (lower-left or upper-right, depending on your layout) means an update is available:\n\n\n\n\n\n\n\n\n\n\nYou can also check the application menu (e.g. on macOS, the Positron menu): if there’s an option like “Restart to Update”, choose it.\n\n\nA recent version of R (&gt;= 4.2), but preferably the current version, which is R 4.6.1.\n\nhttps://cloud.r-project.org/\nIf you’re updating R, consider using rig to do so: https://rig.r-lib.org. Then, in a terminal, do rig add release.\n\nGet your R installation ready for package development work. In R:\n\ninstall.packages(\"pak\"): pak is our preferred way to install packages\npak::pak(\"devtools\"): installs devtools\ndevtools::dev_sitrep(): gives a package development “situation report”\n\nSign up for Posit AI Pass using the same email address as your conf/workshop registration. You can start a free trial and, if your email matches what we have, we can give you credits to use on the day of the workshop.\n\nhttps://posit.ai/\nOpen Posit Assistant in Positron and sign in with your Posit AI Pass.\nSay “hi” to Posit Assistant to check that all is well. Expect a response along the lines “Hello, how can I help?”.\n\nOptional: Get the development version of Posit Assistant by pressing Cmd/Ctrl + Shift + P to open the command palette and run Posit Assistant: Check for newer dev build. Follow the prompts to restart Posit Assistant.",
+    "text": "Please complete the following steps before the workshop so we can dive straight into the material.\nYou need:\n\nA recent version of Positron, preferably the latest release. Go here:\n\nhttps://positron.posit.co/download.html\nIf you already have Positron, check for an update! A red badge on the gear icon (lower-left or upper-right, depending on your layout) means an update is available:\n\n\n\n\n\n\n\n\n\n\nYou can also check the application menu (e.g. on macOS, the Positron menu): if there’s an option like “Restart to Update”, choose it\n\n\nA recent version of R (&gt;= 4.2), but preferably the current version, which is R 4.6.1\n\nhttps://cloud.r-project.org/\nIf you’re updating R, consider using rig to do so: https://rig.r-lib.org. Then, in a terminal, do rig add release.\n\nGet your R installation ready for package development work. In R:\n\ninstall.packages(\"pak\"): pak is our preferred way to install packages\npak::pak(\"devtools\"): installs devtools\ndevtools::dev_sitrep(): gives a package development “situation report”\n\nSign up for Posit AI Pass using the same email address as your conf/workshop registration. You can start a free trial and, if your email matches what we have, we can give you credits to use on the day of the workshop.\n\nhttps://posit.ai/\nOpen Posit Assistant in Positron and sign in with your Posit AI Pass\nSay “hi” to Posit Assistant to check that all is well. Expect a response along the lines “Hello, how can I help?”.\n\nOptional: Get the development version of Posit Assistant by pressing Cmd/Ctrl + Shift + P to open the command palette and run Posit Assistant: Check for newer dev build. Follow the prompts to restart Posit Assistant.",
     "crumbs": [
       "Setup"
     ]
@@ -83,8 +83,8 @@
     "objectID": "modules/slides/00-welcome-slides.html#check-that-posit-assistant-is-alive",
     "href": "modules/slides/00-welcome-slides.html#check-that-posit-assistant-is-alive",
     "title": "Welcome",
-    "section": "Check that Posit Assistant is ALIVE",
-    "text": "Check that Posit Assistant is ALIVE\nIn Posit Assistant, sign in with your Posit AI Pass."
+    "section": "Check that Posit Assistant is alive",
+    "text": "Check that Posit Assistant is alive\nIn Posit Assistant, sign in with your Posit AI Pass."
   },
   {
     "objectID": "modules/slides/00-welcome-slides.html#whats-changed",
@@ -152,7 +152,7 @@
     "href": "modules/06-workflow.html#basic-advice",
     "title": "Workflow",
     "section": "Basic advice",
-    "text": "Basic advice\n\nWhen you get started, pay attention to what it’s doing\nCan be useful to intervene when it’s getting off track.\nCan also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out",
+    "text": "Basic advice\n\nWhen you get started, pay attention to what it’s doing\nCan be useful to intervene when it’s getting off track\nCan also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out",
     "crumbs": [
       "Workflow"
     ]
@@ -162,7 +162,7 @@
     "href": "modules/06-workflow.html#git-flow",
     "title": "Workflow",
     "section": "Git flow",
-    "text": "Git flow\n\nWhen you get started, I think it’s worth doing all the commits yourself\nThen, tell it when to commit\nThen, it let it commit by itself\nThen, let it make the whole PR\n(But NEVER EVER inflect Claude’s writing on another human.)",
+    "text": "Git flow\n\nWhen you get started, I think it’s worth doing all the commits yourself\nThen, tell it when to commit\nThen, it let it commit by itself\nThen, let it make the whole PR\n(But NEVER EVER inflect Claude’s writing on another human)",
     "crumbs": [
       "Workflow"
     ]
@@ -282,7 +282,7 @@
     "href": "modules/04-agent-explainer.html#tool-calls-let-the-agent-run-code-on-your-computer",
     "title": "How do agents work?",
     "section": "Tool calls let the agent run code on your computer",
-    "text": "Tool calls let the agent run code on your computer\n\nTools are provided by the harness, e.g. Posit Assistant\nLLM asks harness to run code; harness returns result to the LLM\nOften requests many tool calls at once\nThese are called “parallel” calls, but don’t actually run in parallel.\nCan recognise with the thick line line\n\n\n\n\nTwo read calls and three edit calls",
+    "text": "Tool calls let the agent run code on your computer\n\nTools are provided by the harness, e.g. Posit Assistant\nLLM asks harness to run code; harness returns result to the LLM\nOften requests many tool calls at once\nThese are called “parallel” calls, but don’t actually run in parallel\nCan recognise with the thick line line\n\n\n\n\nTwo read calls and three edit calls",
     "crumbs": [
       "How do agents work?"
     ]
@@ -322,7 +322,7 @@
     "href": "modules/04-agent-explainer.html#your-turn-1",
     "title": "How do agents work?",
     "section": "Your turn",
-    "text": "Your turn\n\nTry and prompt your agent to make it use each of the tool calls above.\nWhat other tools are available?",
+    "text": "Your turn\n\nTry and prompt your agent to make it use each of the tool calls above\nWhat other tools are available?",
     "crumbs": [
       "How do agents work?"
     ]
@@ -392,7 +392,7 @@
     "href": "modules/04-agent-explainer.html#what-about-sandboxes",
     "title": "How do agents work?",
     "section": "What about sandboxes?",
-    "text": "What about sandboxes?\n\nUse OS level sandboxing to only allow reads and writes to the current directory, and no network access.\nUnfortunately that’s not very useful\n\nNo package install\nNo temporary directory\nNo GitHub\nNo web search\n\nI remain optimistic that it’s possible to overcome these problems, but current implementations are painful.",
+    "text": "What about sandboxes?\n\nUse OS level sandboxing to only allow reads and writes to the current directory, and no network access\nUnfortunately that’s not very useful\n\nNo package install\nNo temporary directory\nNo GitHub\nNo web search\n\nI remain optimistic that it’s possible to overcome these problems, but current implementations are painful",
     "crumbs": [
       "How do agents work?"
     ]
@@ -462,7 +462,7 @@
     "href": "modules/04-agent-explainer.html#enterprise-plans-are-different",
     "title": "How do agents work?",
     "section": "Enterprise plans are different",
-    "text": "Enterprise plans are different\n\nEnterprises have to pay by the million tokens\n\nOpus 5: $5 input, $25 output\ngpt-5.6-terra: $2 input, $12 output\nKimi K3: $3 input, $15 output\n\n(This is also what you pay in ellmer)\nAverage engineers spend $150-$250 / month, i.e. $8-12 / day\nHigh users spend $3,000 / month, i.e. $150 / day.",
+    "text": "Enterprise plans are different\n\nEnterprises have to pay by the million tokens\n\nOpus 5: $5 input, $25 output\ngpt-5.6-terra: $2 input, $12 output\nKimi K3: $3 input, $15 output\n\n(This is also what you pay in ellmer)\nAverage engineers spend $150-$250 / month, i.e. $8-12 / day\nHigh users spend $3,000 / month, i.e. $150 / day",
     "crumbs": [
       "How do agents work?"
     ]
@@ -472,7 +472,7 @@
     "href": "modules/04-agent-explainer.html#my-views-on-cost-benefit-have-changed",
     "title": "How do agents work?",
     "section": "My views on cost-benefit have changed",
-    "text": "My views on cost-benefit have changed\n\nI used to think that Anthropic models was worth the premium\nBut the relative cost has increased and output quality has decreased (code is still fine, but its writing is painful)\nKimi K3 is excellent. Somewhere between Opus and Fable in code quality, but a much better writer, and only costs 75% of Sonnet (thanks to tokenizer).\nAll models since April 16, 2026 (Claude Opus 4.7) use a new tokenizer that uses ~20% more tokens, so even though the per-token prices didn’t change, the overall cost did.\nAnd Anthropic models seem to be producing more loquacious output, which also costs more money 🤔",
+    "text": "My views on cost-benefit have changed\n\nI used to think that Anthropic models was worth the premium\nBut the relative cost has increased and output quality has decreased (code is still fine, but its writing is painful)\nKimi K3 is excellent. Somewhere between Opus and Fable in code quality, but a much better writer, and only costs 75% of Sonnet (thanks to tokenizer).\nAll models since April 16, 2026 (Claude Opus 4.7) use a new tokenizer that uses ~20% more tokens, so even though the per-token prices didn’t change, the overall cost did\nAnd Anthropic models seem to be producing more loquacious output, which also costs more money 🤔",
     "crumbs": [
       "How do agents work?"
     ]
@@ -482,7 +482,7 @@
     "href": "modules/04-agent-explainer.html#so-how-can-you-tell-what-youre-spending",
     "title": "How do agents work?",
     "section": "So how can you tell what you’re spending?",
-    "text": "So how can you tell what you’re spending?\n\nHarnesses by model providers don’t tend to make the cost obvious (I think you can imagine why)\nPosit Assistant displays a lot of information (and we’re working hard to make it better)\nAgentsView is a good retrospective tool that works with many harnesses.\nTwo important facts to know:\n\nConversations are additive\nCache is king",
+    "text": "So how can you tell what you’re spending?\n\nHarnesses by model providers don’t tend to make the cost obvious (I think you can imagine why)\nPosit Assistant displays a lot of information (and we’re working hard to make it better)\nAgentsView is a good retrospective tool that works with many harnesses\nTwo important facts to know:\n\nConversations are additive\nCache is king",
     "crumbs": [
       "How do agents work?"
     ]
@@ -512,7 +512,7 @@
     "href": "modules/04-agent-explainer.html#your-turn-4",
     "title": "How do agents work?",
     "section": "Your turn",
-    "text": "Your turn\n\nLook at what you’ve spent in previous PA conversations.\n\nOptional: download and install AgentsView. Where is your LLM spend going?",
+    "text": "Your turn\n\nLook at what you’ve spent in previous PA conversations\n\nOptional: download and install AgentsView. Where is your LLM spend going?",
     "crumbs": [
       "How do agents work?"
     ]
@@ -570,7 +570,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Modern R Workflow (ft. Positron and AI)",
+    "title": "Modern R workflow (ft. Positron and AI)",
     "section": "",
     "text": "September 14, 2026 posit::conf(2026)\nHow to get to this page: pos.it/modern-r-workflow",
     "crumbs": [
@@ -580,7 +580,7 @@
   {
     "objectID": "index.html#setup",
     "href": "index.html#setup",
-    "title": "Modern R Workflow (ft. Positron and AI)",
+    "title": "Modern R workflow (ft. Positron and AI)",
     "section": "Setup",
     "text": "Setup\nPlease check the Setup Instructions for recommended steps to take before the workshop.",
     "crumbs": [
@@ -590,7 +590,7 @@
   {
     "objectID": "index.html#schedule",
     "href": "index.html#schedule",
-    "title": "Modern R Workflow (ft. Positron and AI)",
+    "title": "Modern R workflow (ft. Positron and AI)",
     "section": "Schedule",
     "text": "Schedule\n\n\n\nTime\nActivity\n\n\n\n\n09:00\nWelcome\n\n\n09:00 - 10:30\nPositron tourIntro to Posit AssistantHow do agents work?\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nHow do agents work? (cont’d)Skills and AGENTS.md\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nWorkflow\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nBest practices feedback loopHelping yourself",
     "crumbs": [
@@ -600,7 +600,7 @@
   {
     "objectID": "index.html#instructors",
     "href": "index.html#instructors",
-    "title": "Modern R Workflow (ft. Positron and AI)",
+    "title": "Modern R workflow (ft. Positron and AI)",
     "section": "Instructors",
     "text": "Instructors\n\nHadley Wickham\nHadley Wickham is Chief Scientist at Posit, where (among other things) he leads the tidyverse team. He builds tools (both computational and cognitive) that make data science easier, faster, and more fun. He’s the creator of packages like ggplot2, dplyr, and devtools and an author of several books on R, including R for Data Science and R Packages.\nGitHub · Bluesky · LinkedIn\n\n\nJenny Bryan\nJenny Bryan is a Senior Software Engineer at Posit, where she works on the tidyverse/r-lib and Positron teams. A recovering biostatistician, she takes special delight in eliminating the small agonies of data analysis. She’s the creator of packages like googlesheets4 and reprex and an author of the book R Packages and the Happy Git with R guide.\nGitHub · Bluesky",
     "crumbs": [
@@ -610,7 +610,7 @@
   {
     "objectID": "index.html#description",
     "href": "index.html#description",
-    "title": "Modern R Workflow (ft. Positron and AI)",
+    "title": "Modern R workflow (ft. Positron and AI)",
     "section": "Description",
     "text": "Description\nThis workshop is designed for data scientists who are comfortable with using R for data analysis and ready to level up their software engineering skills. Led by Hadley Wickham and Jenny Bryan, you’ll learn how to write more robust, maintainable R code while taking advantage of modern tooling (cough AI cough) that can dramatically accelerate your productivity.\nWe’ll cover three interconnected themes. First, you’ll learn contemporary R development practices—writing functions, organizing code into packages, testing, and documentation strategies that scale from personal projects to team collaboration. Second, we’ll explore how AI assistants like Claude Code can help you write better R code faster. Third, we’ll share practical tips for getting the most out of Positron, including features specifically designed to make R development and data exploration more fluid.\nThroughout the workshop, we’ll emphasize the connections between these topics: how good development practices make AI assistance more effective, how modern tooling reduces friction so you can focus on the interesting problems, and how to build workflows that are both efficient and reproducible. You’ll leave with concrete skills you can apply immediately to your own projects.\nPrerequisites: Basic familiarity with R programming (e.g., using the tidyverse). You should have written a few functions before, but don’t need any experience with package development, AI coding tools, or Positron. If you have taken a package development workshop before, you’ll learn what’s changed in our workflows, especially how we’re using AI and Positron effectively.\n This work is licensed under a Creative Commons Attribution 4.0 International License.",
     "crumbs": [
@@ -642,7 +642,7 @@
     "href": "modules/05-agent-instructions.html",
     "title": "Skills and AGENTS.md",
     "section": "",
-    "text": "Write markdown files to provide additional context for agents\nPrimary motivation:\n\nAvoid repeating yourself across multiple conversations\nSave tokens by avoiding common mistakes\n\nWe’ll focus on AGENTS.md (always loaded) and skills (loaded on demand)\nLets dive in with an example",
+    "text": "Provide additinal context/advice (not rules!) via markdown files\nPrimary motivation:\n\nAvoid repeating yourself across multiple conversations\nSave tokens by avoiding common wheel-spinning\n\nWe’ll focus on AGENTS.md (always loaded) and skills (loaded on demand)\nLets start with an example",
     "crumbs": [
       "Skills and AGENTS.md"
     ]
@@ -651,8 +651,8 @@
     "objectID": "modules/05-agent-instructions.html#lets-make-a-package-take-two",
     "href": "modules/05-agent-instructions.html#lets-make-a-package-take-two",
     "title": "Skills and AGENTS.md",
-    "section": "Let’s make a package, take two",
-    "text": "Let’s make a package, take two\n(Make sure you’re in normal mode)\nusethis::create_package(\"~/desktop/compliment2\")\nusethis::use_tidy_agents()\n\nCreate a new R package called compliment in the current directory. It should generate randomized compliments.",
+    "section": "Let’s make a package (take two)",
+    "text": "Let’s make a package (take two)\nusethis::create_package(\"~/desktop/compliment2\")\nusethis::use_tidy_agents()\n\nCreate a new R package called compliment in the current directory. It should generate randomized compliments.",
     "crumbs": [
       "Skills and AGENTS.md"
     ]
@@ -668,11 +668,11 @@
     ]
   },
   {
-    "objectID": "modules/05-agent-instructions.html#where-does-it-live",
-    "href": "modules/05-agent-instructions.html#where-does-it-live",
+    "objectID": "modules/05-agent-instructions.html#where-can-agents.md-live",
+    "href": "modules/05-agent-instructions.html#where-can-agents.md-live",
     "title": "Skills and AGENTS.md",
-    "section": "Where does it live?",
-    "text": "Where does it live?\n\nProject level: AGENTS.md in the project root\n\nChecked into git; shared with your whole team\nApplies to everything below it in the directory tree\n\nUser level: ~/.posit/assistant/AGENTS.md\n\nPersonal preferences that apply across all your projects\n\nProject (generally) beats user when they conflict\nIf you’re using Claude you also need CLAUDE.md that contains @AGENTS.md",
+    "section": "Where can AGENTS.md live?",
+    "text": "Where can AGENTS.md live?\n\nProject level: AGENTS.md in the project root\n\nChecked into git; shared with your whole team\nApplies to everything below it in the directory tree\n\nUser level: ~/.posit/assistant/AGENTS.md\n\nPersonal preferences that apply across all your projects\nGood place for pet peeves\n\nProject (generally) beats user when they conflict\nIf you’re using Claude you also need CLAUDE.md that contains @AGENTS.md",
     "crumbs": [
       "Skills and AGENTS.md"
     ]
@@ -682,7 +682,7 @@
     "href": "modules/05-agent-instructions.html#what-belongs-there",
     "title": "Skills and AGENTS.md",
     "section": "What belongs there?",
-    "text": "What belongs there?\n\nHave you told an agent to do it three times? Put it in AGENTS.md\nIs it a lot of text that is only sometimes important? Use a skill.",
+    "text": "What belongs there?\n\nHave you told an agent to do it three times? Put it in AGENTS.md.\nSeriously, I think that’s my advice\nIs it a lot of text that is only sometimes important? Use a skill.",
     "crumbs": [
       "Skills and AGENTS.md"
     ]
@@ -692,7 +692,7 @@
     "href": "modules/05-agent-instructions.html#your-turn-1",
     "title": "Skills and AGENTS.md",
     "section": "Your turn",
-    "text": "Your turn\n\nUpdate AGENTS.md to records some compliment specific conventions.\ne.g.: Use British English; give over the top compliments.",
+    "text": "Your turn\n\nUpdate AGENTS.md to records some specific conventions for this package\ne.g.: Use British English; give over the top compliments\nThen ask it to update your code, or add a new function",
     "crumbs": [
       "Skills and AGENTS.md"
     ]
@@ -702,7 +702,7 @@
     "href": "modules/05-agent-instructions.html#your-turn-2",
     "title": "Skills and AGENTS.md",
     "section": "Your turn",
-    "text": "Your turn\n\nuse_tidy_agents() includes three skills. What are they? How do they work?\nWhat do you think the advantages and disadvantages of distributing of skills this way?",
+    "text": "Your turn\nuse_tidy_agents() includes three skills.\n\nWhat are they?\nHow do you think they work?\nHow can you tell when a skill is used? (Look back at your history above, or try asking your agent to deprecate a file.)",
     "crumbs": [
       "Skills and AGENTS.md"
     ]
@@ -712,17 +712,7 @@
     "href": "modules/05-agent-instructions.html#what-is-a-skill",
     "title": "Skills and AGENTS.md",
     "section": "What is a skill?",
-    "text": "What is a skill?\n\nFormal definition at https://agentskills.io/\nBut IMO this is very overwrought\nTwo parts to a skill:\n\nWhen: short description that states when to use it\nWhat: longer details of how to use it\n\nSystem prompt includes all the “when”s\nAgent loads the “what” on demand",
-    "crumbs": [
-      "Skills and AGENTS.md"
-    ]
-  },
-  {
-    "objectID": "modules/05-agent-instructions.html#skill-demo",
-    "href": "modules/05-agent-instructions.html#skill-demo",
-    "title": "Skills and AGENTS.md",
-    "section": "Skill demo",
-    "text": "Skill demo",
+    "text": "What is a skill?\n\nFormal definition at https://agentskills.io/, but IMO this is overwrought\nTwo parts to a skill:\n\nWhen should you use it?\nWhat do you need to do?\n\nSystem prompt includes all the “when”s\nAgent loads the “what” on demand",
     "crumbs": [
       "Skills and AGENTS.md"
     ]
@@ -742,7 +732,7 @@
     "href": "modules/05-agent-instructions.html#general-advice",
     "title": "Skills and AGENTS.md",
     "section": "General advice",
-    "text": "General advice\n\nHold on to them loosely\nKeep them personal, local, timely\nBest for stuff a general LLM can’t know\nRelatively little benefit to using same model to both write and read\nThey don’t have to be markdown files",
+    "text": "General advice\n\nHold on to them loosely\nKeep them personal, local, timely\nDon’t write prospectively\nRelatively little benefit to using same model to both write and read",
     "crumbs": [
       "Skills and AGENTS.md"
     ]
@@ -752,7 +742,7 @@
     "href": "modules/05-agent-instructions.html#creating-a-skill",
     "title": "Skills and AGENTS.md",
     "section": "Creating a skill",
-    "text": "Creating a skill\n\nWhere do they live? I don’t know\nJust ask an agent to create the file for you :)",
+    "text": "Creating a skill\n\nWhere do they live? I don’t know\nJust ask an agent to create the file for you :)\nBut not to write the skill (unless you’re using a smarter than usual model)",
     "crumbs": [
       "Skills and AGENTS.md"
     ]
@@ -812,7 +802,7 @@
     "href": "modules/07-best-practices-feedback-loop.html#just-use-air",
     "title": "Best practices feedback loop",
     "section": "Just use air",
-    "text": "Just use air\n\nNo longer worth manually enforcing a coding style\nJust use air\nGet started with usethis::use_air() + Air: format workspace file.\nOur AGENTS.md reminds the agent to use it.\n(If you’re using the Claude Code extension specifically, it won’t know where to find the air binary. You can tell it that it’s bundled with Positron)",
+    "text": "Just use air\n\nNo longer worth manually enforcing a coding style\nJust use air\nGet started with usethis::use_air() + Air: format workspace file\nOur AGENTS.md reminds the agent to use it\n(If you’re using the Claude Code extension specifically, it won’t know where to find the air binary. You can tell it that it’s bundled with Positron)",
     "crumbs": [
       "Best practices feedback loop"
     ]
@@ -822,7 +812,7 @@
     "href": "modules/07-best-practices-feedback-loop.html#agents-love-comments",
     "title": "Best practices feedback loop",
     "section": "Agents love comments",
-    "text": "Agents love comments\n\nAgents (esp. Claude) LOVE to write wordy comments\nSometimes the comments are useful; often they are not\nCode-comment mismatch more dangerous with agents since they’ll often just believe the comment.\nI’ve had relatively little success prompting this behaviour away\nBetter luck with prompt to remove (esp with non-Claude model)",
+    "text": "Agents love comments\n\nAgents (esp. Claude) LOVE to write wordy comments\nSometimes the comments are useful; often they are not\nCode-comment mismatch more dangerous with agents since they’ll often just believe the comment\nI’ve had relatively little success prompting this behaviour away\nBetter luck with prompt to remove (esp with non-Claude model)",
     "crumbs": [
       "Best practices feedback loop"
     ]
@@ -832,7 +822,7 @@
     "href": "modules/07-best-practices-feedback-loop.html#commenting-best-practices",
     "title": "Best practices feedback loop",
     "section": "Commenting best practices",
-    "text": "Commenting best practices\n\nComments should explain the why\nComments shouldn’t need to explain the what. If you can’t understand the code, refactor it.\nComments dont’ need to give the entire history that lead to a decision.",
+    "text": "Commenting best practices\n\nComments should explain the why\nComments shouldn’t need to explain the what. If you can’t understand the code, refactor it.\nComments dont’ need to give the entire history that lead to a decision",
     "crumbs": [
       "Best practices feedback loop"
     ]
@@ -842,7 +832,7 @@
     "href": "modules/07-best-practices-feedback-loop.html#more-smaller-files",
     "title": "Best practices feedback loop",
     "section": "More smaller files",
-    "text": "More smaller files\n\nAgents can more easily load just the context they need with smaller, well-named files.\nIf you have very large files, ask to break them up.\n\nIf you can easily see a good category, ask for that.\nOtherwise brainstorm together to come up with a good solution.\nFor complicated moves, ask for a summary table and a todo list.",
+    "text": "More smaller files\n\nAgents can more easily load just the context they need with smaller, well-named files\nIf you have very large files, ask to break them up\n\nIf you can easily see a good category, ask for that\nOtherwise brainstorm together to come up with a good solution\nFor complicated moves, ask for a summary table and a todo list",
     "crumbs": [
       "Best practices feedback loop"
     ]
@@ -872,7 +862,7 @@
     "href": "modules/07-best-practices-feedback-loop.html#test-coverage",
     "title": "Best practices feedback loop",
     "section": "Test coverage",
-    "text": "Test coverage\n\nPreviously 100% test coverage was not worth it.\nProbably worth reconsidering now.",
+    "text": "Test coverage\n\nPreviously 100% test coverage was not worth it\nProbably worth reconsidering now",
     "crumbs": [
       "Best practices feedback loop"
     ]
@@ -892,7 +882,7 @@
     "href": "modules/07-best-practices-feedback-loop.html#overview",
     "title": "Best practices feedback loop",
     "section": "Overview",
-    "text": "Overview\n\nLLMs are very good at improving the performance of code.\nThey are better than me at reading the results of RProf().\nThey are better than me at writing C/C++ code.\nThey are not very good at experimental design.\nThey are not very good at managing complexity/performance tradeoffs.",
+    "text": "Overview\n\nLLMs are very good at improving the performance of code\nThey are better than me at reading the results of RProf()\nThey are better than me at writing C/C++ code\nThey are not very good at experimental design\nThey are not very good at managing complexity/performance tradeoffs",
     "crumbs": [
       "Best practices feedback loop"
     ]
@@ -912,7 +902,7 @@
     "href": "modules/07-best-practices-feedback-loop.html#cc",
     "title": "Best practices feedback loop",
     "section": "C/C++",
-    "text": "C/C++\n\nPreviously C++ (via Rcpp/cpp11) had good balance of effort vs. results\nNow for small amounts of compiled code, pure C has no dependencies and LLMs are good at writing it.\nYou will need to give it hints as to latest C API.",
+    "text": "C/C++\n\nPreviously C++ (via Rcpp/cpp11) had good balance of effort vs. results\nNow for small amounts of compiled code, pure C has no dependencies and LLMs are good at writing it\nYou will need to give it hints as to latest C API",
     "crumbs": [
       "Best practices feedback loop"
     ]
@@ -920,91 +910,91 @@
   {
     "objectID": "modules/slides/deep-thoughts.html#section",
     "href": "modules/slides/deep-thoughts.html#section",
-    "title": "Deep Thoughts",
+    "title": "Deep thoughts",
     "section": "",
-    "text": "🌌 Deep Thoughts\n(with apologies to Jack Handey)",
+    "text": "🌌 Deep thoughts\n(with apologies to Jack Handey)",
     "crumbs": [
-      "Deep Thoughts"
+      "Deep thoughts"
     ]
   },
   {
     "objectID": "modules/slides/deep-thoughts.html#section-1",
     "href": "modules/slides/deep-thoughts.html#section-1",
-    "title": "Deep Thoughts",
+    "title": "Deep thoughts",
     "section": "",
     "text": "Anyone who has attempted to gamify some experience knows that if you want to keep people hooked, make them feel like they’re always almost at the next level.\nVibe coding does this naturally.\nThe agent builds you something amazing in five minutes, then the 10% that’s wrong takes longer to fix than the 90% that was right took to build. But it never feels that way.\nIt always feels like you’re right on the precipice of completion.\n\nhelp! my husband is addicted to Claude Code. — Hilary Gridley",
     "crumbs": [
-      "Deep Thoughts"
+      "Deep thoughts"
     ]
   },
   {
     "objectID": "modules/slides/deep-thoughts.html#section-2",
     "href": "modules/slides/deep-thoughts.html#section-2",
-    "title": "Deep Thoughts",
+    "title": "Deep thoughts",
     "section": "",
     "text": "Vibe coding extremely scratches the male itch to monitor the situation. You stand there with your arms crossed, watching your little agents work, feeling like Jeff Bezos in a headset overseeing a rocket launch. Very powerful. Very in control. The situation is being monitored.\n\n\nhelp! my husband is addicted to Claude Code. — Hilary Gridley",
     "crumbs": [
-      "Deep Thoughts"
+      "Deep thoughts"
     ]
   },
   {
     "objectID": "modules/slides/deep-thoughts.html#section-3",
     "href": "modules/slides/deep-thoughts.html#section-3",
-    "title": "Deep Thoughts",
+    "title": "Deep thoughts",
     "section": "",
     "text": "Folks often assume what they lack are skills, when they often lack skills AND well-refined ideas.\n\nThe prototyping bottleneck — frank.computer",
     "crumbs": [
-      "Deep Thoughts"
+      "Deep thoughts"
     ]
   },
   {
     "objectID": "modules/slides/deep-thoughts.html#section-4",
     "href": "modules/slides/deep-thoughts.html#section-4",
-    "title": "Deep Thoughts",
+    "title": "Deep thoughts",
     "section": "",
     "text": "Terence Tao discussing a surprising math result with ChatGPT\n\n\nIt is remarkable that the jacobian is constant, that is an exceptional amount of cancellation. Does this polynomial map have any symmetry or other structure that makes this cancelation less miraculous?\n\nWhat stands out is the shape of the interaction. Tao starts his inquiry by noting a single, precise detail that intrigues him.\n\nCode is the byproduct — yagmin.com",
     "crumbs": [
-      "Deep Thoughts"
+      "Deep thoughts"
     ]
   },
   {
     "objectID": "modules/slides/deep-thoughts.html#section-5",
     "href": "modules/slides/deep-thoughts.html#section-5",
-    "title": "Deep Thoughts",
+    "title": "Deep thoughts",
     "section": "",
     "text": "Note what Tao is not doing.\nHe is not building a rich contextual background for the LLM to unpack. He does not list his credentials or say, “you are a mathematical genius, make no mistakes.”\nInstead, he is terse and precise. He asks narrow questions and gets narrow responses.\nKeep your requests narrow and specific. Let the output compound through repeated inquiries. Engage with the goal of improving your personal understanding.\n\nCode is the byproduct — yagmin.com",
     "crumbs": [
-      "Deep Thoughts"
+      "Deep thoughts"
     ]
   },
   {
     "objectID": "modules/slides/deep-thoughts.html#section-6",
     "href": "modules/slides/deep-thoughts.html#section-6",
-    "title": "Deep Thoughts",
+    "title": "Deep thoughts",
     "section": "",
     "text": "How do you construct shared understanding? By narrowing the LLM’s focus through domain-specific wording and keeping requests specific and cumulative.\nTao pins ChatGPT to a “deep mathematics” headspace through terminology and the specificity of his question.\nIf you don’t understand something, set the stage for the LLM and it will capably fill in the missing 20%.\n\nCode is the byproduct — yagmin.com",
     "crumbs": [
-      "Deep Thoughts"
+      "Deep thoughts"
     ]
   },
   {
     "objectID": "modules/slides/deep-thoughts.html#section-7",
     "href": "modules/slides/deep-thoughts.html#section-7",
-    "title": "Deep Thoughts",
+    "title": "Deep thoughts",
     "section": "",
     "text": "the relationship with the machine changes depending on the Job To Be Done\n\n\nplease argue with the insurance company for me, chase the refund, reschedule the meeting across six calendars, fill out the form, and do not invite me into a Delightful Collaborative Experience with the God Computer.\n\n\nbut if I sit down because I want to make music, handing me the finished song is a fairly spectacular misunderstanding…the process wasn’t “friction” on the way to the result.\n\n\nsometimes I want “do this for me,” sometimes “do this with me” or “show me how.” sometimes I just need enough of a boost to do something I couldn’t do before.\n\nThe task isn’t the job — Sunil Pai",
     "crumbs": [
-      "Deep Thoughts"
+      "Deep thoughts"
     ]
   },
   {
     "objectID": "modules/slides/deep-thoughts.html#if-it-hurts-do-it-more-often",
     "href": "modules/slides/deep-thoughts.html#if-it-hurts-do-it-more-often",
-    "title": "Deep Thoughts",
-    "section": "If It Hurts, Do It More Often",
-    "text": "If It Hurts, Do It More Often\n\nWhy?\n\nMany tasks easier when tackled in small chunks\nFeedback loops allow small course corrections\nPractice makes you better at it\n\nFrequencyReducesDifficulty — Martin Fowler",
+    "title": "Deep thoughts",
+    "section": "If it hurts, do it more often",
+    "text": "If it hurts, do it more often\n\nWhy?\n\nMany tasks easier when tackled in small chunks\nFeedback loops allow small course corrections\nPractice makes you better at it\n\nFrequencyReducesDifficulty — Martin Fowler",
     "crumbs": [
-      "Deep Thoughts"
+      "Deep thoughts"
     ]
   }
 ]
