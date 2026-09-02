@@ -38,7 +38,7 @@ deliverer: Hadley
 ## Basic advice
 
 * When you get started, pay attention to what it's doing
-* Can be useful to intervene when it's getting off track.
+* Can be useful to intervene when it's getting off track
 * Can also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out
 
 ## Git flow
@@ -47,7 +47,7 @@ deliverer: Hadley
 * Then, tell it when to commit
 * Then, it let it commit by itself 
 * Then, let it make the whole PR
-* (But NEVER EVER inflect Claude's writing on another human.)
+* (But NEVER EVER inflect Claude's writing on another human)
 
 # Medium-stakes tasks
 

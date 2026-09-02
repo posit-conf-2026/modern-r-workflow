@@ -52,7 +52,7 @@ usethis::create_package("~/desktop/compliment")
 * Tools are provided by the **harness**, e.g. Posit Assistant
 * LLM asks harness to run code; harness returns result to the LLM
 * Often requests many tool calls at once
-* These are called "parallel" calls, but don't actually run in parallel.
+* These are called "parallel" calls, but don't actually run in parallel
 * Can recognise with the thick line line
 
 ![Two read calls and three edit calls](../images/pa-parallel-calls.png)
@@ -86,7 +86,7 @@ usethis::create_package("~/desktop/compliment")
 
 ## Your turn
 
-* Try and prompt your agent to make it use each of the tool calls above.
+* Try and prompt your agent to make it use each of the tool calls above
 * What other tools are available?
 
 ## So what is an agent?
@@ -135,7 +135,7 @@ tar -xzf backup.tar.gz -C /tmp/restore --strip-components=1 -P
 
 ## What about sandboxes?
 
-* Use OS level sandboxing to only allow reads and writes to the current directory, and no network access.
+* Use OS level sandboxing to only allow reads and writes to the current directory, and no network access
 
 * Unfortunately that's not very useful
   * No package install
@@ -143,7 +143,7 @@ tar -xzf backup.tar.gz -C /tmp/restore --strip-components=1 -P
   * No GitHub
   * No web search
 
-* I remain optimistic that it's possible to overcome these problems, but current implementations are painful.
+* I remain optimistic that it's possible to overcome these problems, but current implementations are painful
 
 ## Auto-mode
 
@@ -206,21 +206,21 @@ What other potentially dangerous operations can you get Posit Assistant to do? (
 * (This is also what you pay in ellmer)
 
 * Average engineers spend $150-$250 / month, i.e. $8-12 / day
-* High users spend $3,000 / month, i.e. $150 / day.
+* High users spend $3,000 / month, i.e. $150 / day
 
 ## My views on cost-benefit have changed
 
 * I used to think that Anthropic models was worth the premium
 * But the relative cost has increased and output quality has decreased (code is still fine, but its writing is painful)
 * Kimi K3 is excellent. Somewhere between Opus and Fable in code quality, but a much better writer, and only costs 75% of Sonnet (thanks to tokenizer).
-* All models since April 16, 2026 (Claude Opus 4.7) use a new tokenizer that uses ~20% more tokens, so even though the per-token prices didn't change, the overall cost did.
+* All models since April 16, 2026 (Claude Opus 4.7) use a new tokenizer that uses ~20% more tokens, so even though the per-token prices didn't change, the overall cost did
 * And Anthropic models seem to be producing more loquacious output, which also costs more money 🤔
 
 ## So how can you tell what you're spending?
 
 * Harnesses by model providers don't tend to make the cost obvious (I think you can imagine why)
 * Posit Assistant displays a lot of information (and we're working hard to make it better)
-* [AgentsView](https://www.agentsview.io) is a good retrospective tool that works with many harnesses.
+* [AgentsView](https://www.agentsview.io) is a good retrospective tool that works with many harnesses
 * Two important facts to know:
   * Conversations are additive
   * Cache is king
@@ -245,7 +245,7 @@ What other potentially dangerous operations can you get Posit Assistant to do? (
 
 ## Your turn
 
-* Look at what you've spent in previous PA conversations.
+* Look at what you've spent in previous PA conversations
 *
 * Optional: download and install AgentsView. Where is your LLM spend going?
 

@@ -50,8 +50,8 @@ usethis::use_tidy_agents()
 ## Your turn
 
 * Update `AGENTS.md` to records some specific conventions for this package
-* e.g.: Use British English; give over the top compliments.
-* Then ask it to update your code, or add a new function.
+* e.g.: Use British English; give over the top compliments
+* Then ask it to update your code, or add a new function
 
 # Skills
 

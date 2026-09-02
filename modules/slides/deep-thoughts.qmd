@@ -1,5 +1,5 @@
 ---
-title: "Deep Thoughts"
+title: "Deep thoughts"
 format:
   revealjs:
     slide-number: true
@@ -26,7 +26,7 @@ Reactions happen in the Discord channel, not on-slide.
 ## {background-color="#1a1a2e"}
 
 ::: {style="text-align: center; color: white;"}
-### 🌌 Deep Thoughts
+### 🌌 Deep thoughts
 
 *(with apologies to Jack Handey)*
 :::
@@ -103,7 +103,7 @@ Reactions happen in the Discord channel, not on-slide.
 
 <small>[The task isn't the job](https://sunilpai.dev/posts/the-task-isnt-the-job/) — Sunil Pai</small>
 
-## If It Hurts, Do It More Often {.center .smaller}
+## If it hurts, do it more often {.center .smaller}
 
 ![](../../images/frequency-reduces-difficulty-graph.png){height="380"}
 

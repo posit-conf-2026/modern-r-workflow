@@ -17,11 +17,11 @@ You need:
     ![](images/signs-you-need-to-update-positron-upper-right.png)
     :::
 
-  - You can also check the application menu (e.g. on macOS, the **Positron** menu): if there's an option like "Restart to Update", choose it.
+  - You can also check the application menu (e.g. on macOS, the **Positron** menu): if there's an option like "Restart to Update", choose it
 
     ![](images/signs-you-need-to-update-positron-menu.png){width="60%"}
 
-* A recent version of R (>= 4.2), but preferably the current version, which is R 4.6.1.
+* A recent version of R (>= 4.2), but preferably the current version, which is R 4.6.1
 
     - <https://cloud.r-project.org/>
     - If you're updating R, consider using rig to do so: <https://rig.r-lib.org>. Then, in a terminal, do `rig add release`.
@@ -35,7 +35,7 @@ You need:
 * Sign up for Posit AI Pass **using the same email address as your conf/workshop registration**. You can start a free trial and, **if your email matches what we have**, we can give you credits to use on the day of the workshop.
 
     - <https://posit.ai/>
-    - Open [Posit Assistant](https://assistant.posit.co/) in Positron and sign in with your Posit AI Pass.
+    - Open [Posit Assistant](https://assistant.posit.co/) in Positron and sign in with your Posit AI Pass
     - Say "hi" to Posit Assistant to check that all is well. Expect a response along the lines "Hello, how can I help?".
 
 * Optional: Get the development version of [Posit Assistant](https://assistant.posit.co/) by pressing Cmd/Ctrl + Shift + P to open the command palette and run `Posit Assistant: Check for newer dev build`. Follow the prompts to restart Posit Assistant.

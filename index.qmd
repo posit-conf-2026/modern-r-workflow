@@ -1,5 +1,5 @@
 ---
-title: "Modern R Workflow (ft. Positron and AI)"
+title: "Modern R workflow (ft. Positron and AI)"
 ---
 
 > September 14, 2026

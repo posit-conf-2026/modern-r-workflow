@@ -142,7 +142,7 @@ Sign up for Posit AI Pass, so you're ready to use Posit Assistant during the wor
 -   Sign up: <https://posit.ai>
 -   **Make sure to use the same email address as you used to register for conf!** This is what lets us give you free credits to use today.
 
-## Check that Posit Assistant is ALIVE
+## Check that Posit Assistant is alive
 
 In Posit Assistant, sign in with your Posit AI Pass.
 

@@ -1,4 +1,4 @@
-# Modern R Workflow (ft. Positron and AI)
+# Modern R workflow (ft. Positron and AI)
 
 Workshop materials for *Modern R Workflow (ft. Positron and AI)*, a one-day workshop at posit::conf(2026) by Hadley Wickham and Jenny Bryan.
 
