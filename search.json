@@ -21,7 +21,7 @@
     "href": "modules/slides/00-welcome-slides.html#venue-information",
     "title": "Welcome",
     "section": "Venue information",
-    "text": "Venue information\n\nMeditation/Prayer Room: Room 332\nMother’s Room: Room 333\nSpeakers Lounge: Room 334\nRestroom locations: TBD\n\nMore detailed maps are on the way and will be added once available."
+    "text": "Venue information\n\nMeditation/Prayer Room: Room 332\nMother’s Room: Room 333\nSpeaker’s Lounge: Room 334\nGender-neutral bathrooms: 4th floor, one on either side of ballroom"
   },
   {
     "objectID": "modules/slides/00-welcome-slides.html#workshop-policies",
@@ -70,7 +70,7 @@
     "href": "modules/slides/00-welcome-slides.html#check-your-r-setup",
     "title": "Welcome",
     "section": "Check your R setup",
-    "text": "Check your R setup\nLet’s make sure everyone’s R installation is ready to go.\n\nConfirm you’re on a recent version of R. Ideally R 4.6.\nInstall pak, if you haven’t already:\ninstall.packages(\"pak\")\nInstall/update devtools and friends:\npak::pak(\"devtools\")\nRun a situation report and check that everything looks good:\ndevtools::dev_sitrep()"
+    "text": "Check your R setup\nLet’s make sure everyone’s R installation is ready to go.\n\nConfirm you’re on a recent version of R. Ideally R 4.6.\nInstall pak, if you haven’t already:\ninstall.packages(\"pak\")\nInstall/update devtools and friends:\npak::pak(\"devtools\")\n# or maybe the more update-happy version:\npak::pak(\"devtools\", upgrade = TRUE)\nRun a situation report and check that everything looks good:\ndevtools::dev_sitrep()"
   },
   {
     "objectID": "modules/slides/00-welcome-slides.html#posit-ai-pass",

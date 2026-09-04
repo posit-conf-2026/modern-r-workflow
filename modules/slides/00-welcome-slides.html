@@ -229,10 +229,9 @@
 <ul>
 <li><p>Meditation/Prayer Room: Room 332</p></li>
 <li><p>Mother’s Room: Room 333</p></li>
-<li><p>Speakers Lounge: Room 334</p></li>
-<li><p>Restroom locations: TBD</p></li>
+<li><p>Speaker’s Lounge: Room 334</p></li>
+<li><p>Gender-neutral bathrooms: 4th floor, one on either side of ballroom</p></li>
 </ul>
-<p>More detailed maps are on the way and will be added once available.</p>
 </section>
 <section id="workshop-policies" class="slide level2">
 <h2>Workshop policies</h2>
@@ -296,7 +295,9 @@
 <li><p>Install pak, if you haven’t already:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a><span class="fu">install.packages</span>(<span class="st">"pak"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Install/update devtools and friends:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"devtools"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"devtools"</span>)</span>
+<span id="cb2-2"><a aria-label="2"></a><span class="co"># or maybe the more update-happy version:</span></span>
+<span id="cb2-3"><a aria-label="3"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"devtools"</span>, <span class="at">upgrade =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Run a situation report and check that everything looks good:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>devtools<span class="sc">::</span><span class="fu">dev_sitrep</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ol>
