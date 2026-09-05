@@ -2,4 +2,8 @@
 title: "Positron tour"
 ---
 
-TODO
+[Slides (PDF)](slides/01-hello-positron.pdf)
+
+```{=html}
+<iframe src="slides/01-hello-positron.pdf" style="width: 100%; aspect-ratio: 16 / 9; border: 1px solid #dee2e6;"></iframe>
+```
