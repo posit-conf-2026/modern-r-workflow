@@ -30,6 +30,8 @@ You need:
 
     - `install.packages("pak")`: [pak](https://pak.r-lib.org/) is our preferred way to install packages
     - `pak::pak("devtools")`: installs [devtools](https://devtools.r-lib.org/)
+    pak::pak("devtools")
+    - `pak::pak("devtools", upgrade = TRUE)`: more aggressive version of the above that brings all of devtools's dependencies up to their latest release
     - `devtools::dev_sitrep()`: gives a package development "situation report"
 
 * Sign up for Posit AI Pass **using the same email address as your conf/workshop registration**. You can start a free trial and, **if your email matches what we have**, we can give you credits to use on the day of the workshop.
