@@ -13,7 +13,7 @@ title: "Positron tour"
 Take about 10 minutes to try one or more of the following activities in Positron
 
 - [Positron bingo](#activity-a)
-- [Get comfy with Positron](#activity-b)
+- [Customize your Positron settings](#activity-b)
 - [Multiple R sessions (option 1 of 2)](#activity-c)
 - [Multiple R versions (option 2 of 2)](#activity-d)
 - [Format some ugly R code](#activity-e)
@@ -43,7 +43,7 @@ For the Data Explorer cells: first run `View(mtcars)` in the Console.
 [Solutions](https://posit-dev.github.io/positron-workshop/bingo-solutions/index.html){target="_blank"}
 :::
 
-## Get comfy with Positron {#activity-b}
+## Customize your Positron settings {#activity-b}
 
 If you're new-ish to Positron, there's a good chance you haven't tuned it to your taste yet. Pick a few of the following to try:
 
@@ -53,17 +53,23 @@ If you're new-ish to Positron, there's a good chance you haven't tuned it to you
 - Subscribe to the "dailies" release channel if you want to try new features early, and don't mind occasional instability
 - Open the Data Explorer on a data frame (e.g. `View(mtcars)` or click one in the Variables pane) and try sorting, filtering, or summarizing a column
 - Open the Packages pane and check whether any of your packages have updates available
-- If you like inline Quarto output, turn that setting on and test drive one of you Quarto documents
+- If you like inline Quarto output, turn that setting on and test drive one of your Quarto documents
+- If you're on macOS, experiment with Positron native tabs support as a way of managing multiple windows
 - Poke around other settings you care about, such as those for the R, Quarto, or Shiny extensions
 
 ::: {.callout-note collapse="true"}
 ## Where to find these
 
+- Layout picker: top-right corner of the window
 - How to get to your Settings:
   * Cmd/Ctrl + ,
   * the gear icon in the lower left
   * via the command palette: Cmd/Ctrl + Shift + P, then "Preferences: Open Settings"
-- Layout picker: top-right corner of the window
+- RStudio keybindings: `workbench.keybindings.rstudioKeybindings`
+- Quiet mode: `positron.r.quietMode` (suppresses R's startup banner)
+- Dailies release channel: `update.positron.channel`, set to `"dailies"`
+- Inline Quarto output: `quarto.inlineOutput.enabled`
+- Native tabs (macOS only): `window.nativeTabs` (you'll have to restart Positron to apply a change)
 :::
 
 ## Multiple R sessions (option 1 of 2) {#activity-c}
