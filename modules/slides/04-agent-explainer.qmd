@@ -33,7 +33,7 @@ usethis::create_package("~/desktop/compliment")
   * Tests live in `tests/testhat/`
 * We'll talk more about the pieces and the workflow later
 
-## Your turn
+## Your turn {.your-turn}
 
 * Use the same prompt as me. It's underspecified ask so we're going to get lots of variation. That's part of the fun!
 * Manually approve a few writes
@@ -84,7 +84,7 @@ usethis::create_package("~/desktop/compliment")
 * `webfetch` reads a web page
 * `search` searches directory for matching text
 
-## Your turn
+## Your turn {.your-turn}
 
 * Try and prompt your agent to make it use each of the tool calls above
 * What other tools are available?
@@ -103,7 +103,7 @@ I think the cleanest definition is that the dangers are irreversible action, i.e
 * Sending an email
 * Revealing a secret (API key, password, ...)
 
-## Your turn
+## Your turn {.your-turn}
 
 What other irreversible actions are you worried about?
 What ways do you know to protect yourself?
@@ -170,7 +170,7 @@ writeLines(letters, "~/desktop/junk/tmp2.txt")
 
 > Delete ~/desktop/junk
 
-## Your turn
+## Your turn {.your-turn}
 
 What other potentially dangerous operations can you get Posit Assistant to do? (Don't do anything legit dangerous but see if you can trick PA into doing something that's clearly dangerous in general.)
 
@@ -243,7 +243,7 @@ What other potentially dangerous operations can you get Posit Assistant to do? (
   * KimiK3: no guarantees
 * But if you resume a session the next day, be 10x the cost of the last request
 
-## Your turn
+## Your turn {.your-turn}
 
 * Look at what you've spent in previous PA conversations
 *

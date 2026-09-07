@@ -25,7 +25,7 @@ usethis::use_tidy_agents()
 > Create a new R package called compliment in the current directory. 
 > It should generate randomized compliments.
 
-## Your turn
+## Your turn {.your-turn}
 
 * Try it yourself. What differences do you notice in the workflow?
 * Read `AGENTS.md`. What advice does it contain?
@@ -47,7 +47,7 @@ usethis::use_tidy_agents()
 * Seriously, I think that's my advice
 * Is it a lot of text that is only sometimes important? Use a skill.
 
-## Your turn
+## Your turn {.your-turn}
 
 * Update `AGENTS.md` to records some specific conventions for this package
 * e.g.: Use British English; give over the top compliments
@@ -55,7 +55,7 @@ usethis::use_tidy_agents()
 
 # Skills
 
-## Your turn
+## Your turn {.your-turn}
 
 `use_tidy_agents()` includes three skills. 
 

@@ -4,6 +4,42 @@ duration: 90
 deliverer: Hadley
 ---
 
+## Goals
+
+* Introduce/review the classic package development workflow
+* Introduce key AI-powered workflows
+
+## The classic workflow
+
+The classic workflow is unchanged:
+
+1. Write a function in `R/`
+1. `load_all()` (⌘⇧L) and try it in the console
+1. Write tests with `use_test()`
+1. `test()` (⌘⇧T) and iterate until they passc
+1. `document()` (⌘⇧D) to update docs
+1. `check()` (⌘⇧E) at the end
+
+(Windows/Linux: use Ctrl instead of ⌘)
+
+The AI just does more of the typing; you still own the loop
+
+## Your turn {.your-turn}
+
+Try out the workflow with your compliments package.
+
+* Start with a fresh Positron instance, and confirm you can't run your `compliments()` function.
+* Run `devtools::load_all()` or use the keyboard shortcut and confirm that you can. Make a simple change, re-load, re-run and check that you see it.
+* 
+
+## What changes with AI
+
+* You describe the function; the agent writes it
+* You still run `load_all()` and play with the result — this is your most important feedback
+* Ask the agent to write tests, but review them carefully
+* Let the agent iterate on `test()` failures
+* `check()` stays the final gate
+
 ## General principles
 
 * You are still important and still in control!
@@ -11,14 +47,7 @@ deliverer: Hadley
 * Start slow and grow your confidence
 * Never make another human read AI slop
 
-### R workflow
-
-* Write code
-* Write tests
-* Iterate until they pass
-* R CMD check at the end
-
-## Basic workflows
+## AI workflows
 
 <!-- TODO: make a diagram for this -->
 
@@ -95,7 +124,7 @@ Fine to dump a stream of consciousness and let the agent figure it out. I think 
 
 > https://github.com/r-lib/testthat/issues/2328
 
-## Your turn (big)
+## Your turn (big) {.your-turn}
 
 * stringb
 

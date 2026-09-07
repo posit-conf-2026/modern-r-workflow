@@ -87,6 +87,16 @@ deliverer: Hadley
 
 * Previously 100% test coverage was not worth it
 * Probably worth reconsidering now
+* You can ask an agent to do this
+
+## Test hygiene
+
+* Tests should not produce output
+* Each test should ideally be a standalone function
+
+## `local_` functions
+
+
 
 ## Test maintenance
 
