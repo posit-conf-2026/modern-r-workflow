@@ -4,7 +4,7 @@ duration: 90
 deliverer: Hadley
 ---
 
-# The best practices virtuouos cycle
+# The best practices virtuous cycle
 
 * LLMs both amplify best practices, and make them more achievable
 * As you improve tests and docs, it makes it easier for agents to work with your package
@@ -50,7 +50,7 @@ deliverer: Hadley
 
 * Comments should explain the why
 * Comments shouldn't need to explain the what. If you can't understand the code, refactor it.
-* Comments dont' need to give the entire history that lead to a decision
+* Comments don't need to give the entire history that led to a decision
 
 ## More smaller files
 
@@ -59,7 +59,7 @@ deliverer: Hadley
   * If you can easily see a good category, ask for that
   * Otherwise brainstorm together to come up with a good solution
   * For complicated moves, ask for a summary table and a todo list
-* Good file names really important!
+* Good file names are really important!
 
 # Unit testing
 
@@ -73,7 +73,7 @@ deliverer: Hadley
 ## Your job is to:
 
 * Keep them well organised
-  * "Tests for R/{foo}.R should live in tests/testhat/test-{foo}.R"
+  * "Tests for R/{foo}.R should live in tests/testthat/test-{foo}.R"
 * Keep them fast
   * "Run the tests in parallel"
   * "Use SlowReporter and speed up the slowest tests"
@@ -86,7 +86,6 @@ deliverer: Hadley
 * Previously 100% test coverage was not worth it
 * Probably worth reconsidering now
 * You can ask an agent to do this
-* `devtools::test_coverage()` has token minimal view
 
 ## Test hygiene
 
@@ -95,12 +94,12 @@ deliverer: Hadley
   * Each test should be standalone function
 * But they will also copy bad patterns in existing code
 * Easier than ever to fix!
-* Might tell you agent to read `?testthat::set_state_inspector`
+* Might tell your agent to read `?testthat::set_state_inspector`
 
 ## `local_` functions
 
 * Agents not great at spotting opportunities for code de-duplication
-* You may want to explicitly it tell it to create [`local_`](https://r-pkgs.org/testing-advanced.html#create-and-destroy-a-local-useful_thing) helpers.
+* You may want to explicitly tell it to create [`local_`](https://r-pkgs.org/testing-advanced.html#create-and-destroy-a-local-useful_thing) helpers.
 
 # Performance
 
@@ -137,7 +136,7 @@ deliverer: Hadley
 
 # Downstream changes
 
-* You made a backward incompatbile change or want to help people handle deprecations?
+* You made a backward incompatible change or want to help people handle deprecations?
 * Ask your agent to do it! 
 * <https://blog.davisvaughan.com/posts/2026-01-09-claude-200-pull-requests/>
 

@@ -11,7 +11,7 @@ deliverer: Hadley
   * Avoid repeating yourself across multiple conversations
   * Save tokens by avoiding common wheel-spinning
 * We'll focus on `AGENTS.md` (always loaded) and skills (loaded on demand)
-* Lets start with an example
+* Let's start with an example
 
 # `AGENTS.md`
 
@@ -22,7 +22,7 @@ usethis::create_package("~/desktop/compliment2")
 usethis::use_tidy_agents()
 ```
 
-> Create a new R package called compliment in the current directory. 
+> Create a new R package called compliment in the current directory.
 > It should generate randomized compliments.
 
 ## Your turn {.your-turn}
@@ -49,15 +49,15 @@ usethis::use_tidy_agents()
 
 ## What belongs there?
 
-* Have you told an agent to do it three times? Put it in `AGENTS.md`.
+* Have you told an agent to do it three times? Put it in `AGENTS.md`
 * Seriously, I think that's the totality of my advice. Keep it minimal!
 * `AGENTS.md` is included in every request and you're paying for it
-* Overfitting it to one model will lead to worse results when the model inevitably changes (e.g. you can't make Claude write good)
-* Is it a lot of text that is only sometimes important? Use a skill.
+* Overfitting it to one model will lead to worse results when the model inevitably changes (e.g. you can't make Claude write good) <!-- FIXME: "write good" is ungrammatical — intentional joke or should it be "write well"? -->
+* Is it a lot of text that is only sometimes important? Use a skill
 
 ## Your turn {.your-turn}
 
-* Update the project `AGENTS.md` to records some specific conventions for this package
+* Update the project `AGENTS.md` to record some specific conventions for this package
 * e.g.: Use British English; give over-the-top compliments; pretend to be your favourite R developer
 * Then ask it to update your code, or add a new function
 
@@ -65,9 +65,9 @@ usethis::use_tidy_agents()
 
 ## Your turn {.your-turn}
 
-`use_tidy_agents()` includes three skills. 
+`use_tidy_agents()` includes three skills.
 
-* What are they? 
+* What are they?
 * How do you think they work?
 * How can you tell when a skill is used? (Look back at your history above, or try asking your agent to deprecate a function.)
 
@@ -83,8 +83,8 @@ usethis::use_tidy_agents()
 ## Other forms of skills
 
 * Directory of markdown files with index/README
-* [Quarto website](https://quarto.org/docs/websites/website-llms.html) 
-  * Use `llms-text: true` 
+* [Quarto website](https://quarto.org/docs/websites/website-llms.html)
+  * Use `llms-text: true`
   * Basic idea: <https://design.tidyverse.org>
 * R documentation
 * R functions
@@ -99,8 +99,8 @@ usethis::use_tidy_agents()
 ## Creating a skill
 
 * Where do they live? I don't know
-* Just ask an agent to create the file for you :) 
-* Don't ask the agent to write the skill for you 
+* Just ask an agent to create the file for you :)
+* Don't ask the agent to write the skill for you
   * Unless you're using a smarter than usual model
   * Or extracting important bits from a conversation
 

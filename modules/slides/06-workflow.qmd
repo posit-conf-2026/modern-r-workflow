@@ -32,7 +32,7 @@ In the past we've talked about the individual components in detail. I no longer 
 Try out the workflow with your compliments package.
 
 1. Start with a fresh Positron instance, and confirm you can't run your `compliment()` function.
-1. Load the code and confirm that you can run the function now. 
+1. Load the code and confirm that you can run the function now.
 1. Make a simple change, re-load, re-run and check that you see it in the output.
 1. Tweak the documentation, re-document, and look at the help.
 1. Edit a test so it fails, and check that you see the failure.
@@ -41,16 +41,16 @@ Stuck? Ask an AI or TA.
 
 ## What changes with AI?
 
-* **Code**: you describe it & agent writes it. Still really important to try it out interactively to see how it feels.
+* **Code**: you describe it & the agent writes it. Still really important to try it out interactively to see how it feels.
 * **Tests**: agents love to write tests. Your job is to steer towards minimalism.
-* **Documentation**: agent fine for a first pass but human-to-human communication is possibly the most important activity you can engage in.
+* **Documentation**: agents are fine for a first pass but human-to-human communication is possibly the most important activity you can engage in.
 * **Check**: `R CMD check` just as important but agents do a really good job at fixing any problems you find.
 
 ## General principles
 
 * You are still important and still in control!
 * Choose what to invest in (e.g. code, tests, planning, design, docs)
-* Start small and grow scope and you grow confidence
+* Start small and grow scope as you grow confidence
 * NEVER make another human read AI slop
 * Restart R and reset your agent frequently
 
@@ -69,7 +69,7 @@ Stuck? Ask an AI or TA.
 
 > Fix <https://github.com/r-lib/testthat/issues/2344>
 
-> Fix https://github.com/r-lib/testthat/issues/2317
+> Fix <https://github.com/r-lib/testthat/issues/2317>
 
 ## Basic advice
 
@@ -112,7 +112,7 @@ Pay attention! Try to read everything it does.
 
 ## Example workflow
 
-> Read <https://github.com/r-lib/testthat/issues/2334>. 
+> Read <https://github.com/r-lib/testthat/issues/2334>.
 > Construct a minimal reprex, then write a brief plan for fixing the problem.
 > Save your plan in plan.md.
 
@@ -140,11 +140,11 @@ Pay attention! Try to read everything it does.
 ## Live demo
 
 * <https://github.com/r-lib/testthat/issues/2328>
-* https://github.com/hadley/data-diff
+* <https://github.com/hadley/data-diff>
 
 ## Your turn {.your-turn}
 
-I have always wanted a package that provided the stringr API but without the stringi dependency. (This makes the package less good at handling a wide range of international text cases, but would be worth it for many common package development tasks.) This is now easily in scope for a frontier model. 
+I have always wanted a package that provided the stringr API but without the stringi dependency. (This makes the package less good at handling a wide range of international text cases, but would be worth it for many common package development tasks.) This is now easily in scope for a frontier model.
 
 Work with your agent to come up with a design (no need to implement). What's important to include? What can you skip? Start with an analysis of `str_match()` vs the base equivalents. Do you think you need a `str_length()` wrapper?
 
@@ -153,7 +153,7 @@ Work with your agent to come up with a design (no need to implement). What's imp
 ## Voice
 
 * Some people really like using voice inputs
-* Pick your favourite open source app 
+* Pick your favourite open source app
 * Local models are now very good at transcription
 * Fine to dump a stream of consciousness and let the agent figure it out
 * But good to ask for a plan to ensure that you're both on the same page

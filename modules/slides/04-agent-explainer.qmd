@@ -6,7 +6,7 @@ deliverer: Hadley
 
 ## Goals
 
-* Introduce you to package development with Posit Assitant
+* Introduce you to package development with Posit Assistant
 * Talk about how it works
 * Help you understand the risks associated with using agents
 * Give you practical cost control techniques
@@ -35,7 +35,7 @@ usethis::create_package("~/desktop/compliment")
 
 ## Your turn {.your-turn}
 
-* Use the same prompt as me. It's underspecified ask so we're going to get lots of variation. That's part of the fun!
+* Use the same prompt as me. It's an underspecified ask, so we're going to get lots of variation. That's part of the fun!
 * Manually approve a few writes
 * Then allow all
 * Make sure your package has tests and Git
@@ -57,10 +57,7 @@ usethis::create_package("~/desktop/compliment")
 
 ## Parallel tool calls
 
-TODO: figure out why image isn't rendering?
-
 ![Two read calls and three edit calls](../../images/pa-parallel-calls.png)
-
 
 ## What are some common calls?
 
@@ -83,11 +80,11 @@ TODO: figure out why image isn't rendering?
 
 ## Some examples
 
-* Kimi K3 (model) on posit.ai (provider) with Posit Assitant (harness)
-* Opus 5 (model) on posit.ai (provider) with Posit Assitant (harness)
-* Opus 5 (model) from claude (provider) in Claude Code (harness)
-* GPT-5.3 (model) from AWS Bedrock (provider) in Posit Assitant (harness)
-* GPT-5.3 (model) from OpenAI (provider) in codex (harness)
+* Kimi K3 (model) on posit.ai (provider) with Posit Assistant (harness)
+* Opus 5 (model) on posit.ai (provider) with Posit Assistant (harness)
+* Opus 5 (model) from Claude (provider) in Claude Code (harness)
+* GPT-5.3 (model) from AWS Bedrock (provider) in Posit Assistant (harness)
+* GPT-5.3 (model) from OpenAI (provider) in Codex (harness)
 
 ## Your turn {.your-turn}
 
@@ -108,7 +105,7 @@ An LLM running in a loop, using tools, to achieve a goal
 
 I think the cleanest definition is that the dangers are irreversible action, i.e.:
 
-* Editing file (without git)
+* Editing a file (without git)
 * Deleting a file or database table (without a backup)
 * Sending an email
 * Revealing a secret (API key, password, ...)
@@ -130,7 +127,7 @@ What ways do you know to protect yourself?
 ## Ask for permission
 
 * IMO constantly asking for permission is just security theatre
-* 99% of LLM actions are fine, so you quickly get trained to always click ok
+* 99% of LLM actions are fine, so you quickly get trained to always click OK
 * So then you just click "Approve always"
 * Matching command prefixes doesn't work
 
@@ -180,7 +177,7 @@ With all three, a prompt injection attack can exfiltrate your data.
 ## Reasoning about LLM behaviour is weird
 
 <!--
-Jenny had to do this to fix build and deploy. Otherwise we need to install R, even thought there's no actually executable R code. Quarto can't tell that.
+Jenny had to do this to fix build and deploy. Otherwise we need to install R, even though there's no actually executable R code. Quarto can't tell that.
 ```r
 dir.create("~/desktop/family-data")
 writeLines(letters, "~/desktop/family-data/precious-memories.txt")
@@ -219,7 +216,7 @@ Can you trick PA into doing something bad? Some ideas you might try:
   * Codex: $20 / month, $100 / month
   * Claude Code: $20 / month, $100 / month
 * These are very generous; you get 20-80x the value of API pricing
-* BUT you can only use in provider harnesses (i.e. not Posit Assitant)
+* BUT you can only use them in provider harnesses (i.e. not Posit Assistant)
 
 ## Enterprise plans are different
 
@@ -234,9 +231,9 @@ Can you trick PA into doing something bad? Some ideas you might try:
 
 ## My views on cost-benefit have changed
 
-* I used to think that Anthropic models was worth the premium
+* I used to think that Anthropic models were worth the premium
 * But the relative cost has increased and output quality has decreased (code is still fine, but its writing is painful)
-* Kimi K3 is excellent. Somewhere between Opus and Fable in code quality, but a much better writer, and only costs 75% of Sonnet (thanks to tokenizer).
+* Kimi K3 is excellent. Somewhere between Opus and Fable in code quality, but a much better writer, and only costs 75% of Sonnet (thanks to its tokenizer).
 * All models since April 16, 2026 (Claude Opus 4.7) use a new tokenizer that uses ~20% more tokens, so even though the per-token prices didn't change, the overall cost did
 * And Anthropic models seem to be producing more loquacious output, which also costs more money 🤔
 
@@ -269,8 +266,8 @@ Can you trick PA into doing something bad? Some ideas you might try:
 * Very hard to reason about, not least because the providers differ so much:
   * Claude: 5 minutes / 1 hour (2x cost)
   * OpenAI: 30 minutes
-  * KimiK3: no guarantees
-* But if you resume a session the next day, be 10x the cost of the last request
+  * Kimi K3: no guarantees
+* But if you resume a session the next day, expect 10x the cost of the last request
 
 ## Your turn {.your-turn}
 
@@ -281,7 +278,7 @@ Can you trick PA into doing something bad? Some ideas you might try:
 
 ## Posit Assistant currently most compelling inside the enterprise
 
-* Optimistically, it's 2x better than Claude code/codex
+* Optimistically, it's 2x better than Claude Code/Codex
 * But you have to pay 20-80x as much to use it with an API key (or via posit.ai)
 * So ask for it if you use RStudio/Positron for work, but otherwise we accept it's probably not worth it for you to use it
 * We are closely tracking Anthropic/OpenAI opening up their plans to other harnesses
@@ -296,6 +293,6 @@ Can you trick PA into doing something bad? Some ideas you might try:
 ## What if you can't use it?
 
 * The Claude Code and Codex harnesses are also very good
-* I have used both VS Code/Positron extensions and just their CLI's in the terminal
-* Downside of both extensions is that they can't find `quarto` and `air` which are bundled with Positron. You'll need to explicitly tell them to that they're bundled with Positron.
-* We recommend pairing with <https://github.com/posit-dev/mcp-repl> or similar to get access to a persistent R/python environment
+* I have used both VS Code/Positron extensions and just their CLIs in the terminal
+* Downside of both extensions is that they can't find `quarto` and `air`, which are bundled with Positron. You'll need to explicitly tell them that they're bundled with Positron.
+* We recommend pairing with <https://github.com/posit-dev/mcp-repl> or similar to get access to a persistent R/Python environment
