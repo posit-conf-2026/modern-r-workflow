@@ -241,7 +241,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Get your R installation ready for package development work. In R:</p>
 <ul>
 <li><code>install.packages("pak")</code>: <a href="https://pak.r-lib.org/">pak</a> is our preferred way to install packages</li>
-<li><code>pak::pak("devtools")</code>: installs <a href="https://devtools.r-lib.org/">devtools</a></li>
+<li><code>pak::pak("devtools")</code>: installs <a href="https://devtools.r-lib.org/">devtools</a> pak::pak(“devtools”)</li>
+<li><code>pak::pak("devtools", upgrade = TRUE)</code>: more aggressive version of the above that brings all of devtools’s dependencies up to their latest release</li>
 <li><code>devtools::dev_sitrep()</code>: gives a package development “situation report”</li>
 </ul></li>
 <li><p>Sign up for Posit AI Pass <strong>using the same email address as your conf/workshop registration</strong>. You can start a free trial and, <strong>if your email matches what we have</strong>, we can give you credits to use on the day of the workshop.</p>

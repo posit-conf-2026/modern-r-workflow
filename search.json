@@ -4,7 +4,7 @@
     "href": "setup.html",
     "title": "Setup",
     "section": "",
-    "text": "Please complete the following steps before the workshop so we can dive straight into the material.\nYou need:\n\nA recent version of Positron, preferably the latest release. Go here:\n\nhttps://positron.posit.co/download.html\nIf you already have Positron, check for an update! A red badge on the gear icon (lower-left or upper-right, depending on your layout) means an update is available:\n\n\n\n\n\n\n\n\n\n\nYou can also check the application menu (e.g. on macOS, the Positron menu): if there’s an option like “Restart to Update”, choose it\n\n\nA recent version of R (&gt;= 4.2), but preferably the current version, which is R 4.6.1\n\nhttps://cloud.r-project.org/\nIf you’re updating R, consider using rig to do so: https://rig.r-lib.org. Then, in a terminal, do rig add release.\n\nGet your R installation ready for package development work. In R:\n\ninstall.packages(\"pak\"): pak is our preferred way to install packages\npak::pak(\"devtools\"): installs devtools\ndevtools::dev_sitrep(): gives a package development “situation report”\n\nSign up for Posit AI Pass using the same email address as your conf/workshop registration. You can start a free trial and, if your email matches what we have, we can give you credits to use on the day of the workshop.\n\nhttps://posit.ai/\nOpen Posit Assistant in Positron and sign in with your Posit AI Pass\nSay “hi” to Posit Assistant to check that all is well. Expect a response along the lines “Hello, how can I help?”.\n\nOptional: Get the development version of Posit Assistant by pressing Cmd/Ctrl + Shift + P to open the command palette and run Posit Assistant: Check for newer dev build. Follow the prompts to restart Posit Assistant.",
+    "text": "Please complete the following steps before the workshop so we can dive straight into the material.\nYou need:\n\nA recent version of Positron, preferably the latest release. Go here:\n\nhttps://positron.posit.co/download.html\nIf you already have Positron, check for an update! A red badge on the gear icon (lower-left or upper-right, depending on your layout) means an update is available:\n\n\n\n\n\n\n\n\n\n\nYou can also check the application menu (e.g. on macOS, the Positron menu): if there’s an option like “Restart to Update”, choose it\n\n\nA recent version of R (&gt;= 4.2), but preferably the current version, which is R 4.6.1\n\nhttps://cloud.r-project.org/\nIf you’re updating R, consider using rig to do so: https://rig.r-lib.org. Then, in a terminal, do rig add release.\n\nGet your R installation ready for package development work. In R:\n\ninstall.packages(\"pak\"): pak is our preferred way to install packages\npak::pak(\"devtools\"): installs devtools pak::pak(“devtools”)\npak::pak(\"devtools\", upgrade = TRUE): more aggressive version of the above that brings all of devtools’s dependencies up to their latest release\ndevtools::dev_sitrep(): gives a package development “situation report”\n\nSign up for Posit AI Pass using the same email address as your conf/workshop registration. You can start a free trial and, if your email matches what we have, we can give you credits to use on the day of the workshop.\n\nhttps://posit.ai/\nOpen Posit Assistant in Positron and sign in with your Posit AI Pass\nSay “hi” to Posit Assistant to check that all is well. Expect a response along the lines “Hello, how can I help?”.\n\nOptional: Get the development version of Posit Assistant by pressing Cmd/Ctrl + Shift + P to open the command palette and run Posit Assistant: Check for newer dev build. Follow the prompts to restart Posit Assistant.",
     "crumbs": [
       "Setup"
     ]
@@ -552,7 +552,37 @@
     "href": "modules/02-positron-tour.html",
     "title": "Positron tour",
     "section": "",
-    "text": "TODO",
+    "text": "Slides (PDF)",
+    "crumbs": [
+      "Positron tour"
+    ]
+  },
+  {
+    "objectID": "modules/02-positron-tour.html#hands-on-activities",
+    "href": "modules/02-positron-tour.html#hands-on-activities",
+    "title": "Positron tour",
+    "section": "Hands-on activities",
+    "text": "Hands-on activities\nTake about 10 minutes to try one or more of the following activities in Positron\n\nPositron bingo\nActivity B",
+    "crumbs": [
+      "Positron tour"
+    ]
+  },
+  {
+    "objectID": "modules/02-positron-tour.html#activity-a",
+    "href": "modules/02-positron-tour.html#activity-a",
+    "title": "Positron tour",
+    "section": "Positron bingo",
+    "text": "Positron bingo\nPick a bingo card, any card!\nFor the Data Explorer cells: first run View(mtcars) in the Console.\n\n\npositron-rules\npositron-rocks\npositron-power\npositron-vibes\npositron-magic\npositron-forever\npositron-fanclub\npositron-nation\npositron-energy\npositron-express\n\n\n\n\n\n\n\n\nWarningBingo solutions: don’t peek!\n\n\n\n\n\nSolutions",
+    "crumbs": [
+      "Positron tour"
+    ]
+  },
+  {
+    "objectID": "modules/02-positron-tour.html#activity-b",
+    "href": "modules/02-positron-tour.html#activity-b",
+    "title": "Positron tour",
+    "section": "Activity B",
+    "text": "Activity B\nTODO",
     "crumbs": [
       "Positron tour"
     ]
