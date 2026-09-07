@@ -16,7 +16,6 @@ deliverer: Hadley
 * Git
 * Code style
 * Testing
-* Documentation
 * Performance
 * CI/CD
 * Downstream
@@ -27,6 +26,8 @@ deliverer: Hadley
 * Merge conflicts? Ask your agent to fix
 * Commit messages? Ask your agent to write
 * PR descriptions? Ask your agent to **draft**
+* Ask agent to use `git bisect` to figure out when something broke
+* No reason for anyone not to use git
 
 # Code style
 
@@ -36,13 +37,12 @@ deliverer: Hadley
 * Just use `air`
 * Get started with `usethis::use_air()` + `Air: format workspace file`
 * Our `AGENTS.md` reminds the agent to use it
-* (If you're using the Claude Code extension _specifically_, it won't know where to find the `air` binary. You can tell it that it's bundled with Positron)
 
 ## Agents love comments
 
 * Agents (esp. Claude) LOVE to write wordy comments
 * Sometimes the comments are useful; often they are not
-* Code-comment mismatch more dangerous with agents since they'll often just believe the comment
+* Code-comment mismatch just as dangerous with agents since they'll often just believe the comment
 * I've had relatively little success prompting this behaviour away
 * Better luck with prompt to remove (esp with non-Claude model)
 
@@ -59,6 +59,7 @@ deliverer: Hadley
   * If you can easily see a good category, ask for that
   * Otherwise brainstorm together to come up with a good solution
   * For complicated moves, ask for a summary table and a todo list
+* Good file names really important!
 
 # Unit testing
 
@@ -74,41 +75,32 @@ deliverer: Hadley
 * Keep them well organised
   * "Tests for R/{foo}.R should live in tests/testhat/test-{foo}.R"
 * Keep them fast
-  * "Parallelise these tests"
+  * "Run the tests in parallel"
   * "Use SlowReporter and speed up the slowest tests"
   * "Compare coverage before and after"
 * Keep them minimal
-  * "Carefully consider the tests "
-
-* All these tasks are faciliated by relatively fine grained R and test files
-* You can ask the agent to refactor
+  * "Carefully consider the tests and remove any that are no longer necessary"
 
 ## Test coverage
 
 * Previously 100% test coverage was not worth it
 * Probably worth reconsidering now
 * You can ask an agent to do this
+* `devtools::test_coverage()` has token minimal view
 
 ## Test hygiene
 
-* Tests should not produce output
-* Each test should ideally be a standalone function
+* Agents generally produce tests with good hygiene
+  * Tests should not produce output
+  * Each test should be standalone function
+* But they will also copy bad patterns in existing code
+* Easier than ever to fix!
+* Might tell you agent to read `?testthat::set_state_inspector`
 
 ## `local_` functions
 
-
-
-## Test maintenance
-
-* Worth asking to minimise tests, to group related tests together
-* Make sure
-
-# Documentation
-
-* Reserve `AGENTS.md` for agents only 
-* Use `README.md` for humans + agents
-* If you want people to take your package seriously, worth spending human time on your README and vignettes
-* IMO Kimi is a better writer than Claude, but still plenty of LLMism
+* Agents not great at spotting opportunities for code de-duplication
+* You may want to explicitly it tell it to create [`local_`](https://r-pkgs.org/testing-advanced.html#create-and-destroy-a-local-useful_thing) helpers.
 
 # Performance
 
@@ -122,17 +114,18 @@ deliverer: Hadley
 
 ## Prompting
 
+* Always start by ensuring test coverage is good so you don't accidentally break existing behaviour
 * "Make XXX faster"
-* Make sure it's well tested first
 * Ensure it records its work
 * Request both microbenchmarks and meaningful user actions
-* Pay attention to what it's doing
+* Pay attention!
 
 ## C/C++
 
 * Previously C++ (via Rcpp/cpp11) had good balance of effort vs. results
 * Now for small amounts of compiled code, pure C has no dependencies and LLMs are good at writing it
 * You will need to give it hints as to latest C API
+* I spent an hour or so updating <http://hadley.github.io/r-internals/>
 
 # CI/CD
 
@@ -140,12 +133,13 @@ deliverer: Hadley
 * `use_github_action()` for common stuff
 * Use agents for anything custom
 * Agents are also great at fixing problems thus revealed
+* Great for your data scraping projects too!
 
 # Downstream changes
 
 * You made a backward incompatbile change or want to help people handle deprecations?
 * Ask your agent to do it! 
-* <https://blog.davisvaughan.com/posts/2026-01-09-claude-200-pull-requests/
+* <https://blog.davisvaughan.com/posts/2026-01-09-claude-200-pull-requests/>
 
 # Upstream changes
 

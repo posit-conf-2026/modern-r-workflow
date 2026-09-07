@@ -42,7 +42,7 @@ Stuck? Ask an AI or TA.
 ## What changes with AI?
 
 * **Code**: you describe it & agent writes it. Still really important to try it out interactively to see how it feels.
-* **Tests**: agents love to write tests. Your job is to steer towards minimalism (more on that in the next session).
+* **Tests**: agents love to write tests. Your job is to steer towards minimalism.
 * **Documentation**: agent fine for a first pass but human-to-human communication is possibly the most important activity you can engage in.
 * **Check**: `R CMD check` just as important but agents do a really good job at fixing any problems you find.
 
@@ -67,7 +67,7 @@ Stuck? Ask an AI or TA.
 
 ## Example workflow
 
-> Fix https://github.com/r-lib/testthat/issues/2344
+> Fix <https://github.com/r-lib/testthat/issues/2344>
 
 > Fix https://github.com/r-lib/testthat/issues/2317
 
@@ -91,7 +91,7 @@ Pay attention! Try to read everything it does.
 
 * When you get started, I think it's worth doing all the commits yourself
 * Then, tell it when to commit
-* Then, let it commit by itself
+* Then, let it commit by itself, but you do the PR
 * Then, let it make the whole PR
 * (But again NEVER force AI slop on another human's eyeballs)
 
@@ -112,7 +112,7 @@ Pay attention! Try to read everything it does.
 
 ## Example workflow
 
-> Read https://github.com/r-lib/testthat/issues/2334. 
+> Read <https://github.com/r-lib/testthat/issues/2334>. 
 > Construct a minimal reprex, then write a brief plan for fixing the problem.
 > Save your plan in plan.md.
 
@@ -137,7 +137,10 @@ Pay attention! Try to read everything it does.
 1. Implement with Sonnet or Kimi K3
 1. Review the implementation with Codex
 
-> https://github.com/r-lib/testthat/issues/2328
+## Live demo
+
+* <https://github.com/r-lib/testthat/issues/2328>
+* https://github.com/hadley/data-diff
 
 ## Your turn {.your-turn}
 
