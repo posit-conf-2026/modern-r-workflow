@@ -1,8 +1,45 @@
-/* Inverted "Your turn" headings */
-h2.your-turn,
-.reveal .slides section.your-turn h2 {
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
+
+/* Subtle gradient: white top-right to light grey bottom-left */
+.reveal-viewport {
+  background: linear-gradient(to bottom left, #ffffff, #d5d5d5);
+}
+
+/* Inverted section slides */
+.reveal .level1 {
   background-color: #000;
   color: #fff;
+}
+
+/* Inline code inherits surrounding text colour (not the theme's blue) */
+.reveal code {
+  color: inherit;
+  font-size: inherit;
+}
+.reveal .level1 h1::after {
+  content: "";
+  display: block;
+  position: relative;
+  z-index: -1;
+  height: 0.1em;
+  background: #fff;
+  /* Pull up into the text so descenders cross the line */
+  margin-top: -0.2em;
+    width: 300%;
+  margin-left: -100%;
+  padding-left: 100%;
+}
+
+/* Larger code blocks */
+.reveal pre {
+  font-size: 0.8em;
+  background-color: #EBEBEB;
+}
+
+/* Inverted "Your turn" headings */
+.your-turn h2 {
+  background-color: #000;
+  color: #EBEBEB;
   padding: 0.3em 0;
   /* Full-bleed: overshoot the slide on both sides (reveal.js scales the
      slide, so viewport units don't work); padding keeps the text aligned

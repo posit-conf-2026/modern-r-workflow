@@ -10,18 +10,39 @@
     ]
   },
   {
+    "objectID": "modules/slides/07-best-practices-feedback-loop.html#overview",
+    "href": "modules/slides/07-best-practices-feedback-loop.html#overview",
+    "title": "Best practices feedback loop",
+    "section": "Overview",
+    "text": "Overview\n\nLLMs both amplify best practices, and make them more achievable\nAs you improve tests and docs, it makes it easier for agents to work with your package\nReally good news for non-professional developers\nDo it as you go, and also useful as part of regular upkeep"
+  },
+  {
     "objectID": "modules/slides/07-best-practices-feedback-loop.html#development-best-practices",
     "href": "modules/slides/07-best-practices-feedback-loop.html#development-best-practices",
     "title": "Best practices feedback loop",
     "section": "Development best practices",
-    "text": "Development best practices\n\nGit\nCode style\nTesting\nPerformance\nCI/CD\nDownstream\nUpstream"
+    "text": "Development best practices\n\nCode style\nTesting\nPerformance\nCI/CD\nDownstream\nUpstream"
+  },
+  {
+    "objectID": "modules/slides/07-best-practices-feedback-loop.html#git",
+    "href": "modules/slides/07-best-practices-feedback-loop.html#git",
+    "title": "Best practices feedback loop",
+    "section": "Git",
+    "text": "Git\n\nMerge conflicts? Ask your agent to fix\nCommit messages? Ask your agent to write\nPR descriptions? Ask your agent to draft\nAsk agent to use git bisect to figure out when something broke\nNo reason for anyone not to use git"
+  },
+  {
+    "objectID": "modules/slides/07-best-practices-feedback-loop.html#github-actions",
+    "href": "modules/slides/07-best-practices-feedback-loop.html#github-actions",
+    "title": "Best practices feedback loop",
+    "section": "GitHub actions",
+    "text": "GitHub actions\n\nAgents know more about writing GitHub actions than I do\nuse_github_action() for common stuff\nUse agents for anything custom\nAgents are also great at fixing problems thus revealed\nGreat for your data scraping projects too!"
   },
   {
     "objectID": "modules/slides/07-best-practices-feedback-loop.html#just-use-air",
     "href": "modules/slides/07-best-practices-feedback-loop.html#just-use-air",
     "title": "Best practices feedback loop",
     "section": "Just use air",
-    "text": "Just use air\n\nNo longer worth manually enforcing a coding style\nJust use air\nGet started with usethis::use_air() + Air: format workspace file\nOur AGENTS.md reminds the agent to use it"
+    "text": "Just use air\n\nNo longer worth manually enforcing a coding style\nJust use air\nGet started with usethis::use_air() + Air: format workspace file\nOur AGENTS.md reminds the agent to use it\nTry yamark or panache for markdown/Quarto"
   },
   {
     "objectID": "modules/slides/07-best-practices-feedback-loop.html#agents-love-comments",
@@ -80,8 +101,8 @@
     "text": "local_ functions\n\nAgents not great at spotting opportunities for code de-duplication\nYou may want to explicitly tell it to create local_ helpers."
   },
   {
-    "objectID": "modules/slides/07-best-practices-feedback-loop.html#overview",
-    "href": "modules/slides/07-best-practices-feedback-loop.html#overview",
+    "objectID": "modules/slides/07-best-practices-feedback-loop.html#overview-1",
+    "href": "modules/slides/07-best-practices-feedback-loop.html#overview-1",
     "title": "Best practices feedback loop",
     "section": "Overview",
     "text": "Overview\n\nLLMs are very good at improving the performance of code\nThey are better than me at reading the results of RProf()\nThey are better than me at writing C/C++ code\nThey are not very good at experimental design\nThey are not very good at managing complexity/performance tradeoffs"
@@ -99,6 +120,20 @@
     "title": "Best practices feedback loop",
     "section": "C/C++",
     "text": "C/C++\n\nPreviously C++ (via Rcpp/cpp11) had good balance of effort vs. results\nNow for small amounts of compiled code, pure C has no dependencies and LLMs are good at writing it\nYou will need to give it hints as to latest C API\nI spent an hour or so updating http://hadley.github.io/r-internals/"
+  },
+  {
+    "objectID": "modules/slides/07-best-practices-feedback-loop.html#downstream-changes",
+    "href": "modules/slides/07-best-practices-feedback-loop.html#downstream-changes",
+    "title": "Best practices feedback loop",
+    "section": "Downstream changes",
+    "text": "Downstream changes\n\nYou made a backward incompatible change or want to help people handle deprecations?\nAsk your agent to do it!\nhttps://blog.davisvaughan.com/posts/2026-01-09-claude-200-pull-requests/"
+  },
+  {
+    "objectID": "modules/slides/07-best-practices-feedback-loop.html#upstream-changes",
+    "href": "modules/slides/07-best-practices-feedback-loop.html#upstream-changes",
+    "title": "Best practices feedback loop",
+    "section": "Upstream changes",
+    "text": "Upstream changes\n\nYou can now use these skills to fix problems upstream that might have previously been out of reach\nThe primary drawback of this is maintainer overload\nYour job is to bring your human judgement and expertise into play\nBe upfront about AI usage\nSpend human time on communication\nDon’t be a meat proxy"
   },
   {
     "objectID": "modules/slides/05-agent-instructions.html#additional-context",

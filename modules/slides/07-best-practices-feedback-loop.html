@@ -35,7 +35,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-0ae3a50129cb25a9b689f2ec01f48e65.css">
   <link rel="stylesheet" href="../../styles.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -142,9 +142,8 @@
 </div>
 
 </section>
-<section>
-<section id="the-best-practices-virtuous-cycle" class="title-slide slide level1 center">
-<h1>The best practices virtuous cycle</h1>
+<section id="overview" class="slide level2">
+<h2>Overview</h2>
 <ul>
 <li>LLMs both amplify best practices, and make them more achievable</li>
 <li>As you improve tests and docs, it makes it easier for agents to work with your package</li>
@@ -155,7 +154,6 @@
 <section id="development-best-practices" class="slide level2">
 <h2>Development best practices</h2>
 <ul>
-<li>Git</li>
 <li>Code style</li>
 <li>Testing</li>
 <li>Performance</li>
@@ -163,9 +161,14 @@
 <li>Downstream</li>
 <li>Upstream</li>
 </ul>
-</section></section>
-<section id="git" class="title-slide slide level1 center">
-<h1>Git</h1>
+</section>
+<section>
+<section id="git-github" class="title-slide slide level1 center">
+<h1>Git / GitHub</h1>
+
+</section>
+<section id="git" class="slide level2">
+<h2>Git</h2>
 <ul>
 <li>Merge conflicts? Ask your agent to fix</li>
 <li>Commit messages? Ask your agent to write</li>
@@ -174,7 +177,16 @@
 <li>No reason for anyone not to use git</li>
 </ul>
 </section>
-
+<section id="github-actions" class="slide level2">
+<h2>GitHub actions</h2>
+<ul>
+<li>Agents know more about writing GitHub actions than I do</li>
+<li><code>use_github_action()</code> for common stuff</li>
+<li>Use agents for anything custom</li>
+<li>Agents are also great at fixing problems thus revealed</li>
+<li>Great for your data scraping projects too!</li>
+</ul>
+</section></section>
 <section>
 <section id="code-style" class="title-slide slide level1 center">
 <h1>Code style</h1>
@@ -187,6 +199,7 @@
 <li>Just use <code>air</code></li>
 <li>Get started with <code>usethis::use_air()</code> + <code>Air: format workspace file</code></li>
 <li>Our <code>AGENTS.md</code> reminds the agent to use it</li>
+<li>Try <a href="https://t-kalinowski.github.io/yamark/">yamark</a> or <a href="https://panache.bz">panache</a> for markdown/Quarto</li>
 </ul>
 </section>
 <section id="agents-love-comments" class="slide level2">
@@ -286,7 +299,7 @@
 <h1>Performance</h1>
 
 </section>
-<section id="overview" class="slide level2">
+<section id="overview-1" class="slide level2">
 <h2>Overview</h2>
 <ul>
 <li>LLMs are very good at improving the performance of code</li>
@@ -315,28 +328,21 @@
 <li>I spent an hour or so updating <a href="http://hadley.github.io/r-internals/" class="uri">http://hadley.github.io/r-internals/</a></li>
 </ul>
 </section></section>
-<section id="cicd" class="title-slide slide level1 center">
-<h1>CI/CD</h1>
-<ul>
-<li>Agents know more about writing GitHub actions than I do</li>
-<li><code>use_github_action()</code> for common stuff</li>
-<li>Use agents for anything custom</li>
-<li>Agents are also great at fixing problems thus revealed</li>
-<li>Great for your data scraping projects too!</li>
-</ul>
-</section>
+<section>
+<section id="downstream-upstream" class="title-slide slide level1 center">
+<h1>Downstream &amp; upstream</h1>
 
-<section id="downstream-changes" class="title-slide slide level1 center">
-<h1>Downstream changes</h1>
+</section>
+<section id="downstream-changes" class="slide level2">
+<h2>Downstream changes</h2>
 <ul>
 <li>You made a backward incompatible change or want to help people handle deprecations?</li>
 <li>Ask your agent to do it!</li>
 <li><a href="https://blog.davisvaughan.com/posts/2026-01-09-claude-200-pull-requests/" class="uri">https://blog.davisvaughan.com/posts/2026-01-09-claude-200-pull-requests/</a></li>
 </ul>
 </section>
-
-<section id="upstream-changes" class="title-slide slide level1 center">
-<h1>Upstream changes</h1>
+<section id="upstream-changes" class="slide level2">
+<h2>Upstream changes</h2>
 <ul>
 <li>You can now use these skills to fix problems upstream that might have previously been out of reach</li>
 <li>The primary drawback of this is maintainer overload</li>
@@ -347,7 +353,7 @@
 </ul>
 
 
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
