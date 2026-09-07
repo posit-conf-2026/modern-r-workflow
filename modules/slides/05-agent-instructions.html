@@ -10,7 +10,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.10.18">
 
-  <title>Modern R Workflow (ft. Positron and AI) – Skills and AGENTS.md</title>
+  <title>Modern R Workflow (ft. Positron and AI) – AGENTS.md and skills</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -194,7 +194,7 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Skills and AGENTS.md – Modern R Workflow (ft. Positron and AI)">
+<meta property="og:title" content="AGENTS.md and skills – Modern R Workflow (ft. Positron and AI)">
 <meta property="og:site_name" content="Modern R Workflow (ft. Positron and AI)">
 </head>
 <body class="quarto-light">
@@ -202,26 +202,25 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Skills and AGENTS.md</h1>
+  <h1 class="title">AGENTS.md and skills</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="additional-context" class="title-slide slide level1 center">
-<h1>Additional context</h1>
+<section id="additional-context" class="slide level2">
+<h2>Additional context</h2>
 <ul>
-<li>Provide additinal context/advice (not rules!) via markdown files</li>
+<li>Provide additional context/advice (not rules!) via markdown files</li>
 <li>Primary motivation:
 <ul>
 <li>Avoid repeating yourself across multiple conversations</li>
 <li>Save tokens by avoiding common wheel-spinning</li>
 </ul></li>
 <li>We’ll focus on <code>AGENTS.md</code> (always loaded) and skills (loaded on demand)</li>
-<li>Lets start with an example</li>
+<li>Let’s start with an example</li>
 </ul>
 </section>
-
 <section>
 <section id="agents.md" class="title-slide slide level1 center">
 <h1><code>AGENTS.md</code></h1>
@@ -254,24 +253,34 @@
 <ul>
 <li>Personal preferences that apply across all your projects</li>
 <li>Good place for pet peeves</li>
+<li>(You need to symlink if you’re using multiple harnesses)</li>
 </ul></li>
 <li>Project (generally) beats user when they conflict</li>
 <li>If you’re using Claude you also need <code>CLAUDE.md</code> that contains <code>@AGENTS.md</code></li>
 </ul>
 </section>
+<section id="my-agents.md" class="slide level2">
+<h2>My <code>AGENTS.md</code></h2>
+<ul>
+<li>My personal <code>AGENTS.md</code></li>
+<li>The <code>AGENTS.md</code> in this repo</li>
+</ul>
+</section>
 <section id="what-belongs-there" class="slide level2">
 <h2>What belongs there?</h2>
 <ul>
-<li>Have you told an agent to do it three times? Put it in <code>AGENTS.md</code>.</li>
-<li>Seriously, I think that’s my advice</li>
-<li>Is it a lot of text that is only sometimes important? Use a skill.</li>
+<li>Have you told an agent to do it three times? Put it in <code>AGENTS.md</code></li>
+<li>Seriously, I think that’s the totality of my advice. Keep it minimal!</li>
+<li><code>AGENTS.md</code> is included in every request and you’re paying for it</li>
+<li>Overfitting it to one model will lead to worse results when the model inevitably changes (e.g.&nbsp;you can’t make Claude write good) <!-- FIXME: "write good" is ungrammatical — intentional joke or should it be "write well"? --></li>
+<li>Is it a lot of text that is only sometimes important? Use a skill</li>
 </ul>
 </section>
 <section id="your-turn-1" class="slide level2 your-turn">
 <h2>Your turn</h2>
 <ul>
-<li>Update <code>AGENTS.md</code> to records some specific conventions for this package</li>
-<li>e.g.: Use British English; give over the top compliments</li>
+<li>Update the project <code>AGENTS.md</code> to record some specific conventions for this package</li>
+<li>e.g.: Use British English; give over-the-top compliments; pretend to be your favourite R developer</li>
 <li>Then ask it to update your code, or add a new function</li>
 </ul>
 </section></section>
@@ -286,7 +295,7 @@
 <ul>
 <li>What are they?</li>
 <li>How do you think they work?</li>
-<li>How can you tell when a skill is used? (Look back at your history above, or try asking your agent to deprecate a file.)</li>
+<li>How can you tell when a skill is used? (Look back at your history above, or try asking your agent to deprecate a function.)</li>
 </ul>
 </section>
 <section id="what-is-a-skill" class="slide level2">
@@ -298,7 +307,7 @@
 <li><strong>When</strong> should you use it?</li>
 <li><strong>What</strong> do you need to do?</li>
 </ul></li>
-<li>System prompt includes all the “when”s</li>
+<li>All the “when”s are always sent to the model</li>
 <li>Agent loads the “what” on demand</li>
 </ul>
 </section>
@@ -320,7 +329,7 @@
 <ul>
 <li>Hold on to them loosely</li>
 <li>Keep them personal, local, timely</li>
-<li>Don’t write prospectively</li>
+<li>Don’t write them prospectively</li>
 <li>Relatively little benefit to using same model to both write and read</li>
 </ul>
 </section>
@@ -329,12 +338,17 @@
 <ul>
 <li>Where do they live? I don’t know</li>
 <li>Just ask an agent to create the file for you :)</li>
-<li>But not to write the skill (unless you’re using a smarter than usual model)</li>
+<li>Don’t ask the agent to write the skill for you
+<ul>
+<li>Unless you’re using a smarter than usual model</li>
+<li>Or extracting important bits from a conversation</li>
+</ul></li>
 </ul>
 </section>
 <section id="some-example-skills" class="slide level2">
 <h2>Some example skills</h2>
 <ul>
+<li>Jenny and I don’t use skills very much</li>
 <li><code>usethis::learn_tidy_skill()</code></li>
 <li>Simplification prompt</li>
 </ul>
@@ -349,14 +363,6 @@
 <li><p>Does anything re-implement what the codebase already provides — a bespoke helper shadowing a canonical one, logic in the wrong layer, or wrapper/cast/any churn obscuring the real contract?</p></li>
 </ul>
 <p>When you find opportunities for simplification, be clear about the pros and cons. Produce either a list of potential simplifications or “No simplifications found”.</p>
-</section>
-<section id="bundling-with-a-package" class="slide level2">
-<h2>Bundling with a package</h2>
-<ul>
-<li>No automated tooling yet</li>
-<li><code>inst/skills</code> is a reasonable place to put them</li>
-<li>You’ll need to expose in some other way</li>
-</ul>
 
 
 </section></section>

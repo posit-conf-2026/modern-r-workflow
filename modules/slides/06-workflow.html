@@ -147,6 +147,7 @@
 <ul>
 <li>Introduce/review the classic package development workflow</li>
 <li>Introduce key AI-powered workflows</li>
+<li>Show my workflow by fixing testthat issues 😂</li>
 </ul>
 </section>
 <section id="the-classic-workflow" class="slide level2">
@@ -156,30 +157,35 @@
 <li>Write a function in <code>R/</code></li>
 <li><code>load_all()</code> (⌘⇧L) and try it in the console</li>
 <li>Write tests with <code>use_test()</code></li>
-<li><code>test()</code> (⌘⇧T) and iterate until they passc</li>
+<li><code>test()</code> (⌘⇧T) and iterate until they pass</li>
 <li><code>document()</code> (⌘⇧D) to update docs</li>
 <li><code>check()</code> (⌘⇧E) at the end</li>
 </ol>
 <p>(Windows/Linux: use Ctrl instead of ⌘)</p>
-<p>The AI just does more of the typing; you still own the loop</p>
+</section>
+<section id="were-not-going-to-teach-the-details" class="slide level2">
+<h2>We’re not going to teach the details</h2>
+<p>In the past we’ve talked about the individual components in detail. I no longer think that’s worth teaching live. You and your agent can figure out what expectations are available and how roxygen2 works in your own time 🙂</p>
 </section>
 <section id="your-turn" class="slide level2 your-turn">
 <h2>Your turn</h2>
 <p>Try out the workflow with your compliments package.</p>
-<ul>
-<li>Start with a fresh Positron instance, and confirm you can’t run your <code>compliments()</code> function.</li>
-<li>Run <code>devtools::load_all()</code> or use the keyboard shortcut and confirm that you can. Make a simple change, re-load, re-run and check that you see it.</li>
-<li></li>
-</ul>
+<ol type="1">
+<li>Start with a fresh Positron instance, and confirm you can’t run your <code>compliment()</code> function.</li>
+<li>Load the code and confirm that you can run the function now.</li>
+<li>Make a simple change, re-load, re-run and check that you see it in the output.</li>
+<li>Tweak the documentation, re-document, and look at the help.</li>
+<li>Edit a test so it fails, and check that you see the failure.</li>
+</ol>
+<p>Stuck? Ask an AI or TA.</p>
 </section>
 <section id="what-changes-with-ai" class="slide level2">
-<h2>What changes with AI</h2>
+<h2>What changes with AI?</h2>
 <ul>
-<li>You describe the function; the agent writes it</li>
-<li>You still run <code>load_all()</code> and play with the result — this is your most important feedback</li>
-<li>Ask the agent to write tests, but review them carefully</li>
-<li>Let the agent iterate on <code>test()</code> failures</li>
-<li><code>check()</code> stays the final gate</li>
+<li><strong>Code</strong>: you describe it &amp; the agent writes it. Still really important to try it out interactively to see how it feels.</li>
+<li><strong>Tests</strong>: agents love to write tests. Your job is to steer towards minimalism.</li>
+<li><strong>Documentation</strong>: agents are fine for a first pass but human-to-human communication is possibly the most important activity you can engage in.</li>
+<li><strong>Check</strong>: <code>R CMD check</code> just as important but agents do a really good job at fixing any problems you find.</li>
 </ul>
 </section>
 <section id="general-principles" class="slide level2">
@@ -187,18 +193,18 @@
 <ul>
 <li>You are still important and still in control!</li>
 <li>Choose what to invest in (e.g.&nbsp;code, tests, planning, design, docs)</li>
-<li>Start slow and grow your confidence</li>
-<li>Never make another human read AI slop</li>
+<li>Start small and grow scope as you grow confidence</li>
+<li>NEVER make another human read AI slop</li>
+<li>Restart R and reset your agent frequently</li>
 </ul>
 </section>
 <section id="ai-workflows" class="slide level2">
 <h2>AI workflows</h2>
-<!-- TODO: make a diagram for this -->
 <ul>
-<li>Implement it</li>
-<li>Plan it, then implement it</li>
-<li>Plan it, review the plan, implement it, review the implementation</li>
-<li>Design it, then repeat cycles above</li>
+<li class="fragment">Very low stakes: Implement it</li>
+<li class="fragment">Low stakes: Plan it, then implement it</li>
+<li class="fragment">Medium stakes: Plan it, review the plan, implement it, review the implementation</li>
+<li class="fragment">High stakes: Design it, then repeat cycles above</li>
 </ul>
 </section>
 <section>
@@ -209,10 +215,10 @@
 <section id="example-workflow" class="slide level2">
 <h2>Example workflow</h2>
 <blockquote>
-<p>Fix https://github.com/r-lib/testthat/issues/2344</p>
+<p>Fix <a href="https://github.com/r-lib/testthat/issues/2344" class="uri">https://github.com/r-lib/testthat/issues/2344</a></p>
 </blockquote>
 <blockquote>
-<p>Fix https://github.com/r-lib/testthat/issues/2317</p>
+<p>Fix <a href="https://github.com/r-lib/testthat/issues/2317" class="uri">https://github.com/r-lib/testthat/issues/2317</a></p>
 </blockquote>
 </section>
 <section id="basic-advice" class="slide level2">
@@ -223,15 +229,26 @@
 <li>Can also be useful to let it run, smacking its head into the wall again and again and again until it eventually figures it out</li>
 </ul>
 </section>
+<section id="your-turn-1" class="slide level2 your-turn">
+<h2>Your turn</h2>
+<p>Pick one (or more!) of the following:</p>
+<ul>
+<li>Add a new function <code>farewell()</code> that generates a random goodbye</li>
+<li>Add a <code>mood</code> argument to <code>compliment()</code> so <code>compliment("grumpy")</code> gives a backhanded compliment</li>
+<li>Tackle a simple issue from your own package</li>
+</ul>
+<p>Pay attention! Try to read everything it does.</p>
+</section>
 <section id="git-flow" class="slide level2">
 <h2>Git flow</h2>
 <ul>
 <li>When you get started, I think it’s worth doing all the commits yourself</li>
 <li>Then, tell it when to commit</li>
-<li>Then, it let it commit by itself</li>
+<li>Then, let it commit by itself, but you do the PR</li>
 <li>Then, let it make the whole PR</li>
-<li>(But NEVER EVER inflect Claude’s writing on another human)</li>
+<li>(But again NEVER force AI slop on another human’s eyeballs)</li>
 </ul>
+<p>(This workflow advice can go in your personal <code>AGENTS.md</code>)</p>
 </section></section>
 <section>
 <section id="medium-stakes-tasks" class="title-slide slide level1 center">
@@ -256,16 +273,12 @@
 <section id="example-workflow-1" class="slide level2">
 <h2>Example workflow</h2>
 <blockquote>
-<p>Read https://github.com/r-lib/testthat/issues/2334. Construct a minimal reprex, then write a brief plan for fixing the problem. Save your plan in plan.md.</p>
+<p>Read <a href="https://github.com/r-lib/testthat/issues/2334" class="uri">https://github.com/r-lib/testthat/issues/2334</a>. Construct a minimal reprex, then write a brief plan for fixing the problem. Save your plan in plan.md.</p>
 </blockquote>
 <p>… read and review the plan …</p>
 <blockquote>
 <p>Execute the plan</p>
 </blockquote>
-</section>
-<section id="example-workflow-voice" class="slide level2">
-<h2>Example workflow (voice)</h2>
-<p>Fine to dump a stream of consciousness and let the agent figure it out. I think it’s good to ask for a plan just to check it’s clear what you actually want.</p>
 </section></section>
 <section>
 <section id="high-stakes-tasks" class="title-slide slide level1 center">
@@ -277,37 +290,62 @@
 <ul>
 <li>Claude (esp.&nbsp;Fable/Opus) best at planning</li>
 <li>Codex best at reviewing</li>
-<li>Cheap models fine for implementing</li>
+<li>Any mid-tier model fine for implementing</li>
 </ul>
 </section>
 <section id="example-workflow-2" class="slide level2">
 <h2>Example workflow</h2>
 <ol type="1">
-<li>Plan it with Fable (or whatever the best model you have access to is)</li>
-<li>You read and review the plan</li>
-<li>Review the plan with Codex. Copy and paste the feedback.</li>
-<li>Implement with Sonnet (or a similar cheap model)</li>
+<li>Collaboratively brainstorm</li>
+<li>Plan it with Fable (or the best model you have access to)</li>
+<li>Read and review the plan</li>
+<li>Have Codex review the plan (or at least review in a clean session)</li>
+<li>Implement with Sonnet or Kimi K3</li>
 <li>Review the implementation with Codex</li>
 </ol>
-<blockquote>
-<p>https://github.com/r-lib/testthat/issues/2328</p>
-</blockquote>
 </section>
-<section id="your-turn-big" class="slide level2 your-turn">
-<h2>Your turn (big)</h2>
+<section id="live-demo" class="slide level2">
+<h2>Live demo</h2>
 <ul>
-<li>stringb</li>
+<li><a href="https://github.com/r-lib/testthat/issues/2328" class="uri">https://github.com/r-lib/testthat/issues/2328</a></li>
+<li><a href="https://github.com/hadley/data-diff" class="uri">https://github.com/hadley/data-diff</a></li>
 </ul>
+</section>
+<section id="your-turn-2" class="slide level2 your-turn">
+<h2>Your turn</h2>
+<p>I have always wanted a package that provided the stringr API but without the stringi dependency. (This makes the package less good at handling a wide range of international text cases, but would be worth it for many common package development tasks.) This is now easily in scope for a frontier model.</p>
+<p>Work with your agent to come up with a design (no need to implement). What’s important to include? What can you skip? Start with an analysis of <code>str_match()</code> vs the base equivalents. Do you think you need a <code>str_length()</code> wrapper?</p>
 </section></section>
-<section id="r-cmd-check" class="title-slide slide level1 center">
-<h1><code>R CMD check</code></h1>
-<ul>
-<li>Regular</li>
-<li>First submission</li>
-</ul>
-
+<section>
+<section id="bonus-workflows" class="title-slide slide level1 center">
+<h1>Bonus workflows</h1>
 
 </section>
+<section id="voice" class="slide level2">
+<h2>Voice</h2>
+<ul>
+<li>Some people really like using voice inputs</li>
+<li>Pick your favourite open source app</li>
+<li>Local models are now very good at transcription</li>
+<li>Fine to dump a stream of consciousness and let the agent figure it out</li>
+<li>But good to ask for a plan to ensure that you’re both on the same page</li>
+</ul>
+</section>
+<section id="r-cmd-check" class="slide level2">
+<h2><code>R CMD check</code></h2>
+<ul>
+<li>Your first CRAN submission goes through a manual review process that applies additional non-automated checks</li>
+<li><a href="https://github.com/DavisVaughan/extrachecks">extrachecks</a> documents what we know about these</li>
+<li>Ask your agent to read that README and prepare your package for submission</li>
+<li>You should still think about it! (But this will get you 90% of the way there)</li>
+</ul>
+</section>
+<section id="your-turn-3" class="slide level2 your-turn">
+<h2>Your turn</h2>
+<p>Get your compliments package ready for submission to CRAN. What changed?</p>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

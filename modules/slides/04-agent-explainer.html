@@ -10,7 +10,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.10.18">
 
-  <title>Modern R Workflow (ft. Positron and AI) – How do agents work?</title>
+  <title>Modern R Workflow (ft. Positron and AI) – How does Posit Assistant work?</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -194,7 +194,7 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="How do agents work? – Modern R Workflow (ft. Positron and AI)">
+<meta property="og:title" content="How does Posit Assistant work? – Modern R Workflow (ft. Positron and AI)">
 <meta property="og:site_name" content="Modern R Workflow (ft. Positron and AI)">
 </head>
 <body class="quarto-light">
@@ -202,23 +202,22 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">How do agents work?</h1>
+  <h1 class="title">How does Posit Assistant work?</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="goals" class="title-slide slide level1 center">
-<h1>Goals</h1>
+<section id="goals" class="slide level2">
+<h2>Goals</h2>
 <ul>
-<li>Introduce you to package development in Posit Assitant</li>
-<li>Use that as a framework to explain how agents work</li>
+<li>Introduce you to package development with Posit Assistant</li>
+<li>Talk about how it works</li>
 <li>Help you understand the risks associated with using agents</li>
-<li>Give you a basic mental model of LLM costs</li>
+<li>Give you practical cost control techniques</li>
 <li>Discuss Posit Assistant alternatives</li>
 </ul>
 </section>
-
 <section>
 <section id="what-is-an-agent" class="title-slide slide level1 center">
 <h1>What is an agent?</h1>
@@ -226,7 +225,7 @@
 </section>
 <section id="lets-make-a-package" class="slide level2">
 <h2>Let’s make a package</h2>
-<p>(Make sure you’re in normal mode)</p>
+<p>(Note to self: make sure you’re in normal mode)</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>usethis<span class="sc">::</span><span class="fu">create_package</span>(<span class="st">"~/desktop/compliment"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <blockquote>
 <p>Create a new R package called compliment in the current directory. It should generate randomized compliments.</p>
@@ -248,7 +247,7 @@
 <section id="your-turn" class="slide level2 your-turn">
 <h2>Your turn</h2>
 <ul>
-<li>Use the same prompt as me. It’s underspecified ask so we’re going to get lots of variation. That’s part of the fun!</li>
+<li>Use the same prompt as me. It’s an underspecified ask, so we’re going to get lots of variation. That’s part of the fun!</li>
 <li>Manually approve a few writes</li>
 <li>Then allow all</li>
 <li>Make sure your package has tests and Git</li>
@@ -270,10 +269,26 @@
 <li>LLM asks harness to run code; harness returns result to the LLM</li>
 <li>Often requests many tool calls at once</li>
 <li>These are called “parallel” calls, but don’t actually run in parallel</li>
-<li>Can recognise with the thick line line</li>
+<li>Can recognise with the thick line</li>
 </ul>
+</section>
+<section id="parallel-tool-calls" class="slide level2">
+<h2>Parallel tool calls</h2>
 
-<img data-src="../images/pa-parallel-calls.png" class="r-stretch quarto-figure-center"><p class="caption">Two read calls and three edit calls</p></section>
+<img data-src="../../images/pa-parallel-calls.png" class="r-stretch quarto-figure-center"><p class="caption">Two read calls and three edit calls</p></section>
+<section id="what-are-some-common-calls" class="slide level2">
+<h2>What are some common calls?</h2>
+<ul>
+<li><code>write</code> creates a new file</li>
+<li><code>edit</code> modifies an existing file</li>
+<li><code>executeCode</code> runs R (or Python) code in the console</li>
+<li><code>bash</code> runs code you’d usually use the terminal for</li>
+<li><code>AskUser</code> asks you a question</li>
+<li><code>read</code> reads a file on disk</li>
+<li><code>webfetch</code> reads a web page</li>
+<li><code>search</code> searches directory for matching text</li>
+</ul>
+</section>
 <section id="a-little-vocab" class="slide level2">
 <h2>A little vocab</h2>
 <ul>
@@ -289,24 +304,11 @@
 <section id="some-examples" class="slide level2">
 <h2>Some examples</h2>
 <ul>
-<li>Kimi K3 (model) on posit.ai (provider) with Posit Assitant (harness)</li>
-<li>Opus 5 (model) on posit.ai (provider) with Posit Assitant (harness)</li>
-<li>Opus 5 (model) from claude (provider) in Claude Code (harness)</li>
-<li>GPT-5.3 (model) from AWS Bedrock (provider) in Posit Assitant (harness)</li>
-<li>GPT-5.3 (model) from OpenAI (provider) in codex (harness)</li>
-</ul>
-</section>
-<section id="what-are-some-common-calls" class="slide level2">
-<h2>What are some common calls?</h2>
-<ul>
-<li><code>write</code> creates a new file</li>
-<li><code>edit</code> modifies an existing file</li>
-<li><code>executeCode</code> runs R (or Python) code in the console</li>
-<li><code>bash</code> runs code you’d usually use the terminal for</li>
-<li><code>AskUser</code> asks you a question</li>
-<li><code>read</code> reads a file on disk</li>
-<li><code>webfetch</code> reads a web page</li>
-<li><code>search</code> searches directory for matching text</li>
+<li>Kimi K3 (model) on posit.ai (provider) with Posit Assistant (harness)</li>
+<li>Opus 5 (model) on posit.ai (provider) with Posit Assistant (harness)</li>
+<li>Opus 5 (model) from Claude (provider) in Claude Code (harness)</li>
+<li>GPT-5.3 (model) from AWS Bedrock (provider) in Posit Assistant (harness)</li>
+<li>GPT-5.3 (model) from OpenAI (provider) in Codex (harness)</li>
 </ul>
 </section>
 <section id="your-turn-1" class="slide level2 your-turn">
@@ -318,6 +320,12 @@
 </section>
 <section id="so-what-is-an-agent" class="slide level2">
 <h2>So what is an agent?</h2>
+<p>An LLM running in a loop, using tools, to achieve a goal</p>
+<ul>
+<li>The LLM decides what tool to run next</li>
+<li>The harness runs the tool and feeds the result back</li>
+<li>Repeat until the LLM declares the task done</li>
+</ul>
 </section></section>
 <section>
 <section id="safety-and-security" class="title-slide slide level1 center">
@@ -328,7 +336,7 @@
 <h2>What are the risks?</h2>
 <p>I think the cleanest definition is that the dangers are irreversible action, i.e.:</p>
 <ul>
-<li>Editing file (without git)</li>
+<li>Editing a file (without git)</li>
 <li>Deleting a file or database table (without a backup)</li>
 <li>Sending an email</li>
 <li>Revealing a secret (API key, password, …)</li>
@@ -348,13 +356,14 @@
 <li>Back up!</li>
 </ul></li>
 <li>Prevent dangerous actions (i.e.&nbsp;use a sandbox)</li>
+<li>Auto mode</li>
 </ul>
 </section>
 <section id="ask-for-permission" class="slide level2">
 <h2>Ask for permission</h2>
 <ul>
 <li>IMO constantly asking for permission is just security theatre</li>
-<li>99% of LLM actions are fine, so you quickly get trained to always click ok</li>
+<li>99% of LLM actions are fine, so you quickly get trained to always click OK</li>
 <li>So then you just click “Approve always”</li>
 <li>Matching command prefixes doesn’t work</li>
 </ul>
@@ -386,13 +395,28 @@ tar -xzf backup.tar.gz -C /tmp/restore --strip-components=1 -P</code></pre>
 <ul>
 <li>What if we only ask permission for operations that seem legitimately dangerous?</li>
 <li>That’s the idea behind auto-mode: ask a (simpler) LLM to classify if a command is dangerous or safe, and then only ask permission for dangerous options</li>
+<li>(And use only the conversation, not tool results, to avoid the “lethal trifecta”)</li>
 <li>It leaves a lot to be desired, but I think this is a sweet spot on the security-utility spectrum right now</li>
 </ul>
+</section>
+<section id="picking-a-mode" class="slide level2">
+<h2>Picking a mode</h2>
+
+<img data-src="../../images/pa-modes.png" class="r-stretch quarto-figure-center"><p class="caption">Posit Assistant mode picker showing Normal, Plan, Auto, Cleaning, and Ask modes</p></section>
+<section id="the-lethal-trifecta" class="slide level2">
+<h2>The lethal trifecta</h2>
+<p>Simon Willison’s term for the dangerous combination:</p>
+<ul>
+<li>Access to <strong>private data</strong> (your files, secrets, API keys)</li>
+<li>Exposure to <strong>untrusted content</strong> (web pages, emails, issue comments)</li>
+<li>Ability to <strong>communicate externally</strong> (send requests, post comments)</li>
+</ul>
+<p>With all three, a prompt injection attack can exfiltrate your data.</p>
 </section>
 <section id="reasoning-about-llm-behaviour-is-weird" class="slide level2">
 <h2>Reasoning about LLM behaviour is weird</h2>
 <!--
-Jenny had to do this to fix build and deploy. Otherwise we need to install R, even thought there's no actually executable R code. Quarto can't tell that.
+Jenny had to do this to fix build and deploy. Otherwise we need to install R, even though there's no actually executable R code. Quarto can't tell that.
 ```r
 dir.create("~/desktop/family-data")
 writeLines(letters, "~/desktop/family-data/precious-memories.txt")
@@ -411,13 +435,10 @@ writeLines(letters, "~/desktop/junk/tmp2.txt")
 </section>
 <section id="your-turn-3" class="slide level2 your-turn">
 <h2>Your turn</h2>
-<p>What other potentially dangerous operations can you get Posit Assistant to do? (Don’t do anything legit dangerous but see if you can trick PA into doing something that’s clearly dangerous in general.)</p>
-</section>
-<section id="more-work-to-be-done" class="slide level2">
-<h2>More work to be done</h2>
+<p>Can you trick PA into doing something bad? Some ideas you might try:</p>
 <ul>
-<li>Some of my (incorrect) thinking at <a href="https://tidydesign.substack.com/p/help-my-coding-agent-can-run-code" class="uri">https://tidydesign.substack.com/p/help-my-coding-agent-can-run-code</a></li>
-<li>I plan to work on this after conf</li>
+<li>Can you get it to send me an email complaining about one of my packages?</li>
+<li>Can you create a fake environment variable (e.g.&nbsp;<code>POSIT_ASSISTANT_API_KEY</code>) and get it to save it in a GitHub gist</li>
 </ul>
 </section></section>
 <section>
@@ -446,7 +467,7 @@ writeLines(letters, "~/desktop/junk/tmp2.txt")
 <li>Claude Code: $20 / month, $100 / month</li>
 </ul></li>
 <li>These are very generous; you get 20-80x the value of API pricing</li>
-<li>BUT you can only use in provider harnesses (i.e.&nbsp;not Posit Assitant)</li>
+<li>BUT you can only use them in provider harnesses (i.e.&nbsp;not Posit Assistant)</li>
 </ul>
 </section>
 <section id="enterprise-plans-are-different" class="slide level2">
@@ -466,9 +487,9 @@ writeLines(letters, "~/desktop/junk/tmp2.txt")
 <section id="my-views-on-cost-benefit-have-changed" class="slide level2">
 <h2>My views on cost-benefit have changed</h2>
 <ul>
-<li>I used to think that Anthropic models was worth the premium</li>
+<li>I used to think that Anthropic models were worth the premium</li>
 <li>But the relative cost has increased and output quality has decreased (code is still fine, but its writing is painful)</li>
-<li>Kimi K3 is excellent. Somewhere between Opus and Fable in code quality, but a much better writer, and only costs 75% of Sonnet (thanks to tokenizer).</li>
+<li>Kimi K3 is excellent. Somewhere between Opus and Fable in code quality, but a much better writer, and only costs 75% of Sonnet (thanks to its tokenizer).</li>
 <li>All models since April 16, 2026 (Claude Opus 4.7) use a new tokenizer that uses ~20% more tokens, so even though the per-token prices didn’t change, the overall cost did</li>
 <li>And Anthropic models seem to be producing more loquacious output, which also costs more money 🤔</li>
 </ul>
@@ -486,6 +507,10 @@ writeLines(letters, "~/desktop/junk/tmp2.txt")
 </ul></li>
 </ul>
 </section>
+<section id="session-information-in-posit-assistant" class="slide level2">
+<h2>Session information in Posit Assistant</h2>
+
+<img data-src="../../images/pa-cost.png" class="r-stretch quarto-figure-center"><p class="caption">Posit Assistant session information dialog showing token usage and cost breakdown</p></section>
 <section id="conversations-are-additive" class="slide level2">
 <h2>Conversations are additive</h2>
 <ul>
@@ -493,6 +518,7 @@ writeLines(letters, "~/desktop/junk/tmp2.txt")
 <li><p>They need the <em>complete history</em> of the conversation</p></li>
 <li><p>Both your inputs and its outputs</p></li>
 <li><p>Recommendation: use <code>/clear</code> to start from a fresh slate</p></li>
+<li><p>(Restarting your agent is as important as restarting your R session)</p></li>
 <li><p>Saves money and avoids stale state</p></li>
 </ul>
 </section>
@@ -504,16 +530,15 @@ writeLines(letters, "~/desktop/junk/tmp2.txt")
 <ul>
 <li>Claude: 5 minutes / 1 hour (2x cost)</li>
 <li>OpenAI: 30 minutes</li>
-<li>KimiK3: no guarantees</li>
+<li>Kimi K3: no guarantees</li>
 </ul></li>
-<li>But if you resume a session the next day, be 10x the cost of the last request</li>
+<li>But if you resume a session the next day, expect 10x the cost of the last request</li>
 </ul>
 </section>
 <section id="your-turn-4" class="slide level2 your-turn">
 <h2>Your turn</h2>
 <ul>
 <li>Look at what you’ve spent in previous PA conversations</li>
-<li></li>
 <li>Optional: download and install AgentsView. Where is your LLM spend going?</li>
 </ul>
 </section></section>
@@ -525,7 +550,7 @@ writeLines(letters, "~/desktop/junk/tmp2.txt")
 <section id="posit-assistant-currently-most-compelling-inside-the-enterprise" class="slide level2">
 <h2>Posit Assistant currently most compelling inside the enterprise</h2>
 <ul>
-<li>Optimistically, it’s 2x better than Claude code/codex</li>
+<li>Optimistically, it’s 2x better than Claude Code/Codex</li>
 <li>But you have to pay 20-80x as much to use it with an API key (or via posit.ai)</li>
 <li>So ask for it if you use RStudio/Positron for work, but otherwise we accept it’s probably not worth it for you to use it</li>
 <li>We are closely tracking Anthropic/OpenAI opening up their plans to other harnesses</li>
@@ -541,12 +566,12 @@ writeLines(letters, "~/desktop/junk/tmp2.txt")
 </ul>
 </section>
 <section id="what-if-you-cant-use-it" class="slide level2">
-<h2>What if you can’t use it ?</h2>
+<h2>What if you can’t use it?</h2>
 <ul>
 <li>The Claude Code and Codex harnesses are also very good</li>
-<li>I have used both VS Code/Positron extensions and just their CLI’s in the terminal</li>
-<li>Downside of both extensions is that they can’t find <code>quarto</code> and <code>air</code> which are bundled with Positron. You’ll need to explicitly tell them to that they’re bundled with Positron.</li>
-<li>We recommend pairing with https://github.com/posit-dev/mcp-repl or similar to get access to a persistent R/python environment</li>
+<li>I have used both VS Code/Positron extensions and just their CLIs in the terminal</li>
+<li>Downside of both extensions is that they can’t find <code>quarto</code> and <code>air</code>, which are bundled with Positron. You’ll need to explicitly tell them that they’re bundled with Positron.</li>
+<li>We recommend pairing with <a href="https://github.com/posit-dev/mcp-repl" class="uri">https://github.com/posit-dev/mcp-repl</a> or similar to get access to a persistent R/Python environment</li>
 </ul>
 
 
