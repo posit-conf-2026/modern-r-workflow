@@ -219,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Take about 10 minutes to try one or more of the following activities in Positron</p>
 <ul>
 <li><a href="#activity-a">Positron bingo</a></li>
-<li><a href="#activity-b">Get comfy with Positron</a></li>
+<li><a href="#activity-b">Customize your Positron settings</a></li>
 <li><a href="#activity-c">Multiple R sessions (option 1 of 2)</a></li>
 <li><a href="#activity-d">Multiple R versions (option 2 of 2)</a></li>
 <li><a href="#activity-e">Format some ugly R code</a></li>
@@ -261,7 +261,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </section>
 <section id="activity-b" class="level2">
-<h2 class="anchored" data-anchor-id="activity-b">Get comfy with Positron</h2>
+<h2 class="anchored" data-anchor-id="activity-b">Customize your Positron settings</h2>
 <p>If you’re new-ish to Positron, there’s a good chance you haven’t tuned it to your taste yet. Pick a few of the following to try:</p>
 <ul>
 <li>If you’re coming from RStudio, turn on RStudio keybindings: open Settings and search for “RStudio keybindings”</li>
@@ -270,7 +270,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Subscribe to the “dailies” release channel if you want to try new features early, and don’t mind occasional instability</li>
 <li>Open the Data Explorer on a data frame (e.g.&nbsp;<code>View(mtcars)</code> or click one in the Variables pane) and try sorting, filtering, or summarizing a column</li>
 <li>Open the Packages pane and check whether any of your packages have updates available</li>
-<li>If you like inline Quarto output, turn that setting on and test drive one of you Quarto documents</li>
+<li>If you like inline Quarto output, turn that setting on and test drive one of your Quarto documents</li>
+<li>If you’re on macOS, experiment with Positron native tabs support as a way of managing multiple windows</li>
 <li>Poke around other settings you care about, such as those for the R, Quarto, or Shiny extensions</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -286,13 +287,18 @@ ul.task-list li input[type="checkbox"] {
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
+<li>Layout picker: top-right corner of the window</li>
 <li>How to get to your Settings:
 <ul>
 <li>Cmd/Ctrl + ,</li>
 <li>the gear icon in the lower left</li>
 <li>via the command palette: Cmd/Ctrl + Shift + P, then “Preferences: Open Settings”</li>
 </ul></li>
-<li>Layout picker: top-right corner of the window</li>
+<li>RStudio keybindings: <code>workbench.keybindings.rstudioKeybindings</code></li>
+<li>Quiet mode: <code>positron.r.quietMode</code> (suppresses R’s startup banner)</li>
+<li>Dailies release channel: <code>update.positron.channel</code>, set to <code>"dailies"</code></li>
+<li>Inline Quarto output: <code>quarto.inlineOutput.enabled</code></li>
+<li>Native tabs (macOS only): <code>window.nativeTabs</code> (you’ll have to restart Positron to apply a change)</li>
 </ul>
 </div>
 </div>
