@@ -47,10 +47,14 @@ usethis::use_tidy_agents()
 * Seriously, I think that's my advice
 * Is it a lot of text that is only sometimes important? Use a skill.
 
+## Non-package `AGENTS.md`
+
+Lets take a look at `AGENTS.md` for this repo.
+
 ## Your turn {.your-turn}
 
 * Update `AGENTS.md` to records some specific conventions for this package
-* e.g.: Use British English; give over the top compliments
+* e.g.: Use British English; give over the top compliments; pretend to be your favourite R developer
 * Then ask it to update your code, or add a new function
 
 # Skills

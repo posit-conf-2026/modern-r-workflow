@@ -6,10 +6,9 @@ deliverer: Hadley
 
 # Goals
 
-* Introduce you to package development in Posit Assitant
-* Use that as a framework to explain how agents work
+* Introduce you to package development with Posit Assitant
 * Help you understand the risks associated with using agents
-* Give you a basic mental model of LLM costs
+* Give you practical cost control techniques
 * Discuss Posit Assistant alternatives
 
 # What is an agent?
@@ -232,6 +231,7 @@ What other potentially dangerous operations can you get Posit Assistant to do? (
 * Both your inputs and its outputs
 
 * Recommendation: use `/clear` to start from a fresh slate
+* (Restarting your agent is as important as restarting your R session)
 * Saves money and avoids stale state
 
 ## Cost is dominated by cache hits
