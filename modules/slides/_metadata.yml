@@ -1,3 +1,6 @@
 format:
   revealjs:
     css: ../../styles.css
+    mainfont: Helvetica
+    headingfont: Helvetica
+    monofont: Fira Code

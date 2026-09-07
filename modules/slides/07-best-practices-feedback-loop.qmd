@@ -4,7 +4,7 @@ duration: 90
 deliverer: Hadley
 ---
 
-# The best practices virtuous cycle
+## Overview
 
 * LLMs both amplify best practices, and make them more achievable
 * As you improve tests and docs, it makes it easier for agents to work with your package
@@ -13,7 +13,6 @@ deliverer: Hadley
 
 ## Development best practices
 
-* Git
 * Code style
 * Testing
 * Performance
@@ -21,13 +20,22 @@ deliverer: Hadley
 * Downstream
 * Upstream
 
-# Git
+# Git / GitHub
 
+## Git
 * Merge conflicts? Ask your agent to fix
 * Commit messages? Ask your agent to write
 * PR descriptions? Ask your agent to **draft**
 * Ask agent to use `git bisect` to figure out when something broke
 * No reason for anyone not to use git
+
+## GitHub actions
+
+* Agents know more about writing GitHub actions than I do
+* `use_github_action()` for common stuff
+* Use agents for anything custom
+* Agents are also great at fixing problems thus revealed
+* Great for your data scraping projects too!
 
 # Code style
 
@@ -127,21 +135,15 @@ deliverer: Hadley
 * You will need to give it hints as to latest C API
 * I spent an hour or so updating <http://hadley.github.io/r-internals/>
 
-# CI/CD
+# Downstream & upstream
 
-* Agents know more about writing GitHub actions than I do
-* `use_github_action()` for common stuff
-* Use agents for anything custom
-* Agents are also great at fixing problems thus revealed
-* Great for your data scraping projects too!
-
-# Downstream changes
+## Downstream changes
 
 * You made a backward incompatible change or want to help people handle deprecations?
 * Ask your agent to do it! 
 * <https://blog.davisvaughan.com/posts/2026-01-09-claude-200-pull-requests/>
 
-# Upstream changes
+## Upstream changes
 
 * You can now use these skills to fix problems upstream that might have previously been out of reach
 * The primary drawback of this is maintainer overload
