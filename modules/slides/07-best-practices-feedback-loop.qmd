@@ -37,6 +37,12 @@ deliverer: Hadley
 * Agents are also great at fixing problems thus revealed
 * Great for your data scraping projects too!
 
+## usethis functions
+
+* All that said, I still use the usethis family of functions for working with PRs
+* Especially `pr_init()`, `pr_fetch()` and `pr_finish()`
+* Even when the project isn't in R!
+
 # Code style
 
 ## Just use air
