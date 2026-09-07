@@ -32,7 +32,7 @@ website:
         text: Home
       - href: setup.qmd
       - text: "---"
-      - auto: modules/slides/*.qmd
+      - auto: modules/*.qmd
 
 format:
   html:
