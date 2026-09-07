@@ -41,3 +41,5 @@ You need:
     - Say "hi" to Posit Assistant to check that all is well. Expect a response along the lines "Hello, how can I help?".
 
 * Optional: Get the development version of [Posit Assistant](https://assistant.posit.co/) by pressing Cmd/Ctrl + Shift + P to open the command palette and run `Posit Assistant: Check for newer dev build`. Follow the prompts to restart Posit Assistant.
+
+* Optional: We won't be teaching Git or GitHub, but you'll see us use them throughout the workshop. If you've been meaning to install Git or set up a GitHub account, now's a good time. [Happy Git with R](<https://happygitwithr.com/>) is a great resource for getting set up.
