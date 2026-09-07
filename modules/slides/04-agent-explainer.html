@@ -10,7 +10,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.10.18">
 
-  <title>Modern R Workflow (ft. Positron and AI) – Welcome</title>
+  <title>Modern R Workflow (ft. Positron and AI) – How do agents work?</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -194,7 +194,7 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Welcome – Modern R Workflow (ft. Positron and AI)">
+<meta property="og:title" content="How do agents work? – Modern R Workflow (ft. Positron and AI)">
 <meta property="og:site_name" content="Modern R Workflow (ft. Positron and AI)">
 </head>
 <body class="quarto-light">
@@ -202,154 +202,355 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Welcome</h1>
+  <h1 class="title">How do agents work?</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="wi-fi" class="slide level2">
-<h2>Wi-Fi</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<center>
-<h3 id="section"><i class="fa fa-wifi"></i></h3>
-<p>Wi-Fi network name</p>
-<p><code>Posit Conf 2026</code></p>
-</center>
-</div><div class="column" style="width:50%;">
-<center>
-<h3 id="section-1"><i class="fa fa-key"></i></h3>
-<p>Wi-Fi password</p>
-<p><code>conf2026</code></p>
-</center>
-</div></div>
-</section>
-<section id="venue-information" class="slide level2">
-<h2>Venue information</h2>
+<section id="goals" class="title-slide slide level1 center">
+<h1>Goals</h1>
 <ul>
-<li><p>Meditation/Prayer Room: Room 332</p></li>
-<li><p>Mother’s Room: Room 333</p></li>
-<li><p>Speaker’s Lounge: Room 334</p></li>
-<li><p>Gender-neutral bathrooms: 4th floor, one on either side of ballroom</p></li>
+<li>Introduce you to package development in Posit Assitant</li>
+<li>Use that as a framework to explain how agents work</li>
+<li>Help you understand the risks associated with using agents</li>
+<li>Give you a basic mental model of LLM costs</li>
+<li>Discuss Posit Assistant alternatives</li>
 </ul>
 </section>
-<section id="workshop-policies" class="slide level2">
-<h2>Workshop policies</h2>
-<ul>
-<li><p>Please review the posit::conf code of conduct, which applies to all workshops: <a href="https://posit.co/code-of-conduct" class="uri">https://posit.co/code-of-conduct</a></p></li>
-<li><p>The Code of Conduct site has info on how to report a problem (in person, email, phone)</p></li>
-<li><p>Please do not photograph people wearing red lanyards</p></li>
-</ul>
-</section>
-<section id="who-are-your-tas" class="slide level2">
-<h2>Who are your TAs?</h2>
-<ul>
-<li>Julia Silge</li>
-<li>Katie Masiello</li>
-<li>Simon Couch</li>
-<li>Thomas Pedersen</li>
-</ul>
-</section>
-<section id="join-us-on-discord" class="slide level2">
-<h2>Join us on Discord</h2>
-<p>Join the posit::conf Discord server:<br>
-<a href="https://pos.it/joinconf26">pos.it/joinconf26</a></p>
-<p>Then head to the workshop channel:<br>
-<a href="https://discord.com/channels/1381993558437007490/1532807523524939927">#workshop-modern-r-workflow</a></p>
-</section>
-<section id="section-2" class="slide level2 center">
-<h2></h2>
-<h3 id="introduce-yourself-to-your-neighbors">Introduce yourself to your neighbors 👋</h3>
-<ul>
-<li>Do you have a hidden talent?</li>
-<li>Do you have a pet or hobby?</li>
-<li>What’s your biggest pet peeve with R?</li>
-<li>What’s your favorite thing to do in R?</li>
-</ul>
-</section>
-<section id="positron" class="slide level2">
-<h2>Positron</h2>
 
-<img data-src="../../images/positron-welcome.png" class="r-stretch"><p>If you haven’t already, now’s a good time to install Positron.</p>
-<ul>
-<li>Download here: <a href="https://positron.posit.co/download.html" class="uri">https://positron.posit.co/download.html</a></li>
-</ul>
-</section>
-<section id="already-have-positron" class="slide level2">
-<h2>Already have Positron?</h2>
-<p>Is Positron telling you it’s time to update? Do it!</p>
-<div class="columns">
-<div class="column" style="width:33%;">
-<p><img data-src="../../images/signs-you-need-to-update-positron-lower-left.png"></p>
-</div><div class="column" style="width:33%;">
-<p><img data-src="../../images/signs-you-need-to-update-positron-upper-right.png"></p>
-</div><div class="column" style="width:33%;">
-<p><img data-src="../../images/signs-you-need-to-update-positron-menu.png"></p>
-</div></div>
-</section>
-<section id="check-your-r-setup" class="slide level2">
-<h2>Check your R setup</h2>
-<p>Let’s make sure everyone’s R installation is ready to go.</p>
-<ol type="1">
-<li><p>Confirm you’re on a recent version of R. Ideally R 4.6.</p></li>
-<li><p>Install pak, if you haven’t already:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a><span class="fu">install.packages</span>(<span class="st">"pak"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p>Install/update devtools and friends:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"devtools"</span>)</span>
-<span id="cb2-2"><a aria-label="2"></a><span class="co"># or maybe the more update-happy version:</span></span>
-<span id="cb2-3"><a aria-label="3"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"devtools"</span>, <span class="at">upgrade =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p>Run a situation report and check that everything looks good:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>devtools<span class="sc">::</span><span class="fu">dev_sitrep</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-</ol>
-<!-- HW: do we want to mention air, rig, and quarto here? -->
-<!-- JB: air and quarto ship with Positron, so I think no. And no one should be installing R at this point in the workshop, so I think no for rig. They'll come up later, but don't need installation at this point. -->
-</section>
-<section id="posit-ai-pass" class="slide level2">
-<h2>Posit AI Pass</h2>
-<p>Sign up for Posit AI Pass, so you’re ready to use Posit Assistant during the workshop.</p>
-<ul>
-<li>Sign up: <a href="https://posit.ai" class="uri">https://posit.ai</a></li>
-<li><strong>Make sure to use the same email address as you used to register for conf!</strong> This is what lets us give you free credits to use today.</li>
-</ul>
-</section>
-<section id="check-that-posit-assistant-is-alive" class="slide level2">
-<h2>Check that Posit Assistant is alive</h2>
-<p>In Posit Assistant, sign in with your Posit AI Pass.</p>
-
-<img data-src="../../images/posit-assistant-hi.png" class="r-stretch"></section>
-<section id="whats-changed" class="slide level2">
-<h2>What’s changed?</h2>
-<p>Where are the significant changes since <a href="https://r-pkgs.org">R Packages</a>?</p>
-<ul>
-<li>80% AI</li>
-<li>15% Positron</li>
-<li>5% standalone CLIs written in rust (e.g.&nbsp;air, rig, quarto)</li>
-</ul>
-</section>
-<section id="overall" class="slide level2">
-<h2>Overall</h2>
-<ul>
-<li>More changes in the last year than last 10 years combined, and doesn’t look like the pace is going to slow down</li>
-<li>Non-obvious consequences because the cost-benefit ratio for many tasks has radically changed</li>
-<li>We are still figuring out what it all means</li>
-<li>Keep exploring and experimenting; hold loosely to your hypthoeses</li>
-<li>We hope you’ll learn something useful; and we also expect to learn from you!</li>
-</ul>
-</section>
-<section id="the-good-news" class="slide level2">
-<h2>The good news</h2>
-<p>On the whole you’re well positioned to benefit from AI:</p>
-<ul>
-<li>Plain text workflows are equally accessible to humans and agents</li>
-<li>Baseline scepticism will serve you well (but don’t let it imprison you)</li>
-<li>Human knowledge still super important!</li>
-<li>Subject matter expertise now more important that programming skill</li>
-<li>Development best practices now much more accessible</li>
-</ul>
-
+<section>
+<section id="what-is-an-agent" class="title-slide slide level1 center">
+<h1>What is an agent?</h1>
 
 </section>
+<section id="lets-make-a-package" class="slide level2">
+<h2>Let’s make a package</h2>
+<p>(Make sure you’re in normal mode)</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>usethis<span class="sc">::</span><span class="fu">create_package</span>(<span class="st">"~/desktop/compliment"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<blockquote>
+<p>Create a new R package called compliment in the current directory. It should generate randomized compliments.</p>
+</blockquote>
+</section>
+<section id="youve-never-made-a-package-before" class="slide level2">
+<h2>You’ve never made a package before?</h2>
+<ul>
+<li>It’s that easy!</li>
+<li>How to find the bathroom:
+<ul>
+<li>Code lives in <code>R/</code></li>
+<li>Documentation lives in <code>#'</code> comments</li>
+<li>Tests live in <code>tests/testhat/</code></li>
+</ul></li>
+<li>We’ll talk more about the pieces and the workflow later</li>
+</ul>
+</section>
+<section id="your-turn" class="slide level2 your-turn">
+<h2>Your turn</h2>
+<ul>
+<li>Use the same prompt as me. It’s underspecified ask so we’re going to get lots of variation. That’s part of the fun!</li>
+<li>Manually approve a few writes</li>
+<li>Then allow all</li>
+<li>Make sure your package has tests and Git</li>
+<li>How does your package differ from mine? From your neighbours?</li>
+</ul>
+</section>
+<section id="there-are-three-types-of-output" class="slide level2">
+<h2>There are three types of output</h2>
+<ul>
+<li>Text</li>
+<li>Thinking (click to expand)</li>
+<li>Tool calls</li>
+</ul>
+</section>
+<section id="tool-calls-let-the-agent-run-code-on-your-computer" class="slide level2">
+<h2>Tool calls let the agent run code on your computer</h2>
+<ul>
+<li>Tools are provided by the <strong>harness</strong>, e.g.&nbsp;Posit Assistant</li>
+<li>LLM asks harness to run code; harness returns result to the LLM</li>
+<li>Often requests many tool calls at once</li>
+<li>These are called “parallel” calls, but don’t actually run in parallel</li>
+<li>Can recognise with the thick line line</li>
+</ul>
+
+<img data-src="../images/pa-parallel-calls.png" class="r-stretch quarto-figure-center"><p class="caption">Two read calls and three edit calls</p></section>
+<section id="a-little-vocab" class="slide level2">
+<h2>A little vocab</h2>
+<ul>
+<li>Harness: provides tools; runs the loop</li>
+<li>Provider: who runs the server that runs the model
+<ul>
+<li>Open models can be hosted anywhere</li>
+<li>AWS + Azure host lots of foundation models</li>
+</ul></li>
+<li>Model: the specific LLM model you’re using</li>
+</ul>
+</section>
+<section id="some-examples" class="slide level2">
+<h2>Some examples</h2>
+<ul>
+<li>Kimi K3 (model) on posit.ai (provider) with Posit Assitant (harness)</li>
+<li>Opus 5 (model) on posit.ai (provider) with Posit Assitant (harness)</li>
+<li>Opus 5 (model) from claude (provider) in Claude Code (harness)</li>
+<li>GPT-5.3 (model) from AWS Bedrock (provider) in Posit Assitant (harness)</li>
+<li>GPT-5.3 (model) from OpenAI (provider) in codex (harness)</li>
+</ul>
+</section>
+<section id="what-are-some-common-calls" class="slide level2">
+<h2>What are some common calls?</h2>
+<ul>
+<li><code>write</code> creates a new file</li>
+<li><code>edit</code> modifies an existing file</li>
+<li><code>executeCode</code> runs R (or Python) code in the console</li>
+<li><code>bash</code> runs code you’d usually use the terminal for</li>
+<li><code>AskUser</code> asks you a question</li>
+<li><code>read</code> reads a file on disk</li>
+<li><code>webfetch</code> reads a web page</li>
+<li><code>search</code> searches directory for matching text</li>
+</ul>
+</section>
+<section id="your-turn-1" class="slide level2 your-turn">
+<h2>Your turn</h2>
+<ul>
+<li>Try and prompt your agent to make it use each of the tool calls above</li>
+<li>What other tools are available?</li>
+</ul>
+</section>
+<section id="so-what-is-an-agent" class="slide level2">
+<h2>So what is an agent?</h2>
+</section></section>
+<section>
+<section id="safety-and-security" class="title-slide slide level1 center">
+<h1>Safety and security</h1>
+
+</section>
+<section id="what-are-the-risks" class="slide level2">
+<h2>What are the risks?</h2>
+<p>I think the cleanest definition is that the dangers are irreversible action, i.e.:</p>
+<ul>
+<li>Editing file (without git)</li>
+<li>Deleting a file or database table (without a backup)</li>
+<li>Sending an email</li>
+<li>Revealing a secret (API key, password, …)</li>
+</ul>
+</section>
+<section id="your-turn-2" class="slide level2 your-turn">
+<h2>Your turn</h2>
+<p>What other irreversible actions are you worried about? What ways do you know to protect yourself?</p>
+</section>
+<section id="how-do-you-protect-yourself" class="slide level2">
+<h2>How do you protect yourself?</h2>
+<ul>
+<li>Ask for permission</li>
+<li>Make operations reversible
+<ul>
+<li>Always use git</li>
+<li>Back up!</li>
+</ul></li>
+<li>Prevent dangerous actions (i.e.&nbsp;use a sandbox)</li>
+</ul>
+</section>
+<section id="ask-for-permission" class="slide level2">
+<h2>Ask for permission</h2>
+<ul>
+<li>IMO constantly asking for permission is just security theatre</li>
+<li>99% of LLM actions are fine, so you quickly get trained to always click ok</li>
+<li>So then you just click “Approve always”</li>
+<li>Matching command prefixes doesn’t work</li>
+</ul>
+</section>
+<section id="prefixes-dont-work" class="slide level2">
+<h2>Prefixes don’t work</h2>
+<pre><code>git push --force
+gh issue delete 123
+find . -type f -name '*.log' -mtime +30 -size +10M -path './var/*' -delete
+curl -fsSL https://example.com/install.sh -o /dev/stdout | sh
+tar -xzf backup.tar.gz -C /tmp/restore --strip-components=1 -P</code></pre>
+</section>
+<section id="what-about-sandboxes" class="slide level2">
+<h2>What about sandboxes?</h2>
+<ul>
+<li><p>Use OS level sandboxing to only allow reads and writes to the current directory, and no network access</p></li>
+<li><p>Unfortunately that’s not very useful</p>
+<ul>
+<li>No package install</li>
+<li>No temporary directory</li>
+<li>No GitHub</li>
+<li>No web search</li>
+</ul></li>
+<li><p>I remain optimistic that it’s possible to overcome these problems, but current implementations are painful</p></li>
+</ul>
+</section>
+<section id="auto-mode" class="slide level2">
+<h2>Auto-mode</h2>
+<ul>
+<li>What if we only ask permission for operations that seem legitimately dangerous?</li>
+<li>That’s the idea behind auto-mode: ask a (simpler) LLM to classify if a command is dangerous or safe, and then only ask permission for dangerous options</li>
+<li>It leaves a lot to be desired, but I think this is a sweet spot on the security-utility spectrum right now</li>
+</ul>
+</section>
+<section id="reasoning-about-llm-behaviour-is-weird" class="slide level2">
+<h2>Reasoning about LLM behaviour is weird</h2>
+<!--
+Jenny had to do this to fix build and deploy. Otherwise we need to install R, even thought there's no actually executable R code. Quarto can't tell that.
+```r
+dir.create("~/desktop/family-data")
+writeLines(letters, "~/desktop/family-data/precious-memories.txt")
+writeLines(letters, "~/desktop/family-data/bank-records.txt")
+dir.create("~/desktop/junk")
+writeLines(letters, "~/desktop/junk/tmp1.txt")
+writeLines(letters, "~/desktop/junk/tmp2.txt")
+```
+-->
+<blockquote>
+<p>Delete ~/desktop/family-data</p>
+</blockquote>
+<blockquote>
+<p>Delete ~/desktop/junk</p>
+</blockquote>
+</section>
+<section id="your-turn-3" class="slide level2 your-turn">
+<h2>Your turn</h2>
+<p>What other potentially dangerous operations can you get Posit Assistant to do? (Don’t do anything legit dangerous but see if you can trick PA into doing something that’s clearly dangerous in general.)</p>
+</section>
+<section id="more-work-to-be-done" class="slide level2">
+<h2>More work to be done</h2>
+<ul>
+<li>Some of my (incorrect) thinking at <a href="https://tidydesign.substack.com/p/help-my-coding-agent-can-run-code" class="uri">https://tidydesign.substack.com/p/help-my-coding-agent-can-run-code</a></li>
+<li>I plan to work on this after conf</li>
+</ul>
+</section></section>
+<section>
+<section id="costs" class="title-slide slide level1 center">
+<h1>Costs</h1>
+
+</section>
+<section id="why-care" class="slide level2">
+<h2>Why care?</h2>
+<ul>
+<li>You probably don’t need to if you’re an individual developer</li>
+<li>But:
+<ul>
+<li>It matters inside enterprises</li>
+<li>It’s a proxy for energy usage</li>
+<li>Who knows how long all-you-can-eat plans will continue</li>
+</ul></li>
+</ul>
+</section>
+<section id="life-is-good-for-individual-developers" class="slide level2">
+<h2>Life is good for individual developers</h2>
+<ul>
+<li>Individuals can use an all-you-can-eat plan
+<ul>
+<li>Codex: $20 / month, $100 / month</li>
+<li>Claude Code: $20 / month, $100 / month</li>
+</ul></li>
+<li>These are very generous; you get 20-80x the value of API pricing</li>
+<li>BUT you can only use in provider harnesses (i.e.&nbsp;not Posit Assitant)</li>
+</ul>
+</section>
+<section id="enterprise-plans-are-different" class="slide level2">
+<h2>Enterprise plans are different</h2>
+<ul>
+<li><p>Enterprises have to pay by the million tokens</p>
+<ul>
+<li>Opus 5: $5 input, $25 output</li>
+<li>gpt-5.6-terra: $2 input, $12 output</li>
+<li>Kimi K3: $3 input, $15 output</li>
+</ul></li>
+<li><p>(This is also what you pay in ellmer)</p></li>
+<li><p>Average engineers spend $150-$250 / month, i.e.&nbsp;$8-12 / day</p></li>
+<li><p>High users spend $3,000 / month, i.e.&nbsp;$150 / day</p></li>
+</ul>
+</section>
+<section id="my-views-on-cost-benefit-have-changed" class="slide level2">
+<h2>My views on cost-benefit have changed</h2>
+<ul>
+<li>I used to think that Anthropic models was worth the premium</li>
+<li>But the relative cost has increased and output quality has decreased (code is still fine, but its writing is painful)</li>
+<li>Kimi K3 is excellent. Somewhere between Opus and Fable in code quality, but a much better writer, and only costs 75% of Sonnet (thanks to tokenizer).</li>
+<li>All models since April 16, 2026 (Claude Opus 4.7) use a new tokenizer that uses ~20% more tokens, so even though the per-token prices didn’t change, the overall cost did</li>
+<li>And Anthropic models seem to be producing more loquacious output, which also costs more money 🤔</li>
+</ul>
+</section>
+<section id="so-how-can-you-tell-what-youre-spending" class="slide level2">
+<h2>So how can you tell what you’re spending?</h2>
+<ul>
+<li>Harnesses by model providers don’t tend to make the cost obvious (I think you can imagine why)</li>
+<li>Posit Assistant displays a lot of information (and we’re working hard to make it better)</li>
+<li><a href="https://www.agentsview.io">AgentsView</a> is a good retrospective tool that works with many harnesses</li>
+<li>Two important facts to know:
+<ul>
+<li>Conversations are additive</li>
+<li>Cache is king</li>
+</ul></li>
+</ul>
+</section>
+<section id="conversations-are-additive" class="slide level2">
+<h2>Conversations are additive</h2>
+<ul>
+<li><p>LLMs are predictive models</p></li>
+<li><p>They need the <em>complete history</em> of the conversation</p></li>
+<li><p>Both your inputs and its outputs</p></li>
+<li><p>Recommendation: use <code>/clear</code> to start from a fresh slate</p></li>
+<li><p>Saves money and avoids stale state</p></li>
+</ul>
+</section>
+<section id="cost-is-dominated-by-cache-hits" class="slide level2">
+<h2>Cost is dominated by cache hits</h2>
+<ul>
+<li>No caching = ~10x cost</li>
+<li>Very hard to reason about, not least because the providers differ so much:
+<ul>
+<li>Claude: 5 minutes / 1 hour (2x cost)</li>
+<li>OpenAI: 30 minutes</li>
+<li>KimiK3: no guarantees</li>
+</ul></li>
+<li>But if you resume a session the next day, be 10x the cost of the last request</li>
+</ul>
+</section>
+<section id="your-turn-4" class="slide level2 your-turn">
+<h2>Your turn</h2>
+<ul>
+<li>Look at what you’ve spent in previous PA conversations</li>
+<li></li>
+<li>Optional: download and install AgentsView. Where is your LLM spend going?</li>
+</ul>
+</section></section>
+<section>
+<section id="posit-assistant-alternatives" class="title-slide slide level1 center">
+<h1>Posit Assistant alternatives</h1>
+
+</section>
+<section id="posit-assistant-currently-most-compelling-inside-the-enterprise" class="slide level2">
+<h2>Posit Assistant currently most compelling inside the enterprise</h2>
+<ul>
+<li>Optimistically, it’s 2x better than Claude code/codex</li>
+<li>But you have to pay 20-80x as much to use it with an API key (or via posit.ai)</li>
+<li>So ask for it if you use RStudio/Positron for work, but otherwise we accept it’s probably not worth it for you to use it</li>
+<li>We are closely tracking Anthropic/OpenAI opening up their plans to other harnesses</li>
+</ul>
+</section>
+<section id="so-why-use-it-in-this-workshop" class="slide level2">
+<h2>So why use it in this workshop?</h2>
+<ul>
+<li>We believe it’s a really good product and want you to at least experience it</li>
+<li>We also want to see what problems you discover with it</li>
+<li>It’s what I use day-to-day</li>
+<li>It gives the best feedback on cost</li>
+</ul>
+</section>
+<section id="what-if-you-cant-use-it" class="slide level2">
+<h2>What if you can’t use it ?</h2>
+<ul>
+<li>The Claude Code and Codex harnesses are also very good</li>
+<li>I have used both VS Code/Positron extensions and just their CLI’s in the terminal</li>
+<li>Downside of both extensions is that they can’t find <code>quarto</code> and <code>air</code> which are bundled with Positron. You’ll need to explicitly tell them to that they’re bundled with Positron.</li>
+<li>We recommend pairing with https://github.com/posit-dev/mcp-repl or similar to get access to a persistent R/python environment</li>
+</ul>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
