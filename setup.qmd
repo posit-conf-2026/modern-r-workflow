@@ -6,6 +6,8 @@ Please complete the following steps before the workshop so we can dive straight 
 
 You need:
 
+* A laptop
+
 * A recent version of Positron, preferably the latest release. Go here:
 
   - <https://positron.posit.co/download.html>
@@ -39,6 +41,13 @@ You need:
     - <https://posit.ai/>
     - Open [Posit Assistant](https://assistant.posit.co/) in Positron and sign in with your Posit AI Pass
     - Say "hi" to Posit Assistant to check that all is well. Expect a response along the lines "Hello, how can I help?".
+
+* Join us on Discord, our primary communication method during the workshop:
+
+    - Join the posit::conf Discord server: [pos.it/joinconf26](https://pos.it/joinconf26); sign up for an account if you don't already have one
+    - Set your display name to the one you used to register for the conference
+    - In your "About me," put the name of the workshop you're enrolled in
+    - Then head to the workshop channel: [#workshop-modern-r-workflow](https://discord.com/channels/1381993558437007490/1532807523524939927)
 
 * Optional: Get the development version of [Posit Assistant](https://assistant.posit.co/) by pressing Cmd/Ctrl + Shift + P to open the command palette and run `Posit Assistant: Check for newer dev build`. Follow the prompts to restart Posit Assistant.
 
