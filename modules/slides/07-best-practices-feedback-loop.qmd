@@ -37,6 +37,7 @@ deliverer: Hadley
 * Just use `air`
 * Get started with `usethis::use_air()` + `Air: format workspace file`
 * Our `AGENTS.md` reminds the agent to use it
+* Try [yamark](https://t-kalinowski.github.io/yamark/) or [panache](https://panache.bz) for markdown/Quarto
 
 ## Agents love comments
 
