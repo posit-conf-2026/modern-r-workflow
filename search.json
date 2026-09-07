@@ -38,6 +38,13 @@
     "text": "GitHub actions\n\nAgents know more about writing GitHub actions than I do\nuse_github_action() for common stuff\nUse agents for anything custom\nAgents are also great at fixing problems thus revealed\nGreat for your data scraping projects too!"
   },
   {
+    "objectID": "modules/slides/07-best-practices-feedback-loop.html#usethis-functions",
+    "href": "modules/slides/07-best-practices-feedback-loop.html#usethis-functions",
+    "title": "Best practices feedback loop",
+    "section": "usethis functions",
+    "text": "usethis functions\n\nAll that said, I still use the usethis family of functions for working with PRs\nEspecially pr_init(), pr_fetch() and pr_finish()\nEven when the project isn’t in R!"
+  },
+  {
     "objectID": "modules/slides/07-best-practices-feedback-loop.html#just-use-air",
     "href": "modules/slides/07-best-practices-feedback-loop.html#just-use-air",
     "title": "Best practices feedback loop",
