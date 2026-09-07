@@ -218,7 +218,10 @@ ul.task-list li input[type="checkbox"] {
 <p>Take about 10 minutes to try one or more of the following activities in Positron</p>
 <ul>
 <li><a href="#activity-a">Positron bingo</a></li>
-<li><a href="#activity-b">Activity B</a></li>
+<li><a href="#activity-b">Get comfy with Positron</a></li>
+<li><a href="#activity-c">Multiple R sessions (option 1 of 2)</a></li>
+<li><a href="#activity-d">Multiple R versions (option 2 of 2)</a></li>
+<li><a href="#activity-e">Format some ugly R code</a></li>
 </ul>
 </section>
 <section id="activity-a" class="level2">
@@ -257,8 +260,73 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </section>
 <section id="activity-b" class="level2">
-<h2 class="anchored" data-anchor-id="activity-b">Activity B</h2>
-<p>TODO</p>
+<h2 class="anchored" data-anchor-id="activity-b">Get comfy with Positron</h2>
+<p>If you’re new-ish to Positron, there’s a good chance you haven’t tuned it to your taste yet. Pick a few of the following to try:</p>
+<ul>
+<li>If you’re coming from RStudio, turn on RStudio keybindings: open Settings and search for “RStudio keybindings”</li>
+<li>Experiment with layouts: try the layout picker in the top right, or move panes around and see what sticks</li>
+<li>Search settings for “quiet mode” and consider turning it on to skip R’s startup banner</li>
+<li>Subscribe to the “dailies” release channel if you want to try new features early, and don’t mind occasional instability</li>
+<li>Open the Data Explorer on a data frame (e.g.&nbsp;<code>View(mtcars)</code> or click one in the Variables pane) and try sorting, filtering, or summarizing a column</li>
+<li>Open the Packages pane and check whether any of your packages have updates available</li>
+<li>If you like inline Quarto output, turn that setting on and test drive one of you Quarto documents</li>
+<li>Poke around other settings you care about, such as those for the R, Quarto, or Shiny extensions</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Where to find these
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>How to get to your Settings:
+<ul>
+<li>Cmd/Ctrl + ,</li>
+<li>the gear icon in the lower left</li>
+<li>via the command palette: Cmd/Ctrl + Shift + P, then “Preferences: Open Settings”</li>
+</ul></li>
+<li>Layout picker: top-right corner of the window</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="activity-c" class="level2">
+<h2 class="anchored" data-anchor-id="activity-c">Multiple R sessions (option 1 of 2)</h2>
+<ul>
+<li>Create 2 (or more!) concurrent R sessions of the same or different versions</li>
+<li>Create different objects in each session and explore how that plays out in the Variables pane</li>
+<li>Restart 1 session (but not the other(s)). What do you see in the Variables pane now?</li>
+<li>Click the ⓘ in the Console action bar to see session metadata. Can you find the R executable path?</li>
+<li>Can you figure out how to rename an R session?</li>
+</ul>
+</section>
+<section id="activity-d" class="level2">
+<h2 class="anchored" data-anchor-id="activity-d">Multiple R versions (option 2 of 2)</h2>
+<ul>
+<li>Install rig: <a href="https://github.com/r-lib/rig" class="uri">https://github.com/r-lib/rig</a>. Note the docs in repo’s README</li>
+<li>Use rig to list your existing R versions. Which one is the system default?</li>
+<li>Ask rig to list all available R versions</li>
+<li>Install another R version. Make it the new default (or not)</li>
+<li>Launch Positron and see that the new R version is now also available</li>
+<li>Consider going back to your previous default R version</li>
+</ul>
+</section>
+<section id="activity-e" class="level2">
+<h2 class="anchored" data-anchor-id="activity-e">Format some ugly R code</h2>
+<ul>
+<li>Download <a href="https://github.com/posit-dev/positron-workshop-project/blob/main/air-practice.R" target="_blank">air-practice.R</a> (poorly formatted R code, on purpose). Alternatively, open a personal R file with questionable formatting</li>
+<li>Open it in Positron</li>
+<li>Remove the <code># fmt: skip</code> file line, so that Air will format the file</li>
+<li>Experiment with the Format Selection and/or Format Document commands to see how Air would reformat it</li>
+<li>Inspect the Git diff to see what’s changed</li>
+</ul>
 
 
 </section>

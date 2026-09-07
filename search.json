@@ -562,7 +562,7 @@
     "href": "modules/02-positron-tour.html#hands-on-activities",
     "title": "Positron tour",
     "section": "Hands-on activities",
-    "text": "Hands-on activities\nTake about 10 minutes to try one or more of the following activities in Positron\n\nPositron bingo\nActivity B",
+    "text": "Hands-on activities\nTake about 10 minutes to try one or more of the following activities in Positron\n\nPositron bingo\nGet comfy with Positron\nMultiple R sessions (option 1 of 2)\nMultiple R versions (option 2 of 2)\nFormat some ugly R code",
     "crumbs": [
       "Positron tour"
     ]
@@ -581,8 +581,38 @@
     "objectID": "modules/02-positron-tour.html#activity-b",
     "href": "modules/02-positron-tour.html#activity-b",
     "title": "Positron tour",
-    "section": "Activity B",
-    "text": "Activity B\nTODO",
+    "section": "Get comfy with Positron",
+    "text": "Get comfy with Positron\nIf you’re new-ish to Positron, there’s a good chance you haven’t tuned it to your taste yet. Pick a few of the following to try:\n\nIf you’re coming from RStudio, turn on RStudio keybindings: open Settings and search for “RStudio keybindings”\nExperiment with layouts: try the layout picker in the top right, or move panes around and see what sticks\nSearch settings for “quiet mode” and consider turning it on to skip R’s startup banner\nSubscribe to the “dailies” release channel if you want to try new features early, and don’t mind occasional instability\nOpen the Data Explorer on a data frame (e.g. View(mtcars) or click one in the Variables pane) and try sorting, filtering, or summarizing a column\nOpen the Packages pane and check whether any of your packages have updates available\nIf you like inline Quarto output, turn that setting on and test drive one of you Quarto documents\nPoke around other settings you care about, such as those for the R, Quarto, or Shiny extensions\n\n\n\n\n\n\n\nNoteWhere to find these\n\n\n\n\n\n\nHow to get to your Settings:\n\nCmd/Ctrl + ,\nthe gear icon in the lower left\nvia the command palette: Cmd/Ctrl + Shift + P, then “Preferences: Open Settings”\n\nLayout picker: top-right corner of the window",
+    "crumbs": [
+      "Positron tour"
+    ]
+  },
+  {
+    "objectID": "modules/02-positron-tour.html#activity-c",
+    "href": "modules/02-positron-tour.html#activity-c",
+    "title": "Positron tour",
+    "section": "Multiple R sessions (option 1 of 2)",
+    "text": "Multiple R sessions (option 1 of 2)\n\nCreate 2 (or more!) concurrent R sessions of the same or different versions\nCreate different objects in each session and explore how that plays out in the Variables pane\nRestart 1 session (but not the other(s)). What do you see in the Variables pane now?\nClick the ⓘ in the Console action bar to see session metadata. Can you find the R executable path?\nCan you figure out how to rename an R session?",
+    "crumbs": [
+      "Positron tour"
+    ]
+  },
+  {
+    "objectID": "modules/02-positron-tour.html#activity-d",
+    "href": "modules/02-positron-tour.html#activity-d",
+    "title": "Positron tour",
+    "section": "Multiple R versions (option 2 of 2)",
+    "text": "Multiple R versions (option 2 of 2)\n\nInstall rig: https://github.com/r-lib/rig. Note the docs in repo’s README\nUse rig to list your existing R versions. Which one is the system default?\nAsk rig to list all available R versions\nInstall another R version. Make it the new default (or not)\nLaunch Positron and see that the new R version is now also available\nConsider going back to your previous default R version",
+    "crumbs": [
+      "Positron tour"
+    ]
+  },
+  {
+    "objectID": "modules/02-positron-tour.html#activity-e",
+    "href": "modules/02-positron-tour.html#activity-e",
+    "title": "Positron tour",
+    "section": "Format some ugly R code",
+    "text": "Format some ugly R code\n\nDownload air-practice.R (poorly formatted R code, on purpose). Alternatively, open a personal R file with questionable formatting\nOpen it in Positron\nRemove the # fmt: skip file line, so that Air will format the file\nExperiment with the Format Selection and/or Format Document commands to see how Air would reformat it\nInspect the Git diff to see what’s changed",
     "crumbs": [
       "Positron tour"
     ]
