@@ -7,3 +7,39 @@ title: "Positron tour"
 ```{=html}
 <iframe src="slides/01-hello-positron.pdf" style="width: 100%; aspect-ratio: 16 / 9; border: 1px solid #dee2e6;"></iframe>
 ```
+
+## Hands-on activities
+
+Take about 10 minutes to try one or more of the following activities in Positron
+
+- [Positron bingo](#activity-a)
+- [Activity B](#activity-b)
+
+## Positron bingo {#activity-a}
+
+Pick a bingo card, any card!
+
+For the Data Explorer cells: first run `View(mtcars)` in the Console.
+
+::: {style="column-count: 2;"}
+- [positron-rules](/_bingo/cards/positron-rules.pdf){target="_blank"}
+- [positron-rocks](/_bingo/cards/positron-rocks.pdf){target="_blank"}
+- [positron-power](/_bingo/cards/positron-power.pdf){target="_blank"}
+- [positron-vibes](/_bingo/cards/positron-vibes.pdf){target="_blank"}
+- [positron-magic](/_bingo/cards/positron-magic.pdf){target="_blank"}
+- [positron-forever](/_bingo/cards/positron-forever.pdf){target="_blank"}
+- [positron-fanclub](/_bingo/cards/positron-fanclub.pdf){target="_blank"}
+- [positron-nation](/_bingo/cards/positron-nation.pdf){target="_blank"}
+- [positron-energy](/_bingo/cards/positron-energy.pdf){target="_blank"}
+- [positron-express](/_bingo/cards/positron-express.pdf){target="_blank"}
+:::
+
+::: {.callout-warning collapse="true"}
+## Bingo solutions: don't peek!
+
+[Solutions](https://posit-dev.github.io/positron-workshop/bingo-solutions/index.html){target="_blank"}
+:::
+
+## Activity B {#activity-b}
+
+TODO
