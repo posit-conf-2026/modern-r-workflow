@@ -539,6 +539,111 @@
     ]
   },
   {
+    "objectID": "modules/slides/01-helping-yourself.html#section",
+    "href": "modules/slides/01-helping-yourself.html#section",
+    "title": "Helping yourself",
+    "section": "",
+    "text": "2010s"
+  },
+  {
+    "objectID": "modules/slides/01-helping-yourself.html#section-1",
+    "href": "modules/slides/01-helping-yourself.html#section-1",
+    "title": "Helping yourself",
+    "section": "",
+    "text": "Let me GitHub search that for you\n\n\n2020s"
+  },
+  {
+    "objectID": "modules/slides/01-helping-yourself.html#section-2",
+    "href": "modules/slides/01-helping-yourself.html#section-2",
+    "title": "Helping yourself",
+    "section": "",
+    "text": "Let me ask an LLM for you\n\n\n\n\n\n2026"
+  },
+  {
+    "objectID": "modules/slides/01-helping-yourself.html#effective-self-help-tips",
+    "href": "modules/slides/01-helping-yourself.html#effective-self-help-tips",
+    "title": "Helping yourself",
+    "section": "Effective self-help tips",
+    "text": "Effective self-help tips\n\nBeing 20% more specific improves your results by 80%\nWays to introduce specificity\n\nYour own language\nNarrow the scope, e.g., to a specific codebase\nUse a tool with unique access to, e.g., a specific codebase\nCommision a script to do something exhaustively\n\nDon’t be shy to ask for receipts! E.g. show me where this appears in the codebase or the docs"
+  },
+  {
+    "objectID": "modules/slides/01-helping-yourself.html#talk-like-an-expert",
+    "href": "modules/slides/01-helping-yourself.html#talk-like-an-expert",
+    "title": "Helping yourself",
+    "section": "Talk like an expert",
+    "text": "Talk like an expert\nTerence Tao discussing a surprising math result with ChatGPT\n\n\nIt is remarkable that the jacobian is constant, that is an exceptional amount of cancellation. Does this polynomial map have any symmetry or other structure that makes this cancelation less miraculous?\n\nWhat stands out is the shape of the interaction. Tao starts his inquiry by noting a single, precise detail that intrigues him.\n\nCode is the byproduct — yagmin.com"
+  },
+  {
+    "objectID": "modules/slides/01-helping-yourself.html#terse-and-precise",
+    "href": "modules/slides/01-helping-yourself.html#terse-and-precise",
+    "title": "Helping yourself",
+    "section": "Terse and precise",
+    "text": "Terse and precise\n\nNote what Tao is not doing.\nHe is not building a rich contextual background for the LLM to unpack. He does not list his credentials or say, “you are a mathematical genius, make no mistakes.”\nInstead, he is terse and precise. He asks narrow questions and gets narrow responses.\nKeep your requests narrow and specific. Let the output compound through repeated inquiries. Engage with the goal of improving your personal understanding.\n\nCode is the byproduct — yagmin.com"
+  },
+  {
+    "objectID": "modules/slides/01-helping-yourself.html#section-3",
+    "href": "modules/slides/01-helping-yourself.html#section-3",
+    "title": "Helping yourself",
+    "section": "",
+    "text": "Chat: where can an R package write user files?"
+  },
+  {
+    "objectID": "modules/slides/01-helping-yourself.html#section-4",
+    "href": "modules/slides/01-helping-yourself.html#section-4",
+    "title": "Helping yourself",
+    "section": "",
+    "text": "GitHub search: Show usage of tools::R_user_dir() in CRAN packages"
+  },
+  {
+    "objectID": "modules/slides/01-helping-yourself.html#deepwiki-what-does-pkgdown-use-toolsr_user_dir-for",
+    "href": "modules/slides/01-helping-yourself.html#deepwiki-what-does-pkgdown-use-toolsr_user_dir-for",
+    "title": "Helping yourself",
+    "section": "DeepWiki: What does pkgdown use tools::R_user_dir() for?",
+    "text": "DeepWiki: What does pkgdown use tools::R_user_dir() for?"
+  },
+  {
+    "objectID": "modules/slides/01-helping-yourself.html#deepwiki-what-does-pkgdown-use-toolsr_user_dir-for-1",
+    "href": "modules/slides/01-helping-yourself.html#deepwiki-what-does-pkgdown-use-toolsr_user_dir-for-1",
+    "title": "Helping yourself",
+    "section": "DeepWiki: What does pkgdown use tools::R_user_dir() for?",
+    "text": "DeepWiki: What does pkgdown use tools::R_user_dir() for?"
+  },
+  {
+    "objectID": "modules/slides/01-helping-yourself.html#github-chat-with-copilot-when-did-pkgdown-introduce-toolsr_user_dir",
+    "href": "modules/slides/01-helping-yourself.html#github-chat-with-copilot-when-did-pkgdown-introduce-toolsr_user_dir",
+    "title": "Helping yourself",
+    "section": "GitHub Chat with Copilot: When did pkgdown introduce tools::R_user_dir()?",
+    "text": "GitHub Chat with Copilot: When did pkgdown introduce tools::R_user_dir()?"
+  },
+  {
+    "objectID": "modules/slides/01-helping-yourself.html#github-chat-with-copilot-when-did-pkgdown-introduce-toolsr_user_dir-1",
+    "href": "modules/slides/01-helping-yourself.html#github-chat-with-copilot-when-did-pkgdown-introduce-toolsr_user_dir-1",
+    "title": "Helping yourself",
+    "section": "GitHub Chat with Copilot: When did pkgdown introduce tools::R_user_dir()?",
+    "text": "GitHub Chat with Copilot: When did pkgdown introduce tools::R_user_dir()?"
+  },
+  {
+    "objectID": "modules/slides/01-helping-yourself.html#agent-create-a-quarto-document-surveying-toolsr_user_dir-usage",
+    "href": "modules/slides/01-helping-yourself.html#agent-create-a-quarto-document-surveying-toolsr_user_dir-usage",
+    "title": "Helping yourself",
+    "section": "Agent: Create a Quarto document surveying tools::R_user_dir() usage",
+    "text": "Agent: Create a Quarto document surveying tools::R_user_dir() usage\nOK I’m not actually doing this one, but you could imagine directing an agent to:\n\nEnumerate all uses of tools::R_user_dir() in CRAN packages\nCreate a raw report of GitHub permalinks to these call sites\nAnalyze each call site re: how it’s being used and when it was introduced\nSummarize the findings"
+  },
+  {
+    "objectID": "modules/slides/01-helping-yourself.html#its-a-great-time-to-answer-your-own-questions",
+    "href": "modules/slides/01-helping-yourself.html#its-a-great-time-to-answer-your-own-questions",
+    "title": "Helping yourself",
+    "section": "It’s a great time to answer your own questions!",
+    "text": "It’s a great time to answer your own questions!\n\n\nChat: be as precise as your current understanding allows\nGitHub search: qualifiers are powerful, e.g.\n\nuser:cran searches across source of every CRAN package\nuser:tidyverse searches within the tidyverse organization\npath:*.yaml search within YAML files\nrepo:wch/r-source searches the GitHub mirror of R’s source\nlanguage:R searches R code\n\nGitHub Chat with Copilot: knows about commits, issues, pull requests, in addition to code\nDeepWiki: chat on top of an LLM-generated wiki for a codebase"
+  },
+  {
+    "objectID": "modules/slides/01-helping-yourself.html#code-is-the-byproduct-of-understanding",
+    "href": "modules/slides/01-helping-yourself.html#code-is-the-byproduct-of-understanding",
+    "title": "Helping yourself",
+    "section": "Code is the byproduct of understanding",
+    "text": "Code is the byproduct of understanding\n\nHow do you construct shared understanding? By narrowing the LLM’s focus through domain-specific wording and keeping requests specific and cumulative.\nTao pins ChatGPT to a “deep mathematics” headspace through terminology and the specificity of his question.\nIf you don’t understand something, set the stage for the LLM and it will capably fill in the missing 20%.\n\nCode is the byproduct — yagmin.com"
+  },
+  {
     "objectID": "modules/slides/04-agent-explainer.html#goals",
     "href": "modules/slides/04-agent-explainer.html#goals",
     "title": "How does Posit Assistant work?",
