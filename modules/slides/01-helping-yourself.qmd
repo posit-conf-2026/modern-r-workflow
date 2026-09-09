@@ -22,6 +22,8 @@ Let me GitHub search that for you
 [2020s]{style="position: absolute; bottom: 0.5em; right: 0.5em; padding: 0.1em 0.45em; background: rgba(0, 0, 0, 0.75); color: white; font-weight: bold; border-radius: 6px;"}
 ::::
 
+<small><https://github.com/search?type=code></small>
+
 ##
 
 :::: {style="position: relative; width: fit-content; margin: 0 auto;"}
@@ -37,6 +39,8 @@ Let me ask an LLM for you
 
 [2026]{style="position: absolute; bottom: 0.5em; left: 0.5em; padding: 0.1em 0.45em; background: rgba(0, 0, 0, 0.75); color: white; font-weight: bold; border-radius: 6px;"}
 ::::
+
+<small><https://claude.ai> · [Posit Assistant](https://positron.posit.co/assistant)</small>
 
 ## Effective self-help tips
 
@@ -86,9 +90,13 @@ Let me ask an LLM for you
 
 ![](/images/help-yourself-github-search-tools-r-user-dir.png){width="850"}
 
+<small>[Run this search](https://github.com/search?q=user%3Acran+tools%3A%3AR_user_dir&type=code)</small>
+
 ## DeepWiki: What does pkgdown use `tools::R_user_dir()` for? {.smaller-title}
 
 ![](/images/help-yourself-deep-wiki-pkgdown-r-user-dir-prompt.png){width="850"}
+
+<small><https://deepwiki.com/r-lib/pkgdown></small>
 
 ## DeepWiki: What does pkgdown use `tools::R_user_dir()` for? {.smaller-title}
 
@@ -98,9 +106,13 @@ Let me ask an LLM for you
 
 ![](/images/help-yourself-github-chat-copilot-tools-r-user-dir-prompt.png){height="520"}
 
+<small>Visit <https://github.com/r-lib/pkgdown> and click the Chat with Copilot button</small>
+
 ## GitHub Chat with Copilot: When did pkgdown introduce `tools::R_user_dir()`? {.smaller-title}
 
 ![](/images/help-yourself-github-chat-copilot-tools-r-user-dir-result.png){height="520"}
+
+<small>Visit <https://github.com/r-lib/pkgdown> and click the Chat with Copilot button</small>
 
 ## Agent: Create a Quarto document surveying `tools::R_user_dir()` usage {.smaller-title}
 
@@ -115,14 +127,14 @@ OK I'm not actually *doing* this one, but you could imagine directing an agent t
 
 ::: {style="font-size: 0.75em;"}
 * Chat: be as precise as your current understanding allows
-* GitHub search: qualifiers are powerful, e.g.
+* [GitHub search](https://github.com/search?type=code): [qualifiers](https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax) are powerful, e.g.
   - `user:cran` searches across source of every CRAN package
   - `user:tidyverse` searches within the tidyverse organization
   - `path:*.yaml` search within YAML files
   - `repo:wch/r-source` searches the GitHub mirror of R's source
   - `language:R` searches R code
-* GitHub Chat with Copilot: knows about commits, issues, pull requests, in addition to code
-* DeepWiki: chat on top of an LLM-generated wiki for a codebase
+* [GitHub Chat with Copilot](https://github.com/copilot): knows about commits, issues, pull requests, in addition to code
+* [DeepWiki](https://deepwiki.com): chat on top of an LLM-generated wiki for a codebase
 :::
 
 ## Code is the byproduct of understanding {.center .smaller}
