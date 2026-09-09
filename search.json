@@ -550,14 +550,14 @@
     "href": "modules/slides/01-helping-yourself.html#section-1",
     "title": "Helping yourself",
     "section": "",
-    "text": "Let me GitHub search that for you\n\n\n2020s"
+    "text": "Let me GitHub search that for you\n\n\n2020s\n\nhttps://github.com/search?type=code"
   },
   {
     "objectID": "modules/slides/01-helping-yourself.html#section-2",
     "href": "modules/slides/01-helping-yourself.html#section-2",
     "title": "Helping yourself",
     "section": "",
-    "text": "Let me ask an LLM for you\n\n\n\n\n\n2026"
+    "text": "Let me ask an LLM for you\n\n\n\n\n\n2026\n\nhttps://claude.ai · Posit Assistant"
   },
   {
     "objectID": "modules/slides/01-helping-yourself.html#effective-self-help-tips",
@@ -592,14 +592,14 @@
     "href": "modules/slides/01-helping-yourself.html#section-4",
     "title": "Helping yourself",
     "section": "",
-    "text": "GitHub search: Show usage of tools::R_user_dir() in CRAN packages"
+    "text": "GitHub search: Show usage of tools::R_user_dir() in CRAN packages\n\n\nRun this search"
   },
   {
     "objectID": "modules/slides/01-helping-yourself.html#deepwiki-what-does-pkgdown-use-toolsr_user_dir-for",
     "href": "modules/slides/01-helping-yourself.html#deepwiki-what-does-pkgdown-use-toolsr_user_dir-for",
     "title": "Helping yourself",
     "section": "DeepWiki: What does pkgdown use tools::R_user_dir() for?",
-    "text": "DeepWiki: What does pkgdown use tools::R_user_dir() for?"
+    "text": "DeepWiki: What does pkgdown use tools::R_user_dir() for?\n\nhttps://deepwiki.com/r-lib/pkgdown"
   },
   {
     "objectID": "modules/slides/01-helping-yourself.html#deepwiki-what-does-pkgdown-use-toolsr_user_dir-for-1",
@@ -613,14 +613,14 @@
     "href": "modules/slides/01-helping-yourself.html#github-chat-with-copilot-when-did-pkgdown-introduce-toolsr_user_dir",
     "title": "Helping yourself",
     "section": "GitHub Chat with Copilot: When did pkgdown introduce tools::R_user_dir()?",
-    "text": "GitHub Chat with Copilot: When did pkgdown introduce tools::R_user_dir()?"
+    "text": "GitHub Chat with Copilot: When did pkgdown introduce tools::R_user_dir()?\n\nVisit https://github.com/r-lib/pkgdown and click the Chat with Copilot button"
   },
   {
     "objectID": "modules/slides/01-helping-yourself.html#github-chat-with-copilot-when-did-pkgdown-introduce-toolsr_user_dir-1",
     "href": "modules/slides/01-helping-yourself.html#github-chat-with-copilot-when-did-pkgdown-introduce-toolsr_user_dir-1",
     "title": "Helping yourself",
     "section": "GitHub Chat with Copilot: When did pkgdown introduce tools::R_user_dir()?",
-    "text": "GitHub Chat with Copilot: When did pkgdown introduce tools::R_user_dir()?"
+    "text": "GitHub Chat with Copilot: When did pkgdown introduce tools::R_user_dir()?\n\nVisit https://github.com/r-lib/pkgdown and click the Chat with Copilot button"
   },
   {
     "objectID": "modules/slides/01-helping-yourself.html#agent-create-a-quarto-document-surveying-toolsr_user_dir-usage",
