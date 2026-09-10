@@ -241,99 +241,99 @@
     "text": "Winston’s simplification prompt\n\nMake a deliberate pass over each non-trivial change looking for opportunities for simplification:\n\nCould this change be achieved by deleting or restructuring instead of adding — removing a branch, mode, layer, or special case rather than bolting one on? It’s always better to remove than add.\nIs each new or changed interface narrow relative to what it hides — or must callers know its internals, keep duplicated logic in sync, or work around documented gaps (“does NOT handle X”)?\nDoes anything re-implement what the codebase already provides — a bespoke helper shadowing a canonical one, logic in the wrong layer, or wrapper/cast/any churn obscuring the real contract?\n\nWhen you find opportunities for simplification, be clear about the pros and cons. Produce either a list of potential simplifications or “No simplifications found”."
   },
   {
-    "objectID": "modules/slides/00-welcome-slides.html#wi-fi",
-    "href": "modules/slides/00-welcome-slides.html#wi-fi",
+    "objectID": "modules/slides/00-welcome.html#wi-fi",
+    "href": "modules/slides/00-welcome.html#wi-fi",
     "title": "Welcome",
     "section": "Wi-Fi",
     "text": "Wi-Fi\n\n\n\n\nWi-Fi network name\nPosit Conf 2026\n\n\n\n\nWi-Fi password\nconf2026"
   },
   {
-    "objectID": "modules/slides/00-welcome-slides.html#venue-information",
-    "href": "modules/slides/00-welcome-slides.html#venue-information",
+    "objectID": "modules/slides/00-welcome.html#venue-information",
+    "href": "modules/slides/00-welcome.html#venue-information",
     "title": "Welcome",
     "section": "Venue information",
     "text": "Venue information\n\nMeditation/Prayer Room: Room 332\nMother’s Room: Room 333\nSpeaker’s Lounge: Room 334\nGender-neutral bathrooms: 4th floor, one on either side of ballroom"
   },
   {
-    "objectID": "modules/slides/00-welcome-slides.html#workshop-policies",
-    "href": "modules/slides/00-welcome-slides.html#workshop-policies",
+    "objectID": "modules/slides/00-welcome.html#workshop-policies",
+    "href": "modules/slides/00-welcome.html#workshop-policies",
     "title": "Welcome",
     "section": "Workshop policies",
     "text": "Workshop policies\n\nPlease review the posit::conf code of conduct, which applies to all workshops: https://posit.co/code-of-conduct\nThe Code of Conduct site has info on how to report a problem (in person, email, phone)\nPlease do not photograph people wearing red lanyards"
   },
   {
-    "objectID": "modules/slides/00-welcome-slides.html#who-are-your-tas",
-    "href": "modules/slides/00-welcome-slides.html#who-are-your-tas",
+    "objectID": "modules/slides/00-welcome.html#who-are-your-tas",
+    "href": "modules/slides/00-welcome.html#who-are-your-tas",
     "title": "Welcome",
     "section": "Who are your TAs?",
     "text": "Who are your TAs?\n\nJulia Silge\nKatie Masiello\nSimon Couch\nThomas Pedersen"
   },
   {
-    "objectID": "modules/slides/00-welcome-slides.html#join-us-on-discord",
-    "href": "modules/slides/00-welcome-slides.html#join-us-on-discord",
+    "objectID": "modules/slides/00-welcome.html#join-us-on-discord",
+    "href": "modules/slides/00-welcome.html#join-us-on-discord",
     "title": "Welcome",
     "section": "Join us on Discord",
     "text": "Join us on Discord\nJoin the posit::conf Discord server:\npos.it/joinconf26\nThen head to the workshop channel:\n#workshop-modern-r-workflow"
   },
   {
-    "objectID": "modules/slides/00-welcome-slides.html#section-2",
-    "href": "modules/slides/00-welcome-slides.html#section-2",
+    "objectID": "modules/slides/00-welcome.html#section-2",
+    "href": "modules/slides/00-welcome.html#section-2",
     "title": "Welcome",
     "section": "",
     "text": "Introduce yourself to your neighbors 👋\n\nDo you have a hidden talent?\nDo you have a pet or hobby?\nWhat’s your biggest pet peeve with R?\nWhat’s your favorite thing to do in R?"
   },
   {
-    "objectID": "modules/slides/00-welcome-slides.html#positron",
-    "href": "modules/slides/00-welcome-slides.html#positron",
+    "objectID": "modules/slides/00-welcome.html#positron",
+    "href": "modules/slides/00-welcome.html#positron",
     "title": "Welcome",
     "section": "Positron",
     "text": "Positron\n\nIf you haven’t already, now’s a good time to install Positron.\n\nDownload here: https://positron.posit.co/download.html"
   },
   {
-    "objectID": "modules/slides/00-welcome-slides.html#already-have-positron",
-    "href": "modules/slides/00-welcome-slides.html#already-have-positron",
+    "objectID": "modules/slides/00-welcome.html#already-have-positron",
+    "href": "modules/slides/00-welcome.html#already-have-positron",
     "title": "Welcome",
     "section": "Already have Positron?",
     "text": "Already have Positron?\nIs Positron telling you it’s time to update? Do it!"
   },
   {
-    "objectID": "modules/slides/00-welcome-slides.html#check-your-r-setup",
-    "href": "modules/slides/00-welcome-slides.html#check-your-r-setup",
+    "objectID": "modules/slides/00-welcome.html#check-your-r-setup",
+    "href": "modules/slides/00-welcome.html#check-your-r-setup",
     "title": "Welcome",
     "section": "Check your R setup",
     "text": "Check your R setup\nLet’s make sure everyone’s R installation is ready to go.\n\nConfirm you’re on a recent version of R. Ideally R 4.6.\nInstall pak, if you haven’t already:\ninstall.packages(\"pak\")\nInstall/update devtools and friends:\npak::pak(\"devtools\")\n# or maybe the more update-happy version:\npak::pak(\"devtools\", upgrade = TRUE)\nRun a situation report and check that everything looks good:\ndevtools::dev_sitrep()"
   },
   {
-    "objectID": "modules/slides/00-welcome-slides.html#posit-ai-pass",
-    "href": "modules/slides/00-welcome-slides.html#posit-ai-pass",
+    "objectID": "modules/slides/00-welcome.html#posit-ai-pass",
+    "href": "modules/slides/00-welcome.html#posit-ai-pass",
     "title": "Welcome",
     "section": "Posit AI Pass",
     "text": "Posit AI Pass\nSign up for Posit AI Pass, so you’re ready to use Posit Assistant during the workshop.\n\nSign up: https://posit.ai\nMake sure to use the same email address as you used to register for conf! This is what lets us give you free credits to use today."
   },
   {
-    "objectID": "modules/slides/00-welcome-slides.html#check-that-posit-assistant-is-alive",
-    "href": "modules/slides/00-welcome-slides.html#check-that-posit-assistant-is-alive",
+    "objectID": "modules/slides/00-welcome.html#check-that-posit-assistant-is-alive",
+    "href": "modules/slides/00-welcome.html#check-that-posit-assistant-is-alive",
     "title": "Welcome",
     "section": "Check that Posit Assistant is alive",
     "text": "Check that Posit Assistant is alive\nIn Posit Assistant, sign in with your Posit AI Pass."
   },
   {
-    "objectID": "modules/slides/00-welcome-slides.html#whats-changed",
-    "href": "modules/slides/00-welcome-slides.html#whats-changed",
+    "objectID": "modules/slides/00-welcome.html#whats-changed",
+    "href": "modules/slides/00-welcome.html#whats-changed",
     "title": "Welcome",
     "section": "What’s changed?",
     "text": "What’s changed?\nWhere are the significant changes since R Packages?\n\n80% AI\n15% Positron\n5% standalone CLIs written in rust (e.g. air, rig, quarto)"
   },
   {
-    "objectID": "modules/slides/00-welcome-slides.html#overall",
-    "href": "modules/slides/00-welcome-slides.html#overall",
+    "objectID": "modules/slides/00-welcome.html#overall",
+    "href": "modules/slides/00-welcome.html#overall",
     "title": "Welcome",
     "section": "Overall",
     "text": "Overall\n\nMore changes in the last year than last 10 years combined, and doesn’t look like the pace is going to slow down\nNon-obvious consequences because the cost-benefit ratio for many tasks has radically changed\nWe are still figuring out what it all means\nKeep exploring and experimenting; hold loosely to your hypthoeses\nWe hope you’ll learn something useful; and we also expect to learn from you!"
   },
   {
-    "objectID": "modules/slides/00-welcome-slides.html#the-good-news",
-    "href": "modules/slides/00-welcome-slides.html#the-good-news",
+    "objectID": "modules/slides/00-welcome.html#the-good-news",
+    "href": "modules/slides/00-welcome.html#the-good-news",
     "title": "Welcome",
     "section": "The good news",
     "text": "The good news\nOn the whole you’re well positioned to benefit from AI:\n\nPlain text workflows are equally accessible to humans and agents\nBaseline scepticism will serve you well (but don’t let it imprison you)\nHuman knowledge still super important!\nSubject matter expertise now more important that programming skill\nDevelopment best practices now much more accessible"
