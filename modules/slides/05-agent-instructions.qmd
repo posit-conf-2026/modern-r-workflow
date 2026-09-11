@@ -4,14 +4,14 @@ duration: 30
 deliverer: Hadley
 ---
 
-## Additional context
+## Two ways to provide additional context
 
-* Provide additional context/advice (not rules!) via markdown files
+* Suggestion/advice not rules!
+* Written in markdown
 * Primary motivation:
   * Avoid repeating yourself across multiple conversations
   * Save tokens by avoiding common wheel-spinning
-* We'll focus on `AGENTS.md` (always loaded) and skills (loaded on demand)
-* Let's start with an example
+* Difference is when they're sent to the model
 
 # `AGENTS.md`
 
@@ -30,32 +30,36 @@ usethis::use_tidy_agents()
 * Try it yourself. What differences do you notice in the workflow?
 * Read `AGENTS.md`. What advice does it contain?
 
-## Where can `AGENTS.md` live?
+## Project level `AGENTS.md`
 
-* Project level: `AGENTS.md` in the project root
-  * Checked into git; shared with your whole team
-  * Applies to everything below it in the directory tree
-* User level: `~/.posit/assistant/AGENTS.md`
-  * Personal preferences that apply across all your projects
-  * Good place for pet peeves
-  * (You need to symlink if you're using multiple harnesses)
-* Project (generally) beats user when they conflict
+* `AGENTS.md` in the project root
+* Checked into git; shared with your whole team
+* Applies to everything below it in the directory tree
 * If you're using Claude you also need `CLAUDE.md` that contains `@AGENTS.md`
+* This repos `AGENTS.md`
 
-## My `AGENTS.md`
+## User level `AGENTS.md`
 
-* My personal `AGENTS.md`
-* The `AGENTS.md` in this repo
+*  `~/.posit/assistant/AGENTS.md`
+* Personal preferences that apply across all your projects
+* Good place for pet peeves
+* (You need to symlink if you're using multiple harnesses)
+* Project (generally) beats user when they conflict
+* My `AGENTS.md`
 
 ## What belongs there?
 
+* Keep it minimal!
 * Have you told an agent to do it three times? Put it in `AGENTS.md`
-* Seriously, I think that's the totality of my advice. Keep it minimal!
 * `AGENTS.md` is included in every request and you're paying for it
-* Overfitting it to one model will lead to worse results when the model inevitably changes (e.g. you can't make Claude write good) <!-- FIXME: "write good" is ungrammatical — intentional joke or should it be "write well"? -->
-* Is it a lot of text that is only sometimes important? Use a skill
+* Overfitting advice to one model will lead to worse results when the model inevitably changes (e.g. you can't make Claude write good)
+* Lots of text for a specialised purpose? Use a skill (up next)
 
 ## Your turn {.your-turn}
+
+* Share your personal customisations with your neighbour
+
+Then: 
 
 * Update the project `AGENTS.md` to record some specific conventions for this package
 * e.g.: Use British English; give over-the-top compliments; pretend to be your favourite R developer
@@ -69,7 +73,7 @@ usethis::use_tidy_agents()
 
 * What are they?
 * How do you think they work?
-* How can you tell when a skill is used? (Look back at your history above, or try asking your agent to deprecate a function.)
+* How can you tell when a skill is used? (Look at your chat history, or try asking your agent to deprecate a function.)
 
 ## What is a skill?
 
@@ -98,9 +102,9 @@ usethis::use_tidy_agents()
 
 ## Creating a skill
 
-* Where do they live? I don't know
+* Where do they live? I don't know!
 * Just ask an agent to create the file for you :)
-* Don't ask the agent to write the skill for you
+* But don't ask the agent to write the skill for you
   * Unless you're using a smarter than usual model
   * Or extracting important bits from a conversation
 
