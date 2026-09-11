@@ -10,22 +10,21 @@ deliverer: Hadley
 * Introduce key AI-powered workflows
 * Show my workflow by fixing testthat issues 😂
 
-## The classic workflow
-
-The classic workflow is unchanged:
+## The classic workflow is unchanged
 
 1. Write a function in `R/`
 1. `load_all()` (⌘⇧L) and try it in the console
-1. Write tests with `use_test()`
+1. Create test file with `use_test()` then write tests
 1. `test()` (⌘⇧T) and iterate until they pass
 1. `document()` (⌘⇧D) to update docs
 1. `check()` (⌘⇧E) at the end
+1. Restart R with ⌘⇧0 
 
 (Windows/Linux: use Ctrl instead of ⌘)
 
 ## We're not going to teach the details
 
-In the past we've talked about the individual components in detail. I no longer think that's worth teaching live. You and your agent can figure out what expectations are available and how roxygen2 works in your own time 🙂
+In the past we've talked about the individual components in detail. I no longer think that's worth teaching live. For example, you and your agent can figure out what expectations are available and how roxygen2 works in your own time 🙂
 
 ## Your turn {.your-turn}
 
@@ -36,8 +35,6 @@ Try out the workflow with your compliments package.
 1. Make a simple change, re-load, re-run and check that you see it in the output.
 1. Tweak the documentation, re-document, and look at the help.
 1. Edit a test so it fails, and check that you see the failure.
-
-Stuck? Ask an AI or TA.
 
 ## What changes with AI?
 
@@ -147,6 +144,8 @@ Pay attention! Try to read everything it does.
 I have always wanted a package that provided the stringr API but without the stringi dependency. (This makes the package less good at handling a wide range of international text cases, but would be worth it for many common package development tasks.) This is now easily in scope for a frontier model.
 
 Work with your agent to come up with a design (no need to implement). What's important to include? What can you skip? Start with an analysis of `str_match()` vs the base equivalents. Do you think you need a `str_length()` wrapper?
+
+(Or tackle a more complex task from your own package)
 
 # Bonus workflows
 

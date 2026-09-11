@@ -13,12 +13,12 @@ deliverer: Hadley
 
 ## Development best practices
 
+* Git/GitHub
 * Code style
 * Testing
 * Performance
 * CI/CD
-* Downstream
-* Upstream
+* Downstream & upstream changes
 
 # Git / GitHub
 
@@ -157,3 +157,9 @@ deliverer: Hadley
 * Be upfront about AI usage
 * Spend human time on communication
 * Don't be a meat proxy
+
+# Your turn
+
+## Your turn {.your-turn}
+
+Take this opportunity to experiment with these workflows for your own work!
