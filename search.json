@@ -21,7 +21,7 @@
     "href": "modules/slides/07-best-practices-feedback-loop.html#development-best-practices",
     "title": "Best practices feedback loop",
     "section": "Development best practices",
-    "text": "Development best practices\n\nCode style\nTesting\nPerformance\nCI/CD\nDownstream\nUpstream"
+    "text": "Development best practices\n\nGit/GitHub\nCode style\nTesting\nPerformance\nCI/CD\nDownstream & upstream changes"
   },
   {
     "objectID": "modules/slides/07-best-practices-feedback-loop.html#git",
@@ -143,11 +143,18 @@
     "text": "Upstream changes\n\nYou can now use these skills to fix problems upstream that might have previously been out of reach\nThe primary drawback of this is maintainer overload\nYour job is to bring your human judgement and expertise into play\nBe upfront about AI usage\nSpend human time on communication\nDon’t be a meat proxy"
   },
   {
-    "objectID": "modules/slides/05-agent-instructions.html#additional-context",
-    "href": "modules/slides/05-agent-instructions.html#additional-context",
+    "objectID": "modules/slides/07-best-practices-feedback-loop.html#your-turn-1",
+    "href": "modules/slides/07-best-practices-feedback-loop.html#your-turn-1",
+    "title": "Best practices feedback loop",
+    "section": "Your turn",
+    "text": "Your turn\nTake this opportunity to experiment with these workflows for your own work!"
+  },
+  {
+    "objectID": "modules/slides/05-agent-instructions.html#two-ways-to-provide-additional-context",
+    "href": "modules/slides/05-agent-instructions.html#two-ways-to-provide-additional-context",
     "title": "AGENTS.md and skills",
-    "section": "Additional context",
-    "text": "Additional context\n\nProvide additional context/advice (not rules!) via markdown files\nPrimary motivation:\n\nAvoid repeating yourself across multiple conversations\nSave tokens by avoiding common wheel-spinning\n\nWe’ll focus on AGENTS.md (always loaded) and skills (loaded on demand)\nLet’s start with an example"
+    "section": "Two ways to provide additional context",
+    "text": "Two ways to provide additional context\n\nSuggestion/advice not rules!\nWritten in markdown\nPrimary motivation:\n\nAvoid repeating yourself across multiple conversations\nSave tokens by avoiding common wheel-spinning\n\nDifference is when they’re sent to the model"
   },
   {
     "objectID": "modules/slides/05-agent-instructions.html#lets-make-a-package-take-two",
@@ -164,39 +171,39 @@
     "text": "Your turn\n\nTry it yourself. What differences do you notice in the workflow?\nRead AGENTS.md. What advice does it contain?"
   },
   {
-    "objectID": "modules/slides/05-agent-instructions.html#where-can-agents.md-live",
-    "href": "modules/slides/05-agent-instructions.html#where-can-agents.md-live",
+    "objectID": "modules/slides/05-agent-instructions.html#project-level-agents.md",
+    "href": "modules/slides/05-agent-instructions.html#project-level-agents.md",
     "title": "AGENTS.md and skills",
-    "section": "Where can AGENTS.md live?",
-    "text": "Where can AGENTS.md live?\n\nProject level: AGENTS.md in the project root\n\nChecked into git; shared with your whole team\nApplies to everything below it in the directory tree\n\nUser level: ~/.posit/assistant/AGENTS.md\n\nPersonal preferences that apply across all your projects\nGood place for pet peeves\n(You need to symlink if you’re using multiple harnesses)\n\nProject (generally) beats user when they conflict\nIf you’re using Claude you also need CLAUDE.md that contains @AGENTS.md"
+    "section": "Project level AGENTS.md",
+    "text": "Project level AGENTS.md\n\nAGENTS.md in the project root\nChecked into git; shared with your whole team\nApplies to everything below it in the directory tree\nIf you’re using Claude you also need CLAUDE.md that contains @AGENTS.md\nThis repos AGENTS.md"
   },
   {
-    "objectID": "modules/slides/05-agent-instructions.html#my-agents.md",
-    "href": "modules/slides/05-agent-instructions.html#my-agents.md",
+    "objectID": "modules/slides/05-agent-instructions.html#user-level-agents.md",
+    "href": "modules/slides/05-agent-instructions.html#user-level-agents.md",
     "title": "AGENTS.md and skills",
-    "section": "My AGENTS.md",
-    "text": "My AGENTS.md\n\nMy personal AGENTS.md\nThe AGENTS.md in this repo"
+    "section": "User level AGENTS.md",
+    "text": "User level AGENTS.md\n\n~/.posit/assistant/AGENTS.md\nPersonal preferences that apply across all your projects\nGood place for pet peeves\n(You need to symlink if you’re using multiple harnesses)\nProject (generally) beats user when they conflict\nMy AGENTS.md"
   },
   {
     "objectID": "modules/slides/05-agent-instructions.html#what-belongs-there",
     "href": "modules/slides/05-agent-instructions.html#what-belongs-there",
     "title": "AGENTS.md and skills",
     "section": "What belongs there?",
-    "text": "What belongs there?\n\nHave you told an agent to do it three times? Put it in AGENTS.md\nSeriously, I think that’s the totality of my advice. Keep it minimal!\nAGENTS.md is included in every request and you’re paying for it\nOverfitting it to one model will lead to worse results when the model inevitably changes (e.g. you can’t make Claude write good) \nIs it a lot of text that is only sometimes important? Use a skill"
+    "text": "What belongs there?\n\nKeep it minimal!\nHave you told an agent to do it three times? Put it in AGENTS.md\nAGENTS.md is included in every request and you’re paying for it\nOverfitting advice to one model will lead to worse results when the model inevitably changes (e.g. you can’t make Claude write good)\nLots of text for a specialised purpose? Use a skill (up next)"
   },
   {
     "objectID": "modules/slides/05-agent-instructions.html#your-turn-1",
     "href": "modules/slides/05-agent-instructions.html#your-turn-1",
     "title": "AGENTS.md and skills",
     "section": "Your turn",
-    "text": "Your turn\n\nUpdate the project AGENTS.md to record some specific conventions for this package\ne.g.: Use British English; give over-the-top compliments; pretend to be your favourite R developer\nThen ask it to update your code, or add a new function"
+    "text": "Your turn\n\nShare your personal customisations with your neighbour\n\nThen:\n\nUpdate the project AGENTS.md to record some specific conventions for this package\ne.g.: Use British English; give over-the-top compliments; pretend to be your favourite R developer\nThen ask it to update your code, or add a new function"
   },
   {
     "objectID": "modules/slides/05-agent-instructions.html#your-turn-2",
     "href": "modules/slides/05-agent-instructions.html#your-turn-2",
     "title": "AGENTS.md and skills",
     "section": "Your turn",
-    "text": "Your turn\nuse_tidy_agents() includes three skills.\n\nWhat are they?\nHow do you think they work?\nHow can you tell when a skill is used? (Look back at your history above, or try asking your agent to deprecate a function.)"
+    "text": "Your turn\nuse_tidy_agents() includes three skills.\n\nWhat are they?\nHow do you think they work?\nHow can you tell when a skill is used? (Look at your chat history, or try asking your agent to deprecate a function.)"
   },
   {
     "objectID": "modules/slides/05-agent-instructions.html#what-is-a-skill",
@@ -224,7 +231,7 @@
     "href": "modules/slides/05-agent-instructions.html#creating-a-skill",
     "title": "AGENTS.md and skills",
     "section": "Creating a skill",
-    "text": "Creating a skill\n\nWhere do they live? I don’t know\nJust ask an agent to create the file for you :)\nDon’t ask the agent to write the skill for you\n\nUnless you’re using a smarter than usual model\nOr extracting important bits from a conversation"
+    "text": "Creating a skill\n\nWhere do they live? I don’t know!\nJust ask an agent to create the file for you :)\nBut don’t ask the agent to write the skill for you\n\nUnless you’re using a smarter than usual model\nOr extracting important bits from a conversation"
   },
   {
     "objectID": "modules/slides/05-agent-instructions.html#some-example-skills",
@@ -669,7 +676,7 @@
     "href": "modules/slides/04-agent-explainer.html#your-turn",
     "title": "How does Posit Assistant work?",
     "section": "Your turn",
-    "text": "Your turn\n\nUse the same prompt as me. It’s an underspecified ask, so we’re going to get lots of variation. That’s part of the fun!\nManually approve a few writes\nThen allow all\nMake sure your package has tests and Git\nHow does your package differ from mine? From your neighbours?"
+    "text": "Your turn\n\nUse the same prompt as me. It’s an underspecified ask, so we’re going to get lots of variation. That’s part of the fun!\nManually approve a few writes\nThen allow all\nMake sure your package has tests and Git\nHow does your package differ your neighbours?"
   },
   {
     "objectID": "modules/slides/04-agent-explainer.html#there-are-three-types-of-output",
@@ -697,21 +704,7 @@
     "href": "modules/slides/04-agent-explainer.html#what-are-some-common-calls",
     "title": "How does Posit Assistant work?",
     "section": "What are some common calls?",
-    "text": "What are some common calls?\n\nwrite creates a new file\nedit modifies an existing file\nexecuteCode runs R (or Python) code in the console\nbash runs code you’d usually use the terminal for\nAskUser asks you a question\nread reads a file on disk\nwebfetch reads a web page\nsearch searches directory for matching text"
-  },
-  {
-    "objectID": "modules/slides/04-agent-explainer.html#a-little-vocab",
-    "href": "modules/slides/04-agent-explainer.html#a-little-vocab",
-    "title": "How does Posit Assistant work?",
-    "section": "A little vocab",
-    "text": "A little vocab\n\nHarness: provides tools; runs the loop\nProvider: who runs the server that runs the model\n\nOpen models can be hosted anywhere\nAWS + Azure host lots of foundation models\n\nModel: the specific LLM model you’re using"
-  },
-  {
-    "objectID": "modules/slides/04-agent-explainer.html#some-examples",
-    "href": "modules/slides/04-agent-explainer.html#some-examples",
-    "title": "How does Posit Assistant work?",
-    "section": "Some examples",
-    "text": "Some examples\n\nKimi K3 (model) on posit.ai (provider) with Posit Assistant (harness)\nOpus 5 (model) on posit.ai (provider) with Posit Assistant (harness)\nOpus 5 (model) from Claude (provider) in Claude Code (harness)\nGPT-5.3 (model) from AWS Bedrock (provider) in Posit Assistant (harness)\nGPT-5.3 (model) from OpenAI (provider) in Codex (harness)"
+    "text": "What are some common calls?\n\nsearch searches directory for matching text\nread reads a file on disk\nwrite creates a new file\nedit modifies an existing file\nexecuteCode runs R (or Python) code in the console\nbash runs code you’d usually use the terminal for\nAskUser asks you a question\nwebfetch reads a web page"
   },
   {
     "objectID": "modules/slides/04-agent-explainer.html#your-turn-1",
@@ -721,11 +714,25 @@
     "text": "Your turn\n\nTry and prompt your agent to make it use each of the tool calls above\nWhat other tools are available?"
   },
   {
+    "objectID": "modules/slides/04-agent-explainer.html#a-little-vocab",
+    "href": "modules/slides/04-agent-explainer.html#a-little-vocab",
+    "title": "How does Posit Assistant work?",
+    "section": "A little vocab",
+    "text": "A little vocab\n\nHarness: provides tools; runs the loop\nModel: the specific LLM model you’re using\nProvider: who runs the server that runs the model\n\nOpen models can be hosted anywhere\nAWS + Azure host lots of foundation models"
+  },
+  {
+    "objectID": "modules/slides/04-agent-explainer.html#some-examples",
+    "href": "modules/slides/04-agent-explainer.html#some-examples",
+    "title": "How does Posit Assistant work?",
+    "section": "Some examples",
+    "text": "Some examples\n\nKimi K3 (model) on posit.ai (provider) with Posit Assistant (harness)\nOpus 5 (model) on posit.ai (provider) with Posit Assistant (harness)\nOpus 5 (model) from Anthropic (provider) in Claude Code (harness)\nGPT-5.3 (model) from AWS Bedrock (provider) in Posit Assistant (harness)\nGPT-5.3 (model) from OpenAI (provider) in Codex (harness)"
+  },
+  {
     "objectID": "modules/slides/04-agent-explainer.html#so-what-is-an-agent",
     "href": "modules/slides/04-agent-explainer.html#so-what-is-an-agent",
     "title": "How does Posit Assistant work?",
     "section": "So what is an agent?",
-    "text": "So what is an agent?\nAn LLM running in a loop, using tools, to achieve a goal\n\nThe LLM decides what tool to run next\nThe harness runs the tool and feeds the result back\nRepeat until the LLM declares the task done"
+    "text": "So what is an agent?\nAn model, inside a harness, running in a loop, using tools, to achieve a goal\n\nThe LLM decides what tool to run next\nThe harness runs the tool and feeds the result back\nRepeat until the LLM declares the task done"
   },
   {
     "objectID": "modules/slides/04-agent-explainer.html#what-are-the-risks",
@@ -739,14 +746,14 @@
     "href": "modules/slides/04-agent-explainer.html#your-turn-2",
     "title": "How does Posit Assistant work?",
     "section": "Your turn",
-    "text": "Your turn\nWhat other irreversible actions are you worried about? What ways do you know to protect yourself?"
+    "text": "Your turn\nWhat other dangers are you worried about? What ways do you know to protect yourself?"
   },
   {
     "objectID": "modules/slides/04-agent-explainer.html#how-do-you-protect-yourself",
     "href": "modules/slides/04-agent-explainer.html#how-do-you-protect-yourself",
     "title": "How does Posit Assistant work?",
     "section": "How do you protect yourself?",
-    "text": "How do you protect yourself?\n\nAsk for permission\nMake operations reversible\n\nAlways use git\nBack up!\n\nPrevent dangerous actions (i.e. use a sandbox)\nAuto mode"
+    "text": "How do you protect yourself?\n\nAsk for permission\nMake operations reversible\n\nAlways use git\nBack up!\n\nPrevent dangerous actions\nAuto mode"
   },
   {
     "objectID": "modules/slides/04-agent-explainer.html#ask-for-permission",
@@ -767,21 +774,21 @@
     "href": "modules/slides/04-agent-explainer.html#what-about-sandboxes",
     "title": "How does Posit Assistant work?",
     "section": "What about sandboxes?",
-    "text": "What about sandboxes?\n\nUse OS level sandboxing to only allow reads and writes to the current directory, and no network access\nUnfortunately that’s not very useful\n\nNo package install\nNo temporary directory\nNo GitHub\nNo web search\n\nI remain optimistic that it’s possible to overcome these problems, but current implementations are painful"
+    "text": "What about sandboxes?\n\nUse OS level sandboxing to only allow reads and writes to the current directory, and no network access\nUnfortunately there are a lot of details to get right in order for this to work well (e.g. libraries, temporary directory, what about Git? GitHub?)\nPA only applies the sandbox to bash commands, not R/Python\nI remain optimistic that it’s possible to overcome these problems, but current implementations are painful"
+  },
+  {
+    "objectID": "modules/slides/04-agent-explainer.html#what-about-containers",
+    "href": "modules/slides/04-agent-explainer.html#what-about-containers",
+    "title": "How does Posit Assistant work?",
+    "section": "What about containers?",
+    "text": "What about containers?\n\nGood practice for the very security conscious\nPainful in practice, but getting less so\nYou still need to think about how you will get your data in and out"
   },
   {
     "objectID": "modules/slides/04-agent-explainer.html#auto-mode",
     "href": "modules/slides/04-agent-explainer.html#auto-mode",
     "title": "How does Posit Assistant work?",
     "section": "Auto-mode",
-    "text": "Auto-mode\n\nWhat if we only ask permission for operations that seem legitimately dangerous?\nThat’s the idea behind auto-mode: ask a (simpler) LLM to classify if a command is dangerous or safe, and then only ask permission for dangerous options\n(And use only the conversation, not tool results, to avoid the “lethal trifecta”)\nIt leaves a lot to be desired, but I think this is a sweet spot on the security-utility spectrum right now"
-  },
-  {
-    "objectID": "modules/slides/04-agent-explainer.html#picking-a-mode",
-    "href": "modules/slides/04-agent-explainer.html#picking-a-mode",
-    "title": "How does Posit Assistant work?",
-    "section": "Picking a mode",
-    "text": "Picking a mode\n\nPosit Assistant mode picker showing Normal, Plan, Auto, Cleaning, and Ask modes"
+    "text": "Auto-mode\n\nWhat if we only ask permission for operations that seem legitimately dangerous?\nThat’s the idea behind auto-mode: ask a (simpler) LLM to classify if a command is dangerous or safe, and then only ask permission for dangerous options\n(And use only the conversation, not tool results, to avoid the “lethal trifecta”)\nIt’s not perfect, but I think this is a sweet spot on the security-utility spectrum right now"
   },
   {
     "objectID": "modules/slides/04-agent-explainer.html#the-lethal-trifecta",
@@ -791,25 +798,25 @@
     "text": "The lethal trifecta\nSimon Willison’s term for the dangerous combination:\n\nAccess to private data (your files, secrets, API keys)\nExposure to untrusted content (web pages, emails, issue comments)\nAbility to communicate externally (send requests, post comments)\n\nWith all three, a prompt injection attack can exfiltrate your data."
   },
   {
-    "objectID": "modules/slides/04-agent-explainer.html#reasoning-about-llm-behaviour-is-weird",
-    "href": "modules/slides/04-agent-explainer.html#reasoning-about-llm-behaviour-is-weird",
+    "objectID": "modules/slides/04-agent-explainer.html#picking-a-mode",
+    "href": "modules/slides/04-agent-explainer.html#picking-a-mode",
     "title": "How does Posit Assistant work?",
-    "section": "Reasoning about LLM behaviour is weird",
-    "text": "Reasoning about LLM behaviour is weird\n\n\nDelete ~/desktop/family-data\n\n\nDelete ~/desktop/junk"
+    "section": "Picking a mode",
+    "text": "Picking a mode\n\nPosit Assistant mode picker showing Normal, Plan, Auto, Cleaning, and Ask modes"
   },
   {
     "objectID": "modules/slides/04-agent-explainer.html#your-turn-3",
     "href": "modules/slides/04-agent-explainer.html#your-turn-3",
     "title": "How does Posit Assistant work?",
     "section": "Your turn",
-    "text": "Your turn\nCan you trick PA into doing something bad? Some ideas you might try:\n\nCan you get it to send me an email complaining about one of my packages?\nCan you create a fake environment variable (e.g. POSIT_ASSISTANT_API_KEY) and get it to save it in a GitHub gist"
+    "text": "Your turn\nCan you trick PA into doing something bad? Some ideas you might try:\n\nCan you get it to delete a directory containing files?\nCan you get it to send me an email complaining about one of my packages?\nCan you create a fake environment variable (e.g. POSIT_ASSISTANT_API_KEY) and get it to save it in a GitHub gist?"
   },
   {
     "objectID": "modules/slides/04-agent-explainer.html#why-care",
     "href": "modules/slides/04-agent-explainer.html#why-care",
     "title": "How does Posit Assistant work?",
     "section": "Why care?",
-    "text": "Why care?\n\nYou probably don’t need to if you’re an individual developer\nBut:\n\nIt matters inside enterprises\nIt’s a proxy for energy usage\nWho knows how long all-you-can-eat plans will continue"
+    "text": "Why care?\n\nYou probably don’t need to if you’re an individual developer\nBut:\n\nIt matters inside enterprises\nIt’s a reasonable proxy for energy usage\nWho knows how long all-you-can-eat plans will continue"
   },
   {
     "objectID": "modules/slides/04-agent-explainer.html#life-is-good-for-individual-developers",
@@ -823,14 +830,14 @@
     "href": "modules/slides/04-agent-explainer.html#enterprise-plans-are-different",
     "title": "How does Posit Assistant work?",
     "section": "Enterprise plans are different",
-    "text": "Enterprise plans are different\n\nEnterprises have to pay by the million tokens\n\nOpus 5: $5 input, $25 output\ngpt-5.6-terra: $2 input, $12 output\nKimi K3: $3 input, $15 output\n\n(This is also what you pay in ellmer)\nAverage engineers spend $150-$250 / month, i.e. $8-12 / day\nHigh users spend $3,000 / month, i.e. $150 / day"
+    "text": "Enterprise plans are different\n\nEnterprises have to pay by the million tokens\n\nOpus 5: $5 input, $25 output\ngpt-5.6-terra: $2 input, $12 output\nKimi K3: $3 input, $15 output\n\n(This is also what you pay in ellmer)\nSoftware engineers spend something like $1k-$3k/month, i.e. $50-$150/day"
   },
   {
-    "objectID": "modules/slides/04-agent-explainer.html#my-views-on-cost-benefit-have-changed",
-    "href": "modules/slides/04-agent-explainer.html#my-views-on-cost-benefit-have-changed",
+    "objectID": "modules/slides/04-agent-explainer.html#cost-benefit-continuously-changing",
+    "href": "modules/slides/04-agent-explainer.html#cost-benefit-continuously-changing",
     "title": "How does Posit Assistant work?",
-    "section": "My views on cost-benefit have changed",
-    "text": "My views on cost-benefit have changed\n\nI used to think that Anthropic models were worth the premium\nBut the relative cost has increased and output quality has decreased (code is still fine, but its writing is painful)\nKimi K3 is excellent. Somewhere between Opus and Fable in code quality, but a much better writer, and only costs 75% of Sonnet (thanks to its tokenizer).\nAll models since April 16, 2026 (Claude Opus 4.7) use a new tokenizer that uses ~20% more tokens, so even though the per-token prices didn’t change, the overall cost did\nAnd Anthropic models seem to be producing more loquacious output, which also costs more money 🤔"
+    "section": "Cost-benefit continuously changing",
+    "text": "Cost-benefit continuously changing\n\nI used to think that Anthropic models were worth the premium, but the relative cost has increased and output quality has decreased (esp. writing)\nKimi K3 is excellent. Somewhere between Opus and Fable in code quality, but a much better writer, and only costs 75% of Sonnet (thanks to its tokenizer).\nSince April 16, 2026 (Claude Opus 4.7) a new tokenizer uses ~20% more tokens.\nAnd Anthropic models seem to be producing more loquacious output, which also costs more money 🤔."
   },
   {
     "objectID": "modules/slides/04-agent-explainer.html#so-how-can-you-tell-what-youre-spending",
@@ -896,25 +903,25 @@
     "text": "Goals\n\nIntroduce/review the classic package development workflow\nIntroduce key AI-powered workflows\nShow my workflow by fixing testthat issues 😂"
   },
   {
-    "objectID": "modules/slides/06-workflow.html#the-classic-workflow",
-    "href": "modules/slides/06-workflow.html#the-classic-workflow",
+    "objectID": "modules/slides/06-workflow.html#the-classic-workflow-is-unchanged",
+    "href": "modules/slides/06-workflow.html#the-classic-workflow-is-unchanged",
     "title": "Workflow",
-    "section": "The classic workflow",
-    "text": "The classic workflow\nThe classic workflow is unchanged:\n\nWrite a function in R/\nload_all() (⌘⇧L) and try it in the console\nWrite tests with use_test()\ntest() (⌘⇧T) and iterate until they pass\ndocument() (⌘⇧D) to update docs\ncheck() (⌘⇧E) at the end\n\n(Windows/Linux: use Ctrl instead of ⌘)"
+    "section": "The classic workflow is unchanged",
+    "text": "The classic workflow is unchanged\n\nWrite a function in R/\nload_all() (⌘⇧L) and try it in the console\nCreate test file with use_test() then write tests\ntest() (⌘⇧T) and iterate until they pass\ndocument() (⌘⇧D) to update docs\ncheck() (⌘⇧E) at the end\nRestart R with ⌘⇧0\n\n(Windows/Linux: use Ctrl instead of ⌘)"
   },
   {
     "objectID": "modules/slides/06-workflow.html#were-not-going-to-teach-the-details",
     "href": "modules/slides/06-workflow.html#were-not-going-to-teach-the-details",
     "title": "Workflow",
     "section": "We’re not going to teach the details",
-    "text": "We’re not going to teach the details\nIn the past we’ve talked about the individual components in detail. I no longer think that’s worth teaching live. You and your agent can figure out what expectations are available and how roxygen2 works in your own time 🙂"
+    "text": "We’re not going to teach the details\nIn the past we’ve talked about the individual components in detail. I no longer think that’s worth teaching live. For example, you and your agent can figure out what expectations are available and how roxygen2 works in your own time 🙂"
   },
   {
     "objectID": "modules/slides/06-workflow.html#your-turn",
     "href": "modules/slides/06-workflow.html#your-turn",
     "title": "Workflow",
     "section": "Your turn",
-    "text": "Your turn\nTry out the workflow with your compliments package.\n\nStart with a fresh Positron instance, and confirm you can’t run your compliment() function.\nLoad the code and confirm that you can run the function now.\nMake a simple change, re-load, re-run and check that you see it in the output.\nTweak the documentation, re-document, and look at the help.\nEdit a test so it fails, and check that you see the failure.\n\nStuck? Ask an AI or TA."
+    "text": "Your turn\nTry out the workflow with your compliments package.\n\nStart with a fresh Positron instance, and confirm you can’t run your compliment() function.\nLoad the code and confirm that you can run the function now.\nMake a simple change, re-load, re-run and check that you see it in the output.\nTweak the documentation, re-document, and look at the help.\nEdit a test so it fails, and check that you see the failure."
   },
   {
     "objectID": "modules/slides/06-workflow.html#what-changes-with-ai",
@@ -1005,7 +1012,7 @@
     "href": "modules/slides/06-workflow.html#your-turn-2",
     "title": "Workflow",
     "section": "Your turn",
-    "text": "Your turn\nI have always wanted a package that provided the stringr API but without the stringi dependency. (This makes the package less good at handling a wide range of international text cases, but would be worth it for many common package development tasks.) This is now easily in scope for a frontier model.\nWork with your agent to come up with a design (no need to implement). What’s important to include? What can you skip? Start with an analysis of str_match() vs the base equivalents. Do you think you need a str_length() wrapper?"
+    "text": "Your turn\nI have always wanted a package that provided the stringr API but without the stringi dependency. (This makes the package less good at handling a wide range of international text cases, but would be worth it for many common package development tasks.) This is now easily in scope for a frontier model.\nWork with your agent to come up with a design (no need to implement). What’s important to include? What can you skip? Start with an analysis of str_match() vs the base equivalents. Do you think you need a str_length() wrapper?\n(Or tackle a more complex task from your own package)"
   },
   {
     "objectID": "modules/slides/06-workflow.html#voice",

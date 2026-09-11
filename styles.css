@@ -12,7 +12,7 @@
 }
 
 /* Inline code inherits surrounding text colour (not the theme's blue) */
-.reveal code {
+.reveal code, section.has-dark-background code {
   color: inherit;
   font-size: inherit;
 }
@@ -28,6 +28,11 @@
     width: 300%;
   margin-left: -100%;
   padding-left: 100%;
+}
+
+/* Smaller slide headers */
+.reveal {
+  --r-heading2-size: 1.2em;
 }
 
 /* Larger code blocks */

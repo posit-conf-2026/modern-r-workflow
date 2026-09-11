@@ -150,22 +150,22 @@
 <li>Show my workflow by fixing testthat issues 😂</li>
 </ul>
 </section>
-<section id="the-classic-workflow" class="slide level2">
-<h2>The classic workflow</h2>
-<p>The classic workflow is unchanged:</p>
+<section id="the-classic-workflow-is-unchanged" class="slide level2">
+<h2>The classic workflow is unchanged</h2>
 <ol type="1">
 <li>Write a function in <code>R/</code></li>
 <li><code>load_all()</code> (⌘⇧L) and try it in the console</li>
-<li>Write tests with <code>use_test()</code></li>
+<li>Create test file with <code>use_test()</code> then write tests</li>
 <li><code>test()</code> (⌘⇧T) and iterate until they pass</li>
 <li><code>document()</code> (⌘⇧D) to update docs</li>
 <li><code>check()</code> (⌘⇧E) at the end</li>
+<li>Restart R with ⌘⇧0</li>
 </ol>
 <p>(Windows/Linux: use Ctrl instead of ⌘)</p>
 </section>
 <section id="were-not-going-to-teach-the-details" class="slide level2">
 <h2>We’re not going to teach the details</h2>
-<p>In the past we’ve talked about the individual components in detail. I no longer think that’s worth teaching live. You and your agent can figure out what expectations are available and how roxygen2 works in your own time 🙂</p>
+<p>In the past we’ve talked about the individual components in detail. I no longer think that’s worth teaching live. For example, you and your agent can figure out what expectations are available and how roxygen2 works in your own time 🙂</p>
 </section>
 <section id="your-turn" class="slide level2 your-turn">
 <h2>Your turn</h2>
@@ -177,7 +177,6 @@
 <li>Tweak the documentation, re-document, and look at the help.</li>
 <li>Edit a test so it fails, and check that you see the failure.</li>
 </ol>
-<p>Stuck? Ask an AI or TA.</p>
 </section>
 <section id="what-changes-with-ai" class="slide level2">
 <h2>What changes with AI?</h2>
@@ -315,6 +314,7 @@
 <h2>Your turn</h2>
 <p>I have always wanted a package that provided the stringr API but without the stringi dependency. (This makes the package less good at handling a wide range of international text cases, but would be worth it for many common package development tasks.) This is now easily in scope for a frontier model.</p>
 <p>Work with your agent to come up with a design (no need to implement). What’s important to include? What can you skip? Start with an analysis of <code>str_match()</code> vs the base equivalents. Do you think you need a <code>str_length()</code> wrapper?</p>
+<p>(Or tackle a more complex task from your own package)</p>
 </section></section>
 <section>
 <section id="bonus-workflows" class="title-slide slide level1 center">

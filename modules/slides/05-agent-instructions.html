@@ -208,17 +208,17 @@
 </div>
 
 </section>
-<section id="additional-context" class="slide level2">
-<h2>Additional context</h2>
+<section id="two-ways-to-provide-additional-context" class="slide level2">
+<h2>Two ways to provide additional context</h2>
 <ul>
-<li>Provide additional context/advice (not rules!) via markdown files</li>
+<li>Suggestion/advice not rules!</li>
+<li>Written in markdown</li>
 <li>Primary motivation:
 <ul>
 <li>Avoid repeating yourself across multiple conversations</li>
 <li>Save tokens by avoiding common wheel-spinning</li>
 </ul></li>
-<li>We’ll focus on <code>AGENTS.md</code> (always loaded) and skills (loaded on demand)</li>
-<li>Let’s start with an example</li>
+<li>Difference is when they’re sent to the model</li>
 </ul>
 </section>
 <section>
@@ -241,43 +241,43 @@
 <li>Read <code>AGENTS.md</code>. What advice does it contain?</li>
 </ul>
 </section>
-<section id="where-can-agents.md-live" class="slide level2">
-<h2>Where can <code>AGENTS.md</code> live?</h2>
+<section id="project-level-agents.md" class="slide level2">
+<h2>Project level <code>AGENTS.md</code></h2>
 <ul>
-<li>Project level: <code>AGENTS.md</code> in the project root
-<ul>
+<li><code>AGENTS.md</code> in the project root</li>
 <li>Checked into git; shared with your whole team</li>
 <li>Applies to everything below it in the directory tree</li>
-</ul></li>
-<li>User level: <code>~/.posit/assistant/AGENTS.md</code>
+<li>If you’re using Claude you also need <code>CLAUDE.md</code> that contains <code>@AGENTS.md</code></li>
+<li>This repos <code>AGENTS.md</code></li>
+</ul>
+</section>
+<section id="user-level-agents.md" class="slide level2">
+<h2>User level <code>AGENTS.md</code></h2>
 <ul>
+<li><code>~/.posit/assistant/AGENTS.md</code></li>
 <li>Personal preferences that apply across all your projects</li>
 <li>Good place for pet peeves</li>
 <li>(You need to symlink if you’re using multiple harnesses)</li>
-</ul></li>
 <li>Project (generally) beats user when they conflict</li>
-<li>If you’re using Claude you also need <code>CLAUDE.md</code> that contains <code>@AGENTS.md</code></li>
-</ul>
-</section>
-<section id="my-agents.md" class="slide level2">
-<h2>My <code>AGENTS.md</code></h2>
-<ul>
-<li>My personal <code>AGENTS.md</code></li>
-<li>The <code>AGENTS.md</code> in this repo</li>
+<li>My <code>AGENTS.md</code></li>
 </ul>
 </section>
 <section id="what-belongs-there" class="slide level2">
 <h2>What belongs there?</h2>
 <ul>
+<li>Keep it minimal!</li>
 <li>Have you told an agent to do it three times? Put it in <code>AGENTS.md</code></li>
-<li>Seriously, I think that’s the totality of my advice. Keep it minimal!</li>
 <li><code>AGENTS.md</code> is included in every request and you’re paying for it</li>
-<li>Overfitting it to one model will lead to worse results when the model inevitably changes (e.g.&nbsp;you can’t make Claude write good) <!-- FIXME: "write good" is ungrammatical — intentional joke or should it be "write well"? --></li>
-<li>Is it a lot of text that is only sometimes important? Use a skill</li>
+<li>Overfitting advice to one model will lead to worse results when the model inevitably changes (e.g.&nbsp;you can’t make Claude write good)</li>
+<li>Lots of text for a specialised purpose? Use a skill (up next)</li>
 </ul>
 </section>
 <section id="your-turn-1" class="slide level2 your-turn">
 <h2>Your turn</h2>
+<ul>
+<li>Share your personal customisations with your neighbour</li>
+</ul>
+<p>Then:</p>
 <ul>
 <li>Update the project <code>AGENTS.md</code> to record some specific conventions for this package</li>
 <li>e.g.: Use British English; give over-the-top compliments; pretend to be your favourite R developer</li>
@@ -295,7 +295,7 @@
 <ul>
 <li>What are they?</li>
 <li>How do you think they work?</li>
-<li>How can you tell when a skill is used? (Look back at your history above, or try asking your agent to deprecate a function.)</li>
+<li>How can you tell when a skill is used? (Look at your chat history, or try asking your agent to deprecate a function.)</li>
 </ul>
 </section>
 <section id="what-is-a-skill" class="slide level2">
@@ -336,9 +336,9 @@
 <section id="creating-a-skill" class="slide level2">
 <h2>Creating a skill</h2>
 <ul>
-<li>Where do they live? I don’t know</li>
+<li>Where do they live? I don’t know!</li>
 <li>Just ask an agent to create the file for you :)</li>
-<li>Don’t ask the agent to write the skill for you
+<li>But don’t ask the agent to write the skill for you
 <ul>
 <li>Unless you’re using a smarter than usual model</li>
 <li>Or extracting important bits from a conversation</li>
