@@ -39,7 +39,7 @@ usethis::create_package("~/desktop/compliment")
 * Manually approve a few writes
 * Then allow all
 * Make sure your package has tests and Git
-* How does your package differ from mine? From your neighbours?
+* How does your package differ your neighbours?
 
 ## There are three types of output
 
@@ -61,39 +61,39 @@ usethis::create_package("~/desktop/compliment")
 
 ## What are some common calls?
 
+* `search` searches directory for matching text
+* `read` reads a file on disk
 * `write` creates a new file
 * `edit` modifies an existing file
 * `executeCode` runs R (or Python) code in the console
 * `bash` runs code you'd usually use the terminal for
 * `AskUser` asks you a question
-* `read` reads a file on disk
 * `webfetch` reads a web page
-* `search` searches directory for matching text
-
-## A little vocab
-
-* Harness: provides tools; runs the loop
-* Provider: who runs the server that runs the model
-  * Open models can be hosted anywhere
-  * AWS + Azure host lots of foundation models
-* Model: the specific LLM model you're using
-
-## Some examples
-
-* Kimi K3 (model) on posit.ai (provider) with Posit Assistant (harness)
-* Opus 5 (model) on posit.ai (provider) with Posit Assistant (harness)
-* Opus 5 (model) from Claude (provider) in Claude Code (harness)
-* GPT-5.3 (model) from AWS Bedrock (provider) in Posit Assistant (harness)
-* GPT-5.3 (model) from OpenAI (provider) in Codex (harness)
 
 ## Your turn {.your-turn}
 
 * Try and prompt your agent to make it use each of the tool calls above
 * What other tools are available?
 
+## A little vocab
+
+* Harness: provides tools; runs the loop
+* Model: the specific LLM model you're using
+* Provider: who runs the server that runs the model
+  * Open models can be hosted anywhere
+  * AWS + Azure host lots of foundation models
+
+## Some examples
+
+* Kimi K3 (model) on posit.ai (provider) with Posit Assistant (harness)
+* Opus 5 (model) on posit.ai (provider) with Posit Assistant (harness)
+* Opus 5 (model) from Anthropic (provider) in Claude Code (harness)
+* GPT-5.3 (model) from AWS Bedrock (provider) in Posit Assistant (harness)
+* GPT-5.3 (model) from OpenAI (provider) in Codex (harness)
+
 ## So what is an agent?
 
-An LLM running in a loop, using tools, to achieve a goal
+An model, inside a harness, running in a loop, using tools, to achieve a goal
 
 * The LLM decides what tool to run next
 * The harness runs the tool and feeds the result back
@@ -112,7 +112,7 @@ I think the cleanest definition is that the dangers are irreversible action, i.e
 
 ## Your turn {.your-turn}
 
-What other irreversible actions are you worried about?
+What other dangers are you worried about?
 What ways do you know to protect yourself?
 
 ## How do you protect yourself?
@@ -121,7 +121,7 @@ What ways do you know to protect yourself?
 * Make operations reversible
   * Always use git
   * Back up!
-* Prevent dangerous actions (i.e. use a sandbox)
+* Prevent dangerous actions
 * Auto mode
 
 ## Ask for permission
@@ -145,24 +145,26 @@ tar -xzf backup.tar.gz -C /tmp/restore --strip-components=1 -P
 
 * Use OS level sandboxing to only allow reads and writes to the current directory, and no network access
 
-* Unfortunately that's not very useful
-  * No package install
-  * No temporary directory
-  * No GitHub
-  * No web search
+* Unfortunately there are a lot of details to get right in order for this to work well (e.g. libraries, temporary directory, what about Git? GitHub?)
+
+* PA only applies the sandbox to bash commands, not R/Python
 
 * I remain optimistic that it's possible to overcome these problems, but current implementations are painful
+
+## What about containers?
+
+* Good practice for the very security conscious
+* Painful in practice, but getting less so
+* You still need to think about how you will get your data in and out
 
 ## Auto-mode
 
 * What if we only ask permission for operations that seem legitimately dangerous?
 * That's the idea behind auto-mode: ask a (simpler) LLM to classify if a command is dangerous or safe, and then only ask permission for dangerous options
 * (And use only the conversation, not tool results, to avoid the "lethal trifecta")
-* It leaves a lot to be desired, but I think this is a sweet spot on the security-utility spectrum right now
+* It's not perfect, but I think this is a sweet spot on the security-utility spectrum right now
 
-## Picking a mode
-
-![Posit Assistant mode picker showing Normal, Plan, Auto, Cleaning, and Ask modes](../../images/pa-modes.png)
+## {background-image="/images/auto-mode.png"}
 
 ## The lethal trifecta
 
@@ -174,31 +176,17 @@ Simon Willison's term for the dangerous combination:
 
 With all three, a prompt injection attack can exfiltrate your data.
 
-## Reasoning about LLM behaviour is weird
+## Picking a mode
 
-<!--
-Jenny had to do this to fix build and deploy. Otherwise we need to install R, even though there's no actually executable R code. Quarto can't tell that.
-```r
-dir.create("~/desktop/family-data")
-writeLines(letters, "~/desktop/family-data/precious-memories.txt")
-writeLines(letters, "~/desktop/family-data/bank-records.txt")
-dir.create("~/desktop/junk")
-writeLines(letters, "~/desktop/junk/tmp1.txt")
-writeLines(letters, "~/desktop/junk/tmp2.txt")
-```
--->
-
-
-> Delete ~/desktop/family-data
-
-> Delete ~/desktop/junk
+![Posit Assistant mode picker showing Normal, Plan, Auto, Cleaning, and Ask modes](../../images/pa-modes.png)
 
 ## Your turn {.your-turn}
 
 Can you trick PA into doing something bad? Some ideas you might try:
 
+* Can you get it to delete a directory containing files?
 * Can you get it to send me an email complaining about one of my packages?
-* Can you create a fake environment variable (e.g. `POSIT_ASSISTANT_API_KEY`) and get it to save it in a GitHub gist
+* Can you create a fake environment variable (e.g. `POSIT_ASSISTANT_API_KEY`) and get it to save it in a GitHub gist?
 
 # Costs
 
@@ -207,7 +195,7 @@ Can you trick PA into doing something bad? Some ideas you might try:
 * You probably don't need to if you're an individual developer
 * But:
   * It matters inside enterprises
-  * It's a proxy for energy usage
+  * It's a reasonable proxy for energy usage
   * Who knows how long all-you-can-eat plans will continue
 
 ## Life is good for individual developers
@@ -226,16 +214,14 @@ Can you trick PA into doing something bad? Some ideas you might try:
   * Kimi K3: $3 input, $15 output
 * (This is also what you pay in ellmer)
 
-* Average engineers spend $150-$250 / month, i.e. $8-12 / day
-* High users spend $3,000 / month, i.e. $150 / day
+* Software engineers spend something like $1k-$3k/month, i.e. $50-$150/day
 
-## My views on cost-benefit have changed
+## Cost-benefit continuously changing
 
-* I used to think that Anthropic models were worth the premium
-* But the relative cost has increased and output quality has decreased (code is still fine, but its writing is painful)
+* I used to think that Anthropic models were worth the premium, but the relative cost has increased and output quality has decreased (esp. writing)
 * Kimi K3 is excellent. Somewhere between Opus and Fable in code quality, but a much better writer, and only costs 75% of Sonnet (thanks to its tokenizer).
-* All models since April 16, 2026 (Claude Opus 4.7) use a new tokenizer that uses ~20% more tokens, so even though the per-token prices didn't change, the overall cost did
-* And Anthropic models seem to be producing more loquacious output, which also costs more money 🤔
+* Since April 16, 2026 (Claude Opus 4.7) a new tokenizer uses ~20% more tokens.
+* And Anthropic models seem to be producing more loquacious output, which also costs more money 🤔.
 
 ## So how can you tell what you're spending?
 

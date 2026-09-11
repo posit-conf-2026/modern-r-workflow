@@ -30,6 +30,11 @@
   padding-left: 100%;
 }
 
+/* Smaller slide headers */
+.reveal {
+  --r-heading2-size: 1.2em;
+}
+
 /* Larger code blocks */
 .reveal pre {
   font-size: 0.8em;
