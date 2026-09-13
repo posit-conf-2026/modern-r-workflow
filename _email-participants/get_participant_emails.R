@@ -11,7 +11,7 @@ registrations <- read_sheet(sheet_url, sheet = "Registrations", skip = 5)
 emails <- registrations |>
   filter(`Session name` == "Our Modern R Workflow (ft. Positron and AI)") |>
   pull(Email)
-length(emails) #134
+length(emails) #134 -> 137
 
 bcc_string <- paste(emails, collapse = ",")
 
