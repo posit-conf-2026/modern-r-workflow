@@ -318,6 +318,13 @@
     "text": "Your turn\n\nExperiment to probe how much PA knows about, e.g., the file you are looking at or your current selection\nDefine a couple R objects then ask PA about them\nPrompt PA to create an R object and to mutate it\nAsk PA about itself or Positron to probe its self-knowledge"
   },
   {
+    "objectID": "modules/slides/00-welcome.html#section",
+    "href": "modules/slides/00-welcome.html#section",
+    "title": "Welcome",
+    "section": "",
+    "text": "pos.it/modern-r-workflow"
+  },
+  {
     "objectID": "modules/slides/00-welcome.html#wi-fi",
     "href": "modules/slides/00-welcome.html#wi-fi",
     "title": "Welcome",
@@ -353,8 +360,8 @@
     "text": "Join us on Discord\nJoin the posit::conf Discord server:\npos.it/joinconf26\nThen head to the workshop channel:\n#workshop-modern-r-workflow"
   },
   {
-    "objectID": "modules/slides/00-welcome.html#section-2",
-    "href": "modules/slides/00-welcome.html#section-2",
+    "objectID": "modules/slides/00-welcome.html#section-3",
+    "href": "modules/slides/00-welcome.html#section-3",
     "title": "Welcome",
     "section": "",
     "text": "Introduce yourself to your neighbors 👋\n\nDo you have a hidden talent?\nDo you have a pet or hobby?\nWhat’s your biggest pet peeve with R?\nWhat’s your favorite thing to do in R?"
