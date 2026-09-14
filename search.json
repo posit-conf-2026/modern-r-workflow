@@ -248,6 +248,76 @@
     "text": "Winston’s simplification prompt\n\nMake a deliberate pass over each non-trivial change looking for opportunities for simplification:\n\nCould this change be achieved by deleting or restructuring instead of adding — removing a branch, mode, layer, or special case rather than bolting one on? It’s always better to remove than add.\nIs each new or changed interface narrow relative to what it hides — or must callers know its internals, keep duplicated logic in sync, or work around documented gaps (“does NOT handle X”)?\nDoes anything re-implement what the codebase already provides — a bespoke helper shadowing a canonical one, logic in the wrong layer, or wrapper/cast/any churn obscuring the real contract?\n\nWhen you find opportunities for simplification, be clear about the pros and cons. Produce either a list of potential simplifications or “No simplifications found”."
   },
   {
+    "objectID": "modules/slides/03-posit-assistant-intro.html#posit-assistant-pa",
+    "href": "modules/slides/03-posit-assistant-intro.html#posit-assistant-pa",
+    "title": "Intro to Posit Assistant",
+    "section": "Posit Assistant (PA)",
+    "text": "Posit Assistant (PA)\n\nhttps://assistant.posit.co/\nAn AI agent geared towards the needs of data scientists\nWorks in Positron and RStudio\nConnects to your live R and Python sessions"
+  },
+  {
+    "objectID": "modules/slides/03-posit-assistant-intro.html#sign-in-to-a-provider",
+    "href": "modules/slides/03-posit-assistant-intro.html#sign-in-to-a-provider",
+    "title": "Intro to Posit Assistant",
+    "section": "Sign in to a provider",
+    "text": "Sign in to a provider"
+  },
+  {
+    "objectID": "modules/slides/03-posit-assistant-intro.html#is-this-thing-on",
+    "href": "modules/slides/03-posit-assistant-intro.html#is-this-thing-on",
+    "title": "Intro to Posit Assistant",
+    "section": "Is this thing on?",
+    "text": "Is this thing on?"
+  },
+  {
+    "objectID": "modules/slides/03-posit-assistant-intro.html#all-the-things-you-will-confuse-posit-assistant-with",
+    "href": "modules/slides/03-posit-assistant-intro.html#all-the-things-you-will-confuse-posit-assistant-with",
+    "title": "Intro to Posit Assistant",
+    "section": "All the things you will confuse Posit Assistant with",
+    "text": "All the things you will confuse Posit Assistant with\n\nPosit Assistant supersedes:\n\nPositron Assistant, superseded now, going away Q4 2026.\nDatabot, deprecated July 2026.\nA brief and biased history of Posit data science agents, June 2026 blog post by Joe Cheng\n\nPosit Assistant can be used with many providers\n\nPosit AI Pass is one of the supported providers\nPosit AI Pass lets you access many models through one subscription service\nPosit AI Pass was previously known as Posit AI (no pass)"
+  },
+  {
+    "objectID": "modules/slides/03-posit-assistant-intro.html#choose-from-your-providers-models",
+    "href": "modules/slides/03-posit-assistant-intro.html#choose-from-your-providers-models",
+    "title": "Intro to Posit Assistant",
+    "section": "Choose from your provider’s models",
+    "text": "Choose from your provider’s models"
+  },
+  {
+    "objectID": "modules/slides/03-posit-assistant-intro.html#clear-early-clear-often",
+    "href": "modules/slides/03-posit-assistant-intro.html#clear-early-clear-often",
+    "title": "Intro to Posit Assistant",
+    "section": "/clear early, /clear often",
+    "text": "/clear early, /clear often\n\n/clear begins a new conversation\nAll the usual benefits of turning the thing off and back on again"
+  },
+  {
+    "objectID": "modules/slides/03-posit-assistant-intro.html#conversations-are-not-lost",
+    "href": "modules/slides/03-posit-assistant-intro.html#conversations-are-not-lost",
+    "title": "Intro to Posit Assistant",
+    "section": "Conversations are not lost",
+    "text": "Conversations are not lost\n\nDon’t worry: you can get back to earlier conversations!\n\nTo read\nTo resume"
+  },
+  {
+    "objectID": "modules/slides/03-posit-assistant-intro.html#implicit-context-is-usually-enough",
+    "href": "modules/slides/03-posit-assistant-intro.html#implicit-context-is-usually-enough",
+    "title": "Intro to Posit Assistant",
+    "section": "Implicit context is usually “enough”",
+    "text": "Implicit context is usually “enough”\n\nPosit Assistant knows, e.g.:\n\nWhich files you have open\nWhich file is open\nYour current selection\nThe current workspace/folder\n\nYou rarely need to explicitly attach a file as context\nBut there are ways to explicitly attach content:\n\nChat Features: File Attachments"
+  },
+  {
+    "objectID": "modules/slides/03-posit-assistant-intro.html#special-two-way-relationship-with-r-console",
+    "href": "modules/slides/03-posit-assistant-intro.html#special-two-way-relationship-with-r-console",
+    "title": "Intro to Posit Assistant",
+    "section": "Special two-way relationship with R console",
+    "text": "Special two-way relationship with R console\n\nPA sees and can drive the R session in your console"
+  },
+  {
+    "objectID": "modules/slides/03-posit-assistant-intro.html#your-turn",
+    "href": "modules/slides/03-posit-assistant-intro.html#your-turn",
+    "title": "Intro to Posit Assistant",
+    "section": "Your turn",
+    "text": "Your turn\n\nExperiment to probe how much PA knows about, e.g., the file you are looking at or your current selection\nDefine a couple R objects then ask PA about them\nPrompt PA to create an R object and to mutate it\nAsk PA about itself or Positron to probe its self-knowledge"
+  },
+  {
     "objectID": "modules/slides/00-welcome.html#wi-fi",
     "href": "modules/slides/00-welcome.html#wi-fi",
     "title": "Welcome",
