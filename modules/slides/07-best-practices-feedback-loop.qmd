@@ -163,3 +163,11 @@ deliverer: Hadley
 ## Your turn {.your-turn}
 
 Take this opportunity to experiment with these workflows for your own work!
+
+## Survey
+
+<http://pos.it/conf26-workshop-survey>
+
+<center>
+![](images/survey-qr.svg){width=300}
+</center>
