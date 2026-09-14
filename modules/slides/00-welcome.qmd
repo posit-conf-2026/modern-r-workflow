@@ -105,7 +105,7 @@ Is Positron telling you it's time to update? Do it!
 :::
 :::
 
-## Check your R setup
+## Check your R setup {.smaller}
 
 Let's make sure everyone's R installation is ready to go.
 
@@ -134,7 +134,7 @@ Let's make sure everyone's R installation is ready to go.
 <!-- HW: do we want to mention air, rig, and quarto here? -->
 <!-- JB: air and quarto ship with Positron, so I think no. And no one should be installing R at this point in the workshop, so I think no for rig. They'll come up later, but don't need installation at this point. -->
 
-## Posit AI Pass
+## Posit AI Pass {.smaller}
 
 Sign up for Posit AI Pass, so you're ready to use Posit Assistant during the workshop.
 
