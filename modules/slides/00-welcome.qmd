@@ -137,6 +137,8 @@ Sign up for Posit AI Pass, so you're ready to use Posit Assistant during the wor
 
 -   Sign up: <https://posit.ai>
 -   **Make sure to use the same email address as you used to register for conf!** This is what lets us give you free credits to use today.
+-   If you need to use Posit AI Pass with a different email than your conf registration, ask a TA to help you sort this out.
+-   The "Using Posit AI Pass token credits" section of the [Workshop Tech Setup](https://posit-workshop-setup.share.connect.posit.cloud/) is relevant to our workshop.
 
 ## Check that Posit Assistant is alive
 
