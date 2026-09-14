@@ -746,7 +746,7 @@
     "href": "modules/slides/04-agent-explainer.html#your-turn",
     "title": "How does Posit Assistant work?",
     "section": "Your turn",
-    "text": "Your turn\n\nUse the same prompt as me. It’s an underspecified ask, so we’re going to get lots of variation. That’s part of the fun!\nManually approve a few writes\nThen allow all\nMake sure your package has tests and Git\nHow does your package differ your neighbours?"
+    "text": "Your turn\n\nUse the same prompt as me. It’s an underspecified ask, so we’re going to get lots of variation. That’s part of the fun!\nManually approve a few writes. Then pick allow all.\nMake sure your package has tests and Git.\nHow much did it cost to make? Was it worth it?\nHow does your package differ your neighbours?"
   },
   {
     "objectID": "modules/slides/04-agent-explainer.html#there-are-three-types-of-output",
