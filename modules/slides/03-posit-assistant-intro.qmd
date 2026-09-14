@@ -71,7 +71,7 @@ format:
 
 * Posit Assistant knows, e.g.:
   - Which files you have open
-  - Which file is open
+  - Which file is active
   - Your current selection
   - The current workspace/folder
 * You rarely need to explicitly attach a file as context
