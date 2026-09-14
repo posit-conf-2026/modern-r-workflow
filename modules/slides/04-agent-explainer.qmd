@@ -36,9 +36,9 @@ usethis::create_package("~/desktop/compliment")
 ## Your turn {.your-turn}
 
 * Use the same prompt as me. It's an underspecified ask, so we're going to get lots of variation. That's part of the fun!
-* Manually approve a few writes
-* Then allow all
-* Make sure your package has tests and Git
+* Manually approve a few writes. Then pick allow all.
+* Make sure your package has tests and Git.
+* How much did it cost to make? Was it worth it?
 * How does your package differ your neighbours?
 
 ## There are three types of output
