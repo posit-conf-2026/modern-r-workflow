@@ -301,7 +301,7 @@
     "href": "modules/slides/03-posit-assistant-intro.html#implicit-context-is-usually-enough",
     "title": "Intro to Posit Assistant",
     "section": "Implicit context is usually “enough”",
-    "text": "Implicit context is usually “enough”\n\nPosit Assistant knows, e.g.:\n\nWhich files you have open\nWhich file is open\nYour current selection\nThe current workspace/folder\n\nYou rarely need to explicitly attach a file as context\nBut there are ways to explicitly attach content:\n\nChat Features: File Attachments"
+    "text": "Implicit context is usually “enough”\n\nPosit Assistant knows, e.g.:\n\nWhich files you have open\nWhich file is active\nYour current selection\nThe current workspace/folder\n\nYou rarely need to explicitly attach a file as context\nBut there are ways to explicitly attach content:\n\nChat Features: File Attachments"
   },
   {
     "objectID": "modules/slides/03-posit-assistant-intro.html#special-two-way-relationship-with-r-console",
