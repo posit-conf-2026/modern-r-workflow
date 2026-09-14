@@ -150,6 +150,13 @@
     "text": "Your turn\nTake this opportunity to experiment with these workflows for your own work!"
   },
   {
+    "objectID": "modules/slides/07-best-practices-feedback-loop.html#survey",
+    "href": "modules/slides/07-best-practices-feedback-loop.html#survey",
+    "title": "Best practices feedback loop",
+    "section": "Survey",
+    "text": "Survey\nhttp://pos.it/conf26-workshop-survey"
+  },
+  {
     "objectID": "modules/slides/05-agent-instructions.html#two-ways-to-provide-additional-context",
     "href": "modules/slides/05-agent-instructions.html#two-ways-to-provide-additional-context",
     "title": "AGENTS.md and skills",
@@ -325,11 +332,11 @@
     "text": "pos.it/modern-r-workflow"
   },
   {
-    "objectID": "modules/slides/00-welcome.html#wi-fi",
-    "href": "modules/slides/00-welcome.html#wi-fi",
+    "objectID": "modules/slides/00-welcome.html#welcome-to-our-modern-r-workflow",
+    "href": "modules/slides/00-welcome.html#welcome-to-our-modern-r-workflow",
     "title": "Welcome",
-    "section": "Wi-Fi",
-    "text": "Wi-Fi\n\n\n\n\nWi-Fi network name\nPosit Conf 2026\n\n\n\n\nWi-Fi password\nconf2026"
+    "section": "Welcome to Our Modern R Workflow",
+    "text": "Welcome to Our Modern R Workflow\n\nhttps://pos.it/modern-r-workflow\n\n\n\n\n\nWi-Fi network name\nPosit Conf 2026\n\n\n\n\nWi-Fi password\nconf2026\n\n\n\nPlease make sure you can see the slides\nAnd you’re ready to with Posit Assistant and a posit.ai account"
   },
   {
     "objectID": "modules/slides/00-welcome.html#venue-information",
