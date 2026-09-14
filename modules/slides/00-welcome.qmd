@@ -5,6 +5,12 @@ format:
     footer: "[pos.it/modern-r-workflow](../../index.html)"
 ---
 
+## {.center}
+
+::: {.r-fit-text}
+[pos.it/modern-r-workflow](https://pos.it/modern-r-workflow)
+:::
+
 ## Wi-Fi
 
 ::: columns
