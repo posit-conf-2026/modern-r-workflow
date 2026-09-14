@@ -1,5 +1,8 @@
 ---
 title: "Helping yourself"
+format:
+  revealjs:
+    footer: "[pos.it/modern-r-workflow](../../index.html)"
 ---
 
 ##
