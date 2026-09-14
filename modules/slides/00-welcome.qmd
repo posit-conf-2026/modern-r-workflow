@@ -11,7 +11,9 @@ format:
 [pos.it/modern-r-workflow](https://pos.it/modern-r-workflow)
 :::
 
-## Wi-Fi
+## Welcome to Our Modern R Workflow
+
+* <https://pos.it/modern-r-workflow>
 
 ::: columns
 ::: {.column width="50%"}
@@ -42,6 +44,9 @@ Wi-Fi password
 
 :::
 :::
+
+* Please make sure you can see the slides
+* And you're ready to with Posit Assistant and a posit.ai account
 
 ## Venue information
 
